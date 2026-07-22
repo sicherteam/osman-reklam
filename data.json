@@ -1,6 +1,13 @@
 {
-  "updatedAt": "22.7.2026, 16:23:25",
+  "updatedAt": "22.7.2026, 16:48:54",
   "leads": [
+    {
+      "phone": "0680 3229763",
+      "jobType": "-",
+      "location": "Kirchberg an der Pielach",
+      "status": "Nicht belastet",
+      "date": "22.07.26 16:35"
+    },
     {
       "phone": "0699 81496221",
       "jobType": "-",
@@ -133,13 +140,6 @@
       "location": "Bezirk Sankt Pölten-Land",
       "status": "Belastet",
       "date": "20.07.26 10:01"
-    },
-    {
-      "phone": "0677 63141054",
-      "jobType": "Baumpflege",
-      "location": "Korneuburg",
-      "status": "Nicht belastet",
-      "date": "20.07.26 10:15"
     }
   ]
 }
