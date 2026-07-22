@@ -1,145 +1,185 @@
 {
-  "updatedAt": "22.7.2026, 18:06:06",
+  "updatedAt": "22.7.2026, 19:36:14",
   "leads": [
     {
       "phone": "0676 3100739",
       "jobType": "-",
       "location": "Ternitz",
+      "requestType": "Telefon",
       "status": "Belastet",
-      "date": "21.07.26 17:13"
+      "date": "21.07.26 15:13",
+      "messageText": "-"
     },
     {
       "phone": "0680 3229763",
       "jobType": "-",
       "location": "Kirchberg an der Pielach",
+      "requestType": "Telefon",
       "status": "Nicht belastet",
-      "date": "22.07.26 16:35"
+      "date": "22.07.26 14:35",
+      "messageText": "-"
     },
     {
       "phone": "0699 81496221",
       "jobType": "-",
       "location": "Mödling",
+      "requestType": "Telefon",
       "status": "Nicht belastet",
-      "date": "22.07.26 15:41"
+      "date": "22.07.26 13:41",
+      "messageText": "-"
     },
     {
       "phone": "0676 87831603",
       "jobType": "Baumpflege",
       "location": "Bad Vöslau",
+      "requestType": "Telefon",
       "status": "Belastet",
-      "date": "21.07.26 15:29"
+      "date": "21.07.26 13:29",
+      "messageText": "-"
     },
     {
       "phone": "0676 5151111",
       "jobType": "-",
       "location": "Kottingbrunn",
+      "requestType": "Telefon",
       "status": "Belastet",
-      "date": "21.07.26 15:11"
+      "date": "21.07.26 13:11",
+      "messageText": "-"
     },
     {
       "phone": "0664 1120380",
       "jobType": "Winterdienst",
       "location": "Korneuburg",
+      "requestType": "Telefon",
       "status": "Nicht belastet",
-      "date": "22.07.26 14:31"
+      "date": "22.07.26 12:31",
+      "messageText": "-"
     },
     {
       "phone": "076 533 91 40",
       "jobType": "-",
       "location": "Gerasdorf bei Wien",
+      "requestType": "Telefon",
       "status": "Belastet",
-      "date": "21.07.26 13:11"
+      "date": "21.07.26 11:11",
+      "messageText": "-"
     },
     {
       "phone": "0699 16335597",
       "jobType": "-",
       "location": "Mistelbach",
+      "requestType": "Telefon",
       "status": "Belastet",
-      "date": "21.07.26 12:42"
+      "date": "21.07.26 10:42",
+      "messageText": "-"
     },
     {
       "phone": "0676 7125984",
       "jobType": "Kunstrasenverlegung",
       "location": "Wien",
+      "requestType": "Telefon",
       "status": "Wird überprüft",
-      "date": "22.07.26 11:57"
+      "date": "22.07.26 09:57",
+      "messageText": "-"
     },
     {
       "phone": "0664 1802610",
       "jobType": "-",
       "location": "Puchberg am Schneeberg",
+      "requestType": "Telefon",
       "status": "Belastet",
-      "date": "21.07.26 11:31"
+      "date": "21.07.26 09:31",
+      "messageText": "-"
     },
     {
       "phone": "0664 6486001",
       "jobType": "Kunstrasenverlegung",
       "location": "Wien",
+      "requestType": "Telefon",
       "status": "Wird überprüft",
-      "date": "22.07.26 10:09"
+      "date": "22.07.26 08:09",
+      "messageText": "-"
     },
     {
       "phone": "0681 10766130",
       "jobType": "-",
       "location": "Wien",
+      "requestType": "Telefon",
       "status": "Nicht belastet",
-      "date": "21.07.26 18:21"
+      "date": "21.07.26 16:21",
+      "messageText": "-"
     },
     {
       "phone": "0676 7497457",
       "jobType": "Baumpflege",
       "location": "Felixdorf",
+      "requestType": "Telefon",
       "status": "Nicht belastet",
-      "date": "22.07.26 07:06"
+      "date": "22.07.26 05:06",
+      "messageText": "-"
     },
     {
       "phone": "0664 4655049",
       "jobType": "Gartenteiche, Springbrunnen und Wasserspiele",
       "location": "Strasshof an der Nordbahn",
+      "requestType": "Telefon",
       "status": "Nicht belastet",
-      "date": "21.07.26 18:48"
+      "date": "21.07.26 16:48",
+      "messageText": "-"
     },
     {
       "phone": "0699 19246262",
       "jobType": "Baumpflege",
       "location": "Heldenberg",
+      "requestType": "Telefon",
       "status": "Belastet",
-      "date": "20.07.26 14:19"
+      "date": "20.07.26 12:19",
+      "messageText": "-"
     },
     {
       "phone": "0664 2558747",
       "jobType": "-",
       "location": "Gloggnitz",
+      "requestType": "Telefon",
       "status": "Nicht belastet",
-      "date": "21.07.26 12:37"
+      "date": "21.07.26 10:37",
+      "messageText": "-"
     },
     {
       "phone": "0676 3305727",
       "jobType": "Baumfällarbeiten",
       "location": "Wien",
+      "requestType": "Telefon",
       "status": "Nicht belastet",
-      "date": "21.07.26 11:17"
+      "date": "21.07.26 09:17",
+      "messageText": "-"
     },
     {
       "phone": "0699 12178304",
       "jobType": "-",
       "location": "Korneuburg",
+      "requestType": "Telefon",
       "status": "Belastet",
-      "date": "20.07.26 11:05"
+      "date": "20.07.26 09:05",
+      "messageText": "-"
     },
     {
       "phone": "0676 5412117",
       "jobType": "-",
       "location": "Wien",
+      "requestType": "Telefon",
       "status": "Belastet",
-      "date": "20.07.26 10:15"
+      "date": "20.07.26 08:15",
+      "messageText": "-"
     },
     {
       "phone": "0664 3535035",
       "jobType": "-",
       "location": "Bezirk Sankt Pölten-Land",
+      "requestType": "Telefon",
       "status": "Belastet",
-      "date": "20.07.26 10:01"
+      "date": "20.07.26 08:01",
+      "messageText": "-"
     }
   ]
 }
