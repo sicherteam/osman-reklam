@@ -20,7 +20,6 @@ const puppeteer = require('puppeteer-core');
     // 1. Çerezleri Ayarla ve Temizle
     const rawCookies = JSON.parse(process.env.GOOGLE_COOKIES);
     const cookies = rawCookies.map(cookie => {
-      // Puppeteer uyumluluğu için bazı hassas alanları düzelt
       const cleaned = { ...cookie };
       if (cleaned.sameSite === 'no_restriction' || cleaned.sameSite === 'unspecified') {
         delete cleaned.sameSite;
@@ -41,7 +40,7 @@ const puppeteer = require('puppeteer-core');
     console.log("Sayfa Başlığı:", pageTitle);
     console.log("Mevcut URL:", page.url());
 
-    // Eğer hala giriş ekranına yönlendiriliyorsa hata verip durdur
+    // Eğer oturum kapalıysa hata ver
     if (pageTitle.includes("Anmelden") || pageTitle.includes("Sign in")) {
       throw new Error("Oturum açılamadı! GOOGLE_COOKIES süresi dolmuş veya geçersiz. Lütfen yeni çerez yükleyin.");
     }
@@ -49,8 +48,8 @@ const puppeteer = require('puppeteer-core');
     // 3. İçeriğin tam yüklenmesi için bekle
     await new Promise(resolve => setTimeout(resolve, 8000));
 
-    // 4. Verileri Tara
-    const leads = await page.evaluate(() => {
+    // 4. Verileri Tara ve Yanlış Verileri Filtrele
+    const rawLeads = await page.evaluate(() => {
       let data = [];
       const rows = document.querySelectorAll('[role="row"], tr');
       
@@ -63,7 +62,12 @@ const puppeteer = require('puppeteer-core');
           const status = cells[5]?.innerText?.trim() || '-';
           const date = cells[6]?.innerText?.trim() || '-';
 
-          if (phone && phone !== 'Kunde') {
+          // FİLTRELEME:
+          // 1. Telefon alanı sadece sayı veya kısa indeks (ör. "6", "13") olmamalı.
+          // 2. Gerçek bir telefon formatı (içinde boşluk veya en az 5 rakam barındıran) içermeli.
+          const isRealPhone = /\d{5,}/.test(phone.replace(/\s+/g, ''));
+
+          if (phone && phone !== 'Kunde' && isRealPhone) {
             data.push({ phone, jobType, location, status, date });
           }
         }
@@ -71,8 +75,44 @@ const puppeteer = require('puppeteer-core');
       return data;
     });
 
-    console.log("Çekilen Canlı Veri Sayısı:", leads.length);
-    console.log("Çekilen Canlı Veriler:", JSON.stringify(leads, null, 2));
+    // 5. Saate +2 Saat Ekleme İşlemi (Node.js tarafında güvenli dönüşüm)
+    const adjustedLeads = rawLeads.map(lead => {
+      if (lead.date && lead.date.includes(':')) {
+        // Örnek format: "21.07.26 11:11 AM"
+        const match = lead.date.match(/(\d{2})\.(\d{2})\.(\d{2})\s(\d{1,2}):(\d{2})\s(AM|PM)/i);
+        
+        if (match) {
+          let [ , day, month, year, hours, minutes, ampm ] = match;
+          hours = parseInt(hours, 10);
+          
+          // 12 saatlik (AM/PM) formatı 24 saatliğe çevir
+          if (ampm.toUpperCase() === 'PM' && hours < 12) hours += 12;
+          if (ampm.toUpperCase() === 'AM' && hours === 12) hours = 0;
+          
+          // Saate +2 saat ekle (JavaScript gün/ay değişimlerini otomatik yönetir)
+          const dateObj = new Date(2000 + parseInt(year, 10), parseInt(month, 10) - 1, parseInt(day, 10), hours + 2, parseInt(minutes, 10));
+          
+          // Tekrar LSA formatına geri çevir (DD.MM.YY HH:MM AM/PM)
+          const newDay = String(dateObj.getDate()).padStart(2, '0');
+          const newMonth = String(dateObj.getMonth() + 1).padStart(2, '0');
+          const newYear = String(dateObj.getFullYear()).slice(-2);
+          
+          let newHours = dateObj.getHours();
+          const newAmPm = newHours >= 12 ? 'PM' : 'AM';
+          newHours = newHours % 12 || 12;
+          const newMins = String(dateObj.getMinutes()).padStart(2, '0');
+          
+          return {
+            ...lead,
+            date: `${newDay}.${newMonth}.${newYear} ${newHours}:${newMins} ${newAmPm}`
+          };
+        }
+      }
+      return lead;
+    });
+
+    console.log("Çekilen Canlı Veri Sayısı:", adjustedLeads.length);
+    console.log("Çekilen Canlı Veriler:", JSON.stringify(adjustedLeads, null, 2));
 
     await browser.close();
   } catch (error) {
