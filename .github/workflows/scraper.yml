@@ -5,53 +5,107 @@ on:
     - cron: '*/10 * * * *'
   workflow_dispatch:
 
-# Repoya yazma izni
 permissions:
   contents: write
 
+
 jobs:
   run-scraper:
+
     runs-on: ubuntu-latest
 
     steps:
-      - name: Repositori Kodlarını Çek
+
+      - name: Repository Kodlarını Çek
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
 
       - name: Node.js Kurulumu
         uses: actions/setup-node@v4
         with:
           node-version: '24'
 
+
       - name: Google Chrome Kurulumu
         run: |
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
 
-      - name: NPM Bağımlılıklarını Yükle
-        run: npm install puppeteer-core puppeteer-extra puppeteer-extra-plugin-stealth
 
-      - name: Çerez Kaynağını Belirle ve Scraper'ı Çalıştır
+      - name: NPM Bağımlılıklarını Yükle
+        run: |
+          npm install puppeteer-extra puppeteer-extra-plugin-stealth
+
+
+      - name: Chrome Profil ve Cookie Hazırlığı + Scraper Çalıştırma
         env:
           GOOGLE_COOKIES_SECRET: ${{ secrets.GOOGLE_COOKIES }}
+
         run: |
-          # Eğer önceki çalıştırmadan kaydedilmiş taze çerez dosyası varsa onu kullan, yoksa Secret'ı kullan
-          if [ -f "updated_cookies.json" ]; then
-            echo "Güncellenmiş yerel çerezler (updated_cookies.json) kullanılıyor..."
-            export GOOGLE_COOKIES=$(cat updated_cookies.json)
+
+          echo "🔍 Chrome profil kontrol ediliyor..."
+
+          if [ -d "chrome-profile" ]; then
+            echo "✅ Mevcut Chrome profili bulundu."
           else
-            echo "GitHub Secret çerezleri kullanılıyor..."
-            export GOOGLE_COOKIES="$GOOGLE_COOKIES_SECRET"
+            echo "🆕 Yeni Chrome profili oluşturulacak."
           fi
-          
+
+
+          echo "🍪 Cookie kontrol ediliyor..."
+
+          if [ -f "updated_cookies.json" ]; then
+
+            echo "✅ Güncel cookie dosyası kullanılıyor."
+
+            export GOOGLE_COOKIES="$(cat updated_cookies.json)"
+
+          else
+
+            echo "🔐 GitHub Secret cookie kullanılıyor."
+
+            export GOOGLE_COOKIES="$GOOGLE_COOKIES_SECRET"
+
+          fi
+
+
+          echo "🚀 Scraper başlatılıyor..."
+
           node scraper.js
 
-      - name: Değişiklikleri (data.json ve updated_cookies.json) Repoya Commit Et
+
+
+      - name: Änderungen Commit und Push
+
         run: |
+
           git config --global user.name "github-actions[bot]"
+
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Hem verileri hem de yenilenen çerezleri depoya ekle
-          git add data.json updated_cookies.json
-          
-          git commit -m "Automated update: data.json and fresh cookies" || exit 0
-          git push
+
+
+          echo "📦 Dateien werden vorbereitet..."
+
+          git add data.json
+          git add updated_cookies.json
+          git add chrome-profile
+
+
+          if git diff --cached --quiet; then
+
+            echo "ℹ️ Keine Änderungen vorhanden."
+
+            exit 0
+
+          fi
+
+
+          git commit -m "Automated update: LSA data, cookies and Chrome profile"
+
+
+          git pull --rebase origin main
+
+
+          git push origin main
