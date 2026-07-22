@@ -16,10 +16,10 @@ jobs:
 
     steps:
       - name: Depoyu Kopyala
-        uses: actions/checkout@v4
+        uses: actions/checkout
 
       - name: Node.js Kur
-        uses: actions/setup-node@v4
+        uses: actions/setup-node
         with:
           node-version: '24' # Doğrudan Node 24 kullanıyoruz
 
