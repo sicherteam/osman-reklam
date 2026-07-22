@@ -9,6 +9,7 @@ async function appendToGoogleSheet(rows) {
     return;
   }
 
+  // Google Service Account Kimlik Doğrulaması
   const serviceAccountAuth = new JWT({
     email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
     key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
@@ -18,10 +19,14 @@ async function appendToGoogleSheet(rows) {
   const doc = new GoogleSpreadsheet(process.env.GOOGLE_SHEET_ID, serviceAccountAuth);
 
   await doc.loadInfo();
-  const sheet = doc.sheetsByIndex[0];
+  const sheet = doc.sheetsByIndex[0]; // İlk çalışma sayfasını seçer
 
-  console.log(`Google Sheets'e bağlanıldı: "${doc.title}"`);
+  console.log(`Google Sheets'e bağlanıldı: "${doc.title}" - Sayfa: "${sheet.title}"`);
 
+  // İlk satıra başlıkları garanti olarak ekler/doğrular
+  await sheet.setHeaderRow(['Telefon', 'Hizmet', 'Konum', 'Durum', 'Tarih']);
+
+  // Verileri tabloya ekle
   for (const row of rows) {
     await sheet.addRow({
       Telefon: row.phone,
@@ -49,13 +54,13 @@ async function appendToGoogleSheet(rows) {
     
     const page = await browser.newPage();
     
-    // Yönlendirmeler için genel timeout süresini 90 saniyeye çıkarıyoruz
+    // Yönlendirmeler ve işlemler için zaman aşımını 90 saniye yap
     page.setDefaultNavigationTimeout(90000);
     page.setDefaultTimeout(90000);
 
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
 
-    // 1. Çerezleri Yükle
+    // 1. Çerezleri Yükle ve Temizle
     if (!process.env.GOOGLE_COOKIES) {
       throw new Error("GOOGLE_COOKIES secret değişkeni bulunamadı!");
     }
@@ -75,7 +80,6 @@ async function appendToGoogleSheet(rows) {
     const targetUrl = 'https://ads.google.com/localservices/inbox?cid=2903573653&bid=10985702078&pid=9999999999&euid=3547106212&hl=de-AT&gl=AT';
     console.log("LSA Inbox sayfasına gidiliyor...");
     
-    // Timeout süresini esnettik ve domcontentloaded moduna aldık
     await page.goto(targetUrl, { waitUntil: 'domcontentloaded', timeout: 90000 });
 
     const pageTitle = await page.title();
@@ -103,6 +107,7 @@ async function appendToGoogleSheet(rows) {
           const status = cells[5]?.innerText?.trim() || '-';
           const date = cells[6]?.innerText?.trim() || '-';
 
+          // Yalnızca en az 5 rakam içeren gerçek telefon numaralarını al
           const isRealPhone = /\d{5,}/.test(phone.replace(/\s+/g, ''));
 
           if (phone && phone !== 'Kunde' && isRealPhone) {
@@ -113,7 +118,7 @@ async function appendToGoogleSheet(rows) {
       return data;
     });
 
-    // 5. Saate +2 Saat Ekle ve 24 Saatlik Avrupa Formatına Çevir
+    // 5. Saate +2 Saat Ekle ve 24 Saatlik Avrupa Formatına Çevir (DD.MM.YY HH:MM)
     const adjustedLeads = rawLeads.map(lead => {
       if (lead.date && lead.date.includes(':')) {
         const match = lead.date.match(/(\d{2})\.(\d{2})\.(\d{2})\s(\d{1,2}):(\d{2})\s?(AM|PM)?/i);
