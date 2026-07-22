@@ -8,17 +8,23 @@ const puppeteer = require('puppeteer-core');
       args: [
         '--no-sandbox', 
         '--disable-setuid-sandbox',
-        '--disable-blink-features=AutomationControlled'
+        '--disable-blink-features=AutomationControlled',
+        '--disable-infobars',
+        '--window-size=1920,1080'
       ]
     });
     
     const page = await browser.newPage();
+    
+    // Webdriver izini gizle (Google bot algılamasını aşmak için)
+    await page.evaluateOnNewDocument(() => {
+      Object.defineProperty(navigator, 'webdriver', { get: () => false });
+    });
+
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+    await page.setViewport({ width: 1920, height: 1080 });
 
-    // 1. Önce Google ana sayfasına git (Domain çerezlerinin tanınması için)
-    await page.goto('https://ads.google.com/ups/routing?source=206&subid=xs-ip-gemini-adlt', { waitUntil: 'domcontentloaded' });
-
-    // 2. Çerezleri Temizle ve Yükle
+    // 1. Çerezleri İşle
     const rawCookies = JSON.parse(process.env.GOOGLE_COOKIES);
     const cleanedCookies = rawCookies.map(cookie => {
       const c = { ...cookie };
@@ -29,15 +35,23 @@ const puppeteer = require('puppeteer-core');
       return c;
     });
 
+    // 2. Çerezleri Önce Temiz Bir Google Domain'inde Tanımla
+    console.log("Çerezler yükleniyor...");
+    await page.goto('https://www.google.com', { waitUntil: 'domcontentloaded' });
     await page.setCookie(...cleanedCookies);
 
-    // 3. LSA Inbox URL'sine Git
+    // 3. Oturum Kontrolü İçin Ads Ana Sayfasına Git
+    console.log("Ads oturumu doğrulanıyor...");
+    await page.goto('https://ads.google.com/nav/selectaccount', { waitUntil: 'domcontentloaded' });
+    await new Promise(resolve => setTimeout(resolve, 3000));
+
+    // 4. Doğrudan Hedef LSA Inbox URL'sine Git
     const targetUrl = 'https://ads.google.com/localservices/inbox?cid=2903573653&bid=10985702078&pid=9999999999&euid=3547106212&hl=de-AT&gl=AT';
-    console.log("LSA Inbox sayfasına gidiliyor...");
+    console.log("LSA Inbox sayfasına yönlendiriliyor...");
     
     await page.goto(targetUrl, { waitUntil: 'domcontentloaded' });
 
-    // Yüklenme Beklemesi
+    // Sayfa Yüklenme Beklemesi (SPA İçeriğinin Render Edilmesi İçin)
     await new Promise(resolve => setTimeout(resolve, 8000));
 
     console.log("Mevcut URL:", page.url());
@@ -45,12 +59,12 @@ const puppeteer = require('puppeteer-core');
 
     // Oturum Kontrolü
     if (page.url().includes('accounts.google.com')) {
-      console.error("HATA: Çerezler geçersiz veya süresi dolmuş. Lütfen yeni çerez aktarın!");
+      console.error("HATA: Çerezler Google güvenlik duvarı/IP kısıtlaması nedeniyle reddedildi!");
       await browser.close();
       process.exit(1);
     }
 
-    // 4. Tablo Verilerini Çek
+    // 5. Tablo Verilerini Çek
     const leads = await page.evaluate(() => {
       let data = [];
       const rows = document.querySelectorAll('tr, [role="row"]');
