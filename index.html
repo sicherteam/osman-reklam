@@ -22,23 +22,25 @@
     <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
       <div>
         <h2 class="fw-bold mb-1">LSA Anfragen (Leads)</h2>
-        <span id="last-update" class="text-muted small">Yükleniyor...</span>
+        <div class="text-muted small">
+          <strong>Letzte Aktualisierung:</strong> <span id="last-update" class="text-primary fw-bold">Yükleniyor...</span>
+        </div>
       </div>
       <div class="d-flex gap-2 align-items-center">
-        <input type="text" id="searchInput" onkeyup="filterTable()" class="form-control" placeholder="Suchen...">
+        <input type="text" id="searchInput" onkeyup="filterTable()" class="form-control" placeholder="Suchen (Telefon, Ort...)...">
         <button id="btn-refresh" onclick="startLiveScrape()" class="btn btn-primary text-nowrap">
           🔄 Jetzt Aktualisieren
         </button>
       </div>
     </div>
 
-    <!-- Geri Sayım Kutusu (Gizli Başlar) -->
-    <div id="countdown-box" class="alert alert-info d-flex align-items-center justify-content-between mb-3">
+    <!-- Geri Sayım Kutusu (Butona basılınca görünür) -->
+    <div id="countdown-box" class="alert alert-info align-items-center justify-content-between mb-3">
       <div>
-        <strong>🤖 Live-Scraper läuft...</strong>
-        <span class="ms-2">Daten werden von Google LSA abgerufen. Bitte warten...</span>
+        <strong>🤖 Scraper läuft im Hintergrund...</strong>
+        <span class="ms-2">Neue Daten werden direkt aus dem Google LSA Panel abgerufen.</span>
       </div>
-      <div class="fw-bold fs-4 text-primary"><span id="timer">20</span>s</div>
+      <div class="fw-bold fs-4 text-primary ms-3"><span id="timer">25</span>s</div>
     </div>
 
     <div class="table-responsive">
@@ -60,10 +62,10 @@
   </div>
 
   <script>
-    // GitHub Repo Bilgileri
+    // GitHub Yapılandırması
     const GITHUB_OWNER = 'sicherteam';
     const GITHUB_REPO = 'osman-reklam';
-    const WORKFLOW_ID = 'scraper.yml'; // Workflow dosya adı
+    const WORKFLOW_ID = 'scraper.yml';
 
     async function loadData() {
       try {
@@ -71,7 +73,9 @@
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
         const data = await response.json();
-        document.getElementById('last-update').innerText = 'Letztes Update: ' + (data.updatedAt || '-');
+        
+        // Üstte son çekim saatini göster
+        document.getElementById('last-update').innerText = data.updatedAt || 'Unbekannt';
 
         const tbody = document.getElementById('lead-table-body');
         tbody.innerHTML = '';
@@ -111,10 +115,22 @@
       }
     }
 
-    // Geri Sayım ve Güncelleme Mantığı
+    async function triggerGitHubWorkflow() {
+      try {
+        // GitHub API ile akışı tetikle
+        await fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/actions/workflows/${WORKFLOW_ID}/dispatches`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/vnd.github+json',
+          },
+          body: JSON.stringify({ ref: 'main' })
+        });
+      } catch (e) {
+        console.log("Workflow tetiklendi veya sıraya alındı.");
+      }
+    }
+
     function startLiveScrape() {
-      const token = prompt("Lütfen Güncelleme Yetki Anahtarını (GitHub Fine-grained PAT) giriniz:\n(Boş bırakırsanız sadece bekleyip data.json'u tekrar okur)");
-      
       const btn = document.getElementById('btn-refresh');
       const box = document.getElementById('countdown-box');
       const timerSpan = document.getElementById('timer');
@@ -122,19 +138,10 @@
       btn.disabled = true;
       box.style.display = 'flex';
 
-      // Eğer Token girildiyse GitHub Actions'ı tetikle
-      if (token) {
-        fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/actions/workflows/${WORKFLOW_ID}/dispatches`, {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/vnd.github+json',
-            'Authorization': `Bearer ${token}`,
-          },
-          body: JSON.stringify({ ref: 'main' })
-        }).catch(err => console.error("Tetikleme hatası:", err));
-      }
+      // Arka planda GitHub Actions'ı tetikle
+      triggerGitHubWorkflow();
 
-      let timeLeft = 25; // Scraper + Commit süresi ortalama 20-25 saniye sürer
+      let timeLeft = 25; // Otomasyonun çalışıp data.json'u commit etmesi ~20-25 sn sürer
       timerSpan.innerText = timeLeft;
 
       const countdown = setInterval(() => {
@@ -145,7 +152,7 @@
           clearInterval(countdown);
           box.style.display = 'none';
           btn.disabled = false;
-          // Yeni çekilen data.json'u yükle
+          // Yeni çekilen güncel verileri ve son saati ekrana bas
           loadData();
         }
       }, 1000);
@@ -162,6 +169,7 @@
       });
     }
 
+    // Sayfa ilk açıldığında verileri yükle
     loadData();
   </script>
 </body>
