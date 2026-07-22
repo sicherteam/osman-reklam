@@ -14,7 +14,7 @@ const puppeteer = require('puppeteer-core');
     
     const page = await browser.newPage();
 
-    // User-Agent belirle
+    // Standard User-Agent
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
 
     // 1. Çerezleri Yükle
@@ -34,34 +34,44 @@ const puppeteer = require('puppeteer-core');
     const targetUrl = 'https://ads.google.com/localservices/inbox?cid=2903573653&bid=10985702078&pid=9999999999&euid=3547106212&hl=de-AT&gl=AT';
     console.log("LSA Inbox sayfasına gidiliyor...");
     
-    await page.goto(targetUrl, { waitUntil: 'networkidle2' });
+    await page.goto(targetUrl, { waitUntil: 'domcontentloaded' });
 
-    // Sayfa Yüklenme Beklemesi
-    await new Promise(resolve => setTimeout(resolve, 7000));
+    // 3. Tablo Yüklenene Kadar Bekle (Max 15 saniye)
+    console.log("Tablonun DOM'a yüklenmesi bekleniyor...");
+    try {
+      await page.waitForSelector('table, [role="row"], div[role="gridcell"]', { timeout: 15000 });
+    } catch (e) {
+      console.log("Uyarı: Belirtilen tablo seçicisi zaman aşımına uğradı, sabit bekleme yapılıyor...");
+    }
 
-    // 3. Verileri Çek
+    // Ekranın tam oturması için ilave 5 saniye bekleme
+    await new Promise(resolve => setTimeout(resolve, 5000));
+
+    // 4. Verileri Çek
     const leads = await page.evaluate(() => {
       let data = [];
-      const rows = document.querySelectorAll('table tbody tr, tr[role="row"], div[role="row"]');
+      
+      // Sayfadaki tüm satır benzeri yapıları topla
+      const rows = document.querySelectorAll('tr, [role="row"]');
       
       rows.forEach(row => {
-        const cells = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
+        const cells = Array.from(row.querySelectorAll('td, [role="gridcell"]'));
         
-        if (cells.length >= 6) {
-          const rawPhone = cells[0]?.innerText?.trim() || '';
+        if (cells.length >= 5) {
+          const firstCell = cells[0]?.innerText?.trim() || '';
           
-          // Sadece '0' ile başlayan veya en az 8 karakterlik gerçek telefon numarası satırlarını al (Üstteki tek haneli sahte çöp verileri engeller)
-          if (rawPhone.length >= 8 && (rawPhone.startsWith('0') || rawPhone.startsWith('+'))) {
+          // İlk hücre boş değilse ve "Kunde" (başlık) değilse al
+          if (firstCell && !firstCell.toLowerCase().includes('kunde')) {
             const jobType = cells[1]?.innerText?.trim() || '-';
             const location = cells[3]?.innerText?.trim() || '-';
             
             let status = cells[5]?.innerText?.trim() || '-';
             status = status.replace(/\n?help_outline/g, '').trim();
 
-            let date = cells[6]?.innerText?.trim() || '-';
+            let date = cells[6]?.innerText?.trim() || cells[5]?.innerText?.trim() || '-';
 
             data.push({
-              phone: rawPhone,
+              phone: firstCell,
               jobType,
               location,
               status,
@@ -73,18 +83,8 @@ const puppeteer = require('puppeteer-core');
       return data;
     });
 
-    // 4. Saat Dilimi Düzeltmesi (UTC+2 Viyana Saati Düzeltmesi)
-    // Eğer çekilen tarihte saat UTC çekildiyse Node.js tarafında +2 saat ekliyoruz
-    const adjustedLeads = leads.map(item => {
-      if (item.date && item.date.includes(':')) {
-        // AM/PM saat kaymasını Node.js tarafında güvenle koruyoruz
-        return item;
-      }
-      return item;
-    });
-
-    console.log("Çekilen Canlı Veri Sayısı:", adjustedLeads.length);
-    console.log("Çekilen Canlı Veriler:", JSON.stringify(adjustedLeads, null, 2));
+    console.log("Çekilen Canlı Veri Sayısı:", leads.length);
+    console.log("Çekilen Canlı Veriler:", JSON.stringify(leads, null, 2));
 
     await browser.close();
   } catch (error) {
