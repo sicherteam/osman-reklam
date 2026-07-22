@@ -4,7 +4,11 @@ on:
   schedule:
     # Her 5 dakikada bir otomatik çalışır
     - cron: '*/5 * * * *'
-  workflow_dispatch: # Elle tetikleme butonu ekler
+  workflow_dispatch: # Elle tetikleme butonu
+
+# Duyurudaki gibi Node24 zorlamasını aktif edip uyarıyı kapatıyoruz
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
 jobs:
   run-scraper:
@@ -17,7 +21,7 @@ jobs:
       - name: Node.js Kur
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24' # Doğrudan Node 24 kullanıyoruz
 
       - name: Paketleri Yükle
         run: npm install
