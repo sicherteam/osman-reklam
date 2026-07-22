@@ -1,0 +1,9 @@
+{
+  "name": "lsa-scraper",
+  "version": "1.0.0",
+  "main": "scraper.js",
+  "dependencies": {
+    "puppeteer": "^21.0.0",
+    "google-spreadsheet": "^4.0.0"
+  }
+}
