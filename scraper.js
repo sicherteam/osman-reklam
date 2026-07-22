@@ -2,7 +2,6 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs');
 
-// Stealth eklentisini aktif et (Google bot korumasını aşmak için en kritik adım)
 puppeteer.use(StealthPlugin());
 
 (async () => {
@@ -21,8 +20,6 @@ puppeteer.use(StealthPlugin());
     });
     
     const page = await browser.newPage();
-    
-    // Masaüstü çözünürlüğü ve Avusturya dil ayarı
     await page.setViewport({ width: 1920, height: 1080 });
     await page.setExtraHTTPHeaders({
       'Accept-Language': 'de-AT,de;q=0.9,en-US;q=0.8,en;q=0.7'
@@ -37,7 +34,6 @@ puppeteer.use(StealthPlugin());
       throw new Error("GOOGLE_COOKIES secret değişkeni bulunamadı!");
     }
 
-    // Çerezleri yükle ve temizle
     const rawCookies = JSON.parse(process.env.GOOGLE_COOKIES);
     const cookies = rawCookies.map(cookie => {
       const cleaned = { ...cookie };
@@ -52,7 +48,6 @@ puppeteer.use(StealthPlugin());
     const targetUrl = 'https://ads.google.com/localservices/inbox?cid=2903573653&bid=10985702078&pid=9999999999&euid=3547106212&hl=de-AT&gl=AT';
     console.log("LSA Inbox sayfasına gidiliyor...");
     
-    // networkidle2: Google'ın arka plan oturum çerezlerini tamamen yüklemesini bekler
     await page.goto(targetUrl, { waitUntil: 'networkidle2', timeout: 90000 });
 
     const pageTitle = await page.title();
@@ -62,48 +57,103 @@ puppeteer.use(StealthPlugin());
       throw new Error("Oturum açılamadı! GOOGLE_COOKIES süresi dolmuş veya geçersiz.");
     }
 
-    // --- KRİTİK: Çerezlerin Süresini Uzatma (Auto Refresh Cookies) ---
-    // Google oturumu açtıktan sonra güncellenmiş taze çerezleri alıp dosyaya saklıyoruz.
+    // Taze çerezleri kaydet
     try {
       const freshCookies = await page.cookies();
       fs.writeFileSync('updated_cookies.json', JSON.stringify(freshCookies, null, 2));
-      console.log(" Güncellenmiş taze çerezler 'updated_cookies.json' dosyasına kaydedildi.");
+      console.log("Güncellenmiş taze çerezler 'updated_cookies.json' dosyasına kaydedildi.");
     } catch (cookieErr) {
-      console.warn("Çerezler güncellenirken hata oluştu (önemsiz):", cookieErr.message);
+      console.warn("Çerezler güncellenirken hata oluştu:", cookieErr.message);
     }
 
     console.log("İçeriğin yüklenmesi bekleniyor...");
     await new Promise(resolve => setTimeout(resolve, 8000));
 
-    // Tablo verilerini çekme
-    const rawLeads = await page.evaluate(() => {
-      let data = [];
-      const rows = document.querySelectorAll('[role="row"], tr');
-      
-      rows.forEach(row => {
-        const cells = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
-        if (cells.length >= 5) {
-          const phone = cells[0]?.innerText?.trim() || '';
-          const jobType = cells[1]?.innerText?.trim() || '-';
-          const location = cells[3]?.innerText?.trim() || '-';
-          
-          let rawStatus = cells[5]?.innerText?.trim() || '-';
-          const status = rawStatus.split('\n')[0].trim();
+    // --- TABLO SATIRLARINI VE MESAJ BİLGİLERİNİ ÇEKME ---
+    const rowElements = await page.$$('[role="row"], tr');
+    let leads = [];
 
-          const date = cells[6]?.innerText?.trim() || '-';
+    console.log(`Toplam ${rowElements.length} satır bulundu. Veriler işleniyor...`);
 
-          const isRealPhone = /\d{5,}/.test(phone.replace(/\s+/g, ''));
+    for (let i = 0; i < rowElements.length; i++) {
+      const row = rowElements[i];
 
-          if (phone && phone !== 'Kunde' && isRealPhone) {
-            data.push({ phone, jobType, location, status, date });
-          }
+      // Satırdaki temel hücre verilerini al
+      const rowData = await row.evaluate(el => {
+        const cells = Array.from(el.querySelectorAll('td, div[role="gridcell"]'));
+        if (cells.length < 5) return null;
+
+        const phone = cells[0]?.innerText?.trim() || '';
+        const jobType = cells[1]?.innerText?.trim() || '-';
+        const location = cells[3]?.innerText?.trim() || '-';
+        const requestType = cells[4]?.innerText?.trim() || '-'; // Telefon vs Nachricht
+        
+        let rawStatus = cells[5]?.innerText?.trim() || '-';
+        const status = rawStatus.split('\n')[0].trim();
+
+        const date = cells[6]?.innerText?.trim() || '-';
+        const isRealPhone = /\d{5,}/.test(phone.replace(/\s+/g, ''));
+
+        if (phone && phone !== 'Kunde' && isRealPhone) {
+          return { phone, jobType, location, requestType, status, date };
         }
+        return null;
       });
-      return data;
-    });
 
-    // Saat formatı düzenlemesi (Viyana Saati)
-    const adjustedLeads = rawLeads.map(lead => {
+      if (!rowData) continue;
+
+      let messageText = "-";
+
+      // Eğer gelen talep "Nachricht" (Mesaj) ise satıra tıkla ve mesaj içeriğini çek
+      if (rowData.requestType.toLowerCase().includes('nachricht') || rowData.requestType.toLowerCase().includes('message')) {
+        try {
+          console.log(`[${rowData.phone}] mesaj detayına tıklanıyor...`);
+          await row.click();
+          
+          // Detay panelinin ve "Unterhaltung" alanının yüklenmesini kısa bir süre bekle
+          await new Promise(resolve => setTimeout(resolve, 2500));
+
+          // Sağ/Detay panelindeki mesaj metnini al
+          messageText = await page.evaluate(() => {
+            // LSA Arayüzünde Unterhaltung / Mesaj metninin geçtiği kapsayıcılar
+            const messageSelectors = [
+              '.conversation-view', 
+              '[aria-label*="Unterhaltung"]',
+              'div[class*="message-content"]',
+              'div[class*="conversation"]'
+            ];
+
+            // Önce belirleyici CSS selector'ları dene
+            for (let selector of messageSelectors) {
+              const el = document.querySelector(selector);
+              if (el && el.innerText.trim()) {
+                return el.innerText.trim();
+              }
+            }
+
+            // Alternatif: Genel metin içinde "Unterhaltung" başlığının altını bul
+            const allElements = Array.from(document.querySelectorAll('div, section, p'));
+            const unterhaltungEl = allElements.find(e => e.innerText && e.innerText.includes('Unterhaltung'));
+            if (unterhaltungEl && unterhaltungEl.parentElement) {
+              return unterhaltungEl.parentElement.innerText.replace('Unterhaltung', '').trim();
+            }
+
+            return "-";
+          });
+
+        } catch (clickErr) {
+          console.warn(`[${rowData.phone}] mesaj detayına tıklanırken hata:`, clickErr.message);
+        }
+      }
+
+      leads.push({
+        ...rowData,
+        messageText: messageText
+      });
+    }
+
+    // Tarih/Saat Formatlama (Viyana Saati)
+    const adjustedLeads = leads.map(lead => {
       if (lead.date && lead.date.includes(':')) {
         const match = lead.date.match(/(\d{2})\.(\d{2})\.(\d{2})\s(\d{1,2}):(\d{2})\s?(AM|PM)?/i);
         if (match) {
@@ -122,16 +172,16 @@ puppeteer.use(StealthPlugin());
         }
       }
       return lead;
-    };
+    });
 
-    // Verileri data.json dosyasına yaz
+    // Verileri data.json dosyasına kaydet
     const outputData = {
       updatedAt: new Date().toLocaleString('de-AT', { timeZone: 'Europe/Vienna' }),
       leads: adjustedLeads
     };
 
     fs.writeFileSync('data.json', JSON.stringify(outputData, null, 2));
-    console.log(`Başarıyla ${adjustedLeads.length} adet veri data.json dosyasına yazıldı!`);
+    console.log(`Başarıyla ${adjustedLeads.length} adet veri (mesaj detaylarıyla birlikte) data.json dosyasına yazıldı!`);
 
     await browser.close();
   } catch (error) {
