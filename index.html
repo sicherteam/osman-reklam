@@ -29,7 +29,7 @@
       <div class="d-flex gap-2 align-items-center">
         <input type="text" id="searchInput" onkeyup="filterTable()" class="form-control" placeholder="Suchen (Telefon, Ort...)...">
         <button id="btn-refresh" onclick="startLiveScrape()" class="btn btn-primary text-nowrap">
-          🔄 Jetzt Aktualisieren
+          🔄 Daten neu laden
         </button>
       </div>
     </div>
@@ -37,10 +37,10 @@
     <!-- Geri Sayım Kutusu -->
     <div id="countdown-box" class="alert alert-info align-items-center justify-content-between mb-3">
       <div>
-        <strong>🤖 Daten werden aktualisiert...</strong>
-        <span class="ms-2">Bitte warten Sie, bis die neuesten Daten geladen sind.</span>
+        <strong>🤖 Prüfe auf neue Daten...</strong>
+        <span class="ms-2">data.json wird vom Server neu geladen.</span>
       </div>
-      <div class="fw-bold fs-4 text-primary ms-3"><span id="timer">25</span>s</div>
+      <div class="fw-bold fs-4 text-primary ms-3"><span id="timer">10</span>s</div>
     </div>
 
     <div class="table-responsive">
@@ -67,13 +67,13 @@
       const updateSpan = document.getElementById('last-update');
 
       try {
-        // Önbelleği (cache) tamamen kırıyoruz: 'no-store' ve rastgele timestamp parametresi
+        // Cache bypass: Rastgele bir t parametresi veriyoruz ki tarayıcı eskiyi çekmesin
         const response = await fetch('./data.json?t=' + new Date().getTime(), {
-          cache: 'no-store'
+          cache: 'no-cache'
         });
 
         if (!response.ok) {
-          throw new Error(`HTTP Hata koda: ${response.status}`);
+          throw new Error(`HTTP Hata kodu: ${response.status}`);
         }
 
         const data = await response.json();
@@ -113,7 +113,7 @@
       } catch (err) {
         console.error("Yükleme hatası:", err);
         updateSpan.innerText = 'Fehler beim Laden';
-        tbody.innerHTML = `<tr><td colspan="5" class="text-center text-danger py-4">Veri çekilemedi: ${err.message}</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="5" class="text-center text-danger py-4">Veri okunamadı: ${err.message}</td></tr>`;
       }
     }
 
@@ -125,7 +125,7 @@
       btn.disabled = true;
       box.style.display = 'flex';
 
-      let timeLeft = 25;
+      let timeLeft = 10;
       timerSpan.innerText = timeLeft;
 
       const countdown = setInterval(() => {
@@ -136,7 +136,7 @@
           clearInterval(countdown);
           box.style.display = 'none';
           btn.disabled = false;
-          // Süre bittiğinde kesin olarak data.json'ı tekrar oku
+          // Yeni veriyi çeker
           loadData();
         }
       }, 1000);
@@ -153,7 +153,6 @@
       });
     }
 
-    // İlk açılışta veriyi yükle
     loadData();
   </script>
 </body>
