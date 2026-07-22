@@ -14,18 +14,31 @@
     .bg-pruefung { background-color: #fff3cd; color: #664d03; }
     .bg-nicht { background-color: #f8d7da; color: #842029; }
     .bg-default { background-color: #e2e3e5; color: #41464b; }
+    #countdown-box { display: none; }
   </style>
 </head>
 <body>
   <div class="container card p-4">
-    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-2">
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
       <div>
         <h2 class="fw-bold mb-1">LSA Anfragen (Leads)</h2>
         <span id="last-update" class="text-muted small">Yükleniyor...</span>
       </div>
-      <div class="d-flex gap-2">
-        <input type="text" id="searchInput" onkeyup="filterTable()" class="form-control" placeholder="Suchen (Telefon, Ort...)...">
+      <div class="d-flex gap-2 align-items-center">
+        <input type="text" id="searchInput" onkeyup="filterTable()" class="form-control" placeholder="Suchen...">
+        <button id="btn-refresh" onclick="startLiveScrape()" class="btn btn-primary text-nowrap">
+          🔄 Jetzt Aktualisieren
+        </button>
       </div>
+    </div>
+
+    <!-- Geri Sayım Kutusu (Gizli Başlar) -->
+    <div id="countdown-box" class="alert alert-info d-flex align-items-center justify-content-between mb-3">
+      <div>
+        <strong>🤖 Live-Scraper läuft...</strong>
+        <span class="ms-2">Daten werden von Google LSA abgerufen. Bitte warten...</span>
+      </div>
+      <div class="fw-bold fs-4 text-primary"><span id="timer">20</span>s</div>
     </div>
 
     <div class="table-responsive">
@@ -47,16 +60,17 @@
   </div>
 
   <script>
+    // GitHub Repo Bilgileri
+    const GITHUB_OWNER = 'sicherteam';
+    const GITHUB_REPO = 'osman-reklam';
+    const WORKFLOW_ID = 'scraper.yml'; // Workflow dosya adı
+
     async function loadData() {
       try {
         const response = await fetch('./data.json?v=' + Date.now());
-        
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status} - data.json okunamadı`);
-        }
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
         const data = await response.json();
-
         document.getElementById('last-update').innerText = 'Letztes Update: ' + (data.updatedAt || '-');
 
         const tbody = document.getElementById('lead-table-body');
@@ -68,7 +82,6 @@
         }
 
         data.leads.forEach(lead => {
-          // Status metnini temizle (help_outline vb. kaldırmak için)
           let rawStatus = lead.status || '';
           let cleanStatus = rawStatus.split('\n')[0].trim();
           
@@ -95,14 +108,47 @@
       } catch (err) {
         console.error(err);
         document.getElementById('last-update').innerText = 'Fehler beim Laden';
-        document.getElementById('lead-table-body').innerHTML = `
-          <tr>
-            <td colspan="5" class="text-center py-4 text-danger">
-              <strong>Veri yüklenemedi!</strong><br>
-              <small class="text-muted">${err.message}</small>
-            </td>
-          </tr>`;
       }
+    }
+
+    // Geri Sayım ve Güncelleme Mantığı
+    function startLiveScrape() {
+      const token = prompt("Lütfen Güncelleme Yetki Anahtarını (GitHub Fine-grained PAT) giriniz:\n(Boş bırakırsanız sadece bekleyip data.json'u tekrar okur)");
+      
+      const btn = document.getElementById('btn-refresh');
+      const box = document.getElementById('countdown-box');
+      const timerSpan = document.getElementById('timer');
+
+      btn.disabled = true;
+      box.style.display = 'flex';
+
+      // Eğer Token girildiyse GitHub Actions'ı tetikle
+      if (token) {
+        fetch(`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/actions/workflows/${WORKFLOW_ID}/dispatches`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/vnd.github+json',
+            'Authorization': `Bearer ${token}`,
+          },
+          body: JSON.stringify({ ref: 'main' })
+        }).catch(err => console.error("Tetikleme hatası:", err));
+      }
+
+      let timeLeft = 25; // Scraper + Commit süresi ortalama 20-25 saniye sürer
+      timerSpan.innerText = timeLeft;
+
+      const countdown = setInterval(() => {
+        timeLeft--;
+        timerSpan.innerText = timeLeft;
+
+        if (timeLeft <= 0) {
+          clearInterval(countdown);
+          box.style.display = 'none';
+          btn.disabled = false;
+          // Yeni çekilen data.json'u yükle
+          loadData();
+        }
+      }, 1000);
     }
 
     function filterTable() {
