@@ -13,12 +13,12 @@ const puppeteer = require('puppeteer-core');
     });
     
     const page = await browser.newPage();
-
-    // 1. ZAMAN DİLİMİNİ AVUSTURYA / VİYANA YAP (Saat kaymasını önler)
-    await page.emulateTimezone('Europe/Vienna');
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
 
-    // 2. Çerezleri Yükle
+    // 1. Önce Google ana sayfasına git (Domain çerezlerinin tanınması için)
+    await page.goto('https://ads.google.com/ups/routing?source=206&subid=xs-ip-gemini-adlt', { waitUntil: 'domcontentloaded' });
+
+    // 2. Çerezleri Temizle ve Yükle
     const rawCookies = JSON.parse(process.env.GOOGLE_COOKIES);
     const cleanedCookies = rawCookies.map(cookie => {
       const c = { ...cookie };
@@ -35,46 +35,43 @@ const puppeteer = require('puppeteer-core');
     const targetUrl = 'https://ads.google.com/localservices/inbox?cid=2903573653&bid=10985702078&pid=9999999999&euid=3547106212&hl=de-AT&gl=AT';
     console.log("LSA Inbox sayfasına gidiliyor...");
     
-    await page.goto(targetUrl, { waitUntil: 'networkidle2' });
+    await page.goto(targetUrl, { waitUntil: 'domcontentloaded' });
 
     // Yüklenme Beklemesi
-    await new Promise(resolve => setTimeout(resolve, 7000));
+    await new Promise(resolve => setTimeout(resolve, 8000));
 
-    // 4. Temiz Verileri Çek
+    console.log("Mevcut URL:", page.url());
+    console.log("Sayfa Başlığı:", await page.title());
+
+    // Oturum Kontrolü
+    if (page.url().includes('accounts.google.com')) {
+      console.error("HATA: Çerezler geçersiz veya süresi dolmuş. Lütfen yeni çerez aktarın!");
+      await browser.close();
+      process.exit(1);
+    }
+
+    // 4. Tablo Verilerini Çek
     const leads = await page.evaluate(() => {
       let data = [];
-      const rows = document.querySelectorAll('table tbody tr, tr[role="row"], div[role="row"]');
+      const rows = document.querySelectorAll('tr, [role="row"]');
       
-      // Avusturya Telefon Numarası Formatı Kontrolü (Örn: 0676, 0664, 0699, 076, 0681 vb.)
-      const phoneRegex = /^(06\d{2}|07\d{2}|068\d)\s?[\d\s]+$/;
-
       rows.forEach(row => {
-        const cells = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
+        const cells = Array.from(row.querySelectorAll('td, [role="gridcell"]'));
         
-        if (cells.length >= 6) {
-          const rawPhone = cells[0]?.innerText?.trim() || '';
+        if (cells.length >= 5) {
+          const firstCell = cells[0]?.innerText?.trim() || '';
           
-          // SADECE gerçek telefon numarası olan satırları filtrele
-          if (phoneRegex.test(rawPhone)) {
+          if (firstCell && !firstCell.toLowerCase().includes('kunde')) {
             const jobType = cells[1]?.innerText?.trim() || '-';
             const location = cells[3]?.innerText?.trim() || '-';
             
-            // "Wird überprüft\nhelp_outline" gibi icon yazılarını temizle
             let status = cells[5]?.innerText?.trim() || '-';
             status = status.replace(/\n?help_outline/g, '').trim();
 
-            // Tarih ve saat hücresini bul
-            let date = '-';
-            for (let i = 6; i < cells.length; i++) {
-              const cellText = cells[i]?.innerText?.trim() || '';
-              if (/\d{2}\.\d{2}\.\d{2}/.test(cellText)) {
-                date = cellText.replace(/\n/g, ' '); // Alt satıra geçen saatleri tek satıra al
-                break;
-              }
-            }
+            let date = cells[6]?.innerText?.trim() || cells[5]?.innerText?.trim() || '-';
 
             data.push({
-              phone: rawPhone,
+              phone: firstCell,
               jobType,
               location,
               status,
