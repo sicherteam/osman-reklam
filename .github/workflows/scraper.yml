@@ -2,9 +2,12 @@ name: LSA Lead Scraper Automation
 
 on:
   schedule:
-    # Her saat başı otomatik çalışır
     - cron: '0 * * * *'
-  workflow_dispatch: # Manuel tetikleme butonu
+  workflow_dispatch:
+
+# Repoya yazma izni
+permissions:
+  contents: write
 
 jobs:
   run-scraper:
@@ -12,10 +15,10 @@ jobs:
 
     steps:
       - name: Repositori Kodlarını Çek
-        uses: actions/checkout@v4.2.0
+        uses: actions/checkout@v4
 
       - name: Node.js Kurulumu
-        uses: actions/setup-node@v4.2.0
+        uses: actions/setup-node@v4
         with:
           node-version: '24'
 
@@ -30,7 +33,12 @@ jobs:
       - name: Scraper Scriptini Çalıştır
         env:
           GOOGLE_COOKIES: ${{ secrets.GOOGLE_COOKIES }}
-          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
-          GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
-          GOOGLE_PRIVATE_KEY: ${{ secrets.GOOGLE_PRIVATE_KEY }}
         run: node scraper.js
+
+      - name: data.json Dosyasını Repoya Commit Et
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git commit -m "Automated update: data.json" || exit 0
+          git push
