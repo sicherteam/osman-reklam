@@ -2,9 +2,9 @@ name: LSA Lead Scraper Automation
 
 on:
   schedule:
-    # Her saat başı otomatik çalışır (İsteğe göre değiştirebilirsiniz)
+    # Her saat başı otomatik çalışır
     - cron: '0 * * * *'
-  workflow_dispatch: # GitHub arayüzünden manuel tetikleme butonu ekler
+  workflow_dispatch: # Manuel tetikleme butonu
 
 jobs:
   run-scraper:
@@ -12,13 +12,12 @@ jobs:
 
     steps:
       - name: Repositori Kodlarını Çek
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.0
 
       - name: Node.js Kurulumu
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4.2.0
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: '24'
 
       - name: Google Chrome Kurulumu
         run: |
