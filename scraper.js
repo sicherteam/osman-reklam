@@ -123,17 +123,16 @@ async function loadCookies(page) {
     const pageTitle = await page.title();
     console.log("Sayfa Başlığı:", pageTitle);
 
-    if (pageTitle.includes("Anmelden") || pageTitle.includes("Sign in")) {
-      throw new Error("Oturum açılamadı! Çerezlerin süresi dolmuş veya geçersiz.");
-    }
-
-    // Taze çerezleri kaydet
-    try {
-      const freshCookies = await page.cookies();
-      fs.writeFileSync('updated_cookies.json', JSON.stringify(freshCookies, null, 2));
-      console.log("✅ Güncellenmiş taze çerezler 'updated_cookies.json' dosyasına kaydedildi.");
-    } catch (cookieErr) {
-      console.warn("⚠️ Çerezler güncellenirken hata oluştu:", cookieErr.message);
+    // KORUMA KALKANI 1: Genişletilmiş Hata ve Yönlendirme Kontrolü
+    if (
+      pageTitle.includes("Anmelden") || 
+      pageTitle.includes("Sign in") || 
+      pageTitle.includes("YouTube") || 
+      pageTitle.includes("Error") || 
+      pageTitle.includes("504") || 
+      pageTitle.includes("Serverfehler")
+    ) {
+      throw new Error(`❌ Oturum açılamadı veya Google engelledi! Başlık: ${pageTitle}`);
     }
 
     console.log("Sayfa içeriğinin yüklenmesi ve yumuşak scroll bekleniyor...");
@@ -198,6 +197,11 @@ async function loadCookies(page) {
     });
 
     console.log(`📊 Gerçek Lead Sayısı: ${validRowsIndices.length}`);
+
+    // KORUMA KALKANI 2: 0 Veri Kontrolü
+    if (validRowsIndices.length === 0) {
+      throw new Error("❌ Sayfada hiçbir mesaj bulunamadı! Sayfa tam yüklenmemiş veya Google engellemiş olabilir. Eski verileri korumak için işlem iptal ediliyor.");
+    }
 
     let leads = [];
 
@@ -295,6 +299,15 @@ async function loadCookies(page) {
 
     fs.writeFileSync('data.json', JSON.stringify(outputData, null, 2));
     console.log(`🎉 İŞLEM TAMAM! Toplam ${adjustedLeads.length} veri temiz bir şekilde data.json dosyasına yazıldı.`);
+
+    // KORUMA KALKANI 3: Çerezleri sadece işlem tamamen başarılı olduğunda en son kaydet
+    try {
+      const freshCookies = await page.cookies();
+      fs.writeFileSync('updated_cookies.json', JSON.stringify(freshCookies, null, 2));
+      console.log("✅ Güncellenmiş taze çerezler 'updated_cookies.json' dosyasına başarıyla kaydedildi.");
+    } catch (cookieErr) {
+      console.warn("⚠️ Çerezler güncellenirken hata oluştu:", cookieErr.message);
+    }
 
     await browser.close();
   } catch (error) {
