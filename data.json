@@ -1,4 +1,165 @@
 {
-  "updatedAt": "22.7.2026, 23:55:40",
-  "leads": []
+  "updatedAt": "23.7.2026, 00:01:58",
+  "leads": [
+    {
+      "phone": "0676 3100739",
+      "jobType": "-",
+      "location": "Ternitz",
+      "status": "Belastet",
+      "date": "21.07.26 17:13",
+      "messageText": "-"
+    },
+    {
+      "phone": "0680 3229763",
+      "jobType": "-",
+      "location": "Kirchberg an der Pielach",
+      "status": "Nicht belastet",
+      "date": "22.07.26 16:35",
+      "messageText": "-"
+    },
+    {
+      "phone": "0699 81496221",
+      "jobType": "-",
+      "location": "Mödling",
+      "status": "Nicht belastet",
+      "date": "22.07.26 15:41",
+      "messageText": "-"
+    },
+    {
+      "phone": "0676 87831603",
+      "jobType": "Baumpflege",
+      "location": "Bad Vöslau",
+      "status": "Belastet",
+      "date": "21.07.26 15:29",
+      "messageText": "-"
+    },
+    {
+      "phone": "0676 5151111",
+      "jobType": "-",
+      "location": "Kottingbrunn",
+      "status": "Belastet",
+      "date": "21.07.26 15:11",
+      "messageText": "-"
+    },
+    {
+      "phone": "0664 1120380",
+      "jobType": "Winterdienst",
+      "location": "Korneuburg",
+      "status": "Nicht belastet",
+      "date": "22.07.26 14:31",
+      "messageText": "-"
+    },
+    {
+      "phone": "076 533 91 40",
+      "jobType": "-",
+      "location": "Gerasdorf bei Wien",
+      "status": "Belastet",
+      "date": "21.07.26 13:11",
+      "messageText": "-"
+    },
+    {
+      "phone": "0699 16335597",
+      "jobType": "-",
+      "location": "Mistelbach",
+      "status": "Belastet",
+      "date": "21.07.26 12:42",
+      "messageText": "-"
+    },
+    {
+      "phone": "0676 7125984",
+      "jobType": "Kunstrasenverlegung",
+      "location": "Wien",
+      "status": "Wird überprüft",
+      "date": "22.07.26 11:57",
+      "messageText": "-"
+    },
+    {
+      "phone": "0664 1802610",
+      "jobType": "-",
+      "location": "Puchberg am Schneeberg",
+      "status": "Belastet",
+      "date": "21.07.26 11:31",
+      "messageText": "-"
+    },
+    {
+      "phone": "0664 6486001",
+      "jobType": "Kunstrasenverlegung",
+      "location": "Wien",
+      "status": "Wird überprüft",
+      "date": "22.07.26 10:09",
+      "messageText": "-"
+    },
+    {
+      "phone": "0681 10766130",
+      "jobType": "-",
+      "location": "Wien",
+      "status": "Nicht belastet",
+      "date": "21.07.26 18:21",
+      "messageText": "-"
+    },
+    {
+      "phone": "0676 7497457",
+      "jobType": "Baumpflege",
+      "location": "Felixdorf",
+      "status": "Nicht belastet",
+      "date": "22.07.26 07:06",
+      "messageText": "-"
+    },
+    {
+      "phone": "0664 4655049",
+      "jobType": "Gartenteiche, Springbrunnen und Wasserspiele",
+      "location": "Strasshof an der Nordbahn",
+      "status": "Nicht belastet",
+      "date": "21.07.26 18:48",
+      "messageText": "-"
+    },
+    {
+      "phone": "0699 19246262",
+      "jobType": "Baumpflege",
+      "location": "Heldenberg",
+      "status": "Belastet",
+      "date": "20.07.26 14:19",
+      "messageText": "-"
+    },
+    {
+      "phone": "0664 2558747",
+      "jobType": "-",
+      "location": "Gloggnitz",
+      "status": "Nicht belastet",
+      "date": "21.07.26 12:37",
+      "messageText": "-"
+    },
+    {
+      "phone": "0676 3305727",
+      "jobType": "Baumfällarbeiten",
+      "location": "Wien",
+      "status": "Nicht belastet",
+      "date": "21.07.26 11:17",
+      "messageText": "-"
+    },
+    {
+      "phone": "0699 12178304",
+      "jobType": "-",
+      "location": "Korneuburg",
+      "status": "Belastet",
+      "date": "20.07.26 11:05",
+      "messageText": "-"
+    },
+    {
+      "phone": "0676 5412117",
+      "jobType": "-",
+      "location": "Wien",
+      "status": "Belastet",
+      "date": "20.07.26 10:15",
+      "messageText": "-"
+    },
+    {
+      "phone": "0664 3535035",
+      "jobType": "-",
+      "location": "Bezirk Sankt Pölten-Land",
+      "status": "Belastet",
+      "date": "20.07.26 10:01",
+      "messageText": "-"
+    }
+  ]
 }
