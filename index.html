@@ -11,17 +11,27 @@
       padding: 15px 10px; 
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     }
+
+    /* Ana Kart - Orijinal Temiz Tasarım */
     .main-card { 
-      border: none; 
+      border: 1px solid #e1e8f0; 
       border-radius: 16px; 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+      background: #ffffff !important; 
     }
+
+    /* Tablo Tasarımı */
+    .table {
+      color: #1e293b;
+    }
+
     .table th { 
-      background-color: #1e293b; 
-      color: #fff; 
+      background-color: #1e293b !important; 
+      color: #fff !important; 
       border: none; 
       padding: 14px; 
     }
+
     .badge-status { 
       font-size: 0.85em; 
       padding: 6px 12px; 
@@ -29,24 +39,31 @@
       font-weight: 600; 
       display: inline-block;
     }
+
     .bg-belastet { background-color: #d1e7dd; color: #0f5132; }
     .bg-pruefung { background-color: #fff3cd; color: #664d03; }
     .bg-nicht { background-color: #f8d7da; color: #842029; }
     .bg-default { background-color: #e2e3e5; color: #41464b; }
     #countdown-box { display: none; }
 
+    /* Mesaj Kutusu Stili */
+    .message-box {
+      background-color: #f8fafc;
+      border-left: 4px solid #0d6efd;
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin-top: 8px;
+      white-space: pre-line;
+    }
+
     /* --- MOBİL UYUM ÖZELLEŞTİRMELERİ --- */
     @media (max-width: 767.98px) {
       body { padding: 10px 5px; }
       .main-card { padding: 1.25rem !important; border-radius: 12px; }
       
-      /* Masaüstü tablosunu mobilde gizle */
       .desktop-table-view { display: none !important; }
-      
-      /* Mobil Kart Görünümü Container'ı */
       .mobile-cards-view { display: flex; flex-direction: column; gap: 12px; }
       
-      /* Mobil Lead Kartı */
       .lead-card {
         background: #ffffff;
         border: 1px solid #e2e8f0;
@@ -68,19 +85,11 @@
         margin-bottom: 6px;
         font-size: 0.9em;
       }
-      .lead-card-label {
-        color: #64748b;
-        font-weight: 500;
-      }
-      .lead-card-value {
-        font-weight: 600;
-        color: #1e293b;
-        text-align: right;
-      }
+      .lead-card-label { color: #64748b; font-weight: 500; }
+      .lead-card-value { font-weight: 600; color: #1e293b; text-align: right; }
     }
 
     @media (min-width: 768px) {
-      /* Masaüstünde mobil kart görünümünü gizle */
       .mobile-cards-view { display: none !important; }
     }
   </style>
@@ -97,7 +106,7 @@
       </div>
       <div class="col-12 col-md-6">
         <div class="d-flex flex-column flex-sm-row gap-2">
-          <input type="text" id="searchInput" onkeyup="filterTable()" class="form-control" placeholder="Suchen (Telefon, Ort...)...">
+          <input type="text" id="searchInput" onkeyup="filterTable()" class="form-control" placeholder="Suchen (Telefon, Ort, Nachricht...)...">
           <button id="btn-refresh" onclick="startLiveScrape()" class="btn btn-primary text-nowrap">
             🔄 Daten neu laden
           </button>
@@ -116,7 +125,7 @@
 
     <!-- MASAÜSTÜ TABLO GÖRÜNÜMÜ -->
     <div class="table-responsive desktop-table-view">
-      <table class="table table-hover align-middle" id="leadTable">
+      <table class="table align-middle" id="leadTable">
         <thead>
           <tr>
             <th>Telefon</th>
@@ -124,10 +133,11 @@
             <th>Konum</th>
             <th>Durum</th>
             <th>Tarih</th>
+            <th>Aksiyon</th>
           </tr>
         </thead>
         <tbody id="lead-table-body">
-          <tr><td colspan="5" class="text-center py-4">Veriler yükleniyor...</td></tr>
+          <tr><td colspan="6" class="text-center py-4">Veriler yükleniyor...</td></tr>
         </tbody>
       </table>
     </div>
@@ -138,7 +148,22 @@
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    function cleanMessageText(text) {
+      if (!text || text === '-' || text.trim() === '') return null;
+      
+      let cleaned = text
+        .split('Wird geladen')[0]
+        .split('Audioinhalte')[0]
+        .split('Hier dem Kunden')[0]
+        .replace(/^P\n+/g, '')
+        .replace(/^\d{2}\.\d{2}\.\d{2}\n+/g, '')
+        .trim();
+
+      return cleaned.length > 0 ? cleaned : null;
+    }
+
     async function loadData() {
       const tbody = document.getElementById('lead-table-body');
       const cardsBody = document.getElementById('lead-cards-body');
@@ -161,12 +186,12 @@
 
         if (!data.leads || data.leads.length === 0) {
           const emptyMsg = '<div class="text-center py-4 text-muted">Keine Daten vorhanden.</div>';
-          tbody.innerHTML = `<tr><td colspan="5" class="text-center py-4 text-muted">Keine Daten vorhanden.</td></tr>`;
+          tbody.innerHTML = `<tr><td colspan="6" class="text-center py-4 text-muted">Keine Daten vorhanden.</td></tr>`;
           cardsBody.innerHTML = emptyMsg;
           return;
         }
 
-        data.leads.forEach(lead => {
+        data.leads.forEach((lead, index) => {
           let rawStatus = lead.status || '';
           let cleanStatus = rawStatus.split('\n')[0].trim();
           
@@ -179,7 +204,14 @@
             badgeClass = 'bg-nicht';
           }
 
-          // 1. Masaüstü Tablo Satırı
+          const cleanedMsg = cleanMessageText(lead.messageText);
+
+          const msgButton = cleanedMsg ? `
+            <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#msg-desktop-${index}">
+              💬 Nachricht
+            </button>
+          ` : '<span class="text-muted small">-</span>';
+
           const row = `
             <tr>
               <td><a href="tel:${lead.phone}" class="fw-bold text-decoration-none">${lead.phone}</a></td>
@@ -187,11 +219,28 @@
               <td>${lead.location || '-'}</td>
               <td><span class="badge badge-status ${badgeClass}">${cleanStatus}</span></td>
               <td class="text-muted small">${lead.date || '-'}</td>
+              <td>${msgButton}</td>
             </tr>
+            ${cleanedMsg ? `
+              <tr class="collapse" id="msg-desktop-${index}">
+                <td colspan="6" class="p-3">
+                  <div class="message-box">
+                    <strong class="text-primary small d-block mb-1">💬 Kundennachricht:</strong>
+                    <div class="small text-dark">${cleanedMsg}</div>
+                  </div>
+                </td>
+              </tr>
+            ` : ''}
           `;
           tbody.innerHTML += row;
 
-          // 2. Mobil Kart Satırı
+          const mobileMsgHTML = cleanedMsg ? `
+            <div class="message-box mt-2">
+              <strong class="text-primary small d-block mb-1">💬 Nachricht:</strong>
+              <div class="small text-dark">${cleanedMsg}</div>
+            </div>
+          ` : '';
+
           const card = `
             <div class="lead-card searchable-item">
               <div class="lead-card-header">
@@ -211,6 +260,7 @@
                 <span class="lead-card-label">Konum:</span>
                 <span class="lead-card-value">${lead.location || '-'}</span>
               </div>
+              ${mobileMsgHTML}
             </div>
           `;
           cardsBody.innerHTML += card;
@@ -220,7 +270,7 @@
         console.error("Yükleme hatası:", err);
         updateSpan.innerText = 'Fehler beim Laden';
         const errorMsg = `Veri okunamadı: ${err.message}`;
-        tbody.innerHTML = `<tr><td colspan="5" class="text-center text-danger py-4">${errorMsg}</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="6" class="text-center text-danger py-4">${errorMsg}</td></tr>`;
         cardsBody.innerHTML = `<div class="text-center text-danger py-4">${errorMsg}</div>`;
       }
     }
@@ -253,14 +303,12 @@
       const input = document.getElementById('searchInput');
       const filter = input.value.toLowerCase();
       
-      // Masaüstü Tablo Araması
       const rows = document.querySelectorAll('#lead-table-body tr');
       rows.forEach(row => {
         const text = row.innerText.toLowerCase();
         row.style.display = text.includes(filter) ? '' : 'none';
       });
 
-      // Mobil Kart Araması
       const cards = document.querySelectorAll('#lead-cards-body .searchable-item');
       cards.forEach(card => {
         const text = card.innerText.toLowerCase();
