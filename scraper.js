@@ -13,8 +13,6 @@ const puppeteer = require('puppeteer-core');
     });
     
     const page = await browser.newPage();
-
-    // Standard User-Agent
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
 
     // 1. Çerezleri Yükle
@@ -36,55 +34,50 @@ const puppeteer = require('puppeteer-core');
     
     await page.goto(targetUrl, { waitUntil: 'domcontentloaded' });
 
-    // 3. Tablo Yüklenene Kadar Bekle (Max 15 saniye)
-    console.log("Tablonun DOM'a yüklenmesi bekleniyor...");
-    try {
-      await page.waitForSelector('table, [role="row"], div[role="gridcell"]', { timeout: 15000 });
-    } catch (e) {
-      console.log("Uyarı: Belirtilen tablo seçicisi zaman aşımına uğradı, sabit bekleme yapılıyor...");
+    // Sayfa Yüklenme Beklemesi
+    await new Promise(resolve => setTimeout(resolve, 8000));
+
+    console.log("Mevcut URL:", page.url());
+    console.log("Sayfa Başlığı:", await page.title());
+
+    // 3. Iframe ve DOM Taraması
+    const frames = page.frames();
+    console.log(`Sayfadaki Toplam Frame/Iframe Sayısı: ${frames.length}`);
+
+    let allLeads = [];
+
+    // Tüm Çerçeveleri (Main Page + Iframes) Tara
+    for (let i = 0; i < frames.length; i++) {
+      const frame = frames[i];
+      try {
+        const frameData = await frame.evaluate(() => {
+          let found = [];
+          // Metin içinden Avusturya telefon numarası kalıplarını bul
+          const text = document.body.innerText || '';
+          const matches = text.match(/(?:06\d{2}|07\d{2}|068\d)[\s\d\/]{6,12}/g);
+          
+          if (matches) {
+            matches.forEach(m => found.push(m.trim()));
+          }
+          return {
+            title: document.title,
+            phones: found,
+            sampleText: text.substring(0, 300).replace(/\n/g, ' ')
+          };
+        });
+
+        console.log(`--- Frame ${i} (${frameData.title}) ---`);
+        console.log(`Örnek Metin: ${frameData.sampleText}`);
+        if (frameData.phones.length > 0) {
+          console.log(`Frame ${i} içinde bulunan numaralar:`, frameData.phones);
+          allLeads.push(...frameData.phones);
+        }
+      } catch (err) {
+        // Cross-origin iframe erişim hatalarını yut
+      }
     }
 
-    // Ekranın tam oturması için ilave 5 saniye bekleme
-    await new Promise(resolve => setTimeout(resolve, 5000));
-
-    // 4. Verileri Çek
-    const leads = await page.evaluate(() => {
-      let data = [];
-      
-      // Sayfadaki tüm satır benzeri yapıları topla
-      const rows = document.querySelectorAll('tr, [role="row"]');
-      
-      rows.forEach(row => {
-        const cells = Array.from(row.querySelectorAll('td, [role="gridcell"]'));
-        
-        if (cells.length >= 5) {
-          const firstCell = cells[0]?.innerText?.trim() || '';
-          
-          // İlk hücre boş değilse ve "Kunde" (başlık) değilse al
-          if (firstCell && !firstCell.toLowerCase().includes('kunde')) {
-            const jobType = cells[1]?.innerText?.trim() || '-';
-            const location = cells[3]?.innerText?.trim() || '-';
-            
-            let status = cells[5]?.innerText?.trim() || '-';
-            status = status.replace(/\n?help_outline/g, '').trim();
-
-            let date = cells[6]?.innerText?.trim() || cells[5]?.innerText?.trim() || '-';
-
-            data.push({
-              phone: firstCell,
-              jobType,
-              location,
-              status,
-              date
-            });
-          }
-        }
-      });
-      return data;
-    });
-
-    console.log("Çekilen Canlı Veri Sayısı:", leads.length);
-    console.log("Çekilen Canlı Veriler:", JSON.stringify(leads, null, 2));
+    console.log("Toplam Bulunan Numaralar:", [...new Set(allLeads)]);
 
     await browser.close();
   } catch (error) {
