@@ -1,9 +1,10 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
 
 (async () => {
   try {
     const browser = await puppeteer.launch({
       headless: "new",
+      executablePath: '/usr/bin/google-chrome', // GitHub runner'daki Chrome yolu
       args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
     
