@@ -8,89 +8,63 @@ const puppeteer = require('puppeteer-core');
       args: [
         '--no-sandbox', 
         '--disable-setuid-sandbox',
-        '--disable-blink-features=AutomationControlled',
-        '--disable-infobars',
-        '--window-size=1920,1080'
+        '--disable-blink-features=AutomationControlled' // Bot tespitini engellemek için
       ]
     });
     
     const page = await browser.newPage();
-    
-    // Webdriver izini gizle (Google bot algılamasını aşmak için)
-    await page.evaluateOnNewDocument(() => {
-      Object.defineProperty(navigator, 'webdriver', { get: () => false });
-    });
 
+    // User-Agent belirleyerek bot olarak algılanmayı önle
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-    await page.setViewport({ width: 1920, height: 1080 });
 
-    // 1. Çerezleri İşle
+    // 1. Çerezleri Ayarla ve Temizle
     const rawCookies = JSON.parse(process.env.GOOGLE_COOKIES);
-    const cleanedCookies = rawCookies.map(cookie => {
-      const c = { ...cookie };
-      delete c.hostOnly;
-      delete c.storeId;
-      if (c.sameSite === 'unspecified' || c.sameSite === 'no_restriction') delete c.sameSite;
-      if (c.domain && c.domain.startsWith('.')) c.domain = c.domain.substring(1);
-      return c;
+    const cookies = rawCookies.map(cookie => {
+      // Puppeteer uyumluluğu için bazı hassas alanları düzelt
+      const cleaned = { ...cookie };
+      if (cleaned.sameSite === 'no_restriction' || cleaned.sameSite === 'unspecified') {
+        delete cleaned.sameSite;
+      }
+      return cleaned;
     });
 
-    // 2. Çerezleri Önce Temiz Bir Google Domain'inde Tanımla
-    console.log("Çerezler yükleniyor...");
-    await page.goto('https://www.google.com', { waitUntil: 'domcontentloaded' });
-    await page.setCookie(...cleanedCookies);
+    await page.setCookie(...cookies);
 
-    // 3. Oturum Kontrolü İçin Ads Ana Sayfasına Git
-    console.log("Ads oturumu doğrulanıyor...");
-    await page.goto('https://ads.google.com/nav/selectaccount', { waitUntil: 'domcontentloaded' });
-    await new Promise(resolve => setTimeout(resolve, 3000));
-
-    // 4. Doğrudan Hedef LSA Inbox URL'sine Git
+    // 2. LSA Inbox URL'sine git
     const targetUrl = 'https://ads.google.com/localservices/inbox?cid=2903573653&bid=10985702078&pid=9999999999&euid=3547106212&hl=de-AT&gl=AT';
-    console.log("LSA Inbox sayfasına yönlendiriliyor...");
+    console.log("LSA Inbox sayfasına gidiliyor...");
     
-    await page.goto(targetUrl, { waitUntil: 'domcontentloaded' });
+    await page.goto(targetUrl, { waitUntil: 'networkidle2' });
 
-    // Sayfa Yüklenme Beklemesi (SPA İçeriğinin Render Edilmesi İçin)
-    await new Promise(resolve => setTimeout(resolve, 8000));
-
+    // Sayfa başlığını kontrol et
+    const pageTitle = await page.title();
+    console.log("Sayfa Başlığı:", pageTitle);
     console.log("Mevcut URL:", page.url());
-    console.log("Sayfa Başlığı:", await page.title());
 
-    // Oturum Kontrolü
-    if (page.url().includes('accounts.google.com')) {
-      console.error("HATA: Çerezler Google güvenlik duvarı/IP kısıtlaması nedeniyle reddedildi!");
-      await browser.close();
-      process.exit(1);
+    // Eğer hala giriş ekranına yönlendiriliyorsa hata verip durdur
+    if (pageTitle.includes("Anmelden") || pageTitle.includes("Sign in")) {
+      throw new Error("Oturum açılamadı! GOOGLE_COOKIES süresi dolmuş veya geçersiz. Lütfen yeni çerez yükleyin.");
     }
 
-    // 5. Tablo Verilerini Çek
+    // 3. İçeriğin tam yüklenmesi için bekle
+    await new Promise(resolve => setTimeout(resolve, 8000));
+
+    // 4. Verileri Tara
     const leads = await page.evaluate(() => {
       let data = [];
-      const rows = document.querySelectorAll('tr, [role="row"]');
+      const rows = document.querySelectorAll('[role="row"], tr');
       
       rows.forEach(row => {
-        const cells = Array.from(row.querySelectorAll('td, [role="gridcell"]'));
-        
+        const cells = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
         if (cells.length >= 5) {
-          const firstCell = cells[0]?.innerText?.trim() || '';
-          
-          if (firstCell && !firstCell.toLowerCase().includes('kunde')) {
-            const jobType = cells[1]?.innerText?.trim() || '-';
-            const location = cells[3]?.innerText?.trim() || '-';
-            
-            let status = cells[5]?.innerText?.trim() || '-';
-            status = status.replace(/\n?help_outline/g, '').trim();
+          const phone = cells[0]?.innerText?.trim() || '';
+          const jobType = cells[1]?.innerText?.trim() || '-';
+          const location = cells[3]?.innerText?.trim() || '-';
+          const status = cells[5]?.innerText?.trim() || '-';
+          const date = cells[6]?.innerText?.trim() || '-';
 
-            let date = cells[6]?.innerText?.trim() || cells[5]?.innerText?.trim() || '-';
-
-            data.push({
-              phone: firstCell,
-              jobType,
-              location,
-              status,
-              date
-            });
+          if (phone && phone !== 'Kunde') {
+            data.push({ phone, jobType, location, status, date });
           }
         }
       });
