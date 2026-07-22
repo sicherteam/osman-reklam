@@ -62,9 +62,7 @@ const puppeteer = require('puppeteer-core');
           const status = cells[5]?.innerText?.trim() || '-';
           const date = cells[6]?.innerText?.trim() || '-';
 
-          // FİLTRELEME:
-          // 1. Telefon alanı sadece sayı veya kısa indeks (ör. "6", "13") olmamalı.
-          // 2. Gerçek bir telefon formatı (içinde boşluk veya en az 5 rakam barındıran) içermeli.
+          // FİLTRELEME: Yalnızca en az 5 rakam barındıran gerçek telefonları al
           const isRealPhone = /\d{5,}/.test(phone.replace(/\s+/g, ''));
 
           if (phone && phone !== 'Kunde' && isRealPhone) {
@@ -75,36 +73,35 @@ const puppeteer = require('puppeteer-core');
       return data;
     });
 
-    // 5. Saate +2 Saat Ekleme İşlemi (Node.js tarafında güvenli dönüşüm)
+    // 5. Saate +2 Saat Ekleme ve 24 Saatlik (Avrupa) Formatına Çevirme
     const adjustedLeads = rawLeads.map(lead => {
       if (lead.date && lead.date.includes(':')) {
-        // Örnek format: "21.07.26 11:11 AM"
-        const match = lead.date.match(/(\d{2})\.(\d{2})\.(\d{2})\s(\d{1,2}):(\d{2})\s(AM|PM)/i);
+        // Örnek giriş formatı: "21.07.26 11:11 AM" veya "21.07.26 11:11 PM"
+        const match = lead.date.match(/(\d{2})\.(\d{2})\.(\d{2})\s(\d{1,2}):(\d{2})\s?(AM|PM)?/i);
         
         if (match) {
           let [ , day, month, year, hours, minutes, ampm ] = match;
           hours = parseInt(hours, 10);
           
-          // 12 saatlik (AM/PM) formatı 24 saatliğe çevir
-          if (ampm.toUpperCase() === 'PM' && hours < 12) hours += 12;
-          if (ampm.toUpperCase() === 'AM' && hours === 12) hours = 0;
+          if (ampm) {
+            // AM/PM varsa 24 saatlik düzene çevir
+            if (ampm.toUpperCase() === 'PM' && hours < 12) hours += 12;
+            if (ampm.toUpperCase() === 'AM' && hours === 12) hours = 0;
+          }
           
-          // Saate +2 saat ekle (JavaScript gün/ay değişimlerini otomatik yönetir)
+          // Saate +2 ekle (gün/ay taşmalarını Date nesnesi otomatik halleder)
           const dateObj = new Date(2000 + parseInt(year, 10), parseInt(month, 10) - 1, parseInt(day, 10), hours + 2, parseInt(minutes, 10));
           
-          // Tekrar LSA formatına geri çevir (DD.MM.YY HH:MM AM/PM)
+          // Avrupa formatına (DD.MM.YY HH:MM) dönüştür
           const newDay = String(dateObj.getDate()).padStart(2, '0');
           const newMonth = String(dateObj.getMonth() + 1).padStart(2, '0');
           const newYear = String(dateObj.getFullYear()).slice(-2);
-          
-          let newHours = dateObj.getHours();
-          const newAmPm = newHours >= 12 ? 'PM' : 'AM';
-          newHours = newHours % 12 || 12;
+          const newHours = String(dateObj.getHours()).padStart(2, '0');
           const newMins = String(dateObj.getMinutes()).padStart(2, '0');
           
           return {
             ...lead,
-            date: `${newDay}.${newMonth}.${newYear} ${newHours}:${newMins} ${newAmPm}`
+            date: `${newDay}.${newMonth}.${newYear} ${newHours}:${newMins}`
           };
         }
       }
