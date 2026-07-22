@@ -1,0 +1,28 @@
+name: LSA Live Scraper
+
+on:
+  schedule:
+    # Her 5 dakikada bir otomatik çalışır
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Elle tetikleme butonu ekler
+
+jobs:
+  run-scraper:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Depoyu Kopyala
+        uses: actions/checkout@v3
+
+      - name: Node.js Kur
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Paketleri Yükle
+        run: npm install
+
+      - name: Botu Çalıştır
+        env:
+          GOOGLE_COOKIES: ${{ secrets.GOOGLE_COOKIES }}
+        run: node scraper.js
