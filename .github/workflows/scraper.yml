@@ -1,0 +1,37 @@
+name: LSA Lead Scraper Automation
+
+on:
+  schedule:
+    # Her saat başı otomatik çalışır (İsteğe göre değiştirebilirsiniz)
+    - cron: '0 * * * *'
+  workflow_dispatch: # GitHub arayüzünden manuel tetikleme butonu ekler
+
+jobs:
+  run-scraper:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repositori Kodlarını Çek
+        uses: actions/checkout@v4
+
+      - name: Node.js Kurulumu
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Google Chrome Kurulumu
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
+      - name: NPM Bağımlılıklarını Yükle
+        run: npm install
+
+      - name: Scraper Scriptini Çalıştır
+        env:
+          GOOGLE_COOKIES: ${{ secrets.GOOGLE_COOKIES }}
+          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
+          GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
+          GOOGLE_PRIVATE_KEY: ${{ secrets.GOOGLE_PRIVATE_KEY }}
+        run: node scraper.js
