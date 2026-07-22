@@ -55,7 +55,11 @@ const fs = require('fs');
           const phone = cells[0]?.innerText?.trim() || '';
           const jobType = cells[1]?.innerText?.trim() || '-';
           const location = cells[3]?.innerText?.trim() || '-';
-          const status = cells[5]?.innerText?.trim() || '-';
+          
+          // Raw status metnini al ve help_outline gibi ikon yazılarını temizle
+          let rawStatus = cells[5]?.innerText?.trim() || '-';
+          const status = rawStatus.split('\n')[0].trim();
+
           const date = cells[6]?.innerText?.trim() || '-';
 
           const isRealPhone = /\d{5,}/.test(phone.replace(/\s+/g, ''));
@@ -68,6 +72,7 @@ const fs = require('fs');
       return data;
     });
 
+    // Saat ekleme ( +2 ) kaldırılarak doğrudan doğru yerel saat ile ayrıştırılıyor
     const adjustedLeads = rawLeads.map(lead => {
       if (lead.date && lead.date.includes(':')) {
         const match = lead.date.match(/(\d{2})\.(\d{2})\.(\d{2})\s(\d{1,2}):(\d{2})\s?(AM|PM)?/i);
@@ -78,7 +83,10 @@ const fs = require('fs');
             if (ampm.toUpperCase() === 'PM' && hours < 12) hours += 12;
             if (ampm.toUpperCase() === 'AM' && hours === 12) hours = 0;
           }
-          const dateObj = new Date(2000 + parseInt(year, 10), parseInt(month, 10) - 1, parseInt(day, 10), hours + 2, parseInt(minutes, 10));
+          
+          // Manuel +2 eklemesi kaldırıldı:
+          const dateObj = new Date(2000 + parseInt(year, 10), parseInt(month, 10) - 1, parseInt(day, 10), hours, parseInt(minutes, 10));
+          
           return {
             ...lead,
             date: `${String(dateObj.getDate()).padStart(2, '0')}.${String(dateObj.getMonth() + 1).padStart(2, '0')}.${String(dateObj.getFullYear()).slice(-2)} ${String(dateObj.getHours()).padStart(2, '0')}:${String(dateObj.getMinutes()).padStart(2, '0')}`
@@ -88,7 +96,7 @@ const fs = require('fs');
       return lead;
     });
 
-    // Verileri data.json dosyasına yaz
+    // Verileri data.json dosyasına yaz (Son Güncelleme Saati Avusturya/Viyana formatında)
     const outputData = {
       updatedAt: new Date().toLocaleString('de-AT', { timeZone: 'Europe/Vienna' }),
       leads: adjustedLeads
