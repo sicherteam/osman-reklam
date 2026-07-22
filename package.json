@@ -2,8 +2,12 @@
   "name": "lsa-scraper",
   "version": "1.0.0",
   "main": "scraper.js",
+  "scripts": {
+    "start": "node scraper.js"
+  },
   "dependencies": {
-    "puppeteer-core": "^21.0.0",
-    "google-spreadsheet": "^4.0.0"
+    "google-auth-library": "^9.0.0",
+    "google-spreadsheet": "^4.1.2",
+    "puppeteer-core": "^22.0.0"
   }
 }
