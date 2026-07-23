@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const fs = require('fs');
-const path = require('path'); // Dosya yollarını güvenli bulmak için eklendi
+const path = require('path');
 
 puppeteer.use(StealthPlugin());
 
@@ -11,32 +11,27 @@ function parseCleanMessage(rawText) {
     return rawText;
   }
 
-  // 1. En üstteki müşteri ismi ve numarasını yakala
   let customerHeader = "";
   const headerMatch = rawText.match(/(?:Potenzieller Kunde|[A-Z][a-z]+\s+[A-Z][a-z]+)\s+[\d\s]+/i);
   if (headerMatch) {
     customerHeader = headerMatch[0].trim();
   }
 
-  // 2. "Unterhaltung" kelimesinden sonrasını kesip al
   let parts = rawText.split('Unterhaltung');
   let chatContent = parts[parts.length - 1];
 
-  // 3. Alt sistem yazılarını ve butonları temizle
   chatContent = chatContent
     .split('Wird geladen')[0]
     .split('Audioinhalte')[0]
     .split('Hier dem Kunden')[0]
     .trim();
 
-  // 4. Mesajın başındaki profil harfini (P), Potenzieller Kunde yazısını ve tarihi temizle
   chatContent = chatContent
     .replace(/^P\s+/gi, '')
     .replace(/^Potenzieller Kunde\s+/gi, '')
     .replace(/^\d{2}\.\d{2}\.\d{2}\s+/gi, '')
     .trim();
 
-  // Müşteri bilgisi bulunduysa mesajın başına ekle
   if (customerHeader && chatContent) {
     return `[${customerHeader}]\n${chatContent}`;
   }
@@ -44,43 +39,94 @@ function parseCleanMessage(rawText) {
   return chatContent.length > 0 ? chatContent : rawText;
 }
 
+// Çerez dizisindeki en ileri 'expires' (son kullanma) tarihini bulur
+function getLatestExpiry(cookiesArray) {
+  if (!Array.isArray(cookiesArray)) return 0;
+  let maxExp = 0;
+  for (const c of cookiesArray) {
+    if (c.expires && c.expires > maxExp) {
+      maxExp = c.expires;
+    }
+  }
+  return maxExp;
+}
+
 // Çerezleri akıllı ve güvenli bir şekilde yükleyen fonksiyon
 async function loadCookies(page) {
-  let rawCookies = null;
+  let fileCookies = null;
+  let secretCookies = null;
   const cookieFilePath = path.join(__dirname, 'updated_cookies.json');
 
-  // 1. ÖNCELİK: Eğer repoda 'updated_cookies.json' varsa doğrudan onu kullan
+  // 1. Dosyadan çerezleri oku
   if (fs.existsSync(cookieFilePath)) {
-    console.log("📌 Yerel 'updated_cookies.json' dosyası bulundu. Çerezler dosyadan okunuyor...");
     try {
-      const fileContent = fs.readFileSync(cookieFilePath, 'utf8');
-      rawCookies = JSON.parse(fileContent);
+      fileCookies = JSON.parse(fs.readFileSync(cookieFilePath, 'utf8'));
     } catch (err) {
-      console.error(`⚠️ Dosya okuma hatası, Secret'a düşülüyor: ${err.message}`);
+      console.warn(`⚠️ Dosya okuma hatası: ${err.message}`);
     }
   }
 
-  // 2. YEDEK: Eğer dosya yoksa (örn. ilk çalışma) GitHub Secret'ı kullan
-  if (!rawCookies) {
-    console.log("📌 GitHub Secret (GOOGLE_COOKIES_SECRET) kullanılıyor...");
-    if (!process.env.GOOGLE_COOKIES_SECRET || process.env.GOOGLE_COOKIES_SECRET.trim() === '') {
-      throw new Error("❌ Ne updated_cookies.json dosyası ne de GOOGLE_COOKIES_SECRET bulundu!");
+  // 2. Secret'tan çerezleri oku
+  if (process.env.GOOGLE_COOKIES_SECRET && process.env.GOOGLE_COOKIES_SECRET.trim() !== '') {
+    try {
+      secretCookies = JSON.parse(process.env.GOOGLE_COOKIES_SECRET);
+    } catch (err) {
+      console.warn(`⚠️ Secret okuma hatası: ${err.message}`);
     }
-    rawCookies = JSON.parse(process.env.GOOGLE_COOKIES_SECRET);
+  }
+
+  let rawCookiesToUse = null;
+
+  // 3. KIYASLAMA MANTIĞI
+  if (fileCookies && secretCookies) {
+    const fileExp = getLatestExpiry(fileCookies);
+    const secretExp = getLatestExpiry(secretCookies);
+    
+    // Secret'taki çerezlerin son kullanma tarihi daha ilerideyse (demek ki sen manuel güncelledin)
+    if (secretExp > fileExp) {
+      console.log("📌 Secret'taki çerezler dosyadan daha YENİ! Secret kullanılıyor...");
+      rawCookiesToUse = secretCookies;
+    } else {
+      console.log("📌 Yerel 'updated_cookies.json' dosyası güncel. Dosyadan okunuyor...");
+      rawCookiesToUse = fileCookies;
+    }
+  } else if (fileCookies) {
+    console.log("📌 Sadece yerel dosya bulundu, dosyadan okunuyor...");
+    rawCookiesToUse = fileCookies;
+  } else if (secretCookies) {
+    console.log("📌 Sadece Secret bulundu, Secret kullanılıyor...");
+    rawCookiesToUse = secretCookies;
+  } else {
+    throw new Error("❌ Ne updated_cookies.json dosyası ne de GOOGLE_COOKIES_SECRET bulundu!");
   }
 
   try {
-    // Puppeteer'ın hata vermesini önlemek için SameSite alanlarını temizle
-    const cookies = rawCookies.map(cookie => {
+    const cookies = rawCookiesToUse.map(cookie => {
       const cleaned = { ...cookie };
-      if (cleaned.sameSite === 'no_restriction' || cleaned.sameSite === 'unspecified') {
+      
+      // sameSite hatasını kesin çözen mantık
+      if (cleaned.sameSite) {
+        const ss = String(cleaned.sameSite).toLowerCase();
+        if (ss === 'strict') cleaned.sameSite = 'Strict';
+        else if (ss === 'lax') cleaned.sameSite = 'Lax';
+        else if (ss === 'none' || ss === 'no_restriction') cleaned.sameSite = 'None';
+        else delete cleaned.sameSite;
+      } else {
         delete cleaned.sameSite;
       }
+      
+      // Chromium'un çökmesini engelleyen diğer parametre temizlikleri
+      delete cleaned.partitionKey;
+      delete cleaned.size;
+      delete cleaned.priority;
+      delete cleaned.sourceScheme;
+      delete cleaned.sourcePort;
+
       return cleaned;
     });
 
     await page.setCookie(...cookies);
-    console.log(`✅ ${cookies.length} adet çerez tarayıcıya yüklendi.`);
+    console.log(`✅ ${cookies.length} adet temizlenmiş çerez tarayıcıya yüklendi.`);
   } catch (err) {
     throw new Error(`❌ Çerezler tarayıcıya yüklenirken hata oluştu: ${err.message}`);
   }
@@ -112,7 +158,7 @@ async function loadCookies(page) {
 
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
 
-    // YENİ YAPI: Çerezleri yükle (Akıllı Fonksiyonu Çağır)
+    // YENİ YAPI: Çerezleri yükle (Kıyaslamalı Akıllı Fonksiyon)
     await loadCookies(page);
 
     const targetUrl = 'https://ads.google.com/localservices/inbox?cid=2903573653&bid=10985702078&pid=9999999999&euid=3547106212&hl=de-AT&gl=AT';
@@ -303,6 +349,7 @@ async function loadCookies(page) {
     // KORUMA KALKANI 3: Çerezleri sadece işlem tamamen başarılı olduğunda en son kaydet
     try {
       const freshCookies = await page.cookies();
+      // Dosyaya yaz, böylece bir sonraki turda bu yeni çerez okunur
       fs.writeFileSync('updated_cookies.json', JSON.stringify(freshCookies, null, 2));
       console.log("✅ Güncellenmiş taze çerezler 'updated_cookies.json' dosyasına başarıyla kaydedildi.");
     } catch (cookieErr) {
