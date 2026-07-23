@@ -40,107 +40,32 @@ function parseCleanMessage(rawText) {
   return chatContent.length > 0 ? chatContent : rawText;
 }
 
-// Çerez dizisindeki en ileri 'expires' (son kullanma) tarihini bulur
-function getLatestExpiry(cookiesArray) {
-  if (!Array.isArray(cookiesArray)) return 0;
-  let maxExp = 0;
-  for (const c of cookiesArray) {
-    if (c.expires && c.expires > maxExp) {
-      maxExp = c.expires;
-    }
-  }
-  return maxExp;
-}
-
-// Çerezleri akıllı ve güvenli bir şekilde yükleyen fonksiyon
-async function loadCookies(page) {
-  let fileCookies = null;
-  let secretCookies = null;
-  const cookieFilePath = path.join(__dirname, 'updated_cookies.json');
-
-  // 1. Dosyadan çerezleri oku
-  if (fs.existsSync(cookieFilePath)) {
-    try {
-      fileCookies = JSON.parse(fs.readFileSync(cookieFilePath, 'utf8'));
-    } catch (err) {
-      console.warn(`⚠️ Dosya okuma hatası: ${err.message}`);
-    }
-  }
-
-  // 2. Secret'tan çerezleri oku
-  if (process.env.GOOGLE_COOKIES_SECRET && process.env.GOOGLE_COOKIES_SECRET.trim() !== '') {
-    try {
-      secretCookies = JSON.parse(process.env.GOOGLE_COOKIES_SECRET);
-    } catch (err) {
-      console.warn(`⚠️ Secret okuma hatası: ${err.message}`);
-    }
-  }
-
-  let rawCookiesToUse = null;
-
-  // 3. KIYASLAMA MANTIĞI
-  if (fileCookies && secretCookies) {
-    const fileExp = getLatestExpiry(fileCookies);
-    const secretExp = getLatestExpiry(secretCookies);
-    
-    if (secretExp > fileExp) {
-      console.log("📌 Secret'taki çerezler dosyadan daha YENİ! Secret kullanılıyor...");
-      rawCookiesToUse = secretCookies;
-    } else {
-      console.log("📌 Yerel 'updated_cookies.json' dosyası güncel. Dosyadan okunuyor...");
-      rawCookiesToUse = fileCookies;
-    }
-  } else if (fileCookies) {
-    console.log("📌 Sadece yerel dosya bulundu, dosyadan okunuyor...");
-    rawCookiesToUse = fileCookies;
-  } else if (secretCookies) {
-    console.log("📌 Sadece Secret bulundu, Secret kullanılıyor...");
-    rawCookiesToUse = secretCookies;
-  } else {
-    throw new Error("❌ Ne updated_cookies.json dosyası ne de GOOGLE_COOKIES_SECRET bulundu!");
-  }
-
-  try {
-    const cookies = rawCookiesToUse.map(cookie => {
-      const cleaned = { ...cookie };
-      
-      if (cleaned.sameSite) {
-        const ss = String(cleaned.sameSite).toLowerCase();
-        if (ss === 'strict') cleaned.sameSite = 'Strict';
-        else if (ss === 'lax') cleaned.sameSite = 'Lax';
-        else if (ss === 'none' || ss === 'no_restriction') cleaned.sameSite = 'None';
-        else delete cleaned.sameSite;
-      } else {
-        delete cleaned.sameSite;
-      }
-      
-      delete cleaned.partitionKey;
-      delete cleaned.size;
-      delete cleaned.priority;
-      delete cleaned.sourceScheme;
-      delete cleaned.sourcePort;
-
-      return cleaned;
-    });
-
-    await page.setCookie(...cookies);
-    console.log(`✅ ${cookies.length} adet temizlenmiş çerez tarayıcıya yüklendi.`);
-  } catch (err) {
-    throw new Error(`❌ Çerezler tarayıcıya yüklenirken hata oluştu: ${err.message}`);
-  }
-}
-
 (async () => {
   try {
-    const userDataPath = path.join(__dirname, 'user_data');
+    const userDataPath = '/home/ubuntu/mustafa-reklam/user_data';
 
+    // 0. ÇAKIŞMA VE KİLİT DOSYALARINI TEMİZLE
+    try {
+      const singletonLock = path.join(userDataPath, 'SingletonLock');
+      const singletonCookie = path.join(userDataPath, 'SingletonCookie');
+      const singletonSocket = path.join(userDataPath, 'SingletonSocket');
+      
+      if (fs.existsSync(singletonLock)) fs.unlinkSync(singletonLock);
+      if (fs.existsSync(singletonCookie)) fs.unlinkSync(singletonCookie);
+      if (fs.existsSync(singletonSocket)) fs.unlinkSync(singletonSocket);
+    } catch (cleanErr) {
+      console.warn("⚠️ Kilit dosyaları temizlenirken ufak uyarı:", cleanErr.message);
+    }
+
+    // 1. TARAYICIYI BAŞLAT (Canlı profil diziniyle)
     const browser = await puppeteer.launch({
       headless: "new",
       executablePath: '/usr/bin/google-chrome',
-      userDataDir: userDataPath, // <-- KALICI CHROME PROFİLİ EKLENDİ
+      userDataDir: userDataPath, // Kalıcı oturum dizini
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
         '--disable-blink-features=AutomationControlled',
         '--disable-infobars',
         '--window-size=1920,1080',
@@ -159,8 +84,7 @@ async function loadCookies(page) {
 
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
 
-    // YENİ YAPI: Çerezleri yükle (Kıyaslamalı Akıllı Fonksiyon)
-    await loadCookies(page);
+    // ❌ loadCookies(page) KALDIRILDI (Canlı profil oturumu kullanılıyor)
 
     const targetUrl = 'https://ads.google.com/localservices/inbox?cid=2903573653&bid=10985702078&pid=9999999999&euid=3547106212&hl=de-AT&gl=AT';
     console.log("LSA Inbox sayfasına gidiliyor...");
@@ -347,20 +271,13 @@ async function loadCookies(page) {
     fs.writeFileSync('data.json', JSON.stringify(outputData, null, 2));
     console.log(`🎉 İŞLEM TAMAM! Toplam ${adjustedLeads.length} veri temiz bir şekilde data.json dosyasına yazıldı.`);
 
-    // KORUMA KALKANI 3: Çerezleri sadece işlem tamamen başarılı olduğunda en son kaydet
-    try {
-      const freshCookies = await page.cookies();
-      fs.writeFileSync('updated_cookies.json', JSON.stringify(freshCookies, null, 2));
-      console.log("✅ Güncellenmiş taze çerezler 'updated_cookies.json' dosyasına başarıyla kaydedildi.");
-    } catch (cookieErr) {
-      console.warn("⚠️ Çerezler güncellenirken hata oluştu:", cookieErr.message);
-    }
+    // ❌ ÇEREZ KAYDETME ADIMI KALDIRILDI
 
     // --- GIT PUSH ADIMI ---
     console.log("🚀 GitHub'a güncel veriler push ediliyor...");
     try {
-      execSync('git add data.json updated_cookies.json');
-      execSync('git commit -m "Auto-update data.json and cookies [cron]"');
+      execSync('git add data.json'); // Sadece data.json
+      execSync('git commit -m "Auto-update data.json [cron]"');
       execSync('git pull --rebase origin main');
       execSync('git push origin main');
       console.log("✅ GitHub'a başarıyla push edildi!");
