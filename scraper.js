@@ -83,7 +83,6 @@ async function loadCookies(page) {
     const fileExp = getLatestExpiry(fileCookies);
     const secretExp = getLatestExpiry(secretCookies);
     
-    // Secret'taki çerezlerin son kullanma tarihi daha ilerideyse (demek ki sen manuel güncelledin)
     if (secretExp > fileExp) {
       console.log("📌 Secret'taki çerezler dosyadan daha YENİ! Secret kullanılıyor...");
       rawCookiesToUse = secretCookies;
@@ -105,7 +104,6 @@ async function loadCookies(page) {
     const cookies = rawCookiesToUse.map(cookie => {
       const cleaned = { ...cookie };
       
-      // sameSite hatasını kesin çözen mantık
       if (cleaned.sameSite) {
         const ss = String(cleaned.sameSite).toLowerCase();
         if (ss === 'strict') cleaned.sameSite = 'Strict';
@@ -116,7 +114,6 @@ async function loadCookies(page) {
         delete cleaned.sameSite;
       }
       
-      // Chromium'un çökmesini engelleyen diğer parametre temizlikleri
       delete cleaned.partitionKey;
       delete cleaned.size;
       delete cleaned.priority;
@@ -135,9 +132,12 @@ async function loadCookies(page) {
 
 (async () => {
   try {
+    const userDataPath = path.join(__dirname, 'user_data');
+
     const browser = await puppeteer.launch({
       headless: "new",
       executablePath: '/usr/bin/google-chrome',
+      userDataDir: userDataPath, // <-- KALICI CHROME PROFİLİ EKLENDİ
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
@@ -350,7 +350,6 @@ async function loadCookies(page) {
     // KORUMA KALKANI 3: Çerezleri sadece işlem tamamen başarılı olduğunda en son kaydet
     try {
       const freshCookies = await page.cookies();
-      // Dosyaya yaz, böylece bir sonraki turda bu yeni çerez okunur
       fs.writeFileSync('updated_cookies.json', JSON.stringify(freshCookies, null, 2));
       console.log("✅ Güncellenmiş taze çerezler 'updated_cookies.json' dosyasına başarıyla kaydedildi.");
     } catch (cookieErr) {
@@ -358,17 +357,17 @@ async function loadCookies(page) {
     }
 
     // --- GIT PUSH ADIMI ---
-console.log("🚀 GitHub'a güncel veriler push ediliyor...");
-try {
-  execSync('git add data.json updated_cookies.json');
-  execSync('git commit -m "Auto-update data.json and cookies [cron]"');
-  execSync('git pull --rebase origin main');
-  execSync('git push origin main');
-  console.log("✅ GitHub'a başarıyla push edildi!");
-} catch (gitErr) {
-  console.error("⚠️ Git push hatası:", gitErr.message);
-}
-    
+    console.log("🚀 GitHub'a güncel veriler push ediliyor...");
+    try {
+      execSync('git add data.json updated_cookies.json');
+      execSync('git commit -m "Auto-update data.json and cookies [cron]"');
+      execSync('git pull --rebase origin main');
+      execSync('git push origin main');
+      console.log("✅ GitHub'a başarıyla push edildi!");
+    } catch (gitErr) {
+      console.error("⚠️ Git push hatası:", gitErr.message);
+    }
+
     await browser.close();
   } catch (error) {
     console.error("💥 Scraper hatası:", error.message);
