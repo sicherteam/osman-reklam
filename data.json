@@ -1,6 +1,14 @@
 {
-  "updatedAt": "23.7.2026, 10:17:10",
+  "updatedAt": "23.7.2026, 10:31:35",
   "leads": [
+    {
+      "phone": "0699 81496221",
+      "jobType": "-",
+      "location": "Mödling",
+      "status": "Wird überprüft",
+      "date": "22.07.26 15:41",
+      "messageText": "-"
+    },
     {
       "phone": "0664 6486001",
       "jobType": "Kunstrasenverlegung",
@@ -31,14 +39,6 @@
       "location": "Kirchberg an der Pielach",
       "status": "Nicht belastet",
       "date": "22.07.26 16:35",
-      "messageText": "-"
-    },
-    {
-      "phone": "0699 81496221",
-      "jobType": "-",
-      "location": "Mödling",
-      "status": "Nicht belastet",
-      "date": "22.07.26 15:41",
       "messageText": "-"
     },
     {
