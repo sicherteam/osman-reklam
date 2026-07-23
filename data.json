@@ -1,6 +1,14 @@
 {
-  "updatedAt": "23.7.2026, 16:30:58",
+  "updatedAt": "23.7.2026, 18:48:02",
   "leads": [
+    {
+      "phone": "0680 3115131",
+      "jobType": "-",
+      "location": "Neunkirchen",
+      "status": "Wird überprüft",
+      "date": "23.07.26 19:15",
+      "messageText": "-"
+    },
     {
       "phone": "0664 7650675",
       "jobType": "-",
@@ -151,14 +159,6 @@
       "location": "Heldenberg",
       "status": "Belastet",
       "date": "20.07.26 16:19",
-      "messageText": "-"
-    },
-    {
-      "phone": "0664 2558747",
-      "jobType": "-",
-      "location": "Gloggnitz",
-      "status": "Nicht belastet",
-      "date": "21.07.26 14:37",
       "messageText": "-"
     }
   ]
