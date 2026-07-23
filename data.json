@@ -1,6 +1,14 @@
 {
-  "updatedAt": "23.7.2026, 15:10:58",
+  "updatedAt": "23.7.2026, 15:21:03",
   "leads": [
+    {
+      "phone": "0664 7650675",
+      "jobType": "-",
+      "location": "Wiener Neustadt",
+      "status": "Wird überprüft",
+      "date": "23.07.26 17:17",
+      "messageText": "-"
+    },
     {
       "phone": "0681 20431661",
       "jobType": "Entsorgung von Gartenabfällen",
@@ -151,14 +159,6 @@
       "location": "Gloggnitz",
       "status": "Nicht belastet",
       "date": "21.07.26 14:37",
-      "messageText": "-"
-    },
-    {
-      "phone": "0676 3305727",
-      "jobType": "Baumfällarbeiten",
-      "location": "Wien",
-      "status": "Nicht belastet",
-      "date": "21.07.26 13:17",
       "messageText": "-"
     }
   ]
