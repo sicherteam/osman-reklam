@@ -1,12 +1,12 @@
 {
-  "updatedAt": "23.7.2026, 18:50:48",
+  "updatedAt": "23.7.2026, 19:01:56",
   "leads": [
     {
       "phone": "0680 3115131",
       "jobType": "-",
       "location": "Neunkirchen",
       "status": "Wird überprüft",
-      "date": "23.07.26 19:15",
+      "date": "23.07.26 17:15",
       "messageText": "-"
     },
     {
@@ -14,7 +14,7 @@
       "jobType": "-",
       "location": "Wiener Neustadt",
       "status": "Wird überprüft",
-      "date": "23.07.26 17:17",
+      "date": "23.07.26 15:17",
       "messageText": "-"
     },
     {
@@ -22,7 +22,7 @@
       "jobType": "Entsorgung von Gartenabfällen",
       "location": "Strasshof an der Nordbahn",
       "status": "Wird überprüft",
-      "date": "23.07.26 16:34",
+      "date": "23.07.26 14:34",
       "messageText": "-"
     },
     {
@@ -30,7 +30,7 @@
       "jobType": "Kunstrasenverlegung",
       "location": "Wien",
       "status": "Belastet",
-      "date": "22.07.26 13:57",
+      "date": "22.07.26 11:57",
       "messageText": "-"
     },
     {
@@ -38,7 +38,7 @@
       "jobType": "-",
       "location": "Ebreichsdorf",
       "status": "Wird überprüft",
-      "date": "23.07.26 13:56",
+      "date": "23.07.26 11:56",
       "messageText": "-"
     },
     {
@@ -46,7 +46,7 @@
       "jobType": "-",
       "location": "Mödling",
       "status": "Wird überprüft",
-      "date": "22.07.26 17:41",
+      "date": "22.07.26 15:41",
       "messageText": "-"
     },
     {
@@ -54,7 +54,7 @@
       "jobType": "Kunstrasenverlegung",
       "location": "Wien",
       "status": "Belastet",
-      "date": "22.07.26 12:09",
+      "date": "22.07.26 10:09",
       "messageText": "-"
     },
     {
@@ -62,7 +62,7 @@
       "jobType": "Baumpflege",
       "location": "Wien",
       "status": "Wird überprüft",
-      "date": "23.07.26 11:46",
+      "date": "23.07.26 09:46",
       "messageText": "-"
     },
     {
@@ -70,7 +70,7 @@
       "jobType": "-",
       "location": "Ternitz",
       "status": "Belastet",
-      "date": "21.07.26 19:13",
+      "date": "21.07.26 17:13",
       "messageText": "-"
     },
     {
@@ -78,7 +78,7 @@
       "jobType": "-",
       "location": "Kirchberg an der Pielach",
       "status": "Nicht belastet",
-      "date": "22.07.26 18:35",
+      "date": "22.07.26 16:35",
       "messageText": "-"
     },
     {
@@ -86,7 +86,7 @@
       "jobType": "Baumpflege",
       "location": "Bad Vöslau",
       "status": "Belastet",
-      "date": "21.07.26 17:29",
+      "date": "21.07.26 15:29",
       "messageText": "-"
     },
     {
@@ -94,7 +94,7 @@
       "jobType": "-",
       "location": "Kottingbrunn",
       "status": "Belastet",
-      "date": "21.07.26 17:11",
+      "date": "21.07.26 15:11",
       "messageText": "-"
     },
     {
@@ -102,7 +102,7 @@
       "jobType": "Winterdienst",
       "location": "Korneuburg",
       "status": "Nicht belastet",
-      "date": "22.07.26 16:31",
+      "date": "22.07.26 14:31",
       "messageText": "-"
     },
     {
@@ -110,7 +110,7 @@
       "jobType": "-",
       "location": "Gerasdorf bei Wien",
       "status": "Belastet",
-      "date": "21.07.26 15:11",
+      "date": "21.07.26 13:11",
       "messageText": "-"
     },
     {
@@ -118,7 +118,7 @@
       "jobType": "-",
       "location": "Mistelbach",
       "status": "Belastet",
-      "date": "21.07.26 14:42",
+      "date": "21.07.26 12:42",
       "messageText": "-"
     },
     {
@@ -126,7 +126,7 @@
       "jobType": "-",
       "location": "Puchberg am Schneeberg",
       "status": "Belastet",
-      "date": "21.07.26 13:31",
+      "date": "21.07.26 11:31",
       "messageText": "-"
     },
     {
@@ -134,7 +134,7 @@
       "jobType": "-",
       "location": "Wien",
       "status": "Nicht belastet",
-      "date": "21.07.26 20:21",
+      "date": "21.07.26 18:21",
       "messageText": "-"
     },
     {
@@ -142,7 +142,7 @@
       "jobType": "Baumpflege",
       "location": "Felixdorf",
       "status": "Nicht belastet",
-      "date": "22.07.26 09:06",
+      "date": "22.07.26 07:06",
       "messageText": "-"
     },
     {
@@ -150,7 +150,7 @@
       "jobType": "Gartenteiche, Springbrunnen und Wasserspiele",
       "location": "Strasshof an der Nordbahn",
       "status": "Nicht belastet",
-      "date": "21.07.26 20:48",
+      "date": "21.07.26 18:48",
       "messageText": "-"
     },
     {
@@ -158,7 +158,7 @@
       "jobType": "Baumpflege",
       "location": "Heldenberg",
       "status": "Belastet",
-      "date": "20.07.26 16:19",
+      "date": "20.07.26 14:19",
       "messageText": "-"
     }
   ]
