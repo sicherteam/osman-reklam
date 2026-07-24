@@ -1,6 +1,14 @@
 {
-  "updatedAt": "24.7.2026, 14:28:40",
+  "updatedAt": "24.7.2026, 14:42:40",
   "leads": [
+    {
+      "phone": "0681 20431661",
+      "jobType": "Entsorgung von Gartenabfällen",
+      "location": "Strasshof an der Nordbahn",
+      "status": "Belastet",
+      "date": "23.07.26 14:34",
+      "messageText": "-"
+    },
     {
       "phone": "0660 2177333",
       "jobType": "-",
@@ -63,14 +71,6 @@
       "location": "Wiener Neustadt",
       "status": "Wird überprüft",
       "date": "23.07.26 15:17",
-      "messageText": "-"
-    },
-    {
-      "phone": "0681 20431661",
-      "jobType": "Entsorgung von Gartenabfällen",
-      "location": "Strasshof an der Nordbahn",
-      "status": "Wird überprüft",
-      "date": "23.07.26 14:34",
       "messageText": "-"
     },
     {
