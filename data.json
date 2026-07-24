@@ -1,6 +1,14 @@
 {
-  "updatedAt": "24.7.2026, 11:42:40",
+  "updatedAt": "24.7.2026, 11:56:38",
   "leads": [
+    {
+      "phone": "0664 73923005",
+      "jobType": "-",
+      "location": "Bezirk Sankt Pölten-Land",
+      "status": "Wird überprüft",
+      "date": "24.07.26 11:39",
+      "messageText": "-"
+    },
     {
       "phone": "0699 81496221",
       "jobType": "-",
@@ -151,14 +159,6 @@
       "location": "Felixdorf",
       "status": "Nicht belastet",
       "date": "22.07.26 07:06",
-      "messageText": "-"
-    },
-    {
-      "phone": "0664 4655049",
-      "jobType": "Gartenteiche, Springbrunnen und Wasserspiele",
-      "location": "Strasshof an der Nordbahn",
-      "status": "Nicht belastet",
-      "date": "21.07.26 18:48",
       "messageText": "-"
     }
   ]
