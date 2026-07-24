@@ -1,6 +1,14 @@
 {
-  "updatedAt": "24.7.2026, 09:42:49",
+  "updatedAt": "24.7.2026, 09:56:39",
   "leads": [
+    {
+      "phone": "0664 88555005",
+      "jobType": "Baumpflege",
+      "location": "Wien",
+      "status": "Belastet",
+      "date": "23.07.26 09:46",
+      "messageText": "-"
+    },
     {
       "phone": "0677 61747945",
       "jobType": "-",
@@ -63,14 +71,6 @@
       "location": "Wien",
       "status": "Belastet",
       "date": "22.07.26 10:09",
-      "messageText": "-"
-    },
-    {
-      "phone": "0664 88555005",
-      "jobType": "Baumpflege",
-      "location": "Wien",
-      "status": "Wird überprüft",
-      "date": "23.07.26 09:46",
       "messageText": "-"
     },
     {
