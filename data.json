@@ -1,6 +1,14 @@
 {
-  "updatedAt": "24.7.2026, 13:42:39",
+  "updatedAt": "24.7.2026, 13:56:40",
   "leads": [
+    {
+      "phone": "0660 2177333",
+      "jobType": "-",
+      "location": "Bisamberg",
+      "status": "Wird überprüft",
+      "date": "24.07.26 13:45",
+      "messageText": "-"
+    },
     {
       "phone": "0676 6296724",
       "jobType": "-",
@@ -151,14 +159,6 @@
       "location": "Wien",
       "status": "Nicht belastet",
       "date": "21.07.26 18:21",
-      "messageText": "-"
-    },
-    {
-      "phone": "0676 7497457",
-      "jobType": "Baumpflege",
-      "location": "Felixdorf",
-      "status": "Nicht belastet",
-      "date": "22.07.26 07:06",
       "messageText": "-"
     }
   ]
