@@ -1,6 +1,14 @@
 {
-  "updatedAt": "25.7.2026, 10:42:43",
+  "updatedAt": "25.7.2026, 10:56:46",
   "leads": [
+    {
+      "phone": "0681 10281273",
+      "jobType": "-",
+      "location": "Wien",
+      "status": "Wird überprüft",
+      "date": "25.07.26 10:52",
+      "messageText": "-"
+    },
     {
       "phone": "Gerhard Kienast",
       "jobType": "Baumfällarbeiten",
@@ -151,14 +159,6 @@
       "location": "Korneuburg",
       "status": "Nicht belastet",
       "date": "22.07.26 14:31",
-      "messageText": "-"
-    },
-    {
-      "phone": "076 533 91 40",
-      "jobType": "-",
-      "location": "Gerasdorf bei Wien",
-      "status": "Belastet",
-      "date": "21.07.26 13:11",
       "messageText": "-"
     }
   ]
