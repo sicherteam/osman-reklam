@@ -1,6 +1,14 @@
 {
-  "updatedAt": "26.7.2026, 10:38:41",
+  "updatedAt": "26.7.2026, 10:57:41",
   "leads": [
+    {
+      "phone": "0681 10281273",
+      "jobType": "-",
+      "location": "Wien",
+      "status": "Belastet",
+      "date": "25.07.26 10:52",
+      "messageText": "-"
+    },
     {
       "phone": "Gerhard Kienast",
       "jobType": "Baumfällarbeiten",
@@ -23,14 +31,6 @@
       "location": "Bezirk Sankt Pölten-Land",
       "status": "Belastet",
       "date": "24.07.26 11:39",
-      "messageText": "-"
-    },
-    {
-      "phone": "0681 10281273",
-      "jobType": "-",
-      "location": "Wien",
-      "status": "Wird überprüft",
-      "date": "25.07.26 10:52",
       "messageText": "-"
     },
     {
