@@ -1,13 +1,29 @@
 {
-  "updatedAt": "27.7.2026, 20:51:54",
+  "updatedAt": "27.7.2026, 20:55:24",
   "leads": [
+    {
+      "Musteri": "-",
+      "Hizmet": "-",
+      "Konum": "2",
+      "Ilk gorusme": "-",
+      "Son gorusme": "-",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "-",
+      "Hizmet": "-",
+      "Konum": "-",
+      "Ilk gorusme": "-",
+      "Son gorusme": "-",
+      "Mesaj": "-"
+    },
     {
       "Musteri": "-",
       "Hizmet": "Baumpflege",
       "Konum": "Eggenburg",
       "Ilk gorusme": "26.07.26 19:37",
       "Son gorusme": "27.07.26 19:37",
-      "Mesaj": "P\nPotenzieller Kunde\nGestern um 7:37 PM\nSehr geehrtes Team, benötigen eine Lösung für Zaun zur Nachbarin. Habe zur Zeit viele Sträucher und Bäume stehen. Bitte um Ihre sachkundige Besichtigung und Angebot. Ca.10 Meter. Nicht meine Seite des Zauns. Nachbarin möchte eine Lösung. Und wir wollen Ruhe haben. Vielen Dank, mit freundlichen Grüßen. Fam. Zeller Tel06609144000"
+      "Mesaj": "-"
     },
     {
       "Musteri": "0676 4100053",
