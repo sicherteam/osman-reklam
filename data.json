@@ -1,12 +1,52 @@
 {
-  "updatedAt": "27.7.2026, 17:38:44",
+  "updatedAt": "27.7.2026, 17:47:57",
   "leads": [
+    {
+      "phone": "-",
+      "jobType": "-",
+      "location": "2",
+      "status": "4",
+      "date": "5",
+      "messageText": "-"
+    },
+    {
+      "phone": "6",
+      "jobType": "7",
+      "location": "9",
+      "status": "11",
+      "date": "12",
+      "messageText": "-"
+    },
+    {
+      "phone": "13",
+      "jobType": "14",
+      "location": "16",
+      "status": "18",
+      "date": "19",
+      "messageText": "-"
+    },
+    {
+      "phone": "20",
+      "jobType": "21",
+      "location": "23",
+      "status": "25",
+      "date": "26",
+      "messageText": "-"
+    },
+    {
+      "phone": "27",
+      "jobType": "28",
+      "location": "30",
+      "status": "31",
+      "date": "-",
+      "messageText": "-"
+    },
     {
       "phone": "daniela langthaler",
       "jobType": "-",
       "location": "Baden",
       "status": "Belastet",
-      "date": "26.07.26 16:54",
+      "date": "27.07.26 16:54",
       "messageText": "[daniela langthaler\n0660 6508087]\nd\ndaniela langthaler\nGestern um 4:54 PM\nIch benötige bitte einen Kostenvoranschlag für folgende Leistungen. - 2x Grube unter 2 Frühbeete ca. 2,5m Länge x1,5m Breite x 50cm Tiefe - 1x Grube unter1x Frühbeet ca. 1,50 Länge x 1,0 m Breite x50cm Tiefe Aufgefüllt sollen die beiden Gruben mit Mutterboden, Sand und Laub werden. Es soll grabfähig sein damit meine Schildkröten dort überwintern können. Die Seiten der Gruben sollen mit Stein, Styrodur oder Hohlkammerplatten versehen werden die vor Fressfeinden schützen sollen. Umgesetzt soll das ganze bis 31.08.2026 sein."
     },
     {
@@ -14,15 +54,23 @@
       "jobType": "-",
       "location": "Korneuburg",
       "status": "Wird überprüft",
-      "date": "27.07.26 15:40",
+      "date": "27.07.26 15:41",
       "messageText": "-"
+    },
+    {
+      "phone": "-",
+      "jobType": "Baumpflege",
+      "location": "Eggenburg",
+      "status": "Wird überprüft",
+      "date": "26.07.26 19:37",
+      "messageText": "[Erhalten am 26]\n7:37 PM\nSehr geehrtes Team, benötigen eine Lösung für Zaun zur Nachbarin. Habe zur Zeit viele Sträucher und Bäume stehen. Bitte um Ihre sachkundige Besichtigung und Angebot. Ca.10 Meter. Nicht meine Seite des Zauns. Nachbarin möchte eine Lösung. Und wir wollen Ruhe haben. Vielen Dank, mit freundlichen Grüßen. Fam. Zeller Tel06609144000"
     },
     {
       "phone": "0681 10281273",
       "jobType": "-",
       "location": "Wien",
       "status": "Belastet",
-      "date": "25.07.26 10:52",
+      "date": "26.07.26 10:54",
       "messageText": "-"
     },
     {
@@ -30,7 +78,7 @@
       "jobType": "Baumfällarbeiten",
       "location": "Mödling",
       "status": "Belastet",
-      "date": "25.07.26 09:59",
+      "date": "26.07.26 10:00",
       "messageText": "[Erhalten am 25]\nG\nGerhard Kienast\n25.07.26\nIn meinem Garten in Breitenfurt habe ich eine blätterfreie Birke gefunden mit einer Höhe ca 12m einem Durchmesser von ca 25 cm. Der Standort ist zwischen Fichten 5 m von der Strasse entfernt. Da ich selbst mit Holz etwas anzufangen weiß, braucht es auch nicht abtransportiert werden. könnten Sie diese Arbeit übernehmen? Übernehmen Sie ach andere Arbeiten?"
     },
     {
@@ -38,7 +86,7 @@
       "jobType": "-",
       "location": "Bisamberg",
       "status": "Belastet",
-      "date": "24.07.26 13:45",
+      "date": "25.07.26 13:49",
       "messageText": "-"
     },
     {
@@ -46,7 +94,7 @@
       "jobType": "-",
       "location": "Bezirk Sankt Pölten-Land",
       "status": "Belastet",
-      "date": "24.07.26 11:39",
+      "date": "25.07.26 11:48",
       "messageText": "-"
     },
     {
@@ -54,7 +102,7 @@
       "jobType": "-",
       "location": "Brunn am Gebirge",
       "status": "Belastet",
-      "date": "24.07.26 08:11",
+      "date": "25.07.26 08:14",
       "messageText": "-"
     },
     {
@@ -62,7 +110,7 @@
       "jobType": "Baumfällarbeiten",
       "location": "Puchberg am Schneeberg",
       "status": "Nicht belastet",
-      "date": "24.07.26 19:28",
+      "date": "24.07.26 19:29",
       "messageText": "-"
     },
     {
@@ -70,7 +118,7 @@
       "jobType": "-",
       "location": "Neunkirchen",
       "status": "Belastet",
-      "date": "23.07.26 17:15",
+      "date": "24.07.26 17:18",
       "messageText": "-"
     },
     {
@@ -86,7 +134,7 @@
       "jobType": "-",
       "location": "Wiener Neustadt",
       "status": "Belastet",
-      "date": "23.07.26 15:17",
+      "date": "24.07.26 15:18",
       "messageText": "-"
     },
     {
@@ -94,7 +142,7 @@
       "jobType": "Entsorgung von Gartenabfällen",
       "location": "Strasshof an der Nordbahn",
       "status": "Belastet",
-      "date": "23.07.26 14:34",
+      "date": "24.07.26 14:36",
       "messageText": "-"
     },
     {
@@ -102,7 +150,7 @@
       "jobType": "-",
       "location": "Ebreichsdorf",
       "status": "Belastet",
-      "date": "23.07.26 11:56",
+      "date": "24.07.26 11:58",
       "messageText": "-"
     },
     {
@@ -110,7 +158,7 @@
       "jobType": "-",
       "location": "Mödling",
       "status": "Belastet",
-      "date": "22.07.26 15:41",
+      "date": "24.07.26 10:24",
       "messageText": "-"
     },
     {
@@ -118,7 +166,7 @@
       "jobType": "Baumpflege",
       "location": "Wien",
       "status": "Belastet",
-      "date": "23.07.26 09:46",
+      "date": "24.07.26 09:48",
       "messageText": "-"
     },
     {
@@ -126,7 +174,7 @@
       "jobType": "Kunstrasenverlegung",
       "location": "Wien",
       "status": "Belastet",
-      "date": "22.07.26 11:57",
+      "date": "23.07.26 12:01",
       "messageText": "-"
     },
     {
@@ -134,7 +182,7 @@
       "jobType": "Kunstrasenverlegung",
       "location": "Wien",
       "status": "Belastet",
-      "date": "22.07.26 10:09",
+      "date": "23.07.26 10:11",
       "messageText": "-"
     },
     {
@@ -142,7 +190,7 @@
       "jobType": "-",
       "location": "Ternitz",
       "status": "Belastet",
-      "date": "21.07.26 17:13",
+      "date": "22.07.26 17:15",
       "messageText": "-"
     },
     {
@@ -150,7 +198,7 @@
       "jobType": "-",
       "location": "Kirchberg an der Pielach",
       "status": "Nicht belastet",
-      "date": "22.07.26 16:35",
+      "date": "22.07.26 16:36",
       "messageText": "-"
     }
   ]
