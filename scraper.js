@@ -139,40 +139,47 @@ function clearChromeLocks() {
         const customerName = cells[0] || '-';
         const jobType = cells[1] || '-';
 
-        // GÜVENLİK FİLTRESİ 1: Sadece saf rakamlardan oluşan takvim/hayalet satırlarını ele ("6", "7", "9" vb.)
-        if (/^\d+$/.test(customerName) && /^\d+$/.test(jobType)) return null;
+        // 1. Müşteri adı ve Hizmet ikisi de yoksa/boşsa ATLA
+        if ((!customerName || customerName === '-') && (!jobType || jobType === '-')) return null;
 
-        // GÜVENLİK FİLTRESİ 2: Müşteri adı tek başına küçük sayı ise ele
-        if (/^\d{1,3}$/.test(customerName)) return null;
+        // 2. Müşteri adı veya Hizmet adı tek başına tek/çift haneli sayıysa ATLA ("2", "6", "13" vb.)
+        if (/^\d{1,3}$/.test(customerName) || /^\d{1,3}$/.test(jobType)) return null;
 
         // KONUM TESPİTİ
-        let location = cells[3] || '-';
-        if (!location || location === '-' || location === jobType || /^\+?\d[\d\s-]{6,}$/.test(location)) {
-          location = cells.find((t, i) => 
+        let rawLoc = cells[3] || '-';
+
+        // Orijinal hücredeki konum 2 veya daha az karakterse (rawLoc.length <= 2) alternatif hücre tara
+        if (!rawLoc || rawLoc.length <= 2 || rawLoc === jobType || /^\+?\d[\d\s-]{6,}$/.test(rawLoc)) {
+          const locCandidate = cells.find((t, i) => 
             i > 1 && 
+            t.length > 2 && // KONTROL: Konum metni 2'den büyük olmalı
             t !== customerName && 
             t !== jobType && 
             !/^\+?\d[\d\s-]{6,}$/.test(t) && 
             !/^(Kategorie|Direkte|Telefon|Nachricht|Belastet|Wird)/i.test(t) &&
             !/\d{2}\.\d{2}\.\d{2}/.test(t)
-          ) || '-';
+          );
+          rawLoc = locCandidate || '-';
+        }
+
+        // KESİN KONTROL: Müşteri adı boş/çizgi iken konum 2'den büyük değilse bu satır hayalettir, ELE!
+        if ((!customerName || customerName === '-') && rawLoc.length <= 2) {
+          return null;
         }
 
         const dates = cells.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
-
-        // MESAJ TESPİTİ: "Nachricht" kelimesini satırın tüm metninde veya Art der Anfrage sütununda yakala
         const isMessage = /nachricht|message/i.test(row.innerText || '');
 
         return {
           domIndex: idx,
           phone: customerName,
           jobType,
-          location,
+          location: rawLoc,
           anfrageDate: dates[0] || '-',
           letzteDate: dates[1] || dates[0] || '-',
           isMessage: isMessage
         };
-      }).filter(Boolean);
+      }).filter(Boolean); // null olan hayalet satırları eler
     });
 
     console.log(`📊 Çekilen Temiz Lead Sayısı: ${validRows.length}`);
