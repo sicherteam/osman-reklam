@@ -100,6 +100,7 @@ function clearChromeLocks() {
       throw new Error(`❌ Oturum açılamadı/Engellendi: ${pageTitle}`);
     }
 
+    // Tablo render'ını tetiklemek için yumuşak scroll
     await page.evaluate(async () => {
       for (let i = 0; i < 3; i++) {
         window.scrollBy(0, 400);
@@ -108,7 +109,7 @@ function clearChromeLocks() {
     });
     await new Promise(r => setTimeout(r, 2000));
 
-    // AŞAMA 1: VERİ TOPLAMA VE 'NACHRICHT' TESPİTİ
+    // AŞAMA 1: TABLODAN TEMİZ VERİ TOPLAMA & NACHRICHT TESPİTİ
     const rawData = await page.evaluate(() => {
       const rowElements = Array.from(document.querySelectorAll('[role="row"], tr'));
 
@@ -122,13 +123,10 @@ function clearChromeLocks() {
         const customerName = cells[0] || '-';
         const jobType = cells[1] || '-';
 
-        // Müşteri VE Hizmet ikisi birden yoksa çöp satırdır
         if ((!customerName || customerName === '-') && (!jobType || jobType === '-')) return null;
-
-        // Tek başına sayfa no/sayı içeriyorsa atla
         if (/^\d{1,3}$/.test(customerName) || /^\d{1,3}$/.test(jobType)) return null;
 
-        // KONUM -> Karakter uzunluğu 2'den büyük olmalı
+        // Konum Doğrulama (Uzunluk > 2)
         let location = cells[3] || '-';
         if (!location || location.length <= 2 || location === jobType || /^\+?\d[\d\s-]{6,}$/.test(location)) {
           const candidate = cells.find((t, i) => 
@@ -147,11 +145,11 @@ function clearChromeLocks() {
 
         const dates = cells.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
         
-        // KONTROL: Hücrelerden herhangi birinde "Nachricht" yazıyor mu?
+        // Satır içinde "Nachricht" kelimesi var mı kontrolü
         const isMessage = cells.some(cell => cell.trim().toLowerCase() === 'nachricht');
 
         return {
-          identifier: customerName, // Satırı DOM'da tekrar bulmak için benzersiz alan
+          identifier: customerName,
           phone: customerName,
           jobType,
           location,
@@ -168,43 +166,71 @@ function clearChromeLocks() {
       throw new Error("❌ Hiç geçerli veri bulunamadı.");
     }
 
-    // AŞAMA 2: SADECE "NACHRICHT" OLANLARA TIKLA VE MESAJI ÇEK
+    // AŞAMA 2: SADECE NACHRICHT OLANLARA TIKLA, BEKLE VE MESAJI NOKTA ATIŞI ÇEK
     const leads = [];
     for (const item of rawData) {
       let messageText = "-";
 
       if (item.isMessage) {
         try {
-          console.log(`💬 [${item.identifier}] Nachricht tespit edildi, tıklanıyor...`);
+          console.log(`💬 [${item.identifier}] Nachricht satırı tıklanıyor...`);
 
           const clicked = await page.evaluate((id) => {
             const rows = Array.from(document.querySelectorAll('[role="row"], tr'));
             const targetRow = rows.find(r => r.innerText && r.innerText.includes(id));
             if (targetRow) {
-              targetRow.click();
+              const clickTarget = targetRow.querySelector('td, div[role="gridcell"]') || targetRow;
+              clickTarget.click();
               return true;
             }
             return false;
           }, item.identifier);
 
           if (clicked) {
-            await new Promise(r => setTimeout(r, 4000));
+            console.log(`⏳ [${item.identifier}] Mesaj panelinin ('Unterhaltung') açılması bekleniyor...`);
 
+            // Panel DOM'a düşene ve müşteri mesaj bloğu yüklenene kadar bekle
+            try {
+              await page.waitForFunction(() => {
+                const bodyText = document.body.innerText || '';
+                return bodyText.includes('Unterhaltung') && bodyText.includes('Potenzieller Kunde');
+              }, { timeout: 8000 });
+            } catch (_) {
+              console.warn(`⚠️ [${item.identifier}] Bekleme zaman aşımına uğradı, yine de deneniyor...`);
+            }
+
+            // DOM stabilizasyonu için minik bekleme
+            await new Promise(r => setTimeout(r, 1200));
+
+            // Görseldeki karta özel mesaj ayrıştırma (parsing)
             messageText = await page.evaluate(() => {
-              const chatBlock = Array.from(document.querySelectorAll('div, section, article'))
-                                    .find(el => (el.innerText || '').includes('Unterhaltung'));
-              
-              if (!chatBlock) return "-";
+              const blocks = Array.from(document.querySelectorAll('div, section, article'));
+              const chatCard = blocks.find(el => {
+                const txt = el.innerText || '';
+                return txt.includes('Unterhaltung') && txt.includes('Potenzieller Kunde');
+              });
 
-              return chatBlock.innerText.split('Unterhaltung').pop()
-                         .split('Wird geladen')[0]
-                         .split('Audioinhalte')[0]
-                         .split('Hier dem Kunden')[0]
-                         .replace(/^P\s+|^Potenzieller Kunde\s+|^\d{2}\.\d{2}\.\d{2}\s+/gi, '')
-                         .trim() || "-";
+              if (!chatCard) return "-";
+
+              const rawChatText = chatCard.innerText;
+
+              if (rawChatText.includes('Potenzieller Kunde')) {
+                let msg = rawChatText.split('Potenzieller Kunde').pop();
+                
+                // Tarih başlığını, cevap kutusunu ve SENDEN butonunu temizle
+                msg = msg.replace(/^(Gestern|Heute)?\s*(um)?\s*\d{1,2}:\d{2}\s*(AM|PM)?/gi, '')
+                         .replace(/^\d{2}\.\d{2}\.\d{2}\s+\d{1,2}:\d{2}\s*(AM|PM)?/gi, '')
+                         .split('Hier dem Kunden antworten')[0]
+                         .split('SENDEN')[0]
+                         .trim();
+
+                return msg || "-";
+              }
+
+              return "-";
             });
 
-            console.log(` -> Okunan Mesaj: ${messageText.substring(0, 50)}...`);
+            console.log(` -> ✉️ Çekilen Mesaj: "${messageText.substring(0, 60)}..."`);
           }
         } catch (e) {
           console.warn(`⚠️ [${item.identifier}] Mesaj okuma hatası:`, e.message);
@@ -221,7 +247,7 @@ function clearChromeLocks() {
       });
     }
 
-    // JSON KAYIT
+    // AŞAMA 3: JSON KAYIT & GIT PUSH
     const outputData = {
       updatedAt: new Date().toLocaleString('de-AT', { timeZone: 'Europe/Vienna' }),
       leads
@@ -229,7 +255,6 @@ function clearChromeLocks() {
     fs.writeFileSync('data.json', JSON.stringify(outputData, null, 2));
     console.log(`🎉 BAŞARILI! ${leads.length} veri kaydedildi.`);
 
-    // AŞAMA 3: GIT PUSH & BİLDİRİM
     try {
       const gitStatus = execSync('git status --porcelain data.json').toString().trim();
       if (gitStatus) {
