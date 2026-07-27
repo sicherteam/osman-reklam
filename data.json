@@ -1,47 +1,11 @@
 {
-  "updatedAt": "27.7.2026, 21:45:38",
+  "updatedAt": "27.7.2026, 21:46:37",
   "leads": [
     {
       "Musteri": "-",
       "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
-      "Konum": "-",
-      "Ilk gorusme": "-",
-      "Son gorusme": "-",
-      "Mesaj": "-"
-    },
-    {
-      "Musteri": "6",
-      "Telefon": "Keine Telefonnummer",
-      "Hizmet": "7",
-      "Konum": "-",
-      "Ilk gorusme": "-",
-      "Son gorusme": "-",
-      "Mesaj": "-"
-    },
-    {
-      "Musteri": "13",
-      "Telefon": "Keine Telefonnummer",
-      "Hizmet": "14",
-      "Konum": "-",
-      "Ilk gorusme": "-",
-      "Son gorusme": "-",
-      "Mesaj": "-"
-    },
-    {
-      "Musteri": "20",
-      "Telefon": "Keine Telefonnummer",
-      "Hizmet": "21",
-      "Konum": "-",
-      "Ilk gorusme": "-",
-      "Son gorusme": "-",
-      "Mesaj": "-"
-    },
-    {
-      "Musteri": "27",
-      "Telefon": "Keine Telefonnummer",
-      "Hizmet": "28",
-      "Konum": "-",
+      "Konum": "2",
       "Ilk gorusme": "-",
       "Son gorusme": "-",
       "Mesaj": "-"
@@ -56,31 +20,31 @@
       "Mesaj": "-"
     },
     {
-      "Musteri": "Google Lokale Dienstleistungen",
+      "Musteri": "-",
       "Telefon": "Keine Telefonnummer",
       "Hizmet": "Baumpflege",
-      "Konum": "Baumpflege",
+      "Konum": "Eggenburg",
       "Ilk gorusme": "26.07.26 19:37",
       "Son gorusme": "27.07.26 19:37",
-      "Mesaj": "Hier dem Kunden antworten\nSENDEN"
+      "Mesaj": "-"
     },
     {
-      "Musteri": "Google Lokale Dienstleistungen",
-      "Telefon": "0676 4100053",
+      "Musteri": "0676 4100053",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "Baumpflege",
-      "Konum": "Baumpflege",
+      "Konum": "Korneuburg",
       "Ilk gorusme": "27.07.26 19:24",
       "Son gorusme": "27.07.26 19:24",
-      "Mesaj": "Hier dem Kunden antworten\nSENDEN"
+      "Mesaj": "-"
     },
     {
-      "Musteri": "Google Lokale Dienstleistungen",
+      "Musteri": "daniela langthaler",
       "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
-      "Konum": "daniela langthaler",
+      "Konum": "Baden",
       "Ilk gorusme": "26.07.26 16:54",
       "Son gorusme": "27.07.26 16:54",
-      "Mesaj": "P\nPotenzieller Kunde\nGestern um 7:37 PM\nSehr geehrtes Team, benötigen eine Lösung für Zaun zur Nachbarin. Habe zur Zeit viele Sträucher und Bäume stehen. Bitte um Ihre sachkundige Besichtigung und Angebot. Ca.10 Meter. Nicht meine Seite des Zauns. Nachbarin möchte eine Lösung. Und wir wollen Ruhe haben. Vielen Dank, mit freundlichen Grüßen. Fam. Zeller Tel06609144000\nWird geladen…\nAudioinhalte werden geladen\nHier dem Kunden antworten\nSENDEN"
+      "Mesaj": "-"
     },
     {
       "Musteri": "0664 2477304",
@@ -102,9 +66,9 @@
     },
     {
       "Musteri": "Google Lokale Dienstleistungen",
-      "Telefon": "Keine Telefonnummer",
+      "Telefon": "0676 4100053",
       "Hizmet": "Baumfällarbeiten",
-      "Konum": "Gerhard Kienast",
+      "Konum": "Mödling",
       "Ilk gorusme": "25.07.26 09:59",
       "Son gorusme": "26.07.26 10:00",
       "Mesaj": "Hier dem Kunden antworten\nSENDEN"
@@ -140,7 +104,7 @@
       "Musteri": "0681 81678519",
       "Telefon": "Keine Telefonnummer",
       "Hizmet": "Baumfällarbeiten",
-      "Konum": "Baumfällarbeiten",
+      "Konum": "Puchberg am Schneeberg",
       "Ilk gorusme": "24.07.26 19:28",
       "Son gorusme": "24.07.26 19:29",
       "Mesaj": "-"
@@ -176,7 +140,7 @@
       "Musteri": "0681 20431661",
       "Telefon": "Keine Telefonnummer",
       "Hizmet": "Entsorgung von Gartenabfällen",
-      "Konum": "Entsorgung von Gartenabfällen",
+      "Konum": "Strasshof an der Nordbahn",
       "Ilk gorusme": "23.07.26 14:34",
       "Son gorusme": "24.07.26 14:36",
       "Mesaj": "-"
@@ -203,7 +167,7 @@
       "Musteri": "0664 88555005",
       "Telefon": "Keine Telefonnummer",
       "Hizmet": "Baumpflege",
-      "Konum": "Baumpflege",
+      "Konum": "Wien",
       "Ilk gorusme": "23.07.26 09:46",
       "Son gorusme": "24.07.26 09:48",
       "Mesaj": "-"
@@ -212,7 +176,7 @@
       "Musteri": "0676 7125984",
       "Telefon": "Keine Telefonnummer",
       "Hizmet": "Kunstrasenverlegung",
-      "Konum": "Kunstrasenverlegung",
+      "Konum": "Wien",
       "Ilk gorusme": "22.07.26 11:57",
       "Son gorusme": "23.07.26 12:01",
       "Mesaj": "-"
@@ -221,7 +185,7 @@
       "Musteri": "0664 6486001",
       "Telefon": "Keine Telefonnummer",
       "Hizmet": "Kunstrasenverlegung",
-      "Konum": "Kunstrasenverlegung",
+      "Konum": "Wien",
       "Ilk gorusme": "22.07.26 10:09",
       "Son gorusme": "23.07.26 10:11",
       "Mesaj": "-"
