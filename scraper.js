@@ -109,33 +109,47 @@ function clearChromeLocks() {
     });
     await new Promise(r => setTimeout(r, 2000));
 
-    // AŞAMA 1: MINIMAL & STANDORT BAZLI TABLO TARAMASI
+    // AŞAMA 1: SÜTUN HİZALAMALI VE DİNAMİK INDEX’Lİ TABLO TARAMASI
     const rawData = await page.evaluate(() => {
       const rowElements = Array.from(document.querySelectorAll('[role="row"], tr'));
       let validRowCounter = 0;
+
+      // Sütun Başlıklarının Index'lerini Bul
+      let kundeIdx = 0;
+      let jobtypeIdx = 1;
+      let standortIdx = 3;
+
+      const headerRow = rowElements.find(r => /Gebührenstatus|Kunde|Kundenname/i.test(r.innerText || ''));
+      if (headerRow) {
+        const headerCells = Array.from(headerRow.querySelectorAll('th, td, div[role="columnheader"], div[role="gridcell"]'))
+                                 .map(c => c.innerText?.trim() || '');
+        
+        const kFound = headerCells.findIndex(t => /Kunde/i.test(t));
+        const jFound = headerCells.findIndex(t => /Jobtyp/i.test(t));
+        const sFound = headerCells.findIndex(t => /Standort/i.test(t));
+
+        if (kFound !== -1) kundeIdx = kFound;
+        if (jFound !== -1) jobtypeIdx = jFound;
+        if (sFound !== -1) standortIdx = sFound;
+      }
 
       return rowElements.map((row) => {
         const cellElements = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
         const cells = cellElements.map(c => c.innerText?.trim() || '');
 
-        // 1. Tablo başlığını veya yetersiz sütunlu DOM elemanlarını eler
+        // 1. Başlık satırlarını ve 4 sütundan az olan DOM çöplerini eler
         if (cells.length < 4 || /Gebührenstatus|Kunde|Kundenname/i.test(row.innerText || '')) {
           return null;
         }
 
-        const customerName = cells[0] || '-';
-        const jobType = cells[1] || '-';
+        const customerName = cells[kundeIdx] || cells[0] || '-';
+        const jobType = cells[jobtypeIdx] || cells[1] || '-';
+        const location = cells[standortIdx] || '-';
 
-        // 2. Yalnızca STANDORT (Konum) kontrolü:
-        // Uzunluğu 2'den büyük olan VE içinde rakam barındırmayan hücreyi konum kabul et
-        const locationCandidate = cells.find(t => 
-          t && 
-          t.length > 2 && 
-          !/\d/.test(t) && 
-          !/^(Kategorie|Direkte|Telefon|Nachricht|Belastet|Wird)/i.test(t)
-        );
-
-        const location = locationCandidate || '-';
+        // 2. Takvim / Takvim Numaraları gibi DOM Çöplerini Engelle (Örn: 6-7, 13-14)
+        if (/^\d{1,2}$/.test(customerName) && /^\d{1,2}$/.test(jobType)) {
+          return null;
+        }
 
         const dates = cells.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
         const isMessage = cells.some(cell => cell.trim().toLowerCase() === 'nachricht');
@@ -197,7 +211,6 @@ function clearChromeLocks() {
 
               const allDivs = Array.from(document.querySelectorAll('div, header, section'));
               
-              // Mavi Header Barı (İsim ve Telefon)
               const headerBar = allDivs.find(el => {
                 const txt = el.innerText || '';
                 return txt.includes('ARCHIVIEREN') || txt.includes('MARKIEREN');
@@ -219,7 +232,6 @@ function clearChromeLocks() {
                 }
               }
 
-              // Unterhaltung Mesaj İçeriği (Yazışma yanıt split'leri kaldırıldı)
               const chatCard = allDivs.find(el => (el.innerText || '').includes('Unterhaltung'));
               if (chatCard) {
                 const rawChatText = chatCard.innerText;
