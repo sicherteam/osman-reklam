@@ -100,7 +100,6 @@ function clearChromeLocks() {
       throw new Error(`❌ Oturum açılamadı/Engellendi: ${pageTitle}`);
     }
 
-    // Tablo render'ını tetiklemek için yumuşak scroll
     await page.evaluate(async () => {
       for (let i = 0; i < 3; i++) {
         window.scrollBy(0, 400);
@@ -109,9 +108,10 @@ function clearChromeLocks() {
     });
     await new Promise(r => setTimeout(r, 2000));
 
-    // AŞAMA 1: TABLODAN TEMİZ VERİ TOPLAMA & NACHRICHT TESPİTİ
+    // AŞAMA 1: TABLODAN TEMİZ VERİ TOPLAMA
     const rawData = await page.evaluate(() => {
       const rowElements = Array.from(document.querySelectorAll('[role="row"], tr'));
+      let validRowIndex = 0;
 
       return rowElements.map((row) => {
         const cellElements = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
@@ -126,7 +126,6 @@ function clearChromeLocks() {
         if ((!customerName || customerName === '-') && (!jobType || jobType === '-')) return null;
         if (/^\d{1,3}$/.test(customerName) || /^\d{1,3}$/.test(jobType)) return null;
 
-        // Konum Doğrulama (Uzunluk > 2)
         let location = cells[3] || '-';
         if (!location || location.length <= 2 || location === jobType || /^\+?\d[\d\s-]{6,}$/.test(location)) {
           const candidate = cells.find((t, i) => 
@@ -144,12 +143,14 @@ function clearChromeLocks() {
         if ((!customerName || customerName === '-') && location.length <= 2) return null;
 
         const dates = cells.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
-        
-        // Satır içinde "Nachricht" kelimesi var mı kontrolü
         const isMessage = cells.some(cell => cell.trim().toLowerCase() === 'nachricht');
 
+        const currentIdx = validRowIndex;
+        validRowIndex++;
+
         return {
-          identifier: customerName,
+          rowIndex: currentIdx,
+          identifier: customerName !== '-' ? customerName : `Row-${currentIdx}`,
           phone: customerName,
           jobType,
           location,
@@ -166,7 +167,7 @@ function clearChromeLocks() {
       throw new Error("❌ Hiç geçerli veri bulunamadı.");
     }
 
-    // AŞAMA 2: SADECE NACHRICHT OLANLARA TIKLA, BEKLE VE MESAJI NOKTA ATIŞI ÇEK
+    // AŞAMA 2: SADECE NACHRICHT OLANLARA INDEX ILE TIKLA VE MESAJI ÇEK
     const leads = [];
     for (const item of rawData) {
       let messageText = "-";
@@ -175,9 +176,15 @@ function clearChromeLocks() {
         try {
           console.log(`💬 [${item.identifier}] Nachricht satırı tıklanıyor...`);
 
-          const clicked = await page.evaluate((id) => {
-            const rows = Array.from(document.querySelectorAll('[role="row"], tr'));
-            const targetRow = rows.find(r => r.innerText && r.innerText.includes(id));
+          // Index ve Text Fallback'li Tıklama
+          const clicked = await page.evaluate((targetIdentifier) => {
+            const rows = Array.from(document.querySelectorAll('[role="row"], tr')).filter(r => {
+              const cells = Array.from(r.querySelectorAll('td, div[role="gridcell"]'));
+              return cells.length >= 4 && !/Gebührenstatus|Kunde|Kundenname/i.test(r.innerText || '');
+            });
+
+            const targetRow = rows.find(r => r.innerText && r.innerText.includes(targetIdentifier));
+
             if (targetRow) {
               const clickTarget = targetRow.querySelector('td, div[role="gridcell"]') || targetRow;
               clickTarget.click();
@@ -187,27 +194,15 @@ function clearChromeLocks() {
           }, item.identifier);
 
           if (clicked) {
-            console.log(`⏳ [${item.identifier}] Mesaj panelinin ('Unterhaltung') açılması bekleniyor...`);
+            // Yönlendirme/DOM güncellenmesi riski için kısa uyuma
+            await new Promise(r => setTimeout(r, 2500));
 
-            // Panel DOM'a düşene ve müşteri mesaj bloğu yüklenene kadar bekle
-            try {
-              await page.waitForFunction(() => {
-                const bodyText = document.body.innerText || '';
-                return bodyText.includes('Unterhaltung') && bodyText.includes('Potenzieller Kunde');
-              }, { timeout: 8000 });
-            } catch (_) {
-              console.warn(`⚠️ [${item.identifier}] Bekleme zaman aşımına uğradı, yine de deneniyor...`);
-            }
-
-            // DOM stabilizasyonu için minik bekleme
-            await new Promise(r => setTimeout(r, 1200));
-
-            // Görseldeki karta özel mesaj ayrıştırma (parsing)
+            // Mesaj Ayrıştırma
             messageText = await page.evaluate(() => {
               const blocks = Array.from(document.querySelectorAll('div, section, article'));
               const chatCard = blocks.find(el => {
                 const txt = el.innerText || '';
-                return txt.includes('Unterhaltung') && txt.includes('Potenzieller Kunde');
+                return txt.includes('Unterhaltung') || txt.includes('Potenzieller Kunde');
               });
 
               if (!chatCard) return "-";
@@ -217,7 +212,6 @@ function clearChromeLocks() {
               if (rawChatText.includes('Potenzieller Kunde')) {
                 let msg = rawChatText.split('Potenzieller Kunde').pop();
                 
-                // Tarih başlığını, cevap kutusunu ve SENDEN butonunu temizle
                 msg = msg.replace(/^(Gestern|Heute)?\s*(um)?\s*\d{1,2}:\d{2}\s*(AM|PM)?/gi, '')
                          .replace(/^\d{2}\.\d{2}\.\d{2}\s+\d{1,2}:\d{2}\s*(AM|PM)?/gi, '')
                          .split('Hier dem Kunden antworten')[0]
