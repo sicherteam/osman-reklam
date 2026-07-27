@@ -54,7 +54,7 @@ function sendTelegramMessage(lead) {
   const ilkGorusme24 = parseTo24HourDate(lead["Ilk gorusme"]);
   const sonGorusme24 = parseTo24HourDate(lead["Son gorusme"]);
 
-  const message = `🔔 *YENİ Müşteri!* (${PROJECT_NAME})\n\n` +
+  const message = `🔔 *YENİ MÜŞTERİ!* (${PROJECT_NAME})\n\n` +
                   `👤 *Müşteri:* ${lead["Musteri"]}\n` +
                   `📍 *Konum:* ${lead["Konum"]}\n` +
                   `💼 *Hizmet:* ${lead["Hizmet"]}\n` +
@@ -213,7 +213,7 @@ function parseCleanMessage(rawText) {
     });
     await new Promise(resolve => setTimeout(resolve, 2000));
 
-    // 2. AŞAMA: GERÇEK SATIRLARI VE İÇERİKLERİNİ AKILLI TESPİT ET (Sıkı Konum Filtresi)
+    // 2. AŞAMA: GERÇEK SATIRLARI VE İÇERİKLERİNİ HÜCRE İNDEKSİYLE HASSAS TESPİT ET
     const validRowsIndices = await page.evaluate(() => {
       const allRows = Array.from(document.querySelectorAll('[role="row"], tr'));
       const valid = [];
@@ -222,58 +222,54 @@ function parseCleanMessage(rawText) {
         const text = row.innerText || '';
         const rawCells = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
         
-        const cleanCellTexts = rawCells
-          .map(c => c.innerText ? c.innerText.trim() : '')
-          .filter(txt => txt.length > 0 && !/^\d{1,3}$/.test(txt));
+        // Boş olmayan tüm hücre metinleri
+        const cellTexts = rawCells.map(c => c.innerText ? c.innerText.trim() : '');
 
-        if (cleanCellTexts.length >= 3) {
+        if (cellTexts.length >= 4) {
           const isHeader = text.includes('Gebührenstatus') || text.includes('Kunde') || text.includes('Kundenname');
           
           if (!isHeader) {
             const isMessage = /nachricht|message/i.test(text);
 
-            let customerName = cleanCellTexts[0] || '-';
-            if (/^\d{1,3}$/.test(customerName)) {
-              customerName = cleanCellTexts[1] || '-';
+            let customerName = cellTexts[0] || '-';
+            let jobType = cellTexts[1] || '-';
+
+            // --- KESİN KONUM TESPİTİ ---
+            // Standort (Konum) genelde 3. indeksli (4. hücre) alandadır.
+            let rawLocation = cellTexts[3] || '-';
+
+            // Eğer 3. indeks boşsa, Hizmet adıyla aynıysa veya telefon/kategori ise alternatif ara
+            if (
+              !rawLocation || 
+              rawLocation === '-' || 
+              rawLocation === jobType || 
+              /^\+?\d[\d\s-]{6,}$/.test(rawLocation) ||
+              /^(Kategorie|Direkte|Telefon|Nachricht|Belastet|Wird)/i.test(rawLocation)
+            ) {
+              const locCandidate = cellTexts.find((t, cIdx) => 
+                cIdx > 1 && 
+                t !== customerName && 
+                t !== jobType && 
+                !/^\+?\d[\d\s-]{6,}$/.test(t) && 
+                !/^(Kategorie|Direkte|Telefon|Nachricht|Belastet|Wird|Baum|Entsorgung|Kunstrasen)/i.test(t) && 
+                !/\d{2}\.\d{2}\.\d{2}/.test(t)
+              );
+              rawLocation = locCandidate || '-';
             }
 
-            let jobType = cleanCellTexts[1] || '-';
+            // Tarihleri Al
+            const dateCells = cellTexts.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
+            let anfrageDate = dateCells[0] || '-';
+            let letzteDate = dateCells[1] || anfrageDate;
 
-            // --- AKILLI KONUM TESPİTİ (Numara, Kategorie, Statüleri Eler) ---
-            let location = '-';
-            const locCell = cleanCellTexts.find(t => 
-              t !== customerName && 
-              !t.includes(customerName) && 
-              !/^\+?\d[\d\s-]{6,}$/.test(t) && // Telefon numarası kalıplarını eler
-              !/^(Kategorie|Direkte|Telefon|Nachricht|Belastet|Wird)/i.test(t) && // Sütun başlığı ve statüleri eler
-              !/\d{2}\.\d{2}\.\d{2}/.test(t) // Tarihleri eler
-            );
-
-            if (locCell) {
-              location = locCell;
-            }
-
-            const dateCells = cleanCellTexts.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
-            let anfrageDate = '-';
-            let letzteDate = '-';
-
-            if (dateCells.length >= 2) {
-              anfrageDate = dateCells[0];
-              letzteDate = dateCells[1];
-            } else if (dateCells.length === 1) {
-              anfrageDate = dateCells[0];
-              letzteDate = dateCells[0];
-            }
-
-            if (customerName === '-' || (location === '-' && jobType === '-')) {
-              return;
-            }
+            // Sadece müşteri adı tamamen yoksa atla (Satır kayıplarını engeller)
+            if (customerName === '-' && jobType === '-') return;
 
             valid.push({
               domIndex: idx,
               phone: customerName,
               jobType: jobType,
-              location: location,
+              location: rawLocation,
               anfrageDate: anfrageDate,
               letzteDate: letzteDate,
               isMessage: isMessage
