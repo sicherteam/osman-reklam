@@ -5,61 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OSMAN REKLAMLAR</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <style>
-    body { 
-      background-color: #f4f6f9; 
-      padding: 15px 10px; 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    :root {
+      --bg-body: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --primary-color: #2563eb;
+      --border-color: #e2e8f0;
     }
 
-    /* Ana Kart - Orijinal Temiz Tasarım */
-    .main-card { 
-      border: 1px solid #e1e8f0; 
-      border-radius: 16px; 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
-      background: #ffffff !important; 
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      padding: 20px 10px;
     }
 
-    /* Tablo Tasarımı */
-    .table {
+    .main-card {
+      background: var(--card-bg) !important;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .header-title {
+      font-weight: 700;
+      letter-spacing: -0.5px;
       color: #1e293b;
     }
 
-    .table th { 
-      background-color: #1e293b !important; 
-      color: #fff !important; 
-      border: none; 
-      padding: 14px; 
+    /* Tablo Tasarımı */
+    .table-container {
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
     }
 
-    #countdown-box { display: none; }
+    .table {
+      margin-bottom: 0;
+    }
+
+    .table thead th {
+      background-color: #0f172a !important;
+      color: #f8fafc !important;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 14px 16px;
+      border: none;
+    }
+
+    .table tbody td {
+      padding: 14px 16px;
+      vertical-align: middle;
+      font-size: 0.925rem;
+      border-bottom-color: #f1f5f9;
+    }
 
     /* Mesaj Kutusu Stili */
     .message-box {
-      background-color: #f8fafc;
-      border-left: 4px solid #0d6efd;
-      border-radius: 6px;
-      padding: 12px 14px;
-      margin-top: 6px;
+      background-color: #f1f5f9;
+      border-left: 4px solid var(--primary-color);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 0.9rem;
       white-space: pre-line;
       word-break: break-word;
     }
 
-    /* --- MOBİL UYUM ÖZELLEŞTİRMELERİ --- */
+    /* MOBİL KART GÖRÜNÜMÜ */
     @media (max-width: 767.98px) {
       body { padding: 10px 5px; }
-      .main-card { padding: 1.25rem !important; border-radius: 12px; }
-      
+      .main-card { padding: 1rem !important; border-radius: 12px; }
       .desktop-table-view { display: none !important; }
       .mobile-cards-view { display: flex; flex-direction: column; gap: 12px; }
-      
+
       .lead-card {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
         border-radius: 12px;
         padding: 14px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
       }
+
       .lead-card-header {
         display: flex;
         justify-content: space-between;
@@ -68,14 +99,16 @@
         padding-bottom: 8px;
         margin-bottom: 10px;
       }
+
       .lead-card-row {
         display: flex;
         justify-content: space-between;
         margin-bottom: 6px;
-        font-size: 0.9em;
+        font-size: 0.875rem;
       }
-      .lead-card-label { color: #64748b; font-weight: 500; }
-      .lead-card-value { font-weight: 600; color: #1e293b; text-align: right; }
+
+      .lead-card-label { color: var(--text-muted); font-weight: 500; }
+      .lead-card-value { font-weight: 600; color: var(--text-main); text-align: right; }
     }
 
     @media (min-width: 768px) {
@@ -84,36 +117,27 @@
   </style>
 </head>
 <body>
+
   <div class="container main-card p-4">
     <!-- Header Alanı -->
-    <div class="row g-3 align-items-center mb-3">
+    <div class="row g-3 align-items-center mb-4">
       <div class="col-12 col-md-6">
-        <h2 class="fw-bold mb-1 fs-3">OSMAN REKLAMLAR</h2>
+        <h2 class="header-title mb-1 fs-3">OSMAN REKLAMLAR</h2>
         <div class="text-muted small">
-          <strong>Letzte Aktualisierung:</strong> <span id="last-update" class="text-primary fw-bold">Yükleniyor...</span>
+          <i class="bi bi-clock-history me-1"></i><strong>Letzte Aktualisierung:</strong> 
+          <span id="last-update" class="text-primary fw-bold ms-1">Yükleniyor...</span>
         </div>
       </div>
       <div class="col-12 col-md-6">
-        <div class="d-flex flex-column flex-sm-row gap-2">
-          <input type="text" id="searchInput" onkeyup="filterTable()" class="form-control" placeholder="Suchen (Telefon, Ort, Nachricht...)...">
-          <button id="btn-refresh" onclick="startLiveScrape()" class="btn btn-primary text-nowrap">
-            🔄 Daten neu laden
-          </button>
+        <div class="position-relative">
+          <input type="text" id="searchInput" onkeyup="filterTable()" class="form-control form-control-lg fs-6 ps-5" placeholder="Suchen (Telefon, Ort, Nachricht...)...">
+          <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
         </div>
       </div>
-    </div>
-
-    <!-- Geri Sayım Kutusu -->
-    <div id="countdown-box" class="alert alert-info align-items-center justify-content-between mb-3">
-      <div>
-        <strong>🤖 Prüfe auf neue Daten...</strong>
-        <div class="small text-muted d-block d-sm-inline">data.json wird neu geladen.</div>
-      </div>
-      <div class="fw-bold fs-4 text-primary ms-2"><span id="timer">10</span>s</div>
     </div>
 
     <!-- MASAÜSTÜ TABLO GÖRÜNÜMÜ -->
-    <div class="table-responsive desktop-table-view">
+    <div class="table-container desktop-table-view">
       <table class="table align-middle" id="leadTable">
         <thead>
           <tr>
@@ -126,19 +150,20 @@
           </tr>
         </thead>
         <tbody id="lead-table-body">
-          <tr><td colspan="6" class="text-center py-4">Veriler yükleniyor...</td></tr>
+          <tr><td colspan="6" class="text-center py-4 text-muted"><div class="spinner-border spinner-border-sm me-2"></div>Veriler yükleniyor...</td></tr>
         </tbody>
       </table>
     </div>
 
     <!-- MOBİL KART GÖRÜNÜMÜ -->
     <div id="lead-cards-body" class="mobile-cards-view">
-      <div class="text-center text-muted py-4">Veriler yükleniyor...</div>
+      <div class="text-center text-muted py-4"><div class="spinner-border spinner-border-sm me-2"></div>Veriler yükleniyor...</div>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    // Mesaj Metni Temizleme Mantığı
     function cleanMessageText(text) {
       if (!text || text === '-' || text.trim() === '') return null;
       
@@ -152,86 +177,92 @@
       return cleaned.length > 0 ? cleaned : null;
     }
 
+    // XSS Koruması İçin Metin Kaçış Fonksiyonu
+    function escapeHTML(str) {
+      if (!str) return '';
+      return str.replace(/[&<>'"]/g, 
+        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+      );
+    }
+
     async function loadData() {
       const tbody = document.getElementById('lead-table-body');
       const cardsBody = document.getElementById('lead-cards-body');
       const updateSpan = document.getElementById('last-update');
 
       try {
-        const response = await fetch('./data.json?t=' + new Date().getTime(), {
-          cache: 'no-cache'
-        });
-
-        if (!response.ok) {
-          throw new Error(`HTTP Hata kodu: ${response.status}`);
-        }
+        const response = await fetch('./data.json?t=' + Date.now(), { cache: 'no-cache' });
+        if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
 
         const data = await response.json();
-        updateSpan.innerText = data.updatedAt || 'Unbekannt';
-
-        tbody.innerHTML = '';
-        cardsBody.innerHTML = '';
+        updateSpan.innerText = escapeHTML(data.updatedAt) || 'Unbekannt';
 
         if (!data.leads || data.leads.length === 0) {
-          const emptyMsg = '<div class="text-center py-4 text-muted">Keine Daten vorhanden.</div>';
+          const emptyHTML = '<div class="text-center py-4 text-muted">Keine Daten vorhanden.</div>';
           tbody.innerHTML = `<tr><td colspan="6" class="text-center py-4 text-muted">Keine Daten vorhanden.</td></tr>`;
-          cardsBody.innerHTML = emptyMsg;
+          cardsBody.innerHTML = emptyHTML;
           return;
         }
 
+        let desktopRows = '';
+        let mobileCards = '';
+
         data.leads.forEach((lead, index) => {
-          // Osman scraper.js veri yapısıyla birebir eşleme
-          const phone = lead["Musteri"] || '-';
-          const jobType = lead["Hizmet"] || '-';
-          const location = lead["Konum"] || '-';
-          const ilkGorusme = lead["Ilk gorusme"] || '-';
-          const sonGorusme = lead["Son gorusme"] || '-';
+          const phone = escapeHTML(lead["Musteri"] || '-');
+          const jobType = escapeHTML(lead["Hizmet"] || '-');
+          const location = escapeHTML(lead["Konum"] || '-');
+          const ilkGorusme = escapeHTML(lead["Ilk gorusme"] || '-');
+          const sonGorusme = escapeHTML(lead["Son gorusme"] || '-');
           const rawMessage = lead["Mesaj"] || '-';
 
           const cleanedMsg = cleanMessageText(rawMessage);
+          const escapedCleanedMsg = cleanedMsg ? escapeHTML(cleanedMsg) : null;
 
-          const msgButton = cleanedMsg ? `
+          const phoneDisplay = phone !== '-' 
+            ? `<a href="tel:${phone}" class="fw-bold text-decoration-none text-primary"><i class="bi bi-telephone me-1"></i>${phone}</a>`
+            : `<span class="text-muted fw-bold">-</span>`;
+
+          const msgButton = escapedCleanedMsg ? `
             <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#msg-desktop-${index}">
-              💬 Nachricht
+              <i class="bi bi-chat-text me-1"></i>Nachricht
             </button>
           ` : '<span class="text-muted small">-</span>';
 
-          const row = `
-            <tr>
-              <td><a href="tel:${phone}" class="fw-bold text-decoration-none">${phone}</a></td>
+          // Masaüstü Satırı
+          desktopRows += `
+            <tr class="searchable-row">
+              <td>${phoneDisplay}</td>
               <td>${jobType}</td>
-              <td>${location}</td>
+              <td><span class="badge bg-light text-dark border">${location}</span></td>
               <td class="text-muted small">${ilkGorusme}</td>
               <td class="text-muted small">${sonGorusme}</td>
               <td>${msgButton}</td>
             </tr>
-            ${cleanedMsg ? `
+            ${escapedCleanedMsg ? `
               <tr class="collapse" id="msg-desktop-${index}">
-                <td colspan="6" class="p-3">
+                <td colspan="6" class="p-3 bg-light">
                   <div class="message-box">
-                    <strong class="text-primary small d-block mb-1">💬 Kundennachricht:</strong>
-                    <div class="small text-dark">${cleanedMsg}</div>
+                    <strong class="text-primary small d-block mb-1"><i class="bi bi-chat-quote me-1"></i>Kundennachricht:</strong>
+                    <div class="small text-dark">${escapedCleanedMsg}</div>
                   </div>
                 </td>
               </tr>
             ` : ''}
           `;
-          tbody.innerHTML += row;
 
-          const mobileMsgHTML = cleanedMsg ? `
+          // Mobil Kart
+          const mobileMsgHTML = escapedCleanedMsg ? `
             <div class="message-box mt-2">
-              <strong class="text-primary small d-block mb-1">💬 Nachricht:</strong>
-              <div class="small text-dark">${cleanedMsg}</div>
+              <strong class="text-primary small d-block mb-1"><i class="bi bi-chat-quote me-1"></i>Nachricht:</strong>
+              <div class="small text-dark">${escapedCleanedMsg}</div>
             </div>
           ` : '';
 
-          const card = `
-            <div class="lead-card searchable-item">
+          mobileCards += `
+            <div class="lead-card searchable-card">
               <div class="lead-card-header">
                 <div>
-                  <a href="tel:${phone}" class="fw-bold fs-6 text-decoration-none text-primary d-block">
-                    📞 ${phone}
-                  </a>
+                  ${phone !== '-' ? `<a href="tel:${phone}" class="fw-bold fs-6 text-decoration-none text-primary d-block"><i class="bi bi-telephone me-1"></i>${phone}</a>` : `<span class="fw-bold text-muted">-</span>`}
                   <small class="text-muted">Son: ${sonGorusme}</small>
                 </div>
               </div>
@@ -250,8 +281,10 @@
               ${mobileMsgHTML}
             </div>
           `;
-          cardsBody.innerHTML += card;
         });
+
+        tbody.innerHTML = desktopRows;
+        cardsBody.innerHTML = mobileCards;
 
       } catch (err) {
         console.error("Yükleme hatası:", err);
@@ -262,47 +295,33 @@
       }
     }
 
-    function startLiveScrape() {
-      const btn = document.getElementById('btn-refresh');
-      const box = document.getElementById('countdown-box');
-      const timerSpan = document.getElementById('timer');
-
-      btn.disabled = true;
-      box.style.display = 'flex';
-
-      let timeLeft = 10;
-      timerSpan.innerText = timeLeft;
-
-      const countdown = setInterval(() => {
-        timeLeft--;
-        timerSpan.innerText = timeLeft;
-
-        if (timeLeft <= 0) {
-          clearInterval(countdown);
-          box.style.display = 'none';
-          btn.disabled = false;
-          loadData();
-        }
-      }, 1000);
-    }
-
+    // Arama Fonksiyonu (Performanslı ve Collapse Hassasiyetli)
     function filterTable() {
       const input = document.getElementById('searchInput');
       const filter = input.value.toLowerCase();
-      
-      const rows = document.querySelectorAll('#lead-table-body tr');
+
+      // Masaüstü Satırları
+      const rows = document.querySelectorAll('#lead-table-body tr.searchable-row');
       rows.forEach(row => {
         const text = row.innerText.toLowerCase();
-        row.style.display = text.includes(filter) ? '' : 'none';
+        const nextCollapse = row.nextElementSibling;
+        const isMatch = text.includes(filter);
+
+        row.style.display = isMatch ? '' : 'none';
+        if (nextCollapse && nextCollapse.classList.contains('collapse') && !isMatch) {
+          nextCollapse.style.display = 'none';
+        }
       });
 
-      const cards = document.querySelectorAll('#lead-cards-body .searchable-item');
+      // Mobil Kartlar
+      const cards = document.querySelectorAll('#lead-cards-body .searchable-card');
       cards.forEach(card => {
         const text = card.innerText.toLowerCase();
         card.style.display = text.includes(filter) ? '' : 'none';
       });
     }
 
+    // Sayfa Yüklendiğinde Başlat
     loadData();
   </script>
 </body>
