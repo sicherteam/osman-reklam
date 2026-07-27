@@ -130,7 +130,7 @@ function clearChromeLocks() {
 
       return rows.map((row, idx) => {
         const rawCells = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
-        const cells = rawCells.map(c => c.innerText?.trim() || '').filter(Boolean);
+        const cells = rawCells.map(c => c.innerText?.trim() || '');
 
         // En az 4 hücre yoksa veya başlık satırıysa atla
         if (cells.length < 4) return null;
@@ -145,7 +145,7 @@ function clearChromeLocks() {
         // GÜVENLİK FİLTRESİ 2: Müşteri adı tek başına küçük sayı ise ele
         if (/^\d{1,3}$/.test(customerName)) return null;
 
-        // KONUM TESPİTİ (4. Hücre yani index 3 doğrudan Standort'tur, yedekli doğrulama)
+        // KONUM TESPİTİ
         let location = cells[3] || '-';
         if (!location || location === '-' || location === jobType || /^\+?\d[\d\s-]{6,}$/.test(location)) {
           location = cells.find((t, i) => 
@@ -160,6 +160,9 @@ function clearChromeLocks() {
 
         const dates = cells.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
 
+        // MESAJ TESPİTİ: "Nachricht" kelimesini satırın tüm metninde veya Art der Anfrage sütununda yakala
+        const isMessage = /nachricht|message/i.test(row.innerText || '');
+
         return {
           domIndex: idx,
           phone: customerName,
@@ -167,7 +170,7 @@ function clearChromeLocks() {
           location,
           anfrageDate: dates[0] || '-',
           letzteDate: dates[1] || dates[0] || '-',
-          isMessage: /nachricht|message/i.test(row.innerText || '')
+          isMessage: isMessage
         };
       }).filter(Boolean);
     });
@@ -185,13 +188,18 @@ function clearChromeLocks() {
 
       if (item.isMessage) {
         try {
+          console.log(`[${item.phone} / ${item.location}] Mesaj paneli açılıyor...`);
+          
           await page.evaluate((index) => {
             const rows = Array.from(document.querySelectorAll('[role="row"], tr'));
             const row = rows[index];
-            if (row) (row.querySelector('td, div[role="gridcell"]') || row).click();
+            if (row) {
+              const target = row.querySelector('td, div[role="gridcell"]') || row;
+              target.click();
+            }
           }, item.domIndex);
 
-          await new Promise(r => setTimeout(r, 4000));
+          await new Promise(r => setTimeout(r, 4500));
 
           messageText = await page.evaluate(() => {
             const chatBlock = Array.from(document.querySelectorAll('div, section, article'))
@@ -206,6 +214,8 @@ function clearChromeLocks() {
                        .replace(/^P\s+|^Potenzieller Kunde\s+|^\d{2}\.\d{2}\.\d{2}\s+/gi, '')
                        .trim() || "-";
           });
+
+          console.log(` -> Okunan mesaj: ${messageText.substring(0, 40)}...`);
         } catch (e) {
           console.warn(`[${item.phone}] Mesaj okuma uyarısı:`, e.message);
         }
