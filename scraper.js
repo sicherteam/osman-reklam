@@ -54,7 +54,7 @@ function sendTelegramMessage(lead) {
   const ilkGorusme24 = parseTo24HourDate(lead["Ilk gorusme"]);
   const sonGorusme24 = parseTo24HourDate(lead["Son gorusme"]);
 
-  const message = `🔔 *YENİ MÜSTERI!* (${PROJECT_NAME})\n\n` +
+  const message = `🔔 *YENİ Müşteri!* (${PROJECT_NAME})\n\n` +
                   `👤 *Müşteri:* ${lead["Musteri"]}\n` +
                   `📍 *Konum:* ${lead["Konum"]}\n` +
                   `💼 *Hizmet:* ${lead["Hizmet"]}\n` +
