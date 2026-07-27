@@ -109,49 +109,40 @@ function clearChromeLocks() {
     });
     await new Promise(r => setTimeout(r, 2000));
 
-    // AŞAMA 1: SÜTUN HİZALAMALI VE DİNAMİK INDEX’Lİ TABLO TARAMASI
+    // AŞAMA 1: KATI FİLTRELİ TABLO TARAMASI
     const rawData = await page.evaluate(() => {
       const rowElements = Array.from(document.querySelectorAll('[role="row"], tr'));
       let validRowCounter = 0;
-
-      // Sütun Başlıklarının Index'lerini Bul
-      let kundeIdx = 0;
-      let jobtypeIdx = 1;
-      let standortIdx = 3;
-
-      const headerRow = rowElements.find(r => /Gebührenstatus|Kunde|Kundenname/i.test(r.innerText || ''));
-      if (headerRow) {
-        const headerCells = Array.from(headerRow.querySelectorAll('th, td, div[role="columnheader"], div[role="gridcell"]'))
-                                 .map(c => c.innerText?.trim() || '');
-        
-        const kFound = headerCells.findIndex(t => /Kunde/i.test(t));
-        const jFound = headerCells.findIndex(t => /Jobtyp/i.test(t));
-        const sFound = headerCells.findIndex(t => /Standort/i.test(t));
-
-        if (kFound !== -1) kundeIdx = kFound;
-        if (jFound !== -1) jobtypeIdx = jFound;
-        if (sFound !== -1) standortIdx = sFound;
-      }
 
       return rowElements.map((row) => {
         const cellElements = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
         const cells = cellElements.map(c => c.innerText?.trim() || '');
 
-        // 1. Başlık satırlarını ve 4 sütundan az olan DOM çöplerini eler
+        // 1. Hücre sayısı 4'ten azsa veya başlık satırıysa atla
         if (cells.length < 4 || /Gebührenstatus|Kunde|Kundenname/i.test(row.innerText || '')) {
           return null;
         }
 
-        const customerName = cells[kundeIdx] || cells[0] || '-';
-        const jobType = cells[jobtypeIdx] || cells[1] || '-';
-        const location = cells[standortIdx] || '-';
-
-        // 2. Takvim / Takvim Numaraları gibi DOM Çöplerini Engelle (Örn: 6-7, 13-14)
-        if (/^\d{1,2}$/.test(customerName) && /^\d{1,2}$/.test(jobType)) {
+        // 2. Gerçek müşteri satırlarında mutlaka tarih (DD.MM.YY) bulunur. Yoksa çöp satırdır!
+        const dates = cells.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
+        if (dates.length === 0) {
           return null;
         }
 
-        const dates = cells.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
+        const customerName = cells[0] || '-';
+        const jobType = cells[1] || '-';
+
+        // 3. Konum (Lokasyon) Ayıklama: Uzunluğu > 2 olan, sayı içermeyen ve LSA statü kelimesi olmayan hücre
+        const locationCandidate = cells.find(t => 
+          t && 
+          t.length > 2 && 
+          !/\d/.test(t) && 
+          !/^(Kategorie|Direkte|Telefon|Nachricht|Belastet|Wird)/i.test(t) &&
+          t !== customerName &&
+          t !== jobType
+        );
+
+        const location = locationCandidate || '-';
         const isMessage = cells.some(cell => cell.trim().toLowerCase() === 'nachricht');
 
         const domIndex = validRowCounter;
@@ -175,7 +166,7 @@ function clearChromeLocks() {
       throw new Error("❌ Hiç geçerli veri bulunamadı.");
     }
 
-    // AŞAMA 2: SAF MESAJ VE DETAY OKUMA
+    // AŞAMA 2: MESAJ PANELERİNİ AÇMA VE OKUMA
     const leads = [];
     for (const item of rawData) {
       let messageText = "-";
@@ -184,12 +175,14 @@ function clearChromeLocks() {
 
       if (item.isMessage) {
         try {
-          console.log(`\n💬 [Index: ${item.domIndex} | ${item.customerName}] Nachricht satırı açılıyor...`);
+          console.log(`\n💬 [Index: ${item.domIndex} | Müşteri: ${item.customerName} | Konum: ${item.location}] Nachricht satırı açılıyor...`);
 
+          // Birebir eşleşen DOM Index üzerinden tıklama
           const clicked = await page.evaluate((targetIndex) => {
             const rows = Array.from(document.querySelectorAll('[role="row"], tr')).filter(r => {
               const cells = Array.from(r.querySelectorAll('td, div[role="gridcell"]'));
-              return cells.length >= 4 && !/Gebührenstatus|Kunde|Kundenname/i.test(r.innerText || '');
+              const dates = cells.filter(c => /\d{2}\.\d{2}\.\d{2}/.test(c.innerText || ''));
+              return cells.length >= 4 && dates.length > 0 && !/Gebührenstatus|Kunde|Kundenname/i.test(r.innerText || '');
             });
 
             if (rows[targetIndex]) {
@@ -202,7 +195,8 @@ function clearChromeLocks() {
           }, item.domIndex);
 
           if (clicked) {
-            await new Promise(r => setTimeout(r, 2000));
+            // Panelin render olması için 2.5 saniye bekle
+            await new Promise(r => setTimeout(r, 2500));
 
             const panelData = await page.evaluate(() => {
               let name = null;
@@ -211,6 +205,7 @@ function clearChromeLocks() {
 
               const allDivs = Array.from(document.querySelectorAll('div, header, section'));
               
+              // Mavi Header Barı
               const headerBar = allDivs.find(el => {
                 const txt = el.innerText || '';
                 return txt.includes('ARCHIVIEREN') || txt.includes('MARKIEREN');
@@ -232,6 +227,7 @@ function clearChromeLocks() {
                 }
               }
 
+              // Mesaj İçeriği
               const chatCard = allDivs.find(el => (el.innerText || '').includes('Unterhaltung'));
               if (chatCard) {
                 const rawChatText = chatCard.innerText;
