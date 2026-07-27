@@ -100,7 +100,6 @@ function clearChromeLocks() {
       throw new Error(`❌ Oturum açılamadı/Engellendi: ${pageTitle}`);
     }
 
-    // Scroll ile DOM yerleşimi
     await page.evaluate(async () => {
       for (let i = 0; i < 3; i++) {
         window.scrollBy(0, 400);
@@ -109,7 +108,7 @@ function clearChromeLocks() {
     });
     await new Promise(r => setTimeout(r, 2000));
 
-    // AŞAMA 1: DOM'DAN ARINDIRILMIŞ HAM VERİ TOPLAMA
+    // AŞAMA 1: VERİ TOPLAMA VE 'NACHRICHT' TESPİTİ
     const rawData = await page.evaluate(() => {
       const rowElements = Array.from(document.querySelectorAll('[role="row"], tr'));
 
@@ -123,20 +122,18 @@ function clearChromeLocks() {
         const customerName = cells[0] || '-';
         const jobType = cells[1] || '-';
 
-        // Müşteri VE Hizmet ikisi birden yoksa doğrudan çöp satırdır
+        // Müşteri VE Hizmet ikisi birden yoksa çöp satırdır
         if ((!customerName || customerName === '-') && (!jobType || jobType === '-')) return null;
 
         // Tek başına sayfa no/sayı içeriyorsa atla
         if (/^\d{1,3}$/.test(customerName) || /^\d{1,3}$/.test(jobType)) return null;
 
-        // KONUM ADIM 1: Standart Hücre
+        // KONUM -> Karakter uzunluğu 2'den büyük olmalı
         let location = cells[3] || '-';
-
-        // KONUM ADIM 2: 2 Karakterden Büyük Olma Şartı (length > 2)
         if (!location || location.length <= 2 || location === jobType || /^\+?\d[\d\s-]{6,}$/.test(location)) {
           const candidate = cells.find((t, i) => 
             i > 1 && 
-            t.length > 2 && // STRICT: 2'den büyük karakter şartı
+            t.length > 2 && 
             t !== customerName && 
             t !== jobType && 
             !/^\+?\d[\d\s-]{6,}$/.test(t) && 
@@ -146,13 +143,15 @@ function clearChromeLocks() {
           location = candidate || '-';
         }
 
-        // FİNAL KONTROL: Konum hala <= 2 ise ve müşteri ismi yoksa ELE
         if ((!customerName || customerName === '-') && location.length <= 2) return null;
 
         const dates = cells.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
-        const isMessage = /nachricht|message/i.test(row.innerText || '');
+        
+        // KONTROL: Hücrelerden herhangi birinde "Nachricht" yazıyor mu?
+        const isMessage = cells.some(cell => cell.trim().toLowerCase() === 'nachricht');
 
         return {
+          identifier: customerName, // Satırı DOM'da tekrar bulmak için benzersiz alan
           phone: customerName,
           jobType,
           location,
@@ -163,35 +162,33 @@ function clearChromeLocks() {
       }).filter(Boolean);
     });
 
-    console.log(`📊 Filtrelerden Geçen Net Lead Sayısı: ${rawData.length}`);
+    console.log(`📊 Çekilen Temiz Lead Sayısı: ${rawData.length}`);
 
     if (rawData.length === 0) {
       throw new Error("❌ Hiç geçerli veri bulunamadı.");
     }
 
-    // AŞAMA 2: DETACHED FRAME ÖNLEYİCİ - RE-QUERY ILE MESAJ OKUMA
+    // AŞAMA 2: SADECE "NACHRICHT" OLANLARA TIKLA VE MESAJI ÇEK
     const leads = [];
     for (const item of rawData) {
       let messageText = "-";
 
       if (item.isMessage) {
         try {
-          console.log(`💬 [${item.phone}] Mesaj içeriği çekiliyor...`);
+          console.log(`💬 [${item.identifier}] Nachricht tespit edildi, tıklanıyor...`);
 
-          // İndeks yerine metin bazlı DOM arama (Detached Frame kesin çözümü)
-          const clicked = await page.evaluate((customerPhone) => {
+          const clicked = await page.evaluate((id) => {
             const rows = Array.from(document.querySelectorAll('[role="row"], tr'));
-            const targetRow = rows.find(r => r.innerText && r.innerText.includes(customerPhone));
+            const targetRow = rows.find(r => r.innerText && r.innerText.includes(id));
             if (targetRow) {
-              const clickTarget = targetRow.querySelector('td, div[role="gridcell"]') || targetRow;
-              clickTarget.click();
+              targetRow.click();
               return true;
             }
             return false;
-          }, item.phone);
+          }, item.identifier);
 
           if (clicked) {
-            await new Promise(r => setTimeout(r, 3500));
+            await new Promise(r => setTimeout(r, 4000));
 
             messageText = await page.evaluate(() => {
               const chatBlock = Array.from(document.querySelectorAll('div, section, article'))
@@ -206,9 +203,11 @@ function clearChromeLocks() {
                          .replace(/^P\s+|^Potenzieller Kunde\s+|^\d{2}\.\d{2}\.\d{2}\s+/gi, '')
                          .trim() || "-";
             });
+
+            console.log(` -> Okunan Mesaj: ${messageText.substring(0, 50)}...`);
           }
         } catch (e) {
-          console.warn(`⚠️ [${item.phone}] Mesaj paneli okunamadı, atlandı.`);
+          console.warn(`⚠️ [${item.identifier}] Mesaj okuma hatası:`, e.message);
         }
       }
 
@@ -228,7 +227,7 @@ function clearChromeLocks() {
       leads
     };
     fs.writeFileSync('data.json', JSON.stringify(outputData, null, 2));
-    console.log(`🎉 BAŞARILI! ${leads.length} gerçek lead 'data.json'a kaydedildi.`);
+    console.log(`🎉 BAŞARILI! ${leads.length} veri kaydedildi.`);
 
     // AŞAMA 3: GIT PUSH & BİLDİRİM
     try {
