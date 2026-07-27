@@ -1,42 +1,170 @@
 {
-  "updatedAt": "27.7.2026, 20:33:53",
+  "updatedAt": "27.7.2026, 20:38:07",
   "leads": [
+    {
+      "Musteri": "6",
+      "Hizmet": "7",
+      "Konum": "9",
+      "Ilk gorusme": "-",
+      "Son gorusme": "-",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "13",
+      "Hizmet": "14",
+      "Konum": "16",
+      "Ilk gorusme": "-",
+      "Son gorusme": "-",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "20",
+      "Hizmet": "21",
+      "Konum": "23",
+      "Ilk gorusme": "-",
+      "Son gorusme": "-",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "27",
+      "Hizmet": "28",
+      "Konum": "30",
+      "Ilk gorusme": "-",
+      "Son gorusme": "-",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "-",
+      "Hizmet": "Baumpflege",
+      "Konum": "Eggenburg",
+      "Ilk gorusme": "26.07.26 19:37",
+      "Son gorusme": "27.07.26 19:37",
+      "Mesaj": "2026Mo., 27. JuliJuli 2026MDMDFSS12345678910111213141516171819202122232425262728293031"
+    },
     {
       "Musteri": "0676 4100053",
       "Hizmet": "Baumpflege",
-      "Konum": "Baumpflege",
+      "Konum": "Korneuburg",
       "Ilk gorusme": "27.07.26 19:24",
       "Son gorusme": "27.07.26 19:24",
-      "Mesaj": "[Potenzieller Kunde\n0676 4100053]\n7:24 PM\nWollen Fichte im Bezirk Korneuburg abtragen lassen. Bitte um Ihren Anruf. Fam. Grössing 06764100053"
+      "Mesaj": "2026Mo., 27. JuliJuli 2026MDMDFSS12345678910111213141516171819202122232425262728293031"
+    },
+    {
+      "Musteri": "daniela langthaler",
+      "Hizmet": "-",
+      "Konum": "Baden",
+      "Ilk gorusme": "26.07.26 16:54",
+      "Son gorusme": "27.07.26 16:54",
+      "Mesaj": "[daniela langthaler\n0660 6508087]\nd\ndaniela langthaler\nGestern um 4:54 PM\nIch benötige bitte einen Kostenvoranschlag für folgende Leistungen. - 2x Grube unter 2 Frühbeete ca. 2,5m Länge x1,5m Breite x 50cm Tiefe - 1x Grube unter1x Frühbeet ca. 1,50 Länge x 1,0 m Breite x50cm Tiefe Aufgefüllt sollen die beiden Gruben mit Mutterboden, Sand und Laub werden. Es soll grabfähig sein damit meine Schildkröten dort überwintern können. Die Seiten der Gruben sollen mit Stein, Styrodur oder Hohlkammerplatten versehen werden die vor Fressfeinden schützen sollen. Umgesetzt soll das ganze bis 31.08.2026 sein."
+    },
+    {
+      "Musteri": "0664 2477304",
+      "Hizmet": "-",
+      "Konum": "Korneuburg",
+      "Ilk gorusme": "27.07.26 15:40",
+      "Son gorusme": "27.07.26 15:41",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "0681 10281273",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Ilk gorusme": "25.07.26 10:52",
+      "Son gorusme": "26.07.26 10:54",
+      "Mesaj": "-"
     },
     {
       "Musteri": "Gerhard Kienast",
       "Hizmet": "Baumfällarbeiten",
-      "Konum": "Baumfällarbeiten",
+      "Konum": "Mödling",
       "Ilk gorusme": "25.07.26 09:59",
       "Son gorusme": "26.07.26 10:00",
       "Mesaj": "[Erhalten am 25]\nG\nGerhard Kienast\n25.07.26\nIn meinem Garten in Breitenfurt habe ich eine blätterfreie Birke gefunden mit einer Höhe ca 12m einem Durchmesser von ca 25 cm. Der Standort ist zwischen Fichten 5 m von der Strasse entfernt. Da ich selbst mit Holz etwas anzufangen weiß, braucht es auch nicht abtransportiert werden. könnten Sie diese Arbeit übernehmen? Übernehmen Sie ach andere Arbeiten?"
     },
     {
+      "Musteri": "0660 2177333",
+      "Hizmet": "-",
+      "Konum": "Bisamberg",
+      "Ilk gorusme": "24.07.26 13:45",
+      "Son gorusme": "25.07.26 13:49",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "0664 73923005",
+      "Hizmet": "-",
+      "Konum": "Bezirk Sankt Pölten-Land",
+      "Ilk gorusme": "24.07.26 11:39",
+      "Son gorusme": "25.07.26 11:48",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "0677 61747945",
+      "Hizmet": "-",
+      "Konum": "Brunn am Gebirge",
+      "Ilk gorusme": "24.07.26 08:11",
+      "Son gorusme": "25.07.26 08:14",
+      "Mesaj": "-"
+    },
+    {
       "Musteri": "0681 81678519",
       "Hizmet": "Baumfällarbeiten",
-      "Konum": "Baumfällarbeiten",
+      "Konum": "Puchberg am Schneeberg",
       "Ilk gorusme": "24.07.26 19:28",
       "Son gorusme": "24.07.26 19:29",
       "Mesaj": "-"
     },
     {
+      "Musteri": "0680 3115131",
+      "Hizmet": "-",
+      "Konum": "Neunkirchen",
+      "Ilk gorusme": "23.07.26 17:15",
+      "Son gorusme": "24.07.26 17:18",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "0676 9064327",
+      "Hizmet": "-",
+      "Konum": "Mank",
+      "Ilk gorusme": "24.07.26 15:48",
+      "Son gorusme": "24.07.26 15:48",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "0664 7650675",
+      "Hizmet": "-",
+      "Konum": "Wiener Neustadt",
+      "Ilk gorusme": "23.07.26 15:17",
+      "Son gorusme": "24.07.26 15:18",
+      "Mesaj": "-"
+    },
+    {
       "Musteri": "0681 20431661",
       "Hizmet": "Entsorgung von Gartenabfällen",
-      "Konum": "Entsorgung von Gartenabfällen",
+      "Konum": "Strasshof an der Nordbahn",
       "Ilk gorusme": "23.07.26 14:34",
       "Son gorusme": "24.07.26 14:36",
       "Mesaj": "-"
     },
     {
+      "Musteri": "0676 6296724",
+      "Hizmet": "-",
+      "Konum": "Ebreichsdorf",
+      "Ilk gorusme": "23.07.26 11:56",
+      "Son gorusme": "24.07.26 11:58",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "0699 81496221",
+      "Hizmet": "-",
+      "Konum": "Mödling",
+      "Ilk gorusme": "22.07.26 15:41",
+      "Son gorusme": "24.07.26 10:24",
+      "Mesaj": "-"
+    },
+    {
       "Musteri": "0664 88555005",
       "Hizmet": "Baumpflege",
-      "Konum": "Baumpflege",
+      "Konum": "Wien",
       "Ilk gorusme": "23.07.26 09:46",
       "Son gorusme": "24.07.26 09:48",
       "Mesaj": "-"
@@ -44,7 +172,7 @@
     {
       "Musteri": "0676 7125984",
       "Hizmet": "Kunstrasenverlegung",
-      "Konum": "Kunstrasenverlegung",
+      "Konum": "Wien",
       "Ilk gorusme": "22.07.26 11:57",
       "Son gorusme": "23.07.26 12:01",
       "Mesaj": "-"
@@ -52,9 +180,17 @@
     {
       "Musteri": "0664 6486001",
       "Hizmet": "Kunstrasenverlegung",
-      "Konum": "Kunstrasenverlegung",
+      "Konum": "Wien",
       "Ilk gorusme": "22.07.26 10:09",
       "Son gorusme": "23.07.26 10:11",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "0676 3100739",
+      "Hizmet": "-",
+      "Konum": "Ternitz",
+      "Ilk gorusme": "21.07.26 17:13",
+      "Son gorusme": "22.07.26 17:15",
       "Mesaj": "-"
     }
   ]
