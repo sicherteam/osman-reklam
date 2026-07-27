@@ -1,13 +1,21 @@
 {
-  "updatedAt": "27.7.2026, 19:23:52",
+  "updatedAt": "27.7.2026, 19:28:52",
   "leads": [
+    {
+      "phone": "0676 4100053",
+      "jobType": "Baumpflege",
+      "location": "0676 4100053",
+      "status": "Korneuburg",
+      "date": "27.07.26 724 PM",
+      "messageText": "[Potenzieller Kunde\n0676 4100053]\n7:24 PM\nWollen Fichte im Bezirk Korneuburg abtragen lassen. Bitte um Ihren Anruf. Fam. Grössing 06764100053"
+    },
     {
       "phone": "daniela langthaler",
       "jobType": "-",
       "location": "Kategorie",
       "status": "Baden",
       "date": "26.07.26 454 PM",
-      "messageText": "[daniela langthaler\n0660 6508087]\nd\ndaniela langthaler\nGestern um 4:54 PM\nIch benötige bitte einen Kostenvoranschlag für folgende Leistungen. - 2x Grube unter 2 Frühbeete ca. 2,5m Länge x1,5m Breite x 50cm Tiefe - 1x Grube unter1x Frühbeet ca. 1,50 Länge x 1,0 m Breite x50cm Tiefe Aufgefüllt sollen die beiden Gruben mit Mutterboden, Sand und Laub werden. Es soll grabfähig sein damit meine Schildkröten dort überwintern können. Die Seiten der Gruben sollen mit Stein, Styrodur oder Hohlkammerplatten versehen werden die vor Fressfeinden schützen sollen. Umgesetzt soll das ganze bis 31.08.2026 sein."
+      "messageText": "Google Lokale Dienstleistungen\n\ndaniela langthaler\n0660 6508087\nARCHIVIEREN\nALS \"TERMIN VEREINBART\" MARKIEREN\nAbrechnungsgrenzbetrag aktualisiert - Der Abrechnungsgrenzbetrag wurde automatisch aktualisiert. Dies kann unter Umständen Auswirkungen auf die Buchungshäufigkeit haben. Dennoch werden dir auch weiterhin lediglich deine Ausgaben in Rechnung gestellt.\nPROBLEM BEHEBEN\nZusammenfassung der Anfrage\nErhalten am 26.07.2026 an 4:54 PM.\nDiese Anfrage bewerten\nStatusNeu\nGebührenstatus\nBelastet\nAnfrage-ID328660870\nArt der AnfrageNachricht\nUnternehmenskategorieAnbieter von Rasenpflege\nStandortBaden\nSuchabsichtKategorie\nKundenname\nKundenname hinzufügen\nIhre Notizen\nHier hinzugefügte Notizen sind für Kunden nicht sichtbar, sollten jedoch trotzdem keine sensiblen oder vertraulichen Informationen enthalten.\nUnterhaltung\nHier dem Kunden antworten\nSENDEN"
     },
     {
       "phone": "0664 2477304",
@@ -143,14 +151,6 @@
       "location": "0676 3100739",
       "status": "Ternitz",
       "date": "21.07.26 513 PM",
-      "messageText": "-"
-    },
-    {
-      "phone": "0680 3229763",
-      "jobType": "-",
-      "location": "0680 3229763",
-      "status": "Kirchberg an der Pielach",
-      "date": "22.07.26 435 PM",
       "messageText": "-"
     }
   ]
