@@ -1,6 +1,14 @@
 {
-  "updatedAt": "27.7.2026, 15:38:49",
+  "updatedAt": "27.7.2026, 15:57:50",
   "leads": [
+    {
+      "phone": "0664 2477304",
+      "jobType": "-",
+      "location": "Korneuburg",
+      "status": "Wird überprüft",
+      "date": "27.07.26 15:40",
+      "messageText": "-"
+    },
     {
       "phone": "daniela langthaler",
       "jobType": "-",
@@ -143,14 +151,6 @@
       "location": "Kirchberg an der Pielach",
       "status": "Nicht belastet",
       "date": "22.07.26 16:35",
-      "messageText": "-"
-    },
-    {
-      "phone": "0676 87831603",
-      "jobType": "Baumpflege",
-      "location": "Bad Vöslau",
-      "status": "Belastet",
-      "date": "21.07.26 15:29",
       "messageText": "-"
     }
   ]
