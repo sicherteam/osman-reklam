@@ -1,32 +1,90 @@
 {
-  "updatedAt": "27.7.2026, 21:39:40",
+  "updatedAt": "27.7.2026, 21:43:25",
   "leads": [
     {
       "Musteri": "-",
+      "Telefon": "Keine Telefonnummer",
+      "Hizmet": "-",
+      "Konum": "-",
+      "Ilk gorusme": "-",
+      "Son gorusme": "-",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "6",
+      "Telefon": "Keine Telefonnummer",
+      "Hizmet": "7",
+      "Konum": "-",
+      "Ilk gorusme": "-",
+      "Son gorusme": "-",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "13",
+      "Telefon": "Keine Telefonnummer",
+      "Hizmet": "14",
+      "Konum": "-",
+      "Ilk gorusme": "-",
+      "Son gorusme": "-",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "20",
+      "Telefon": "Keine Telefonnummer",
+      "Hizmet": "21",
+      "Konum": "-",
+      "Ilk gorusme": "-",
+      "Son gorusme": "-",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "27",
+      "Telefon": "Keine Telefonnummer",
+      "Hizmet": "28",
+      "Konum": "-",
+      "Ilk gorusme": "-",
+      "Son gorusme": "-",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "-",
+      "Telefon": "Keine Telefonnummer",
+      "Hizmet": "-",
+      "Konum": "-",
+      "Ilk gorusme": "-",
+      "Son gorusme": "-",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "-",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "Baumpflege",
-      "Konum": "Eggenburg",
+      "Konum": "Baumpflege",
       "Ilk gorusme": "26.07.26 19:37",
       "Son gorusme": "27.07.26 19:37",
-      "Mesaj": "-"
+      "Mesaj": "Hier dem Kunden antwortenSenden"
     },
     {
-      "Musteri": "0676 4100053",
+      "Musteri": "Google Lokale Dienstleistungen",
+      "Telefon": "0676 4100053",
       "Hizmet": "Baumpflege",
-      "Konum": "Korneuburg",
+      "Konum": "Baumpflege",
       "Ilk gorusme": "27.07.26 19:24",
       "Son gorusme": "27.07.26 19:24",
-      "Mesaj": "0676 4100053\nARCHIVIEREN\nALS \"TERMIN VEREINBART\" MARKIEREN\nZusammenfassung der Anfrage\nErhalten am 27.07.2026 an 7:24 PM.\nStatusNeu\nGebührenstatus\nWird überprüft\nhelp_outline\nAnfrage-ID328798356\nArt der AnfrageNachricht\nUnternehmenskategorieAnbieter von Baumpflege\nDiensttypBaumpflege\nStandortKorneuburg\nSuchabsichtKategorie\nKundenname\nKundenname hinzufügen\nIhre Notizen\nHier hinzugefügte Notizen sind für Kunden nicht sichtbar, sollten jedoch trotzdem keine sensiblen oder vertraulichen Informationen enthalten.\nUnterhaltung"
+      "Mesaj": "Hier dem Kunden antworten\nSENDEN"
     },
     {
-      "Musteri": "daniela langthaler",
+      "Musteri": "Google Lokale Dienstleistungen",
+      "Telefon": "0660 6508087",
       "Hizmet": "-",
-      "Konum": "Baden",
+      "Konum": "daniela langthaler",
       "Ilk gorusme": "26.07.26 16:54",
       "Son gorusme": "27.07.26 16:54",
-      "Mesaj": "-"
+      "Mesaj": "Hier dem Kunden antworten\nSENDEN"
     },
     {
       "Musteri": "0664 2477304",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Korneuburg",
       "Ilk gorusme": "27.07.26 15:40",
@@ -35,6 +93,7 @@
     },
     {
       "Musteri": "0681 10281273",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Wien",
       "Ilk gorusme": "25.07.26 10:52",
@@ -42,15 +101,17 @@
       "Mesaj": "-"
     },
     {
-      "Musteri": "Gerhard Kienast",
+      "Musteri": "Google Lokale Dienstleistungen",
+      "Telefon": "0676 4100053",
       "Hizmet": "Baumfällarbeiten",
-      "Konum": "Mödling",
+      "Konum": "Gerhard Kienast",
       "Ilk gorusme": "25.07.26 09:59",
       "Son gorusme": "26.07.26 10:00",
-      "Mesaj": "-"
+      "Mesaj": "P\nPotenzieller Kunde\n7:24 PM\nWollen Fichte im Bezirk Korneuburg abtragen lassen. Bitte um Ihren Anruf. Fam. Grössing 06764100053\nWird geladen…\nAudioinhalte werden geladen\nHier dem Kunden antworten\nSENDEN"
     },
     {
       "Musteri": "0660 2177333",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Bisamberg",
       "Ilk gorusme": "24.07.26 13:45",
@@ -59,6 +120,7 @@
     },
     {
       "Musteri": "0664 73923005",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Bezirk Sankt Pölten-Land",
       "Ilk gorusme": "24.07.26 11:39",
@@ -67,6 +129,7 @@
     },
     {
       "Musteri": "0677 61747945",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Brunn am Gebirge",
       "Ilk gorusme": "24.07.26 08:11",
@@ -75,14 +138,16 @@
     },
     {
       "Musteri": "0681 81678519",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "Baumfällarbeiten",
-      "Konum": "Puchberg am Schneeberg",
+      "Konum": "Baumfällarbeiten",
       "Ilk gorusme": "24.07.26 19:28",
       "Son gorusme": "24.07.26 19:29",
       "Mesaj": "-"
     },
     {
       "Musteri": "0680 3115131",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Neunkirchen",
       "Ilk gorusme": "23.07.26 17:15",
@@ -91,6 +156,7 @@
     },
     {
       "Musteri": "0676 9064327",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Mank",
       "Ilk gorusme": "24.07.26 15:48",
@@ -99,6 +165,7 @@
     },
     {
       "Musteri": "0664 7650675",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Wiener Neustadt",
       "Ilk gorusme": "23.07.26 15:17",
@@ -107,14 +174,16 @@
     },
     {
       "Musteri": "0681 20431661",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "Entsorgung von Gartenabfällen",
-      "Konum": "Strasshof an der Nordbahn",
+      "Konum": "Entsorgung von Gartenabfällen",
       "Ilk gorusme": "23.07.26 14:34",
       "Son gorusme": "24.07.26 14:36",
       "Mesaj": "-"
     },
     {
       "Musteri": "0676 6296724",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Ebreichsdorf",
       "Ilk gorusme": "23.07.26 11:56",
@@ -123,6 +192,7 @@
     },
     {
       "Musteri": "0699 81496221",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Mödling",
       "Ilk gorusme": "22.07.26 15:41",
@@ -131,30 +201,34 @@
     },
     {
       "Musteri": "0664 88555005",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "Baumpflege",
-      "Konum": "Wien",
+      "Konum": "Baumpflege",
       "Ilk gorusme": "23.07.26 09:46",
       "Son gorusme": "24.07.26 09:48",
       "Mesaj": "-"
     },
     {
       "Musteri": "0676 7125984",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "Kunstrasenverlegung",
-      "Konum": "Wien",
+      "Konum": "Kunstrasenverlegung",
       "Ilk gorusme": "22.07.26 11:57",
       "Son gorusme": "23.07.26 12:01",
       "Mesaj": "-"
     },
     {
       "Musteri": "0664 6486001",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "Kunstrasenverlegung",
-      "Konum": "Wien",
+      "Konum": "Kunstrasenverlegung",
       "Ilk gorusme": "22.07.26 10:09",
       "Son gorusme": "23.07.26 10:11",
       "Mesaj": "-"
     },
     {
       "Musteri": "0676 3100739",
+      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Ternitz",
       "Ilk gorusme": "21.07.26 17:13",
