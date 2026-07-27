@@ -61,14 +61,12 @@ function sendTelegramMessage(lead) {
   req.end();
 }
 
-// Tarihi 24 Saatlik Formata Çeviren Gelişmiş Fonksiyon (Örn: "26.07.26 4:54 PM" veya "26.07.26 454 PM" -> "26.07.26 16:54")
+// Tarihi 24 Saatlik Formata Çeviren Gelişmiş Fonksiyon
 function parseTo24HourDate(dateStr) {
   if (!dateStr || dateStr === '-') return '-';
 
-  // 1. Önce "454 PM" gibi iki noktası eksik ifadelerin arasına iki nokta ekle
   let fixedStr = dateStr.replace(/(\b\d{1,2})(\d{2})\s*(AM|PM)/gi, '$1:$2 $3');
 
-  // 2. Regex ile Tarih, Saat, Dakika ve AM/PM grubunu yakala
   const regex = /(\d{2}\.\d{2}\.\d{2})\s+(\d{1,2}):(\d{2})\s*(AM|PM)?/i;
   const match = fixedStr.match(regex);
 
@@ -126,6 +124,7 @@ function parseCleanMessage(rawText) {
 }
 
 (async () => {
+  let browser;
   try {
     const userDataPath = '/home/ubuntu/osman-reklam/user_data';
 
@@ -143,7 +142,7 @@ function parseCleanMessage(rawText) {
     }
 
     // 1. TARAYICIYI BAŞLAT
-    const browser = await puppeteer.launch({
+    browser = await puppeteer.launch({
       headless: "new",
       executablePath: '/usr/bin/google-chrome',
       userDataDir: userDataPath,
@@ -217,7 +216,6 @@ function parseCleanMessage(rawText) {
         const text = row.innerText || '';
         const rawCells = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
         
-        // Sadece sayı içeren ("2", "4" vb.) ve boş hücreleri temizle
         const cleanCellTexts = rawCells
           .map(c => c.innerText ? c.innerText.trim() : '')
           .filter(txt => txt.length > 0 && !/^\d{1,3}$/.test(txt));
@@ -228,16 +226,13 @@ function parseCleanMessage(rawText) {
           if (!isHeader) {
             const isMessage = /nachricht|message/i.test(text);
 
-            // 1. MÜŞTERİ / TELEFON
             let customerName = cleanCellTexts[0] || '-';
             if (/^\d{1,3}$/.test(customerName)) {
               customerName = cleanCellTexts[1] || '-';
             }
 
-            // 2. HİZMET / JOB TYPE
             let jobType = cleanCellTexts[1] || '-';
 
-            // 3. KONUM (Avusturya PLZ veya Şehir adı yakalama)
             let location = '-';
             const locCell = cleanCellTexts.find(t => /\b(Wien|Graz|Linz|Salzburg|Innsbruck|Klagenfurt|\d{4})\b/i.test(t));
             if (locCell) {
@@ -246,7 +241,6 @@ function parseCleanMessage(rawText) {
               location = cleanCellTexts[2] || '-';
             }
 
-            // 4. İKİ AYRI TARİHİ YAKALAMA (Anfrage erhalten & Letzte Aktivität)
             const dateCells = cleanCellTexts.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
             let anfrageDate = '-';
             let letzteDate = '-';
@@ -259,7 +253,6 @@ function parseCleanMessage(rawText) {
               letzteDate = dateCells[0];
             }
 
-            // Hayalet Satır Kontrolü
             if (customerName === '-' || (location === '-' && jobType === '-')) {
               return;
             }
@@ -361,7 +354,7 @@ function parseCleanMessage(rawText) {
     fs.writeFileSync('data.json', JSON.stringify(outputData, null, 2));
     console.log(`🎉 İŞLEM TAMAM! Toplam ${leads.length} veri temiz bir şekilde data.json dosyasına yazıldı.`);
 
-    // --- AKILLI GIT PUSH VE BİLDİRİM ADIMI ---
+    // --- AKILLI VE GÜVENLİ GIT PUSH / BİLDİRİM ADIMI ---
     try {
       const gitStatus = execSync('git status --porcelain data.json').toString().trim();
 
@@ -369,10 +362,13 @@ function parseCleanMessage(rawText) {
         console.log("ℹ️ 'data.json' içeriğinde yeni bir değişiklik yok. Git push pas geçildi.");
       } else {
         console.log("🚀 'data.json' güncellendi! GitHub'a push ediliyor...");
+        
+        // Çakışmayı ve rebase kilitlenmesini önleyen güvenli zincir
         execSync('git add data.json');
-        execSync('git commit -m "Auto-update data.json [cron] [skip ci]"');
-        execSync('git pull --rebase origin main');
+        execSync('git commit -m "Auto-update data.json [cron] [skip ci]" || true');
+        execSync('git pull origin main --rebase -X ours');
         execSync('git push origin main');
+        
         console.log("✅ GitHub'a başarıyla push edildi!");
 
         if (leads.length > 0) {
@@ -383,9 +379,10 @@ function parseCleanMessage(rawText) {
       console.error("⚠️ Git push hatası:", gitErr.message);
     }
 
-    await browser.close();
+    if (browser) await browser.close();
   } catch (error) {
     console.error("💥 Scraper hatası:", error.message);
+    if (browser) await browser.close();
     process.exit(1);
   }
 })();
