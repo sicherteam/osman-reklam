@@ -13,19 +13,53 @@ const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const PROJECT_NAME = 'Osman Reklam'; // Proje ayrımı için
 
-// Telegram Bildirim Fonksiyonu
+// Tarihi 24 Saatlik Formata Çeviren Gelişmiş Fonksiyon (AM/PM Tam Dönüşüm)
+function parseTo24HourDate(dateStr) {
+  if (!dateStr || dateStr === '-') return '-';
+
+  // Boşluk ve bitişik AM/PM durumlarını düzenleme
+  let fixedStr = dateStr.replace(/(\b\d{1,2})(\d{2})\s*(AM|PM)/gi, '$1:$2 $3');
+
+  // "27.07.26 7:24 PM" veya "27.07.26 07:24PM" gibi tüm varyasyonları yakalar
+  const regex = /(\d{2}\.\d{2}\.\d{2})\s+(\d{1,2}):(\d{2})\s*(AM|PM)?/i;
+  const match = fixedStr.match(regex);
+
+  if (match) {
+    let [, datePart, hoursStr, minutes, modifier] = match;
+    let hours = parseInt(hoursStr, 10);
+
+    if (modifier) {
+      const isPM = modifier.toUpperCase() === 'PM';
+      const isAM = modifier.toUpperCase() === 'AM';
+
+      if (isPM && hours < 12) hours += 12;
+      if (isAM && hours === 12) hours = 0;
+    }
+
+    const formattedHours = String(hours).padStart(2, '0');
+    return `${datePart} ${formattedHours}:${minutes}`;
+  }
+
+  return dateStr;
+}
+
+// Telegram Bildirim Fonksiyonu (24 Saatlik Tarih Garantili)
 function sendTelegramMessage(lead) {
   if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
     console.warn("⚠️ Telegram bilgileri eksik! Lütfen .env dosyasını kontrol et.");
     return;
   }
 
-  const message = `🔔 *YENİ LSA LEAD!* (${PROJECT_NAME})\n\n` +
+  // Tarihlerin 24 saatlik formatta gönderilmesini garanti ediyoruz
+  const ilkGorusme24 = parseTo24HourDate(lead["Ilk gorusme"]);
+  const sonGorusme24 = parseTo24HourDate(lead["Son gorusme"]);
+
+  const message = `🔔 *YENİ MÜSTERI!* (${PROJECT_NAME})\n\n` +
                   `👤 *Müşteri:* ${lead["Musteri"]}\n` +
                   `📍 *Konum:* ${lead["Konum"]}\n` +
                   `💼 *Hizmet:* ${lead["Hizmet"]}\n` +
-                  `📅 *İlk Görüşme:* ${lead["Ilk gorusme"]}\n` +
-                  `⏳ *Son Görüşme:* ${lead["Son gorusme"]}\n` +
+                  `📅 *İlk Görüşme:* ${ilkGorusme24}\n` +
+                  `⏳ *Son Görüşme:* ${sonGorusme24}\n` +
                   `💬 *Mesaj:* ${lead["Mesaj"]}`;
 
   const data = JSON.stringify({
@@ -59,34 +93,6 @@ function sendTelegramMessage(lead) {
 
   req.write(data);
   req.end();
-}
-
-// Tarihi 24 Saatlik Formata Çeviren Gelişmiş Fonksiyon
-function parseTo24HourDate(dateStr) {
-  if (!dateStr || dateStr === '-') return '-';
-
-  let fixedStr = dateStr.replace(/(\b\d{1,2})(\d{2})\s*(AM|PM)/gi, '$1:$2 $3');
-
-  const regex = /(\d{2}\.\d{2}\.\d{2})\s+(\d{1,2}):(\d{2})\s*(AM|PM)?/i;
-  const match = fixedStr.match(regex);
-
-  if (match) {
-    let [, datePart, hoursStr, minutes, modifier] = match;
-    let hours = parseInt(hoursStr, 10);
-
-    if (modifier) {
-      const isPM = modifier.toUpperCase() === 'PM';
-      const isAM = modifier.toUpperCase() === 'AM';
-
-      if (isPM && hours < 12) hours += 12;
-      if (isAM && hours === 12) hours = 0;
-    }
-
-    const formattedHours = String(hours).padStart(2, '0');
-    return `${datePart} ${formattedHours}:${minutes}`;
-  }
-
-  return dateStr;
 }
 
 // Ham panel metninden MÜŞTERİ BİLGİSİ ve SADECE GERÇEK MESAJI süzen fonksiyon
@@ -207,7 +213,7 @@ function parseCleanMessage(rawText) {
     });
     await new Promise(resolve => setTimeout(resolve, 2000));
 
-    // 2. AŞAMA: GERÇEK SATIRLARI VE İÇERİKLERİNİ AKILLI TESPİT ET
+    // 2. AŞAMA: GERÇEK SATIRLARI VE İÇERİKLERİNİ AKILLI TESPİT ET (Sıkı Konum Filtresi)
     const validRowsIndices = await page.evaluate(() => {
       const allRows = Array.from(document.querySelectorAll('[role="row"], tr'));
       const valid = [];
@@ -233,12 +239,18 @@ function parseCleanMessage(rawText) {
 
             let jobType = cleanCellTexts[1] || '-';
 
+            // --- AKILLI KONUM TESPİTİ (Numara, Kategorie, Statüleri Eler) ---
             let location = '-';
-            const locCell = cleanCellTexts.find(t => /\b(Wien|Graz|Linz|Salzburg|Innsbruck|Klagenfurt|\d{4})\b/i.test(t));
+            const locCell = cleanCellTexts.find(t => 
+              t !== customerName && 
+              !t.includes(customerName) && 
+              !/^\+?\d[\d\s-]{6,}$/.test(t) && // Telefon numarası kalıplarını eler
+              !/^(Kategorie|Direkte|Telefon|Nachricht|Belastet|Wird)/i.test(t) && // Sütun başlığı ve statüleri eler
+              !/\d{2}\.\d{2}\.\d{2}/.test(t) // Tarihleri eler
+            );
+
             if (locCell) {
               location = locCell;
-            } else {
-              location = cleanCellTexts[2] || '-';
             }
 
             const dateCells = cleanCellTexts.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
@@ -361,9 +373,12 @@ function parseCleanMessage(rawText) {
       if (!gitStatus) {
         console.log("ℹ️ 'data.json' içeriğinde yeni bir değişiklik yok. Git push pas geçildi.");
       } else {
+        // GitHub Pages'in eşzamanlı yayın çakışmasını önlemek için 10s bekleme
+        console.log("⏳ GitHub Pages çakışmasını önlemek için 10 saniye bekleniyor...");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+
         console.log("🚀 'data.json' güncellendi! GitHub'a push ediliyor...");
         
-        // Çakışmayı ve rebase kilitlenmesini önleyen güvenli zincir
         execSync('git add data.json');
         execSync('git commit -m "Auto-update data.json [cron] [skip ci]" || true');
         execSync('git pull origin main --rebase -X ours');
