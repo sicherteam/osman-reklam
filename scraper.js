@@ -16,8 +16,6 @@ const CONFIG = {
   telegramChatId: process.env.TELEGRAM_CHAT_ID,
 };
 
-// --- HELPER FUNCTIONS ---
-
 // Native Fetch API with Telegram Alert
 async function sendTelegramMessage(lead) {
   if (!CONFIG.telegramToken || !CONFIG.telegramChatId) {
@@ -132,17 +130,19 @@ function clearChromeLocks() {
         const rawCells = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
         const cells = rawCells.map(c => c.innerText?.trim() || '').filter(Boolean);
 
-        // En az 4 hücre yoksa veya başlık satırıysa atla
         if (cells.length < 4) return null;
         if (/Gebührenstatus|Kunde|Kundenname/i.test(row.innerText || '')) return null;
 
-        const customerName = cells[0] || '-';
+        let customerName = cells[0] || '-';
         const jobType = cells[1] || '-';
 
-        // GÜVENLİK FİLTRESİ 1: Sadece saf rakamlardan oluşan takvim/hayalet satırlarını ele ("6", "7", "9" vb.)
-        if (/^\d+$/.test(customerName) && /^\d+$/.test(jobType)) return null;
+        // Müşteri adı eğer Google sistem kelimelerinden oluşuyorsa sıfırla
+        if (/Google|Lokale Dienstleistungen|Potenzieller Kunde/i.test(customerName)) {
+          customerName = '-';
+        }
 
-        // GÜVENLİK FİLTRESİ 2: Müşteri adı tek başına küçük sayı ise ele
+        // GÜVENLİK FİLTRELERİ
+        if (/^\d+$/.test(customerName) && /^\d+$/.test(jobType)) return null;
         if (/^\d{1,3}$/.test(customerName)) return null;
 
         // KONUM TESPİTİ (> 2 karakter kontrolü)
@@ -161,7 +161,6 @@ function clearChromeLocks() {
 
         const dates = cells.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
 
-        // YENİ EKŞTİRA KONTROL: Müşteri adı/nosu yoksa ('-') AMA geçerli bir konum varsa tıklanabilir yap
         const hasNoCustomer = !customerName || customerName === '-';
         const hasLocation = location && location !== '-';
         const isExplicitMessage = /nachricht|message/i.test(row.innerText || '');
@@ -186,7 +185,7 @@ function clearChromeLocks() {
       throw new Error("❌ Hiç veri bulunamadı! Sayfa yüklenemedi veya Google yapıyı değiştirdi.");
     }
 
-    // 2. AŞAMA: MESAJ DETAYLARINI VE PANEL VERİLERİNİ ALMA
+    // 2. AŞAMA: MESAJ DETAYLARINI ALMA
     const leads = [];
     for (const item of validRows) {
       let messageText = "-";
@@ -200,13 +199,13 @@ function clearChromeLocks() {
             if (row) (row.querySelector('td, div[role="gridcell"]') || row).click();
           }, item.domIndex);
 
-          await new Promise(r => setTimeout(r, 4000));
+          await new Promise(r => setTimeout(r, 3500));
 
           const panelData = await page.evaluate(() => {
             let msg = "-";
             let nameInHeader = null;
 
-            // Mesaj Metni Algılama
+            // Chat / Unterhaltung Bloku
             const chatBlock = Array.from(document.querySelectorAll('div, section, article'))
                                   .find(el => (el.innerText || '').includes('Unterhaltung'));
             
@@ -219,13 +218,17 @@ function clearChromeLocks() {
                          .trim() || "-";
             }
 
-            // Panel Header'ından Müşteri İsim/Tel Çekme (Eğer tabloda '-' ise kurtarmak için)
+            // Panel Header'ı (Strict Filtreli)
             const headerBar = Array.from(document.querySelectorAll('div, header'))
                                    .find(el => (el.innerText || '').includes('ARCHIVIEREN') || (el.innerText || '').includes('MARKIEREN'));
             if (headerBar) {
               const lines = headerBar.innerText.split('\n').map(l => l.trim()).filter(Boolean);
               if (lines.length > 0 && !lines[0].includes('ARCHIVIEREN')) {
-                nameInHeader = lines[0].split('|')[0].trim();
+                const candidate = lines[0].split('|')[0].trim();
+                // Sıkı Garanti: Google sistem kelimelerini asla isim olarak alma
+                if (!/Google|Lokale|Dienstleistungen|Potenzieller|Anrufer/i.test(candidate)) {
+                  nameInHeader = candidate;
+                }
               }
             }
 
@@ -234,8 +237,7 @@ function clearChromeLocks() {
 
           messageText = panelData.msg;
 
-          // Eğer tablodaki isim '-' ise ama panelden isim yakalandıysa güncelle
-          if ((finalCustomerName === '-' || !finalCustomerName) && panelData.nameInHeader && panelData.nameInHeader !== "Potenzieller Kunde") {
+          if ((finalCustomerName === '-' || !finalCustomerName) && panelData.nameInHeader) {
             finalCustomerName = panelData.nameInHeader;
           }
 
