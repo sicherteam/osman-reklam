@@ -7,6 +7,7 @@ const { execSync } = require('child_process');
 
 puppeteer.use(StealthPlugin());
 
+// --- CONFIGURATION ---
 const CONFIG = {
   projectName: 'Osman Reklam',
   userDataPath: '/home/ubuntu/osman-reklam/user_data',
@@ -15,12 +16,17 @@ const CONFIG = {
   telegramChatId: process.env.TELEGRAM_CHAT_ID,
 };
 
+// --- HELPER FUNCTIONS ---
+
+// Native Fetch API with Telegram Alert
 async function sendTelegramMessage(lead) {
-  if (!CONFIG.telegramToken || !CONFIG.telegramChatId) return;
+  if (!CONFIG.telegramToken || !CONFIG.telegramChatId) {
+    console.warn("⚠️ Telegram API bilgileri eksik (.env)");
+    return;
+  }
 
   const message = `🔔 *YENİ MÜŞTERİ!* (${CONFIG.projectName})\n\n` +
                   `👤 *Müşteri:* ${lead["Musteri"]}\n` +
-                  `📞 *Telefon:* ${lead["Telefon"]}\n` +
                   `📍 *Konum:* ${lead["Konum"]}\n` +
                   `💼 *Hizmet:* ${lead["Hizmet"]}\n` +
                   `📅 *İlk Görüşme:* ${lead["Ilk gorusme"]}\n` +
@@ -28,7 +34,7 @@ async function sendTelegramMessage(lead) {
                   `💬 *Mesaj:* ${lead["Mesaj"]}`;
 
   try {
-    await fetch(`https://api.telegram.org/bot${CONFIG.telegramToken}/sendMessage`, {
+    const res = await fetch(`https://api.telegram.org/bot${CONFIG.telegramToken}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -37,13 +43,16 @@ async function sendTelegramMessage(lead) {
         parse_mode: 'Markdown'
       })
     });
+    if (res.ok) console.log('📱 Telegram bildirimi başarıyla gönderildi.');
   } catch (err) {
-    console.error('⚠️ Telegram hatası:', err.message);
+    console.error('⚠️ Telegram mesaj hatası:', err.message);
   }
 }
 
+// 24-Hour Strict Date Formatter
 function parseTo24HourDate(dateStr) {
   if (!dateStr || dateStr === '-') return '-';
+
   const fixedStr = dateStr.replace(/(\b\d{1,2})(\d{2})\s*(AM|PM)/gi, '$1:$2 $3');
   const match = fixedStr.match(/(\d{2}\.\d{2}\.\d{2})\s+(\d{1,2}):(\d{2})\s*(AM|PM)?/i);
   if (!match) return dateStr;
@@ -52,12 +61,16 @@ function parseTo24HourDate(dateStr) {
   let hours = parseInt(hoursStr, 10);
 
   if (modifier) {
-    if (modifier.toUpperCase() === 'PM' && hours < 12) hours += 12;
-    if (modifier.toUpperCase() === 'AM' && hours === 12) hours = 0;
+    const isPM = modifier.toUpperCase() === 'PM';
+    const isAM = modifier.toUpperCase() === 'AM';
+    if (isPM && hours < 12) hours += 12;
+    if (isAM && hours === 12) hours = 0;
   }
+
   return `${datePart} ${String(hours).padStart(2, '0')}:${minutes}`;
 }
 
+// Clear Chrome Locks
 function clearChromeLocks() {
   const locks = ['SingletonLock', 'SingletonCookie', 'SingletonSocket'];
   locks.forEach(lock => {
@@ -68,6 +81,7 @@ function clearChromeLocks() {
   });
 }
 
+// --- MAIN EXECUTION ---
 (async () => {
   let browser;
   try {
@@ -91,179 +105,115 @@ function clearChromeLocks() {
     await page.setViewport({ width: 1920, height: 1080 });
     page.setDefaultTimeout(90000);
 
-    console.log("🚀 LSA Inbox yükleniyor...");
+    console.log("LSA Inbox sayfasına gidiliyor...");
     await page.goto(CONFIG.targetUrl, { waitUntil: 'networkidle2' });
 
     const pageTitle = await page.title();
     console.log("Sayfa Başlığı:", pageTitle);
 
-    if (/Anmelden|Sign in|YouTube|Error|504/i.test(pageTitle)) {
-      throw new Error(`❌ Oturum açılamadı/Engellendi: ${pageTitle}`);
+    if (/Anmelden|Sign in|YouTube|Error|504|Serverfehler/i.test(pageTitle)) {
+      throw new Error(`❌ Oturum açılamadı veya Google engelledi! Başlık: ${pageTitle}`);
     }
 
+    // Lazy load tetiklemek için smooth scroll
     await page.evaluate(async () => {
-      for (let i = 0; i < 3; i++) {
-        window.scrollBy(0, 400);
-        await new Promise(r => setTimeout(r, 250));
+      for (let i = 0; i < 4; i++) {
+        window.scrollBy(0, 300);
+        await new Promise(r => setTimeout(r, 200));
       }
     });
     await new Promise(r => setTimeout(r, 2000));
 
-    // AŞAMA 1: KATI FİLTRELİ TABLO TARAMASI
-    const rawData = await page.evaluate(() => {
-      const rowElements = Array.from(document.querySelectorAll('[role="row"], tr'));
-      let validRowCounter = 0;
+    // 1. AŞAMA: TABLO VERİLERİNİ HASSAS FİLTRELEME İLE ÇEKME
+    const validRows = await page.evaluate(() => {
+      const rows = Array.from(document.querySelectorAll('[role="row"], tr'));
 
-      return rowElements.map((row) => {
-        const cellElements = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
-        const cells = cellElements.map(c => c.innerText?.trim() || '');
+      return rows.map((row, idx) => {
+        const rawCells = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
+        const cells = rawCells.map(c => c.innerText?.trim() || '').filter(Boolean);
 
-        // 1. Hücre sayısı 4'ten azsa veya başlık satırıysa atla
-        if (cells.length < 4 || /Gebührenstatus|Kunde|Kundenname/i.test(row.innerText || '')) {
-          return null;
-        }
-
-        // 2. Gerçek müşteri satırlarında mutlaka tarih (DD.MM.YY) bulunur. Yoksa çöp satırdır!
-        const dates = cells.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
-        if (dates.length === 0) {
-          return null;
-        }
+        // En az 4 hücre yoksa veya başlık satırıysa atla
+        if (cells.length < 4) return null;
+        if (/Gebührenstatus|Kunde|Kundenname/i.test(row.innerText || '')) return null;
 
         const customerName = cells[0] || '-';
         const jobType = cells[1] || '-';
 
-        // 3. Konum (Lokasyon) Ayıklama: Uzunluğu > 2 olan, sayı içermeyen ve LSA statü kelimesi olmayan hücre
-        const locationCandidate = cells.find(t => 
-          t && 
-          t.length > 2 && 
-          !/\d/.test(t) && 
-          !/^(Kategorie|Direkte|Telefon|Nachricht|Belastet|Wird)/i.test(t) &&
-          t !== customerName &&
-          t !== jobType
-        );
+        // GÜVENLİK FİLTRESİ 1: Sadece saf rakamlardan oluşan takvim/hayalet satırlarını ele ("6", "7", "9" vb.)
+        if (/^\d+$/.test(customerName) && /^\d+$/.test(jobType)) return null;
 
-        const location = locationCandidate || '-';
-        const isMessage = cells.some(cell => cell.trim().toLowerCase() === 'nachricht');
+        // GÜVENLİK FİLTRESİ 2: Müşteri adı tek başına küçük sayı ise ele
+        if (/^\d{1,3}$/.test(customerName)) return null;
 
-        const domIndex = validRowCounter;
-        validRowCounter++;
+        // KONUM TESPİTİ (> 2 karakter kontrolü eklendi)
+        let location = cells[3] || '-';
+        if (!location || location === '-' || location.length <= 2 || location === jobType || /^\+?\d[\d\s-]{6,}$/.test(location)) {
+          location = cells.find((t, i) => 
+            i > 1 && 
+            t.length > 2 && 
+            t !== customerName && 
+            t !== jobType && 
+            !/^\+?\d[\d\s-]{6,}$/.test(t) && 
+            !/^(Kategorie|Direkte|Telefon|Nachricht|Belastet|Wird)/i.test(t) &&
+            !/\d{2}\.\d{2}\.\d{2}/.test(t)
+          ) || '-';
+        }
+
+        const dates = cells.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
 
         return {
-          domIndex,
-          customerName,
+          domIndex: idx,
+          phone: customerName,
           jobType,
           location,
           anfrageDate: dates[0] || '-',
           letzteDate: dates[1] || dates[0] || '-',
-          isMessage
+          isMessage: /nachricht|message/i.test(row.innerText || '')
         };
       }).filter(Boolean);
     });
 
-    console.log(`📊 Çekilen Temiz Lead Sayısı: ${rawData.length}`);
+    console.log(`📊 Çekilen Temiz Lead Sayısı: ${validRows.length}`);
 
-    if (rawData.length === 0) {
-      throw new Error("❌ Hiç geçerli veri bulunamadı.");
+    if (validRows.length === 0) {
+      throw new Error("❌ Hiç veri bulunamadı! Sayfa yüklenemedi veya Google yapıyı değiştirdi.");
     }
 
-    // AŞAMA 2: MESAJ PANELERİNİ AÇMA VE OKUMA
+    // 2. AŞAMA: MESAJ DETAYLARINI ALMA
     const leads = [];
-    for (const item of rawData) {
+    for (const item of validRows) {
       let messageText = "-";
-      let extractedName = item.customerName;
-      let extractedPhone = "Keine Telefonnummer";
 
       if (item.isMessage) {
         try {
-          console.log(`\n💬 [Index: ${item.domIndex} | Müşteri: ${item.customerName} | Konum: ${item.location}] Nachricht satırı açılıyor...`);
-
-          // Birebir eşleşen DOM Index üzerinden tıklama
-          const clicked = await page.evaluate((targetIndex) => {
-            const rows = Array.from(document.querySelectorAll('[role="row"], tr')).filter(r => {
-              const cells = Array.from(r.querySelectorAll('td, div[role="gridcell"]'));
-              const dates = cells.filter(c => /\d{2}\.\d{2}\.\d{2}/.test(c.innerText || ''));
-              return cells.length >= 4 && dates.length > 0 && !/Gebührenstatus|Kunde|Kundenname/i.test(r.innerText || '');
-            });
-
-            if (rows[targetIndex]) {
-              const targetRow = rows[targetIndex];
-              const targetCell = targetRow.querySelector('td, div[role="gridcell"]') || targetRow;
-              targetCell.click();
-              return true;
-            }
-            return false;
+          await page.evaluate((index) => {
+            const rows = Array.from(document.querySelectorAll('[role="row"], tr'));
+            const row = rows[index];
+            if (row) (row.querySelector('td, div[role="gridcell"]') || row).click();
           }, item.domIndex);
 
-          if (clicked) {
-            // Panelin render olması için 2.5 saniye bekle
-            await new Promise(r => setTimeout(r, 2500));
+          await new Promise(r => setTimeout(r, 4000));
 
-            const panelData = await page.evaluate(() => {
-              let name = null;
-              let phone = "Keine Telefonnummer";
-              let msg = "-";
+          messageText = await page.evaluate(() => {
+            const chatBlock = Array.from(document.querySelectorAll('div, section, article'))
+                                  .find(el => (el.innerText || '').includes('Unterhaltung'));
+            
+            if (!chatBlock) return "-";
 
-              const allDivs = Array.from(document.querySelectorAll('div, header, section'));
-              
-              // Mavi Header Barı
-              const headerBar = allDivs.find(el => {
-                const txt = el.innerText || '';
-                return txt.includes('ARCHIVIEREN') || txt.includes('MARKIEREN');
-              });
-
-              if (headerBar) {
-                const headerText = headerBar.innerText || '';
-
-                if (headerText.includes('Keine Telefonnummer')) {
-                  phone = "Keine Telefonnummer";
-                } else {
-                  const phoneMatch = headerText.match(/(\+?\d[\d\s\/-]{6,15}\d)/);
-                  if (phoneMatch) phone = phoneMatch[0].trim();
-                }
-
-                const headerLines = headerText.split('\n').map(l => l.trim()).filter(Boolean);
-                if (headerLines.length > 0 && !headerLines[0].includes('ARCHIVIEREN')) {
-                  name = headerLines[0].split('|')[0].trim();
-                }
-              }
-
-              // Mesaj İçeriği
-              const chatCard = allDivs.find(el => (el.innerText || '').includes('Unterhaltung'));
-              if (chatCard) {
-                const rawChatText = chatCard.innerText;
-                if (rawChatText.includes('Unterhaltung')) {
-                  msg = rawChatText.split('Unterhaltung').pop()
-                           .replace(/^Potenzieller Kunde/gi, '')
-                           .trim();
-                }
-              }
-
-              return { name, phone, msg };
-            });
-
-            if (panelData.name && panelData.name !== "Potenzieller Kunde") {
-              extractedName = panelData.name;
-            } else if (item.customerName !== "-") {
-              extractedName = item.customerName;
-            } else {
-              extractedName = panelData.name || "-";
-            }
-
-            extractedPhone = panelData.phone;
-            messageText = panelData.msg;
-
-            console.log(` -> 👤 Müşteri: ${extractedName}`);
-            console.log(` -> 📞 Telefon: ${extractedPhone}`);
-            console.log(` -> ✉️ Mesaj: "${messageText.substring(0, 50)}..."`);
-          }
+            let text = chatBlock.innerText.split('Unterhaltung').pop();
+            return text.split('Wird geladen')[0]
+                       .split('Audioinhalte')[0]
+                       .split('Hier dem Kunden')[0]
+                       .replace(/^P\s+|^Potenzieller Kunde\s+|^\d{2}\.\d{2}\.\d{2}\s+/gi, '')
+                       .trim() || "-";
+          });
         } catch (e) {
-          console.warn(`⚠️ [Index: ${item.domIndex}] Okuma hatası:`, e.message);
+          console.warn(`[${item.phone}] Mesaj okuma uyarısı:`, e.message);
         }
       }
 
       leads.push({
-        "Musteri": extractedName,
-        "Telefon": extractedPhone,
+        "Musteri": item.phone,
         "Hizmet": item.jobType,
         "Konum": item.location,
         "Ilk gorusme": parseTo24HourDate(item.anfrageDate),
@@ -272,38 +222,39 @@ function clearChromeLocks() {
       });
     }
 
-    // AŞAMA 3: JSON KAYIT & GIT PUSH
+    // JSON Kayıt
     const outputData = {
       updatedAt: new Date().toLocaleString('de-AT', { timeZone: 'Europe/Vienna' }),
       leads
     };
     fs.writeFileSync('data.json', JSON.stringify(outputData, null, 2));
-    console.log(`\n🎉 BAŞARILI! Toplam ${leads.length} lead işlendi ve kaydedildi.`);
+    console.log(`🎉 İŞLEM TAMAM! ${leads.length} veri data.json dosyasına yazıldı.`);
 
+    // 3. AŞAMA: GIT PUSH & BİLDİRİM
     try {
       const gitStatus = execSync('git status --porcelain data.json').toString().trim();
-      if (gitStatus) {
-        console.log("⏳ GitHub Pages sync bekleniyor (10sn)...");
+      if (!gitStatus) {
+        console.log("ℹ️ 'data.json' değişmedi, Git push atlandı.");
+      } else {
+        console.log("⏳ GitHub Pages çakışma önleyici (10sn)...");
         await new Promise(r => setTimeout(r, 10000));
 
         execSync('git add data.json');
         execSync('git commit -m "Auto-update data.json [cron] [skip ci]" || true');
         execSync('git pull origin main --rebase -X ours');
         execSync('git push origin main');
-        console.log("✅ Git Push Tamamlandı.");
+        console.log("✅ GitHub'a başarıyla push edildi!");
 
         if (leads.length > 0) {
           await sendTelegramMessage(leads[0]);
         }
-      } else {
-        console.log("ℹ️ Veri değişmedi, Push atlandı.");
       }
     } catch (gitErr) {
-      console.error("⚠️ Git Push Hatası:", gitErr.message);
+      console.error("⚠️ Git push hatası:", gitErr.message);
     }
 
   } catch (error) {
-    console.error("💥 Kritik Scraper Hatası:", error.message);
+    console.error("💥 Scraper hatası:", error.message);
     process.exitCode = 1;
   } finally {
     if (browser) await browser.close();
