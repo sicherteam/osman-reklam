@@ -20,6 +20,7 @@ async function sendTelegramMessage(lead) {
 
   const message = `🔔 *YENİ MÜŞTERİ!* (${CONFIG.projectName})\n\n` +
                   `👤 *Müşteri:* ${lead["Musteri"]}\n` +
+                  `📞 *Telefon:* ${lead["Telefon"]}\n` +
                   `📍 *Konum:* ${lead["Konum"]}\n` +
                   `💼 *Hizmet:* ${lead["Hizmet"]}\n` +
                   `📅 *İlk Görüşme:* ${lead["Ilk gorusme"]}\n` +
@@ -108,50 +109,43 @@ function clearChromeLocks() {
     });
     await new Promise(r => setTimeout(r, 2000));
 
-    // AŞAMA 1: TABLODAN TEMİZ VERİ TOPLAMA
+    // AŞAMA 1: MINIMAL & STANDORT BAZLI TABLO TARAMASI
     const rawData = await page.evaluate(() => {
       const rowElements = Array.from(document.querySelectorAll('[role="row"], tr'));
-      let validRowIndex = 0;
+      let validRowCounter = 0;
 
       return rowElements.map((row) => {
         const cellElements = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
         const cells = cellElements.map(c => c.innerText?.trim() || '');
 
-        if (cells.length < 4) return null;
-        if (/Gebührenstatus|Kunde|Kundenname/i.test(row.innerText || '')) return null;
+        // 1. Tablo başlığını veya yetersiz sütunlu DOM elemanlarını eler
+        if (cells.length < 4 || /Gebührenstatus|Kunde|Kundenname/i.test(row.innerText || '')) {
+          return null;
+        }
 
         const customerName = cells[0] || '-';
         const jobType = cells[1] || '-';
 
-        if ((!customerName || customerName === '-') && (!jobType || jobType === '-')) return null;
-        if (/^\d{1,3}$/.test(customerName) || /^\d{1,3}$/.test(jobType)) return null;
+        // 2. Yalnızca STANDORT (Konum) kontrolü:
+        // Uzunluğu 2'den büyük olan VE içinde rakam barındırmayan hücreyi konum kabul et
+        const locationCandidate = cells.find(t => 
+          t && 
+          t.length > 2 && 
+          !/\d/.test(t) && 
+          !/^(Kategorie|Direkte|Telefon|Nachricht|Belastet|Wird)/i.test(t)
+        );
 
-        let location = cells[3] || '-';
-        if (!location || location.length <= 2 || location === jobType || /^\+?\d[\d\s-]{6,}$/.test(location)) {
-          const candidate = cells.find((t, i) => 
-            i > 1 && 
-            t.length > 2 && 
-            t !== customerName && 
-            t !== jobType && 
-            !/^\+?\d[\d\s-]{6,}$/.test(t) && 
-            !/^(Kategorie|Direkte|Telefon|Nachricht|Belastet|Wird)/i.test(t) &&
-            !/\d{2}\.\d{2}\.\d{2}/.test(t)
-          );
-          location = candidate || '-';
-        }
-
-        if ((!customerName || customerName === '-') && location.length <= 2) return null;
+        const location = locationCandidate || '-';
 
         const dates = cells.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
         const isMessage = cells.some(cell => cell.trim().toLowerCase() === 'nachricht');
 
-        const currentIdx = validRowIndex;
-        validRowIndex++;
+        const domIndex = validRowCounter;
+        validRowCounter++;
 
         return {
-          rowIndex: currentIdx,
-          identifier: customerName !== '-' ? customerName : `Row-${currentIdx}`,
-          phone: customerName,
+          domIndex,
+          customerName,
           jobType,
           location,
           anfrageDate: dates[0] || '-',
@@ -167,72 +161,101 @@ function clearChromeLocks() {
       throw new Error("❌ Hiç geçerli veri bulunamadı.");
     }
 
-    // AŞAMA 2: SADECE NACHRICHT OLANLARA INDEX ILE TIKLA VE MESAJI ÇEK
+    // AŞAMA 2: SAF MESAJ VE DETAY OKUMA
     const leads = [];
     for (const item of rawData) {
       let messageText = "-";
+      let extractedName = item.customerName;
+      let extractedPhone = "Keine Telefonnummer";
 
       if (item.isMessage) {
         try {
-          console.log(`💬 [${item.identifier}] Nachricht satırı tıklanıyor...`);
+          console.log(`\n💬 [Index: ${item.domIndex} | ${item.customerName}] Nachricht satırı açılıyor...`);
 
-          // Index ve Text Fallback'li Tıklama
-          const clicked = await page.evaluate((targetIdentifier) => {
+          const clicked = await page.evaluate((targetIndex) => {
             const rows = Array.from(document.querySelectorAll('[role="row"], tr')).filter(r => {
               const cells = Array.from(r.querySelectorAll('td, div[role="gridcell"]'));
               return cells.length >= 4 && !/Gebührenstatus|Kunde|Kundenname/i.test(r.innerText || '');
             });
 
-            const targetRow = rows.find(r => r.innerText && r.innerText.includes(targetIdentifier));
-
-            if (targetRow) {
-              const clickTarget = targetRow.querySelector('td, div[role="gridcell"]') || targetRow;
-              clickTarget.click();
+            if (rows[targetIndex]) {
+              const targetRow = rows[targetIndex];
+              const targetCell = targetRow.querySelector('td, div[role="gridcell"]') || targetRow;
+              targetCell.click();
               return true;
             }
             return false;
-          }, item.identifier);
+          }, item.domIndex);
 
           if (clicked) {
-            // Yönlendirme/DOM güncellenmesi riski için kısa uyuma
-            await new Promise(r => setTimeout(r, 2500));
+            await new Promise(r => setTimeout(r, 2000));
 
-            // Mesaj Ayrıştırma
-            messageText = await page.evaluate(() => {
-              const blocks = Array.from(document.querySelectorAll('div, section, article'));
-              const chatCard = blocks.find(el => {
+            const panelData = await page.evaluate(() => {
+              let name = null;
+              let phone = "Keine Telefonnummer";
+              let msg = "-";
+
+              const allDivs = Array.from(document.querySelectorAll('div, header, section'));
+              
+              // Mavi Header Barı (İsim ve Telefon)
+              const headerBar = allDivs.find(el => {
                 const txt = el.innerText || '';
-                return txt.includes('Unterhaltung') || txt.includes('Potenzieller Kunde');
+                return txt.includes('ARCHIVIEREN') || txt.includes('MARKIEREN');
               });
 
-              if (!chatCard) return "-";
+              if (headerBar) {
+                const headerText = headerBar.innerText || '';
 
-              const rawChatText = chatCard.innerText;
+                if (headerText.includes('Keine Telefonnummer')) {
+                  phone = "Keine Telefonnummer";
+                } else {
+                  const phoneMatch = headerText.match(/(\+?\d[\d\s\/-]{6,15}\d)/);
+                  if (phoneMatch) phone = phoneMatch[0].trim();
+                }
 
-              if (rawChatText.includes('Potenzieller Kunde')) {
-                let msg = rawChatText.split('Potenzieller Kunde').pop();
-                
-                msg = msg.replace(/^(Gestern|Heute)?\s*(um)?\s*\d{1,2}:\d{2}\s*(AM|PM)?/gi, '')
-                         .replace(/^\d{2}\.\d{2}\.\d{2}\s+\d{1,2}:\d{2}\s*(AM|PM)?/gi, '')
-                         .split('Hier dem Kunden antworten')[0]
-                         .split('SENDEN')[0]
-                         .trim();
-
-                return msg || "-";
+                const headerLines = headerText.split('\n').map(l => l.trim()).filter(Boolean);
+                if (headerLines.length > 0 && !headerLines[0].includes('ARCHIVIEREN')) {
+                  name = headerLines[0].split('|')[0].trim();
+                }
               }
 
-              return "-";
+              // Unterhaltung Mesaj İçeriği (Yazışma yanıt split'leri kaldırıldı)
+              const chatCard = allDivs.find(el => (el.innerText || '').includes('Unterhaltung'));
+              if (chatCard) {
+                const rawChatText = chatCard.innerText;
+                if (rawChatText.includes('Unterhaltung')) {
+                  msg = rawChatText.split('Unterhaltung').pop()
+                           .replace(/^Potenzieller Kunde/gi, '')
+                           .trim();
+                }
+              }
+
+              return { name, phone, msg };
             });
 
-            console.log(` -> ✉️ Çekilen Mesaj: "${messageText.substring(0, 60)}..."`);
+            if (panelData.name && panelData.name !== "Potenzieller Kunde") {
+              extractedName = panelData.name;
+            } else if (item.customerName !== "-") {
+              extractedName = item.customerName;
+            } else {
+              extractedName = panelData.name || "-";
+            }
+
+            extractedPhone = panelData.phone;
+            messageText = panelData.msg;
+
+            console.log(` -> 👤 Müşteri: ${extractedName}`);
+            console.log(` -> 📞 Telefon: ${extractedPhone}`);
+            console.log(` -> ✉️ Mesaj: "${messageText.substring(0, 50)}..."`);
           }
         } catch (e) {
-          console.warn(`⚠️ [${item.identifier}] Mesaj okuma hatası:`, e.message);
+          console.warn(`⚠️ [Index: ${item.domIndex}] Okuma hatası:`, e.message);
         }
       }
 
       leads.push({
-        "Musteri": item.phone,
+        "Musteri": extractedName,
+        "Telefon": extractedPhone,
         "Hizmet": item.jobType,
         "Konum": item.location,
         "Ilk gorusme": parseTo24HourDate(item.anfrageDate),
@@ -247,7 +270,7 @@ function clearChromeLocks() {
       leads
     };
     fs.writeFileSync('data.json', JSON.stringify(outputData, null, 2));
-    console.log(`🎉 BAŞARILI! ${leads.length} veri kaydedildi.`);
+    console.log(`\n🎉 BAŞARILI! Toplam ${leads.length} lead işlendi ve kaydedildi.`);
 
     try {
       const gitStatus = execSync('git status --porcelain data.json').toString().trim();
