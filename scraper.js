@@ -7,7 +7,6 @@ const { execSync } = require('child_process');
 
 puppeteer.use(StealthPlugin());
 
-// --- CONFIGURATION ---
 const CONFIG = {
   projectName: 'Osman Reklam',
   userDataPath: '/home/ubuntu/osman-reklam/user_data',
@@ -16,14 +15,8 @@ const CONFIG = {
   telegramChatId: process.env.TELEGRAM_CHAT_ID,
 };
 
-// --- HELPER FUNCTIONS ---
-
-// Native Fetch API with Telegram Alert
 async function sendTelegramMessage(lead) {
-  if (!CONFIG.telegramToken || !CONFIG.telegramChatId) {
-    console.warn("⚠️ Telegram API bilgileri eksik (.env)");
-    return;
-  }
+  if (!CONFIG.telegramToken || !CONFIG.telegramChatId) return;
 
   const message = `🔔 *YENİ MÜŞTERİ!* (${CONFIG.projectName})\n\n` +
                   `👤 *Müşteri:* ${lead["Musteri"]}\n` +
@@ -34,7 +27,7 @@ async function sendTelegramMessage(lead) {
                   `💬 *Mesaj:* ${lead["Mesaj"]}`;
 
   try {
-    const res = await fetch(`https://api.telegram.org/bot${CONFIG.telegramToken}/sendMessage`, {
+    await fetch(`https://api.telegram.org/bot${CONFIG.telegramToken}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -43,16 +36,13 @@ async function sendTelegramMessage(lead) {
         parse_mode: 'Markdown'
       })
     });
-    if (res.ok) console.log('📱 Telegram bildirimi başarıyla gönderildi.');
   } catch (err) {
-    console.error('⚠️ Telegram mesaj hatası:', err.message);
+    console.error('⚠️ Telegram hatası:', err.message);
   }
 }
 
-// 24-Hour Strict Date Formatter
 function parseTo24HourDate(dateStr) {
   if (!dateStr || dateStr === '-') return '-';
-
   const fixedStr = dateStr.replace(/(\b\d{1,2})(\d{2})\s*(AM|PM)/gi, '$1:$2 $3');
   const match = fixedStr.match(/(\d{2}\.\d{2}\.\d{2})\s+(\d{1,2}):(\d{2})\s*(AM|PM)?/i);
   if (!match) return dateStr;
@@ -61,16 +51,12 @@ function parseTo24HourDate(dateStr) {
   let hours = parseInt(hoursStr, 10);
 
   if (modifier) {
-    const isPM = modifier.toUpperCase() === 'PM';
-    const isAM = modifier.toUpperCase() === 'AM';
-    if (isPM && hours < 12) hours += 12;
-    if (isAM && hours === 12) hours = 0;
+    if (modifier.toUpperCase() === 'PM' && hours < 12) hours += 12;
+    if (modifier.toUpperCase() === 'AM' && hours === 12) hours = 0;
   }
-
   return `${datePart} ${String(hours).padStart(2, '0')}:${minutes}`;
 }
 
-// Clear Chrome Locks
 function clearChromeLocks() {
   const locks = ['SingletonLock', 'SingletonCookie', 'SingletonSocket'];
   locks.forEach(lock => {
@@ -81,7 +67,6 @@ function clearChromeLocks() {
   });
 }
 
-// --- MAIN EXECUTION ---
 (async () => {
   let browser;
   try {
@@ -105,126 +90,125 @@ function clearChromeLocks() {
     await page.setViewport({ width: 1920, height: 1080 });
     page.setDefaultTimeout(90000);
 
-    console.log("LSA Inbox sayfasına gidiliyor...");
+    console.log("🚀 LSA Inbox yükleniyor...");
     await page.goto(CONFIG.targetUrl, { waitUntil: 'networkidle2' });
 
     const pageTitle = await page.title();
     console.log("Sayfa Başlığı:", pageTitle);
 
-    if (/Anmelden|Sign in|YouTube|Error|504|Serverfehler/i.test(pageTitle)) {
-      throw new Error(`❌ Oturum açılamadı veya Google engelledi! Başlık: ${pageTitle}`);
+    if (/Anmelden|Sign in|YouTube|Error|504/i.test(pageTitle)) {
+      throw new Error(`❌ Oturum açılamadı/Engellendi: ${pageTitle}`);
     }
 
-    // Lazy load tetiklemek için smooth scroll
+    // Scroll ile DOM yerleşimi
     await page.evaluate(async () => {
-      for (let i = 0; i < 4; i++) {
-        window.scrollBy(0, 300);
-        await new Promise(r => setTimeout(r, 200));
+      for (let i = 0; i < 3; i++) {
+        window.scrollBy(0, 400);
+        await new Promise(r => setTimeout(r, 250));
       }
     });
     await new Promise(r => setTimeout(r, 2000));
 
-    // 1. AŞAMA: TABLO VERİLERİNİ HASSAS FİLTRELEME İLE ÇEKME
-    const validRows = await page.evaluate(() => {
-      const rows = Array.from(document.querySelectorAll('[role="row"], tr'));
+    // AŞAMA 1: DOM'DAN ARINDIRILMIŞ HAM VERİ TOPLAMA
+    const rawData = await page.evaluate(() => {
+      const rowElements = Array.from(document.querySelectorAll('[role="row"], tr'));
 
-      return rows.map((row, idx) => {
-        const rawCells = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
-        const cells = rawCells.map(c => c.innerText?.trim() || '');
+      return rowElements.map((row) => {
+        const cellElements = Array.from(row.querySelectorAll('td, div[role="gridcell"]'));
+        const cells = cellElements.map(c => c.innerText?.trim() || '');
 
-        // En az 4 hücre yoksa veya başlık satırıysa atla
         if (cells.length < 4) return null;
         if (/Gebührenstatus|Kunde|Kundenname/i.test(row.innerText || '')) return null;
 
         const customerName = cells[0] || '-';
         const jobType = cells[1] || '-';
 
-        // 1. Müşteri adı ve Hizmet ikisi de yoksa/boşsa ATLA
+        // Müşteri VE Hizmet ikisi birden yoksa doğrudan çöp satırdır
         if ((!customerName || customerName === '-') && (!jobType || jobType === '-')) return null;
 
-        // 2. Müşteri adı veya Hizmet adı tek başına tek/çift haneli sayıysa ATLA ("2", "6", "13" vb.)
+        // Tek başına sayfa no/sayı içeriyorsa atla
         if (/^\d{1,3}$/.test(customerName) || /^\d{1,3}$/.test(jobType)) return null;
 
-        // KONUM TESPİTİ
-        let rawLoc = cells[3] || '-';
+        // KONUM ADIM 1: Standart Hücre
+        let location = cells[3] || '-';
 
-        // Orijinal hücredeki konum 2 veya daha az karakterse (rawLoc.length <= 2) alternatif hücre tara
-        if (!rawLoc || rawLoc.length <= 2 || rawLoc === jobType || /^\+?\d[\d\s-]{6,}$/.test(rawLoc)) {
-          const locCandidate = cells.find((t, i) => 
+        // KONUM ADIM 2: 2 Karakterden Büyük Olma Şartı (length > 2)
+        if (!location || location.length <= 2 || location === jobType || /^\+?\d[\d\s-]{6,}$/.test(location)) {
+          const candidate = cells.find((t, i) => 
             i > 1 && 
-            t.length > 2 && // KONTROL: Konum metni 2'den büyük olmalı
+            t.length > 2 && // STRICT: 2'den büyük karakter şartı
             t !== customerName && 
             t !== jobType && 
             !/^\+?\d[\d\s-]{6,}$/.test(t) && 
             !/^(Kategorie|Direkte|Telefon|Nachricht|Belastet|Wird)/i.test(t) &&
             !/\d{2}\.\d{2}\.\d{2}/.test(t)
           );
-          rawLoc = locCandidate || '-';
+          location = candidate || '-';
         }
 
-        // KESİN KONTROL: Müşteri adı boş/çizgi iken konum 2'den büyük değilse bu satır hayalettir, ELE!
-        if ((!customerName || customerName === '-') && rawLoc.length <= 2) {
-          return null;
-        }
+        // FİNAL KONTROL: Konum hala <= 2 ise ve müşteri ismi yoksa ELE
+        if ((!customerName || customerName === '-') && location.length <= 2) return null;
 
         const dates = cells.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
         const isMessage = /nachricht|message/i.test(row.innerText || '');
 
         return {
-          domIndex: idx,
           phone: customerName,
           jobType,
-          location: rawLoc,
+          location,
           anfrageDate: dates[0] || '-',
           letzteDate: dates[1] || dates[0] || '-',
-          isMessage: isMessage
+          isMessage
         };
-      }).filter(Boolean); // null olan hayalet satırları eler
+      }).filter(Boolean);
     });
 
-    console.log(`📊 Çekilen Temiz Lead Sayısı: ${validRows.length}`);
+    console.log(`📊 Filtrelerden Geçen Net Lead Sayısı: ${rawData.length}`);
 
-    if (validRows.length === 0) {
-      throw new Error("❌ Hiç veri bulunamadı! Sayfa yüklenemedi veya Google yapıyı değiştirdi.");
+    if (rawData.length === 0) {
+      throw new Error("❌ Hiç geçerli veri bulunamadı.");
     }
 
-    // 2. AŞAMA: MESAJ DETAYLARINI ALMA
+    // AŞAMA 2: DETACHED FRAME ÖNLEYİCİ - RE-QUERY ILE MESAJ OKUMA
     const leads = [];
-    for (const item of validRows) {
+    for (const item of rawData) {
       let messageText = "-";
 
       if (item.isMessage) {
         try {
-          console.log(`[${item.phone} / ${item.location}] Mesaj paneli açılıyor...`);
-          
-          await page.evaluate((index) => {
+          console.log(`💬 [${item.phone}] Mesaj içeriği çekiliyor...`);
+
+          // İndeks yerine metin bazlı DOM arama (Detached Frame kesin çözümü)
+          const clicked = await page.evaluate((customerPhone) => {
             const rows = Array.from(document.querySelectorAll('[role="row"], tr'));
-            const row = rows[index];
-            if (row) {
-              const target = row.querySelector('td, div[role="gridcell"]') || row;
-              target.click();
+            const targetRow = rows.find(r => r.innerText && r.innerText.includes(customerPhone));
+            if (targetRow) {
+              const clickTarget = targetRow.querySelector('td, div[role="gridcell"]') || targetRow;
+              clickTarget.click();
+              return true;
             }
-          }, item.domIndex);
+            return false;
+          }, item.phone);
 
-          await new Promise(r => setTimeout(r, 4500));
+          if (clicked) {
+            await new Promise(r => setTimeout(r, 3500));
 
-          messageText = await page.evaluate(() => {
-            const chatBlock = Array.from(document.querySelectorAll('div, section, article'))
-                                  .find(el => (el.innerText || '').includes('Unterhaltung'));
-            
-            if (!chatBlock) return "-";
+            messageText = await page.evaluate(() => {
+              const chatBlock = Array.from(document.querySelectorAll('div, section, article'))
+                                    .find(el => (el.innerText || '').includes('Unterhaltung'));
+              
+              if (!chatBlock) return "-";
 
-            let text = chatBlock.innerText.split('Unterhaltung').pop();
-            return text.split('Wird geladen')[0]
-                       .split('Audioinhalte')[0]
-                       .split('Hier dem Kunden')[0]
-                       .replace(/^P\s+|^Potenzieller Kunde\s+|^\d{2}\.\d{2}\.\d{2}\s+/gi, '')
-                       .trim() || "-";
-          });
-
-          console.log(` -> Okunan mesaj: ${messageText.substring(0, 40)}...`);
+              return chatBlock.innerText.split('Unterhaltung').pop()
+                         .split('Wird geladen')[0]
+                         .split('Audioinhalte')[0]
+                         .split('Hier dem Kunden')[0]
+                         .replace(/^P\s+|^Potenzieller Kunde\s+|^\d{2}\.\d{2}\.\d{2}\s+/gi, '')
+                         .trim() || "-";
+            });
+          }
         } catch (e) {
-          console.warn(`[${item.phone}] Mesaj okuma uyarısı:`, e.message);
+          console.warn(`⚠️ [${item.phone}] Mesaj paneli okunamadı, atlandı.`);
         }
       }
 
@@ -238,39 +222,39 @@ function clearChromeLocks() {
       });
     }
 
-    // JSON Kayıt
+    // JSON KAYIT
     const outputData = {
       updatedAt: new Date().toLocaleString('de-AT', { timeZone: 'Europe/Vienna' }),
       leads
     };
     fs.writeFileSync('data.json', JSON.stringify(outputData, null, 2));
-    console.log(`🎉 İŞLEM TAMAM! ${leads.length} veri data.json dosyasına yazıldı.`);
+    console.log(`🎉 BAŞARILI! ${leads.length} gerçek lead 'data.json'a kaydedildi.`);
 
-    // 3. AŞAMA: GIT PUSH & BİLDİRİM
+    // AŞAMA 3: GIT PUSH & BİLDİRİM
     try {
       const gitStatus = execSync('git status --porcelain data.json').toString().trim();
-      if (!gitStatus) {
-        console.log("ℹ️ 'data.json' değişmedi, Git push atlandı.");
-      } else {
-        console.log("⏳ GitHub Pages çakışma önleyici (10sn)...");
+      if (gitStatus) {
+        console.log("⏳ GitHub Pages sync bekleniyor (10sn)...");
         await new Promise(r => setTimeout(r, 10000));
 
         execSync('git add data.json');
         execSync('git commit -m "Auto-update data.json [cron] [skip ci]" || true');
         execSync('git pull origin main --rebase -X ours');
         execSync('git push origin main');
-        console.log("✅ GitHub'a başarıyla push edildi!");
+        console.log("✅ Git Push Tamamlandı.");
 
         if (leads.length > 0) {
           await sendTelegramMessage(leads[0]);
         }
+      } else {
+        console.log("ℹ️ Veri değişmedi, Push atlandı.");
       }
     } catch (gitErr) {
-      console.error("⚠️ Git push hatası:", gitErr.message);
+      console.error("⚠️ Git Push Hatası:", gitErr.message);
     }
 
   } catch (error) {
-    console.error("💥 Scraper hatası:", error.message);
+    console.error("💥 Kritik Scraper Hatası:", error.message);
     process.exitCode = 1;
   } finally {
     if (browser) await browser.close();
