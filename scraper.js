@@ -145,7 +145,7 @@ function clearChromeLocks() {
         // GÜVENLİK FİLTRESİ 2: Müşteri adı tek başına küçük sayı ise ele
         if (/^\d{1,3}$/.test(customerName)) return null;
 
-        // KONUM TESPİTİ (> 2 karakter kontrolü eklendi)
+        // KONUM TESPİTİ (> 2 karakter kontrolü)
         let location = cells[3] || '-';
         if (!location || location === '-' || location.length <= 2 || location === jobType || /^\+?\d[\d\s-]{6,}$/.test(location)) {
           location = cells.find((t, i) => 
@@ -161,6 +161,13 @@ function clearChromeLocks() {
 
         const dates = cells.filter(t => /\d{2}\.\d{2}\.\d{2}/.test(t));
 
+        // YENİ EKŞTİRA KONTROL: Müşteri adı/nosu yoksa ('-') AMA geçerli bir konum varsa tıklanabilir yap
+        const hasNoCustomer = !customerName || customerName === '-';
+        const hasLocation = location && location !== '-';
+        const isExplicitMessage = /nachricht|message/i.test(row.innerText || '');
+
+        const shouldOpenPanel = isExplicitMessage || (hasNoCustomer && hasLocation);
+
         return {
           domIndex: idx,
           phone: customerName,
@@ -168,7 +175,7 @@ function clearChromeLocks() {
           location,
           anfrageDate: dates[0] || '-',
           letzteDate: dates[1] || dates[0] || '-',
-          isMessage: /nachricht|message/i.test(row.innerText || '')
+          isMessage: shouldOpenPanel
         };
       }).filter(Boolean);
     });
@@ -179,10 +186,11 @@ function clearChromeLocks() {
       throw new Error("❌ Hiç veri bulunamadı! Sayfa yüklenemedi veya Google yapıyı değiştirdi.");
     }
 
-    // 2. AŞAMA: MESAJ DETAYLARINI ALMA
+    // 2. AŞAMA: MESAJ DETAYLARINI VE PANEL VERİLERİNİ ALMA
     const leads = [];
     for (const item of validRows) {
       let messageText = "-";
+      let finalCustomerName = item.phone;
 
       if (item.isMessage) {
         try {
@@ -194,26 +202,50 @@ function clearChromeLocks() {
 
           await new Promise(r => setTimeout(r, 4000));
 
-          messageText = await page.evaluate(() => {
+          const panelData = await page.evaluate(() => {
+            let msg = "-";
+            let nameInHeader = null;
+
+            // Mesaj Metni Algılama
             const chatBlock = Array.from(document.querySelectorAll('div, section, article'))
                                   .find(el => (el.innerText || '').includes('Unterhaltung'));
             
-            if (!chatBlock) return "-";
+            if (chatBlock) {
+              let text = chatBlock.innerText.split('Unterhaltung').pop();
+              msg = text.split('Wird geladen')[0]
+                         .split('Audioinhalte')[0]
+                         .split('Hier dem Kunden')[0]
+                         .replace(/^P\s+|^Potenzieller Kunde\s+|^\d{2}\.\d{2}\.\d{2}\s+/gi, '')
+                         .trim() || "-";
+            }
 
-            let text = chatBlock.innerText.split('Unterhaltung').pop();
-            return text.split('Wird geladen')[0]
-                       .split('Audioinhalte')[0]
-                       .split('Hier dem Kunden')[0]
-                       .replace(/^P\s+|^Potenzieller Kunde\s+|^\d{2}\.\d{2}\.\d{2}\s+/gi, '')
-                       .trim() || "-";
+            // Panel Header'ından Müşteri İsim/Tel Çekme (Eğer tabloda '-' ise kurtarmak için)
+            const headerBar = Array.from(document.querySelectorAll('div, header'))
+                                   .find(el => (el.innerText || '').includes('ARCHIVIEREN') || (el.innerText || '').includes('MARKIEREN'));
+            if (headerBar) {
+              const lines = headerBar.innerText.split('\n').map(l => l.trim()).filter(Boolean);
+              if (lines.length > 0 && !lines[0].includes('ARCHIVIEREN')) {
+                nameInHeader = lines[0].split('|')[0].trim();
+              }
+            }
+
+            return { msg, nameInHeader };
           });
+
+          messageText = panelData.msg;
+
+          // Eğer tablodaki isim '-' ise ama panelden isim yakalandıysa güncelle
+          if ((finalCustomerName === '-' || !finalCustomerName) && panelData.nameInHeader && panelData.nameInHeader !== "Potenzieller Kunde") {
+            finalCustomerName = panelData.nameInHeader;
+          }
+
         } catch (e) {
           console.warn(`[${item.phone}] Mesaj okuma uyarısı:`, e.message);
         }
       }
 
       leads.push({
-        "Musteri": item.phone,
+        "Musteri": finalCustomerName,
         "Hizmet": item.jobType,
         "Konum": item.location,
         "Ilk gorusme": parseTo24HourDate(item.anfrageDate),
