@@ -184,8 +184,11 @@ function parseCleanMessage(rawText) {
         if (cells.length >= 6) {
           const firstCol = cells[0]?.innerText?.trim() || '';
           
-          // BAŞLIK SATIRINI ATLA (İsmi '-' olsa dahi kabul eder, sadece başlığı eler)
-          if (firstCol !== 'Kunde' && !text.includes('Gebührenstatus') && cells[3]?.innerText) {
+          // --- GELİŞMİŞ FİLTRELEME MANTIĞI ---
+          const isHeader = firstCol === 'Kunde' || text.includes('Gebührenstatus');
+          const isJustIndexNumber = /^\d{1,3}$/.test(firstCol); // "6", "13", "20" gibi yalnız sayısal çöp verileri engeller
+
+          if (!isHeader && !isJustIndexNumber && cells[3]?.innerText) {
             
             const isMessage = /nachricht|message/i.test(text);
             const customerName = firstCol || '-';
@@ -202,8 +205,12 @@ function parseCleanMessage(rawText) {
             if (activityCell) {
               lastActivityDate = activityCell.innerText.replace('Letzte Aktivität', '').replace(':', '').trim();
             } else {
-              // 8 sütunlu LSA yapısında Letzte Aktivität 7. indekstedir (cells[7])
               lastActivityDate = cells[7]?.innerText?.trim() || cells[6]?.innerText?.trim() || cells[5]?.innerText?.trim() || '-';
+            }
+
+            // Ekstra Hayalet Satır Kontrolü
+            if (lastActivityDate === '-' && location === '-' && jobType === '-') {
+              return; // Tamamen boş olan hayalet satırları atla
             }
 
             valid.push({
