@@ -1,36 +1,32 @@
 {
-  "updatedAt": "27.7.2026, 22:03:41",
+  "updatedAt": "27.7.2026, 22:04:35",
   "leads": [
     {
-      "Musteri": "Google Lokale Dienstleistungen",
-      "Telefon": "Keine Telefonnummer",
+      "Musteri": "-",
       "Hizmet": "Baumpflege",
       "Konum": "Eggenburg",
       "Ilk gorusme": "26.07.26 19:37",
       "Son gorusme": "27.07.26 19:37",
-      "Mesaj": "Hier dem Kunden antworten\nSENDEN"
+      "Mesaj": "-"
     },
     {
       "Musteri": "0676 4100053",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "Baumpflege",
       "Konum": "Korneuburg",
       "Ilk gorusme": "27.07.26 19:24",
       "Son gorusme": "27.07.26 19:24",
-      "Mesaj": "-"
+      "Mesaj": "P\nPotenzieller Kunde\n7:24 PM\nWollen Fichte im Bezirk Korneuburg abtragen lassen. Bitte um Ihren Anruf. Fam. Grössing 06764100053"
     },
     {
       "Musteri": "daniela langthaler",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Baden",
       "Ilk gorusme": "26.07.26 16:54",
       "Son gorusme": "27.07.26 16:54",
-      "Mesaj": "-"
+      "Mesaj": "d\ndaniela langthaler\nGestern um 4:54 PM\nIch benötige bitte einen Kostenvoranschlag für folgende Leistungen. - 2x Grube unter 2 Frühbeete ca. 2,5m Länge x1,5m Breite x 50cm Tiefe - 1x Grube unter1x Frühbeet ca. 1,50 Länge x 1,0 m Breite x50cm Tiefe Aufgefüllt sollen die beiden Gruben mit Mutterboden, Sand und Laub werden. Es soll grabfähig sein damit meine Schildkröten dort überwintern können. Die Seiten der Gruben sollen mit Stein, Styrodur oder Hohlkammerplatten versehen werden die vor Fressfeinden schützen sollen. Umgesetzt soll das ganze bis 31.08.2026 sein."
     },
     {
       "Musteri": "0664 2477304",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Korneuburg",
       "Ilk gorusme": "27.07.26 15:40",
@@ -39,7 +35,6 @@
     },
     {
       "Musteri": "0681 10281273",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Wien",
       "Ilk gorusme": "25.07.26 10:52",
@@ -48,16 +43,14 @@
     },
     {
       "Musteri": "Gerhard Kienast",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "Baumfällarbeiten",
       "Konum": "Mödling",
       "Ilk gorusme": "25.07.26 09:59",
       "Son gorusme": "26.07.26 10:00",
-      "Mesaj": "-"
+      "Mesaj": "d\ndaniela langthaler\nGestern um 4:54 PM\nIch benötige bitte einen Kostenvoranschlag für folgende Leistungen. - 2x Grube unter 2 Frühbeete ca. 2,5m Länge x1,5m Breite x 50cm Tiefe - 1x Grube unter1x Frühbeet ca. 1,50 Länge x 1,0 m Breite x50cm Tiefe Aufgefüllt sollen die beiden Gruben mit Mutterboden, Sand und Laub werden. Es soll grabfähig sein damit meine Schildkröten dort überwintern können. Die Seiten der Gruben sollen mit Stein, Styrodur oder Hohlkammerplatten versehen werden die vor Fressfeinden schützen sollen. Umgesetzt soll das ganze bis 31.08.2026 sein."
     },
     {
       "Musteri": "0660 2177333",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Bisamberg",
       "Ilk gorusme": "24.07.26 13:45",
@@ -66,7 +59,6 @@
     },
     {
       "Musteri": "0664 73923005",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Bezirk Sankt Pölten-Land",
       "Ilk gorusme": "24.07.26 11:39",
@@ -75,7 +67,6 @@
     },
     {
       "Musteri": "0677 61747945",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Brunn am Gebirge",
       "Ilk gorusme": "24.07.26 08:11",
@@ -84,7 +75,6 @@
     },
     {
       "Musteri": "0681 81678519",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "Baumfällarbeiten",
       "Konum": "Puchberg am Schneeberg",
       "Ilk gorusme": "24.07.26 19:28",
@@ -93,7 +83,6 @@
     },
     {
       "Musteri": "0680 3115131",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Neunkirchen",
       "Ilk gorusme": "23.07.26 17:15",
@@ -102,7 +91,6 @@
     },
     {
       "Musteri": "0676 9064327",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Mank",
       "Ilk gorusme": "24.07.26 15:48",
@@ -111,7 +99,6 @@
     },
     {
       "Musteri": "0664 7650675",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Wiener Neustadt",
       "Ilk gorusme": "23.07.26 15:17",
@@ -120,7 +107,6 @@
     },
     {
       "Musteri": "0681 20431661",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "Entsorgung von Gartenabfällen",
       "Konum": "Strasshof an der Nordbahn",
       "Ilk gorusme": "23.07.26 14:34",
@@ -129,7 +115,6 @@
     },
     {
       "Musteri": "0676 6296724",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Ebreichsdorf",
       "Ilk gorusme": "23.07.26 11:56",
@@ -138,7 +123,6 @@
     },
     {
       "Musteri": "0699 81496221",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Mödling",
       "Ilk gorusme": "22.07.26 15:41",
@@ -147,7 +131,6 @@
     },
     {
       "Musteri": "0664 88555005",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "Baumpflege",
       "Konum": "Wien",
       "Ilk gorusme": "23.07.26 09:46",
@@ -156,7 +139,6 @@
     },
     {
       "Musteri": "0676 7125984",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "Kunstrasenverlegung",
       "Konum": "Wien",
       "Ilk gorusme": "22.07.26 11:57",
@@ -165,7 +147,6 @@
     },
     {
       "Musteri": "0664 6486001",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "Kunstrasenverlegung",
       "Konum": "Wien",
       "Ilk gorusme": "22.07.26 10:09",
@@ -174,7 +155,6 @@
     },
     {
       "Musteri": "0676 3100739",
-      "Telefon": "Keine Telefonnummer",
       "Hizmet": "-",
       "Konum": "Ternitz",
       "Ilk gorusme": "21.07.26 17:13",
