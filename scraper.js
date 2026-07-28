@@ -10,7 +10,7 @@ puppeteer.use(StealthPlugin());
 // --- CONFIGURATION ---
 const CONFIG = {
   projectName: 'Osman Reklam',
-  userDataPath: '/home/ubuntu/chrome-profile', // Tam (absolute) yol garantiye alındı
+  userDataPath: '/home/ubuntu/osman-reklam/user_data',
   targetUrl: 'https://ads.google.com/localservices/inbox?cid=2903573653&bid=10985702078&pid=9999999999&euid=3547106212&hl=de-AT&gl=AT',
   telegramToken: process.env.TELEGRAM_BOT_TOKEN,
   telegramChatId: process.env.TELEGRAM_CHAT_ID,
@@ -87,29 +87,19 @@ function clearChromeLocks() {
 
     browser = await puppeteer.launch({
       headless: "new",
-      executablePath: '/usr/bin/google-chrome', // Sistemdeki gerçek Chrome
-      userDataDir: '/home/ubuntu/chrome-profile',        // Absolute yol
+      executablePath: '/usr/bin/google-chrome',
+      userDataDir: CONFIG.userDataPath,
       args: [
-        '--profile-directory=Default', // <--- BU SATIRI EKLEYİN
         '--no-sandbox',
         '--disable-setuid-sandbox',
-        '--profile-directory=Default',
         '--disable-dev-shm-usage',
-        '--disable-blink-features=AutomationControlled', // Google otomasyon algılamasını kırar
-        '--no-first-run',
-        '--no-default-browser-check'
+        '--disable-blink-features=AutomationControlled',
+        '--window-size=1920,1080',
+        '--lang=de-AT,de'
       ]
     });
 
     const page = await browser.newPage();
-    
-    // Otomasyon (webdriver) izini gizleme
-    await page.evaluateOnNewDocument(() => {
-      Object.defineProperty(navigator, 'webdriver', {
-        get: () => undefined,
-      });
-    });
-
     await page.setViewport({ width: 1920, height: 1080 });
     page.setDefaultTimeout(90000);
 
@@ -117,18 +107,10 @@ function clearChromeLocks() {
     await page.goto(CONFIG.targetUrl, { waitUntil: 'networkidle2' });
 
     const pageTitle = await page.title();
-    const pageUrl = page.url();
-    console.log(`Sayfa Başlığı: "${pageTitle}" | URL: "${pageUrl}"`);
+    console.log("Sayfa Başlığı:", pageTitle);
 
-    // Genişletilmiş Giriş/Hata Kontrolü (Kontoauswahl vb. başlıklar eklendi)
-    const isLoginScreen = 
-      /Anmelden|Sign in|Kontoauswahl|Login|Google-Konto|Einloggen/i.test(pageTitle) ||
-      /accounts\.google\.com|signin/i.test(pageUrl);
-    
-    const isErrorPage = /YouTube|Error|504|Serverfehler|Service Unavailable/i.test(pageTitle);
-
-    if (isLoginScreen || isErrorPage) {
-      throw new Error(`❌ Oturum açılamadı veya Google engelledi! Başlık: "${pageTitle}"`);
+    if (/Anmelden|Sign in|YouTube|Error|504|Serverfehler/i.test(pageTitle)) {
+      throw new Error(`❌ Oturum açılamadı veya Google engelledi! Başlık: ${pageTitle}`);
     }
 
     // Lazy load tetiklemek için smooth scroll
