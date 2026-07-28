@@ -85,13 +85,16 @@ function clearChromeLocks() {
   try {
     clearChromeLocks();
 
-const page = await browser.newPage();
+browser = await puppeteer.launch({ headless: "new", executablePath: '/usr/bin/google-chrome', userDataDir: CONFIG.userDataPath, args: [ '--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-blink-features=AutomationControlled', '--window-size=1920,1080', '--lang=de-AT,de' ] });
 
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1920, height: 1080 });
+    page.setDefaultTimeout(90000);
 console.log("UserData:", CONFIG.userDataPath);
-console.log(browser.process().spawnargs);
+console.log("Chrome args:", browser.process().spawnargs);
 
 await page.goto("https://myaccount.google.com", {
-    waitUntil: "networkidle2"
+  waitUntil: "networkidle2"
 });
 
 console.log("Title:", await page.title());
@@ -99,16 +102,9 @@ console.log("Title:", await page.title());
 const cookies = await page.cookies();
 
 console.log("Cookie count:", cookies.length);
-console.log(
-    cookies
-        .filter(c => c.domain.includes("google"))
-        .map(c => c.name)
-);
+console.log("Cookies:", cookies.map(c => c.name));
 
-    const page = await browser.newPage();
-    await page.setViewport({ width: 1920, height: 1080 });
-    page.setDefaultTimeout(90000);
-
+return;
     console.log("LSA Inbox sayfasına gidiliyor...");
     await page.goto(CONFIG.targetUrl, { waitUntil: 'networkidle2' });
 
