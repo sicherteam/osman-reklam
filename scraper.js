@@ -7,16 +7,21 @@ const { execSync } = require('child_process');
 
 puppeteer.use(StealthPlugin());
 
-// --- CONFIGURATION ---
+// --- CONFIGURATION (OSMAN REKLAM) ---
 const CONFIG = {
   projectName: 'Osman Reklam',
-  userDataPath: '/home/ubuntu/osman-reklam/user_data',
+  userDataPath: path.resolve('/home/ubuntu/osman-reklam/user_data'),
   targetUrl: 'https://ads.google.com/localservices/inbox?cid=2903573653&bid=10985702078&pid=9999999999&euid=3547106212&hl=de-AT&gl=AT',
   telegramToken: process.env.TELEGRAM_BOT_TOKEN,
   telegramChatId: process.env.TELEGRAM_CHAT_ID,
 };
 
-// Native Fetch API with Telegram Alert
+// Klasör yoksa otomatik oluştur ve izin sorununu engelle
+if (!fs.existsSync(CONFIG.userDataPath)) {
+  fs.mkdirSync(CONFIG.userDataPath, { recursive: true });
+}
+
+// Native Fetch API ile Telegram Bildirimi
 async function sendTelegramMessage(lead) {
   if (!CONFIG.telegramToken || !CONFIG.telegramChatId) {
     console.warn("⚠️ Telegram API bilgileri eksik (.env)");
@@ -89,7 +94,7 @@ function clearChromeLocks() {
     process.env.DISPLAY = process.env.DISPLAY || ':1';
 
     browser = await puppeteer.launch({
-      headless: false, // Google tespitini aşmak için false yapıldı
+      headless: true, // Arka planda stabil çalışması için true yapıldı
       executablePath: '/usr/bin/google-chrome',
       userDataDir: CONFIG.userDataPath,
       args: [
@@ -98,8 +103,10 @@ function clearChromeLocks() {
         '--disable-dev-shm-usage',
         '--disable-blink-features=AutomationControlled',
         '--disable-features=IsolateOrigins,site-per-process',
+        '--profile-directory=Default', // Çerez sabitleme
         '--window-size=1920,1080',
-        '--lang=de-AT,de'
+        '--lang=de-AT,de',
+        '--user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
       ]
     });
 
