@@ -85,8 +85,11 @@ function clearChromeLocks() {
   try {
     clearChromeLocks();
 
+    // VNC Ekranı için Display Değişkeni
+    process.env.DISPLAY = process.env.DISPLAY || ':1';
+
     browser = await puppeteer.launch({
-      headless: "new",
+      headless: false, // Google tespitini aşmak için false yapıldı
       executablePath: '/usr/bin/google-chrome',
       userDataDir: CONFIG.userDataPath,
       args: [
@@ -94,6 +97,7 @@ function clearChromeLocks() {
         '--disable-setuid-sandbox',
         '--disable-dev-shm-usage',
         '--disable-blink-features=AutomationControlled',
+        '--disable-features=IsolateOrigins,site-per-process',
         '--window-size=1920,1080',
         '--lang=de-AT,de'
       ]
@@ -101,6 +105,12 @@ function clearChromeLocks() {
 
     const page = await browser.newPage();
     await page.setViewport({ width: 1920, height: 1080 });
+    
+    // Automation flag silme (Bot algılamayı zorlaştırır)
+    await page.evaluateOnNewDocument(() => {
+      Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+    });
+
     page.setDefaultTimeout(90000);
 
     console.log("LSA Inbox sayfasına gidiliyor...");
@@ -271,7 +281,6 @@ function clearChromeLocks() {
     const hasChanges = JSON.stringify(leads) !== JSON.stringify(previousLeads);
 
     if (hasChanges) {
-      // Eski kayıtta aynısı bulunmayan (yeni gelen veya içeriği değişen) lead'leri filtrele
       const changedOrNewLeads = leads.filter(newLead => {
         return !previousLeads.some(oldLead => JSON.stringify(oldLead) === JSON.stringify(newLead));
       });
@@ -294,7 +303,6 @@ function clearChromeLocks() {
         execSync('git push origin main');
         console.log("✅ GitHub'a başarıyla push edildi!");
 
-        // DEĞİŞEN VEYA YENİ GELEN BİLDİRİMLERİ GÖNDER
         if (changedOrNewLeads.length > 0) {
           console.log(`📱 ${changedOrNewLeads.length} adet yenilik için Telegram bildirimi gönderiliyor...`);
           for (const lead of changedOrNewLeads) {
