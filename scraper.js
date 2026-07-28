@@ -10,7 +10,7 @@ puppeteer.use(StealthPlugin());
 // --- CONFIGURATION (OSMAN REKLAM) ---
 const CONFIG = {
   projectName: 'Osman Reklam',
-  userDataPath: path.resolve('/home/ubuntu/osman-reklam/user_data'),
+  userDataPath: path.resolve(__dirname, 'user_data'),
   targetUrl: 'https://ads.google.com/localservices/inbox?cid=2903573653&bid=10985702078&pid=9999999999&euid=3547106212&hl=de-AT&gl=AT',
   telegramToken: process.env.TELEGRAM_BOT_TOKEN,
   telegramChatId: process.env.TELEGRAM_CHAT_ID,
