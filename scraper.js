@@ -88,7 +88,7 @@ function clearChromeLocks() {
     browser = await puppeteer.launch({
       headless: "new",
       executablePath: '/usr/bin/google-chrome', // Sistemdeki gerçek Chrome
-      userDataDir: CONFIG.userDataPath,         // Absolute yol
+      userDataDir: '/home/ubuntu/chrome-profile',        // Absolute yol
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
