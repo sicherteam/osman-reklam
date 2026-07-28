@@ -90,6 +90,7 @@ function clearChromeLocks() {
       executablePath: '/usr/bin/google-chrome', // Sistemdeki gerçek Chrome
       userDataDir: '/home/ubuntu/chrome-profile',        // Absolute yol
       args: [
+        '--profile-directory=Default', // <--- BU SATIRI EKLEYİN
         '--no-sandbox',
         '--disable-setuid-sandbox',
         '--profile-directory=Default',
