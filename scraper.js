@@ -85,19 +85,17 @@ function clearChromeLocks() {
   try {
     clearChromeLocks();
 
-    browser = await puppeteer.launch({
-      headless: "new",
-      executablePath: '/usr/bin/google-chrome',
-      userDataDir: CONFIG.userDataPath,
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-dev-shm-usage',
-        '--disable-blink-features=AutomationControlled',
-        '--window-size=1920,1080',
-        '--lang=de-AT,de'
-      ]
-    });
+const browser = await puppeteer.launch({
+  headless: "new",
+  executablePath: '/usr/bin/google-chrome', // Sistemdeki gerçek Chrome'u kullanması için
+  userDataDir: path.resolve(__dirname, 'user_data'), // Tam (absolute) yol veriyoruz
+  args: [
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--profile-directory=Default',
+    '--disable-dev-shm-usage'
+  ]
+});
 
     const page = await browser.newPage();
     await page.setViewport({ width: 1920, height: 1080 });
