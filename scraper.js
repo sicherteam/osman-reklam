@@ -7,7 +7,7 @@ const { execSync } = require('child_process');
 
 puppeteer.use(StealthPlugin());
 
-// --- CONFIGURATION (OSMAN REKLAM) ---
+// --- CONFIGURATION ---
 const CONFIG = {
   projectName: 'Osman Reklam',
   userDataPath: '/home/ubuntu/osman-reklam/user_data',
@@ -16,19 +16,14 @@ const CONFIG = {
   telegramChatId: process.env.TELEGRAM_CHAT_ID,
 };
 
-// Klasör yoksa otomatik oluştur ve izin sorununu engelle
-if (!fs.existsSync(CONFIG.userDataPath)) {
-  fs.mkdirSync(CONFIG.userDataPath, { recursive: true });
-}
-
-// Native Fetch API ile Telegram Bildirimi
+// Native Fetch API with Telegram Alert
 async function sendTelegramMessage(lead) {
   if (!CONFIG.telegramToken || !CONFIG.telegramChatId) {
     console.warn("⚠️ Telegram API bilgileri eksik (.env)");
     return;
   }
 
-  const message = `🔔 *YENİ / GÜNCELLENEN MÜŞTERİ!* (${CONFIG.projectName})\n\n` +
+  const message = `🔔 *YENİ MÜŞTERİ!* (${CONFIG.projectName})\n\n` +
                   `👤 *Müşteri:* ${lead["Musteri"]}\n` +
                   `📍 *Konum:* ${lead["Konum"]}\n` +
                   `💼 *Hizmet:* ${lead["Hizmet"]}\n` +
@@ -90,11 +85,8 @@ function clearChromeLocks() {
   try {
     clearChromeLocks();
 
-    // VNC Ekranı için Display Değişkeni
-    process.env.DISPLAY = process.env.DISPLAY || ':1';
-
     browser = await puppeteer.launch({
-      headless: true, // Arka planda stabil çalışması için true yapıldı
+      headless: "new",
       executablePath: '/usr/bin/google-chrome',
       userDataDir: CONFIG.userDataPath,
       args: [
@@ -102,22 +94,13 @@ function clearChromeLocks() {
         '--disable-setuid-sandbox',
         '--disable-dev-shm-usage',
         '--disable-blink-features=AutomationControlled',
-        '--disable-features=IsolateOrigins,site-per-process',
-        '--profile-directory=Default', // Çerez sabitleme
         '--window-size=1920,1080',
-        '--lang=de-AT,de',
-        '--user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+        '--lang=de-AT,de'
       ]
     });
 
     const page = await browser.newPage();
     await page.setViewport({ width: 1920, height: 1080 });
-    
-    // Automation flag silme (Bot algılamayı zorlaştırır)
-    await page.evaluateOnNewDocument(() => {
-      Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-    });
-
     page.setDefaultTimeout(90000);
 
     console.log("LSA Inbox sayfasına gidiliyor...");
@@ -232,7 +215,7 @@ function clearChromeLocks() {
                          .split('Audioinhalte')[0]
                          .split('Hier dem Kunden')[0]
                          .replace(/^P\s+|^Potenzieller Kunde\s+|^\d{2}\.\d{2}\.\d{2}\s+/gi, '')
-                         .trim() || "-";
+                         .trim() || "NO MESSAGE";
             }
 
             // Panel Header'ından Gerçek İsim Kurtarma
@@ -273,7 +256,7 @@ function clearChromeLocks() {
       });
     }
 
-    // 3. AŞAMA: SADECE LEADS DİZİSİNDEKİ YENİLİK/DEĞİŞİKLİK KONTROLÜ
+    // 3. AŞAMA: SADECE YENİ MÜŞTERİ VARSA KAYDET VE BİLDİRİM GÖNDER
     let previousLeads = [];
     if (fs.existsSync('data.json')) {
       try {
@@ -284,45 +267,47 @@ function clearChromeLocks() {
       }
     }
 
-    // En üstteki 'updatedAt' saat/tarih bilgisi DIŞINDA kalan 'leads' verisini kıyasla
-    const hasChanges = JSON.stringify(leads) !== JSON.stringify(previousLeads);
+    // Var olan listede bulunmayan YENİ müşteri tespiti
+    const newLeads = leads.filter(newLead => {
+      return !previousLeads.some(oldLead => 
+        oldLead["Musteri"] === newLead["Musteri"] &&
+        oldLead["Ilk gorusme"] === newLead["Ilk gorusme"] &&
+        oldLead["Mesaj"] === newLead["Mesaj"]
+      );
+    });
 
-    if (hasChanges) {
-      const changedOrNewLeads = leads.filter(newLead => {
-        return !previousLeads.some(oldLead => JSON.stringify(oldLead) === JSON.stringify(newLead));
-      });
+    console.log(`🔎 İnceleme Tamamlandı. Bulunan YENİ Lead Sayısı: ${newLeads.length}`);
 
+    if (newLeads.length > 0) {
       const outputData = {
         updatedAt: new Date().toLocaleString('de-AT', { timeZone: 'Europe/Vienna' }),
         leads
       };
 
       fs.writeFileSync('data.json', JSON.stringify(outputData, null, 2));
-      console.log(`🎉 YENİLİK TESPİT EDİLDİ! data.json güncellendi.`);
+      console.log(`🎉 YENİ MÜŞTERİ GELMİŞ! ${newLeads.length} adet yeni lead data.json dosyasına yazıldı.`);
 
       try {
         console.log("⏳ GitHub Pages çakışma önleyici (10sn)...");
         await new Promise(r => setTimeout(r, 10000));
 
         execSync('git add data.json');
-        execSync('git commit -m "Auto-update data.json [leads updated] [skip ci]" || true');
+        execSync('git commit -m "Auto-update data.json [new leads] [skip ci]" || true');
         execSync('git pull origin main --rebase -X ours');
         execSync('git push origin main');
         console.log("✅ GitHub'a başarıyla push edildi!");
 
-        if (changedOrNewLeads.length > 0) {
-          console.log(`📱 ${changedOrNewLeads.length} adet yenilik için Telegram bildirimi gönderiliyor...`);
-          for (const lead of changedOrNewLeads) {
-            await sendTelegramMessage(lead);
-            await new Promise(r => setTimeout(r, 1000));
-          }
+        // SADECE YENİ MÜŞTERİLER İÇİN TELEGRAM MESAJI AT
+        for (const newLead of newLeads) {
+          await sendTelegramMessage(newLead);
+          await new Promise(r => setTimeout(r, 1000));
         }
 
       } catch (gitErr) {
         console.error("⚠️ Git push veya Telegram hatası:", gitErr.message);
       }
     } else {
-      console.log("ℹ️ Müşteri verilerinde (leads) hiçbir değişiklik yok. Git push ve Telegram atlandı.");
+      console.log("ℹ️ Yeni bir müşteri veya değişiklik yok. Telegram bildirimi ve Git push atlandı.");
     }
 
   } catch (error) {
