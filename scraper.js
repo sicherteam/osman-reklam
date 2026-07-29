@@ -10,7 +10,7 @@ puppeteer.use(StealthPlugin());
 // --- CONFIGURATION ---
 const CONFIG = {
   projectName: 'Osman Reklam',
-  userDataPath: '/home/ubuntu/test_chrome_profile',
+  userDataPath: '/home/ubuntu/osman-reklam/user_data',
   targetUrl: 'https://ads.google.com/localservices/inbox?cid=2903573653&bid=10985702078&pid=9999999999&euid=3547106212&hl=de-AT&gl=AT',
   telegramToken: process.env.TELEGRAM_BOT_TOKEN,
   telegramChatId: process.env.TELEGRAM_CHAT_ID,
@@ -85,56 +85,24 @@ function clearChromeLocks() {
   try {
     clearChromeLocks();
 
-browser = await puppeteer.launch({
-  headless: false,
-  executablePath: '/usr/bin/google-chrome',
-  userDataDir: '/home/ubuntu/test_chrome_profile',
-  args: [
-    '--no-sandbox',
-    '--disable-setuid-sandbox',
-    '--disable-dev-shm-usage',
-    '--window-size=1920,1080',
-    '--lang=de-AT,de'
-  ]
-});
+    browser = await puppeteer.launch({
+      headless: "new",
+      executablePath: '/usr/bin/google-chrome',
+      userDataDir: CONFIG.userDataPath,
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-blink-features=AutomationControlled',
+        '--window-size=1920,1080',
+        '--lang=de-AT,de'
+      ]
+    });
 
-const page = await browser.newPage();
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1920, height: 1080 });
+    page.setDefaultTimeout(90000);
 
-console.log("Sayfa açılıyor...");
-
-await page.goto("https://myaccount.google.com", {
-  waitUntil: "domcontentloaded",
-  timeout: 60000
-});
-
-console.log("URL:", page.url());
-console.log("TITLE:", await page.title());
-
-const jsData = await page.evaluate(() => {
-  return {
-    cookies: document.cookie,
-    localStorage: Object.keys(localStorage),
-    path: location.pathname
-  };
-});
-
-console.log("JS DATA:", jsData);
-
-console.log("UserAgent:", await page.evaluate(() => navigator.userAgent));
-
-const cookies = await page.cookies();
-
-console.log("Cookie count:", cookies.length);
-console.log(
-  "Cookies:",
-  cookies.map(c => ({
-    name: c.name,
-    domain: c.domain
-  }))
-);
-
-await new Promise(() => {});
-return;
     console.log("LSA Inbox sayfasına gidiliyor...");
     await page.goto(CONFIG.targetUrl, { waitUntil: 'networkidle2' });
 
