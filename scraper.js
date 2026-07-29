@@ -112,7 +112,8 @@ await page.goto("https://myaccount.google.com", {
 });
 
 console.log("Title:", await page.title());
-
+await new Promise(() => {});
+    
 const cookies = await page.cookies();
 
 console.log("Cookie count:", cookies.length);
