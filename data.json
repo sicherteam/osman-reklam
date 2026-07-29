@@ -1,6 +1,38 @@
 {
-  "updatedAt": "29.7.2026, 05:31:04",
+  "updatedAt": "29.7.2026, 09:41:19",
   "leads": [
+    {
+      "Musteri": "0676 4100869",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Ilk gorusme": "29.07.26 07:22",
+      "Son gorusme": "29.07.26 07:23",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "0664 5004072",
+      "Hizmet": "Winterdienst",
+      "Konum": "Klosterneuburg",
+      "Ilk gorusme": "28.07.26 07:07",
+      "Son gorusme": "29.07.26 07:11",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "0664 1765208",
+      "Hizmet": "Baumpflege",
+      "Konum": "Wien",
+      "Ilk gorusme": "28.07.26 06:39",
+      "Son gorusme": "29.07.26 06:42",
+      "Mesaj": "-"
+    },
+    {
+      "Musteri": "0699 11046998",
+      "Hizmet": "Baumpflege",
+      "Konum": "Wien",
+      "Ilk gorusme": "29.07.26 06:27",
+      "Son gorusme": "29.07.26 06:36",
+      "Mesaj": "-"
+    },
     {
       "Musteri": "0699 11046998",
       "Hizmet": "-",
@@ -42,27 +74,11 @@
       "Mesaj": "-"
     },
     {
-      "Musteri": "0664 5004072",
-      "Hizmet": "Winterdienst",
-      "Konum": "Klosterneuburg",
-      "Ilk gorusme": "28.07.26 07:07",
-      "Son gorusme": "28.07.26 07:11",
-      "Mesaj": "-"
-    },
-    {
       "Musteri": "0664 1765208",
       "Hizmet": "Schneiden der Hecke",
       "Konum": "Wien",
       "Ilk gorusme": "28.07.26 06:48",
       "Son gorusme": "28.07.26 06:48",
-      "Mesaj": "-"
-    },
-    {
-      "Musteri": "0664 1765208",
-      "Hizmet": "Baumpflege",
-      "Konum": "Wien",
-      "Ilk gorusme": "28.07.26 06:39",
-      "Son gorusme": "28.07.26 06:42",
       "Mesaj": "-"
     },
     {
@@ -143,22 +159,6 @@
       "Konum": "Mank",
       "Ilk gorusme": "24.07.26 13:48",
       "Son gorusme": "24.07.26 13:48",
-      "Mesaj": "-"
-    },
-    {
-      "Musteri": "0664 7650675",
-      "Hizmet": "-",
-      "Konum": "Wiener Neustadt",
-      "Ilk gorusme": "23.07.26 13:17",
-      "Son gorusme": "24.07.26 13:18",
-      "Mesaj": "-"
-    },
-    {
-      "Musteri": "0681 20431661",
-      "Hizmet": "Entsorgung von Gartenabfällen",
-      "Konum": "Strasshof an der Nordbahn",
-      "Ilk gorusme": "23.07.26 12:34",
-      "Son gorusme": "24.07.26 12:36",
       "Mesaj": "-"
     }
   ]
