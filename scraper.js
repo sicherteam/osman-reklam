@@ -85,33 +85,31 @@ function clearChromeLocks() {
   try {
     clearChromeLocks();
 
-browser = await puppeteer.launch({ headless: false, executablePath: '/usr/bin/google-chrome', userDataDir: CONFIG.userDataPath, 
-  
-  ignoreDefaultArgs: [
-    '--password-store=basic'
-  ],
-args: [
-  '--no-sandbox',
-  '--disable-setuid-sandbox',
-  '--disable-dev-shm-usage',
-  '--disable-blink-features=AutomationControlled',
-  '--window-size=1920,1080',
-  '--lang=de-AT,de',
-  '--password-store=gnome',
-  '--use-system-default-keyring'
-] });
-
-    const page = await browser.newPage();
-    await page.setViewport({ width: 1920, height: 1080 });
-    page.setDefaultTimeout(90000);
-console.log("UserData:", CONFIG.userDataPath);
-console.log("Chrome args:", browser.process().spawnargs);
-
-await page.goto("https://myaccount.google.com", {
-  waitUntil: "networkidle2"
+browser = await puppeteer.launch({
+  headless: false,
+  executablePath: '/usr/bin/google-chrome',
+  userDataDir: CONFIG.userDataPath,
+  args: [
+    '--no-sandbox',
+    '--disable-setuid-sandbox',
+    '--disable-dev-shm-usage',
+    '--window-size=1920,1080',
+    '--lang=de-AT,de'
+  ]
 });
 
-console.log("Title:", await page.title());
+const page = await browser.newPage();
+
+console.log("Sayfa açılıyor...");
+
+await page.goto("https://myaccount.google.com", {
+  waitUntil: "domcontentloaded",
+  timeout: 60000
+});
+
+console.log("URL:", page.url());
+console.log("TITLE:", await page.title());
+
 await new Promise(() => {});
     
 const cookies = await page.cookies();
