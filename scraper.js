@@ -85,7 +85,12 @@ function clearChromeLocks() {
   try {
     clearChromeLocks();
 
-browser = await puppeteer.launch({ headless: false, executablePath: '/usr/bin/google-chrome', userDataDir: CONFIG.userDataPath, args: [
+browser = await puppeteer.launch({ headless: false, executablePath: '/usr/bin/google-chrome', userDataDir: CONFIG.userDataPath, 
+  
+  ignoreDefaultArgs: [
+    '--password-store=basic'
+  ],
+args: [
   '--no-sandbox',
   '--disable-setuid-sandbox',
   '--disable-dev-shm-usage',
