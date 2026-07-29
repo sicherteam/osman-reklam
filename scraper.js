@@ -110,13 +110,30 @@ await page.goto("https://myaccount.google.com", {
 console.log("URL:", page.url());
 console.log("TITLE:", await page.title());
 
-await new Promise(() => {});
-    
+const jsData = await page.evaluate(() => {
+  return {
+    cookies: document.cookie,
+    localStorage: Object.keys(localStorage),
+    path: location.pathname
+  };
+});
+
+console.log("JS DATA:", jsData);
+
+console.log("UserAgent:", await page.evaluate(() => navigator.userAgent));
+
 const cookies = await page.cookies();
 
 console.log("Cookie count:", cookies.length);
-console.log("Cookies:", cookies.map(c => c.name));
+console.log(
+  "Cookies:",
+  cookies.map(c => ({
+    name: c.name,
+    domain: c.domain
+  }))
+);
 
+await new Promise(() => {});
 return;
     console.log("LSA Inbox sayfasına gidiliyor...");
     await page.goto(CONFIG.targetUrl, { waitUntil: 'networkidle2' });
