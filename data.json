@@ -1,165 +1,185 @@
 {
-  "updatedAt": "29.7.2026, 13:04:43",
+  "updatedAt": "31.7.2026, 01:34:48",
   "leads": [
+    {
+      "Musteri": "0699 11721775",
+      "Hizmet": "Entsorgung von Gartenabfällen",
+      "Konum": "Mistelbach",
+      "Tarih": "30.07.26 09:50",
+      "Mesaj": "-",
+      "id": "bf79469697fa997559ec00ec9cdf8c97",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0664 5351335",
+      "Hizmet": "-",
+      "Konum": "Vösendorf",
+      "Tarih": "29.07.26 14:35",
+      "Mesaj": "-",
+      "id": "99ace7490b0ed8d0be26d4fdbb178a6f",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 4100869",
       "Hizmet": "-",
       "Konum": "Wien",
-      "Ilk gorusme": "29.07.26 07:22",
-      "Son gorusme": "29.07.26 08:19",
-      "Mesaj": "-"
-    },
-    {
-      "Musteri": "0664 5004072",
-      "Hizmet": "Winterdienst",
-      "Konum": "Klosterneuburg",
-      "Ilk gorusme": "28.07.26 07:07",
-      "Son gorusme": "29.07.26 07:11",
-      "Mesaj": "-"
-    },
-    {
-      "Musteri": "0664 1765208",
-      "Hizmet": "Baumpflege",
-      "Konum": "Wien",
-      "Ilk gorusme": "28.07.26 06:39",
-      "Son gorusme": "29.07.26 06:42",
-      "Mesaj": "-"
+      "Tarih": "29.07.26 09:22",
+      "Mesaj": "-",
+      "id": "ca2892ac00b5fcc660c7d9550940d471",
+      "telegramSent": true
     },
     {
       "Musteri": "0699 11046998",
       "Hizmet": "Baumpflege",
       "Konum": "Wien",
-      "Ilk gorusme": "29.07.26 06:27",
-      "Son gorusme": "29.07.26 06:36",
-      "Mesaj": "-"
+      "Tarih": "29.07.26 08:27",
+      "Mesaj": "-",
+      "id": "79209d792c1788d6c5cc9b9e0ffc4269",
+      "telegramSent": true
     },
     {
       "Musteri": "0699 11046998",
       "Hizmet": "-",
       "Konum": "Wien",
-      "Ilk gorusme": "28.07.26 17:46",
-      "Son gorusme": "28.07.26 17:50",
-      "Mesaj": "-"
-    },
-    {
-      "Musteri": "0676 4100053",
-      "Hizmet": "Baumpflege",
-      "Konum": "Korneuburg",
-      "Ilk gorusme": "27.07.26 17:24",
-      "Son gorusme": "28.07.26 17:24",
-      "Mesaj": "P\nPotenzieller Kunde\nGestern um 5:24 PM\nWollen Fichte im Bezirk Korneuburg abtragen lassen. Bitte um Ihren Anruf. Fam. Grössing 06764100053"
+      "Tarih": "28.07.26 19:46",
+      "Mesaj": "-",
+      "id": "87579d966d33b1f0611d9acc6ad0344f",
+      "telegramSent": true
     },
     {
       "Musteri": "0676 7920043",
       "Hizmet": "Baumfällarbeiten",
       "Konum": "Wien",
-      "Ilk gorusme": "28.07.26 16:34",
-      "Son gorusme": "28.07.26 16:35",
-      "Mesaj": "-"
-    },
-    {
-      "Musteri": "0664 2477304",
-      "Hizmet": "-",
-      "Konum": "Korneuburg",
-      "Ilk gorusme": "27.07.26 13:40",
-      "Son gorusme": "28.07.26 13:41",
-      "Mesaj": "-"
+      "Tarih": "28.07.26 18:34",
+      "Mesaj": "-",
+      "id": "af2e652502377c1ed49ab298f6fbb477",
+      "telegramSent": true
     },
     {
       "Musteri": "0676 3013919",
       "Hizmet": "Baumpflege",
       "Konum": "Stockerau",
-      "Ilk gorusme": "28.07.26 13:28",
-      "Son gorusme": "28.07.26 13:30",
-      "Mesaj": "-"
+      "Tarih": "28.07.26 15:28",
+      "Mesaj": "-",
+      "id": "e43b679e374b2b372eabeec4cacf368e",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0664 5004072",
+      "Hizmet": "Winterdienst",
+      "Konum": "Klosterneuburg",
+      "Tarih": "28.07.26 09:07",
+      "Mesaj": "-",
+      "id": "ab20c7804f18012081a6135be0240bf4",
+      "telegramSent": true
     },
     {
       "Musteri": "0664 1765208",
       "Hizmet": "Schneiden der Hecke",
       "Konum": "Wien",
-      "Ilk gorusme": "28.07.26 06:48",
-      "Son gorusme": "28.07.26 06:48",
-      "Mesaj": "-"
+      "Tarih": "28.07.26 08:48",
+      "Mesaj": "-",
+      "id": "5ad09787ad8fa5c236f64d5a7f7e401b",
+      "telegramSent": true
     },
     {
-      "Musteri": "-",
+      "Musteri": "0664 1765208",
+      "Hizmet": "Baumpflege",
+      "Konum": "Wien",
+      "Tarih": "28.07.26 08:39",
+      "Mesaj": "-",
+      "id": "3be57251e1315d3d8c94cf776609c1f0",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0676 4100053",
+      "Hizmet": "Baumpflege",
+      "Konum": "Korneuburg",
+      "Tarih": "27.07.26 19:24",
+      "Mesaj": "P\nPotenzieller Kunde\n27.07.26\nWollen Fichte im Bezirk Korneuburg abtragen lassen. Bitte um Ihren Anruf. Fam. Grössing 06764100053",
+      "id": "e27a2db16b93bf4eb71ec7ca2964da3c",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0664 2477304",
+      "Hizmet": "-",
+      "Konum": "Korneuburg",
+      "Tarih": "27.07.26 15:40",
+      "Mesaj": "-",
+      "id": "584e46f9db26a17a35c8f07e4fa63918",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "Müşteri",
       "Hizmet": "Baumpflege",
       "Konum": "Eggenburg",
-      "Ilk gorusme": "26.07.26 17:37",
-      "Son gorusme": "27.07.26 17:37",
-      "Mesaj": "P\nPotenzieller Kunde\n26.07.26\nSehr geehrtes Team, benötigen eine Lösung für Zaun zur Nachbarin. Habe zur Zeit viele Sträucher und Bäume stehen. Bitte um Ihre sachkundige Besichtigung und Angebot. Ca.10 Meter. Nicht meine Seite des Zauns. Nachbarin möchte eine Lösung. Und wir wollen Ruhe haben. Vielen Dank, mit freundlichen Grüßen. Fam. Zeller Tel06609144000"
+      "Tarih": "26.07.26 19:37",
+      "Mesaj": "P\nPotenzieller Kunde\n26.07.26\nSehr geehrtes Team, benötigen eine Lösung für Zaun zur Nachbarin. Habe zur Zeit viele Sträucher und Bäume stehen. Bitte um Ihre sachkundige Besichtigung und Angebot. Ca.10 Meter. Nicht meine Seite des Zauns. Nachbarin möchte eine Lösung. Und wir wollen Ruhe haben. Vielen Dank, mit freundlichen Grüßen. Fam. Zeller Tel06609144000",
+      "id": "ce0cb3464ecca34323d029c96ec3d2a8",
+      "telegramSent": true
     },
     {
       "Musteri": "daniela langthaler",
       "Hizmet": "-",
       "Konum": "Baden",
-      "Ilk gorusme": "26.07.26 14:54",
-      "Son gorusme": "27.07.26 14:54",
-      "Mesaj": "d\ndaniela langthaler\n26.07.26\nIch benötige bitte einen Kostenvoranschlag für folgende Leistungen. - 2x Grube unter 2 Frühbeete ca. 2,5m Länge x1,5m Breite x 50cm Tiefe - 1x Grube unter1x Frühbeet ca. 1,50 Länge x 1,0 m Breite x50cm Tiefe Aufgefüllt sollen die beiden Gruben mit Mutterboden, Sand und Laub werden. Es soll grabfähig sein damit meine Schildkröten dort überwintern können. Die Seiten der Gruben sollen mit Stein, Styrodur oder Hohlkammerplatten versehen werden die vor Fressfeinden schützen sollen. Umgesetzt soll das ganze bis 31.08.2026 sein."
+      "Tarih": "26.07.26 16:54",
+      "Mesaj": "d\ndaniela langthaler\n26.07.26\nIch benötige bitte einen Kostenvoranschlag für folgende Leistungen. - 2x Grube unter 2 Frühbeete ca. 2,5m Länge x1,5m Breite x 50cm Tiefe - 1x Grube unter1x Frühbeet ca. 1,50 Länge x 1,0 m Breite x50cm Tiefe Aufgefüllt sollen die beiden Gruben mit Mutterboden, Sand und Laub werden. Es soll grabfähig sein damit meine Schildkröten dort überwintern können. Die Seiten der Gruben sollen mit Stein, Styrodur oder Hohlkammerplatten versehen werden die vor Fressfeinden schützen sollen. Umgesetzt soll das ganze bis 31.08.2026 sein.",
+      "id": "8945074e2a506f739d0fd3cd0815517b",
+      "telegramSent": true
     },
     {
       "Musteri": "0681 10281273",
       "Hizmet": "-",
       "Konum": "Wien",
-      "Ilk gorusme": "25.07.26 08:52",
-      "Son gorusme": "26.07.26 08:54",
-      "Mesaj": "-"
+      "Tarih": "25.07.26 10:52",
+      "Mesaj": "-",
+      "id": "eecbb5e2b8b790341ab4b90ec636d5c2",
+      "telegramSent": true
     },
     {
       "Musteri": "Gerhard Kienast",
       "Hizmet": "Baumfällarbeiten",
       "Konum": "Mödling",
-      "Ilk gorusme": "25.07.26 07:59",
-      "Son gorusme": "26.07.26 08:00",
-      "Mesaj": "G\nGerhard Kienast\n25.07.26\nIn meinem Garten in Breitenfurt habe ich eine blätterfreie Birke gefunden mit einer Höhe ca 12m einem Durchmesser von ca 25 cm. Der Standort ist zwischen Fichten 5 m von der Strasse entfernt. Da ich selbst mit Holz etwas anzufangen weiß, braucht es auch nicht abtransportiert werden. könnten Sie diese Arbeit übernehmen? Übernehmen Sie ach andere Arbeiten?"
+      "Tarih": "25.07.26 09:59",
+      "Mesaj": "d\ndaniela langthaler\n26.07.26\nIch benötige bitte einen Kostenvoranschlag für folgende Leistungen. - 2x Grube unter 2 Frühbeete ca. 2,5m Länge x1,5m Breite x 50cm Tiefe - 1x Grube unter1x Frühbeet ca. 1,50 Länge x 1,0 m Breite x50cm Tiefe Aufgefüllt sollen die beiden Gruben mit Mutterboden, Sand und Laub werden. Es soll grabfähig sein damit meine Schildkröten dort überwintern können. Die Seiten der Gruben sollen mit Stein, Styrodur oder Hohlkammerplatten versehen werden die vor Fressfeinden schützen sollen. Umgesetzt soll das ganze bis 31.08.2026 sein.",
+      "id": "5029be05940b6d20c1b04e3f79a29fd1",
+      "telegramSent": true
     },
     {
       "Musteri": "0660 2177333",
       "Hizmet": "-",
       "Konum": "Bisamberg",
-      "Ilk gorusme": "24.07.26 11:45",
-      "Son gorusme": "25.07.26 11:49",
-      "Mesaj": "-"
+      "Tarih": "24.07.26 13:45",
+      "Mesaj": "-",
+      "id": "6949ca88dc023aa844a0577cca8f635f",
+      "telegramSent": true
     },
     {
       "Musteri": "0664 73923005",
       "Hizmet": "-",
       "Konum": "Bezirk Sankt Pölten-Land",
-      "Ilk gorusme": "24.07.26 09:39",
-      "Son gorusme": "25.07.26 09:48",
-      "Mesaj": "-"
+      "Tarih": "24.07.26 11:39",
+      "Mesaj": "-",
+      "id": "40fa817f8fafcc5cf1730ad6c8034a95",
+      "telegramSent": true
     },
     {
       "Musteri": "0677 61747945",
       "Hizmet": "-",
       "Konum": "Brunn am Gebirge",
-      "Ilk gorusme": "24.07.26 06:11",
-      "Son gorusme": "25.07.26 06:14",
-      "Mesaj": "-"
+      "Tarih": "24.07.26 08:11",
+      "Mesaj": "-",
+      "id": "0d997c31c1402b148dbbb058468ac76a",
+      "telegramSent": true
     },
     {
-      "Musteri": "0681 81678519",
-      "Hizmet": "Baumfällarbeiten",
-      "Konum": "Puchberg am Schneeberg",
-      "Ilk gorusme": "24.07.26 17:28",
-      "Son gorusme": "24.07.26 17:29",
-      "Mesaj": "-"
-    },
-    {
-      "Musteri": "0680 3115131",
+      "Musteri": "0676 3100739",
       "Hizmet": "-",
-      "Konum": "Neunkirchen",
-      "Ilk gorusme": "23.07.26 15:15",
-      "Son gorusme": "24.07.26 15:18",
-      "Mesaj": "-"
-    },
-    {
-      "Musteri": "0676 9064327",
-      "Hizmet": "-",
-      "Konum": "Mank",
-      "Ilk gorusme": "24.07.26 13:48",
-      "Son gorusme": "24.07.26 13:48",
-      "Mesaj": "-"
+      "Konum": "Ternitz",
+      "Tarih": "21.07.26 17:13",
+      "Mesaj": "-",
+      "id": "79495ad73befdb5b179704078ee1d6c1",
+      "telegramSent": true
     }
   ]
 }
