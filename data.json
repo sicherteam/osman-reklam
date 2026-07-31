@@ -1,6 +1,15 @@
 {
-  "updatedAt": "31.7.2026, 17:05:49",
+  "updatedAt": "31.7.2026, 19:47:33",
   "leads": [
+    {
+      "Musteri": "0699 10859057",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "31.07.26 19:40",
+      "Mesaj": "-",
+      "id": "fe13c763ad46f3454edf5e04859466df",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 5013929",
       "Hizmet": "Baumpflege",
@@ -125,15 +134,6 @@
       "Tarih": "28.07.26 09:07",
       "Mesaj": "-",
       "id": "ab20c7804f18012081a6135be0240bf4",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 1765208",
-      "Hizmet": "Schneiden der Hecke",
-      "Konum": "Wien",
-      "Tarih": "28.07.26 08:48",
-      "Mesaj": "-",
-      "id": "5ad09787ad8fa5c236f64d5a7f7e401b",
       "telegramSent": true
     },
     {
