@@ -1,6 +1,15 @@
 {
-  "updatedAt": "31.7.2026, 12:51:34",
+  "updatedAt": "31.7.2026, 13:33:46",
   "leads": [
+    {
+      "Musteri": "0664 5963043",
+      "Hizmet": "-",
+      "Konum": "Berndorf",
+      "Tarih": "31.07.26 13:23",
+      "Mesaj": "-",
+      "id": "59757b74bbb9c1dc1406e1f09659ffff",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 10137450",
       "Hizmet": "Winterdienst",
@@ -161,15 +170,6 @@
       "Tarih": "25.07.26 09:59",
       "Mesaj": "d\ndaniela langthaler\n26.07.26\nIch benötige bitte einen Kostenvoranschlag für folgende Leistungen. - 2x Grube unter 2 Frühbeete ca. 2,5m Länge x1,5m Breite x 50cm Tiefe - 1x Grube unter1x Frühbeet ca. 1,50 Länge x 1,0 m Breite x50cm Tiefe Aufgefüllt sollen die beiden Gruben mit Mutterboden, Sand und Laub werden. Es soll grabfähig sein damit meine Schildkröten dort überwintern können. Die Seiten der Gruben sollen mit Stein, Styrodur oder Hohlkammerplatten versehen werden die vor Fressfeinden schützen sollen. Umgesetzt soll das ganze bis 31.08.2026 sein.",
       "id": "5029be05940b6d20c1b04e3f79a29fd1",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 2177333",
-      "Hizmet": "-",
-      "Konum": "Bisamberg",
-      "Tarih": "24.07.26 13:45",
-      "Mesaj": "-",
-      "id": "6949ca88dc023aa844a0577cca8f635f",
       "telegramSent": true
     },
     {
