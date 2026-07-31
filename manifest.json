@@ -1,25 +1,24 @@
 {
-  "short_name": "MustafaReklam",
-  "name": "Mustafa Reklam - ",
+  "name": "Osman Reklam",
+  "short_name": "Osman Reklam",
+  "description": "Müşteri talepleri ve reklam lead takip uygulaması",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f8fafc",
+  "theme_color": "#0f172a",
+
   "icons": [
     {
-      "src": "./icon-512.png",
-      "type": "image/png",
+      "src": "./icon-192.png",
       "sizes": "192x192",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
       "src": "./icon-512.png",
-      "type": "image/png",
       "sizes": "512x512",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
-  ],
-  "start_url": "./index.html",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
-  "display": "standalone",
-  "orientation": "portrait",
-  "scope": "./",
-  "lang": "tr"
+  ]
 }
