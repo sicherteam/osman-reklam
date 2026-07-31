@@ -1,6 +1,24 @@
 {
-  "updatedAt": "31.7.2026, 15:47:57",
+  "updatedAt": "31.7.2026, 17:05:49",
   "leads": [
+    {
+      "Musteri": "0664 5013929",
+      "Hizmet": "Baumpflege",
+      "Konum": "Hollabrunn",
+      "Tarih": "31.07.26 16:56",
+      "Mesaj": "P\nPotenzieller Kunde\n2:56 PM\nBaumzumschnitt Zuschnitt von großen Sträuchern Könnten sie mal vorbeikommen und vorort besichtigen bzw. Kostenvoranschlag Obritz 314 2061 Hadres Bitte Kontaktaufnahme Tochter Lercher 06645013929",
+      "id": "ab1a4ddbcb82cc4017daede8ebf18f77",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0664 5013929",
+      "Hizmet": "Baumpflege",
+      "Konum": "Hollabrunn",
+      "Tarih": "31.07.26 16:49",
+      "Mesaj": "-",
+      "id": "bfcca525d7a01395ea0ca524b5fcfa05",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 2023791",
       "Hizmet": "-",
@@ -152,24 +170,6 @@
       "Tarih": "26.07.26 19:37",
       "Mesaj": "P\nPotenzieller Kunde\n26.07.26\nSehr geehrtes Team, benötigen eine Lösung für Zaun zur Nachbarin. Habe zur Zeit viele Sträucher und Bäume stehen. Bitte um Ihre sachkundige Besichtigung und Angebot. Ca.10 Meter. Nicht meine Seite des Zauns. Nachbarin möchte eine Lösung. Und wir wollen Ruhe haben. Vielen Dank, mit freundlichen Grüßen. Fam. Zeller Tel06609144000",
       "id": "ce0cb3464ecca34323d029c96ec3d2a8",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "daniela langthaler",
-      "Hizmet": "-",
-      "Konum": "Baden",
-      "Tarih": "26.07.26 16:54",
-      "Mesaj": "d\ndaniela langthaler\n26.07.26\nIch benötige bitte einen Kostenvoranschlag für folgende Leistungen. - 2x Grube unter 2 Frühbeete ca. 2,5m Länge x1,5m Breite x 50cm Tiefe - 1x Grube unter1x Frühbeet ca. 1,50 Länge x 1,0 m Breite x50cm Tiefe Aufgefüllt sollen die beiden Gruben mit Mutterboden, Sand und Laub werden. Es soll grabfähig sein damit meine Schildkröten dort überwintern können. Die Seiten der Gruben sollen mit Stein, Styrodur oder Hohlkammerplatten versehen werden die vor Fressfeinden schützen sollen. Umgesetzt soll das ganze bis 31.08.2026 sein.",
-      "id": "8945074e2a506f739d0fd3cd0815517b",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0681 10281273",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "25.07.26 10:52",
-      "Mesaj": "-",
-      "id": "eecbb5e2b8b790341ab4b90ec636d5c2",
       "telegramSent": true
     },
     {
