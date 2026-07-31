@@ -1,6 +1,24 @@
 {
-  "updatedAt": "31.7.2026, 01:34:48",
+  "updatedAt": "31.7.2026, 12:51:34",
   "leads": [
+    {
+      "Musteri": "0699 10137450",
+      "Hizmet": "Winterdienst",
+      "Konum": "Gießhübl",
+      "Tarih": "31.07.26 12:08",
+      "Mesaj": "-",
+      "id": "ae595dcd38a08995202d68fec466876b",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0664 2114410",
+      "Hizmet": "-",
+      "Konum": "Maria Enzersdorf",
+      "Tarih": "31.07.26 10:50",
+      "Mesaj": "-",
+      "id": "9f621ad9360a5633bf9cb5bcb0534d1c",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 11721775",
       "Hizmet": "Entsorgung von Gartenabfällen",
@@ -152,24 +170,6 @@
       "Tarih": "24.07.26 13:45",
       "Mesaj": "-",
       "id": "6949ca88dc023aa844a0577cca8f635f",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 73923005",
-      "Hizmet": "-",
-      "Konum": "Bezirk Sankt Pölten-Land",
-      "Tarih": "24.07.26 11:39",
-      "Mesaj": "-",
-      "id": "40fa817f8fafcc5cf1730ad6c8034a95",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0677 61747945",
-      "Hizmet": "-",
-      "Konum": "Brunn am Gebirge",
-      "Tarih": "24.07.26 08:11",
-      "Mesaj": "-",
-      "id": "0d997c31c1402b148dbbb058468ac76a",
       "telegramSent": true
     },
     {
