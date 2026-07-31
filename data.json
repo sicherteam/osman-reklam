@@ -1,6 +1,15 @@
 {
-  "updatedAt": "31.7.2026, 13:33:46",
+  "updatedAt": "31.7.2026, 15:47:57",
   "leads": [
+    {
+      "Musteri": "0664 2023791",
+      "Hizmet": "-",
+      "Konum": "Niederösterreich",
+      "Tarih": "31.07.26 15:44",
+      "Mesaj": "-",
+      "id": "0edd114c966af933e037cc090d01f24a",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 5963043",
       "Hizmet": "-",
@@ -161,15 +170,6 @@
       "Tarih": "25.07.26 10:52",
       "Mesaj": "-",
       "id": "eecbb5e2b8b790341ab4b90ec636d5c2",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "Gerhard Kienast",
-      "Hizmet": "Baumfällarbeiten",
-      "Konum": "Mödling",
-      "Tarih": "25.07.26 09:59",
-      "Mesaj": "d\ndaniela langthaler\n26.07.26\nIch benötige bitte einen Kostenvoranschlag für folgende Leistungen. - 2x Grube unter 2 Frühbeete ca. 2,5m Länge x1,5m Breite x 50cm Tiefe - 1x Grube unter1x Frühbeet ca. 1,50 Länge x 1,0 m Breite x50cm Tiefe Aufgefüllt sollen die beiden Gruben mit Mutterboden, Sand und Laub werden. Es soll grabfähig sein damit meine Schildkröten dort überwintern können. Die Seiten der Gruben sollen mit Stein, Styrodur oder Hohlkammerplatten versehen werden die vor Fressfeinden schützen sollen. Umgesetzt soll das ganze bis 31.08.2026 sein.",
-      "id": "5029be05940b6d20c1b04e3f79a29fd1",
       "telegramSent": true
     },
     {
