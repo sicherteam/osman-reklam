@@ -1,6 +1,15 @@
 {
-  "updatedAt": "1.8.2026, 10:58:05",
+  "updatedAt": "1.8.2026, 11:33:39",
   "leads": [
+    {
+      "Musteri": "0699 19073257",
+      "Hizmet": "-",
+      "Konum": "Ebreichsdorf",
+      "Tarih": "01.08.26 11:19",
+      "Mesaj": "-",
+      "id": "13df453c06a177c5b696c1f2b0869e17",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 2049808",
       "Hizmet": "Baumpflege",
@@ -116,15 +125,6 @@
       "Tarih": "28.07.26 19:46",
       "Mesaj": "-",
       "id": "87579d966d33b1f0611d9acc6ad0344f",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 7920043",
-      "Hizmet": "Baumfällarbeiten",
-      "Konum": "Wien",
-      "Tarih": "28.07.26 18:34",
-      "Mesaj": "-",
-      "id": "af2e652502377c1ed49ab298f6fbb477",
       "telegramSent": true
     },
     {
