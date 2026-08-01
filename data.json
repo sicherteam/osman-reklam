@@ -1,6 +1,15 @@
 {
-  "updatedAt": "1.8.2026, 11:33:39",
+  "updatedAt": "1.8.2026, 17:05:33",
   "leads": [
+    {
+      "Musteri": "0664 99696715",
+      "Hizmet": "Zaunbau",
+      "Konum": "Krems",
+      "Tarih": "01.08.26 16:44",
+      "Mesaj": "-",
+      "id": "4defb633046f6b930d412eba44842e9a",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 19073257",
       "Hizmet": "-",
@@ -152,15 +161,6 @@
       "Tarih": "28.07.26 08:39",
       "Mesaj": "-",
       "id": "3be57251e1315d3d8c94cf776609c1f0",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 4100053",
-      "Hizmet": "Baumpflege",
-      "Konum": "Korneuburg",
-      "Tarih": "27.07.26 19:24",
-      "Mesaj": "P\nPotenzieller Kunde\n27.07.26\nWollen Fichte im Bezirk Korneuburg abtragen lassen. Bitte um Ihren Anruf. Fam. Grössing 06764100053",
-      "id": "e27a2db16b93bf4eb71ec7ca2964da3c",
       "telegramSent": true
     },
     {
