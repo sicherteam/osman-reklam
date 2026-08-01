@@ -1,6 +1,15 @@
 {
-  "updatedAt": "1.8.2026, 19:05:40",
+  "updatedAt": "1.8.2026, 20:05:32",
   "leads": [
+    {
+      "Musteri": "0664 73576605",
+      "Hizmet": "-",
+      "Konum": "Niederösterreich",
+      "Tarih": "01.08.26 19:56",
+      "Mesaj": "-",
+      "id": "655069f73fbcfa89d2aaa1665ce1190d",
+      "telegramSent": true
+    },
     {
       "Musteri": "Müşteri",
       "Hizmet": "-",
@@ -152,15 +161,6 @@
       "Tarih": "28.07.26 09:07",
       "Mesaj": "-",
       "id": "ab20c7804f18012081a6135be0240bf4",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 1765208",
-      "Hizmet": "Baumpflege",
-      "Konum": "Wien",
-      "Tarih": "28.07.26 08:39",
-      "Mesaj": "-",
-      "id": "3be57251e1315d3d8c94cf776609c1f0",
       "telegramSent": true
     },
     {
