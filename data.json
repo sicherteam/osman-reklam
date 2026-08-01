@@ -1,6 +1,15 @@
 {
-  "updatedAt": "31.7.2026, 19:47:33",
+  "updatedAt": "1.8.2026, 10:58:05",
   "leads": [
+    {
+      "Musteri": "0664 2049808",
+      "Hizmet": "Baumpflege",
+      "Konum": "Scheibbs",
+      "Tarih": "01.08.26 10:40",
+      "Mesaj": "-",
+      "id": "e2fb84a1b3de07a2ea6259ef7536f423",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 10859057",
       "Hizmet": "-",
@@ -152,15 +161,6 @@
       "Tarih": "27.07.26 19:24",
       "Mesaj": "P\nPotenzieller Kunde\n27.07.26\nWollen Fichte im Bezirk Korneuburg abtragen lassen. Bitte um Ihren Anruf. Fam. Grössing 06764100053",
       "id": "e27a2db16b93bf4eb71ec7ca2964da3c",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 2477304",
-      "Hizmet": "-",
-      "Konum": "Korneuburg",
-      "Tarih": "27.07.26 15:40",
-      "Mesaj": "-",
-      "id": "584e46f9db26a17a35c8f07e4fa63918",
       "telegramSent": true
     },
     {
