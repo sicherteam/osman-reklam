@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2.8.2026, 18:20:29",
+  "updatedAt": "2.8.2026, 20:19:53",
   "leads": [
+    {
+      "Musteri": "0676 4889211",
+      "Hizmet": "Baumfällarbeiten",
+      "Konum": "Klosterneuburg",
+      "Tarih": "02.08.26 20:17",
+      "Mesaj": "P\nPotenzieller Kunde\n6:17 PM\nFällen eines alten hohen baumes( föhre) in weidling",
+      "id": "91f76f6fe37e4c13d10f3e91ae49558f",
+      "telegramSent": true
+    },
     {
       "Musteri": "0650 6010220",
       "Hizmet": "Schneiden der Hecke",
@@ -152,15 +161,6 @@
       "Tarih": "29.07.26 08:27",
       "Mesaj": "-",
       "id": "79209d792c1788d6c5cc9b9e0ffc4269",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 3013919",
-      "Hizmet": "Baumpflege",
-      "Konum": "Stockerau",
-      "Tarih": "28.07.26 15:28",
-      "Mesaj": "-",
-      "id": "e43b679e374b2b372eabeec4cacf368e",
       "telegramSent": true
     },
     {
