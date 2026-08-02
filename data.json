@@ -1,6 +1,24 @@
 {
-  "updatedAt": "1.8.2026, 20:05:32",
+  "updatedAt": "2.8.2026, 18:20:29",
   "leads": [
+    {
+      "Musteri": "0650 6010220",
+      "Hizmet": "Schneiden der Hecke",
+      "Konum": "Sankt Valentin",
+      "Tarih": "02.08.26 18:13",
+      "Mesaj": "P\nPotenzieller Kunde\n4:13 PM\nHeckenschnitt. Ca. 25 laufmeter Kirschloorbeer 3 andere Büsche sind in den 25 m enthalten ( 1 Ostergruß + 2 andere",
+      "id": "18d9da6d3587be2ff431852aa1ed20e3",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0650 6010220",
+      "Hizmet": "-",
+      "Konum": "Sankt Valentin",
+      "Tarih": "02.08.26 18:09",
+      "Mesaj": "-",
+      "id": "c34379b25bb182d918165ebcab0e3b13",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 73576605",
       "Hizmet": "-",
@@ -128,15 +146,6 @@
       "telegramSent": true
     },
     {
-      "Musteri": "0676 4100869",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "29.07.26 09:22",
-      "Mesaj": "-",
-      "id": "ca2892ac00b5fcc660c7d9550940d471",
-      "telegramSent": true
-    },
-    {
       "Musteri": "0699 11046998",
       "Hizmet": "Baumpflege",
       "Konum": "Wien",
@@ -152,15 +161,6 @@
       "Tarih": "28.07.26 15:28",
       "Mesaj": "-",
       "id": "e43b679e374b2b372eabeec4cacf368e",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 5004072",
-      "Hizmet": "Winterdienst",
-      "Konum": "Klosterneuburg",
-      "Tarih": "28.07.26 09:07",
-      "Mesaj": "-",
-      "id": "ab20c7804f18012081a6135be0240bf4",
       "telegramSent": true
     },
     {
