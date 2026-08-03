@@ -1,6 +1,15 @@
 {
-  "updatedAt": "3.8.2026, 09:05:38",
+  "updatedAt": "3.8.2026, 12:33:33",
   "leads": [
+    {
+      "Musteri": "0660 7120292",
+      "Hizmet": "Baumpflege",
+      "Konum": "Strasshof an der Nordbahn",
+      "Tarih": "03.08.26 12:24",
+      "Mesaj": "-",
+      "id": "ff3474040d38a8829cdf9ab1b69723f0",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 73556638",
       "Hizmet": "Baumpflege",
@@ -161,15 +170,6 @@
       "Tarih": "29.07.26 14:35",
       "Mesaj": "-",
       "id": "99ace7490b0ed8d0be26d4fdbb178a6f",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 11046998",
-      "Hizmet": "Baumpflege",
-      "Konum": "Wien",
-      "Tarih": "29.07.26 08:27",
-      "Mesaj": "-",
-      "id": "79209d792c1788d6c5cc9b9e0ffc4269",
       "telegramSent": true
     },
     {
