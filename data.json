@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2.8.2026, 20:19:53",
+  "updatedAt": "3.8.2026, 09:05:38",
   "leads": [
+    {
+      "Musteri": "0664 73556638",
+      "Hizmet": "Baumpflege",
+      "Konum": "Gerasdorf bei Wien",
+      "Tarih": "03.08.26 08:55",
+      "Mesaj": "-",
+      "id": "b570055bc964d7e101aa8392e3cd0934",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 4889211",
       "Hizmet": "Baumfällarbeiten",
@@ -170,15 +179,6 @@
       "Tarih": "26.07.26 19:37",
       "Mesaj": "P\nPotenzieller Kunde\n26.07.26\nSehr geehrtes Team, benötigen eine Lösung für Zaun zur Nachbarin. Habe zur Zeit viele Sträucher und Bäume stehen. Bitte um Ihre sachkundige Besichtigung und Angebot. Ca.10 Meter. Nicht meine Seite des Zauns. Nachbarin möchte eine Lösung. Und wir wollen Ruhe haben. Vielen Dank, mit freundlichen Grüßen. Fam. Zeller Tel06609144000",
       "id": "ce0cb3464ecca34323d029c96ec3d2a8",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 3100739",
-      "Hizmet": "-",
-      "Konum": "Ternitz",
-      "Tarih": "21.07.26 17:13",
-      "Mesaj": "-",
-      "id": "79495ad73befdb5b179704078ee1d6c1",
       "telegramSent": true
     }
   ]
