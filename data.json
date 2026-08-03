@@ -1,6 +1,24 @@
 {
-  "updatedAt": "3.8.2026, 12:33:33",
+  "updatedAt": "3.8.2026, 15:33:36",
   "leads": [
+    {
+      "Musteri": "0664 3377549",
+      "Hizmet": "-",
+      "Konum": "Mistelbach",
+      "Tarih": "03.08.26 15:27",
+      "Mesaj": "-",
+      "id": "e00abc4e9289b19888e8d1958caee3d2",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0660 1106022",
+      "Hizmet": "-",
+      "Konum": "Gerasdorf bei Wien",
+      "Tarih": "03.08.26 15:22",
+      "Mesaj": "-",
+      "id": "38b9637a2be3046cc337a7c1f352791e",
+      "telegramSent": true
+    },
     {
       "Musteri": "0660 7120292",
       "Hizmet": "Baumpflege",
@@ -161,24 +179,6 @@
       "Tarih": "30.07.26 09:50",
       "Mesaj": "-",
       "id": "bf79469697fa997559ec00ec9cdf8c97",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 5351335",
-      "Hizmet": "-",
-      "Konum": "Vösendorf",
-      "Tarih": "29.07.26 14:35",
-      "Mesaj": "-",
-      "id": "99ace7490b0ed8d0be26d4fdbb178a6f",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "Müşteri",
-      "Hizmet": "Baumpflege",
-      "Konum": "Eggenburg",
-      "Tarih": "26.07.26 19:37",
-      "Mesaj": "P\nPotenzieller Kunde\n26.07.26\nSehr geehrtes Team, benötigen eine Lösung für Zaun zur Nachbarin. Habe zur Zeit viele Sträucher und Bäume stehen. Bitte um Ihre sachkundige Besichtigung und Angebot. Ca.10 Meter. Nicht meine Seite des Zauns. Nachbarin möchte eine Lösung. Und wir wollen Ruhe haben. Vielen Dank, mit freundlichen Grüßen. Fam. Zeller Tel06609144000",
-      "id": "ce0cb3464ecca34323d029c96ec3d2a8",
       "telegramSent": true
     }
   ]
