@@ -1,6 +1,15 @@
 {
-  "updatedAt": "4.8.2026, 10:33:47",
+  "updatedAt": "4.8.2026, 11:19:46",
   "leads": [
+    {
+      "Musteri": "015333 043299",
+      "Hizmet": "Steinmetzarbeiten",
+      "Konum": "Wien",
+      "Tarih": "04.08.26 11:10",
+      "Mesaj": "-",
+      "id": "e1638e65378809c7d783162797625018",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 2534407",
       "Hizmet": "Reparaturen und Wartung",
@@ -134,15 +143,6 @@
       "Tarih": "31.07.26 16:56",
       "Mesaj": "P\nPotenzieller Kunde\n2:56 PM\nBaumzumschnitt Zuschnitt von großen Sträuchern Könnten sie mal vorbeikommen und vorort besichtigen bzw. Kostenvoranschlag Obritz 314 2061 Hadres Bitte Kontaktaufnahme Tochter Lercher 06645013929",
       "id": "ab1a4ddbcb82cc4017daede8ebf18f77",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 5013929",
-      "Hizmet": "Baumpflege",
-      "Konum": "Hollabrunn",
-      "Tarih": "31.07.26 16:49",
-      "Mesaj": "-",
-      "id": "bfcca525d7a01395ea0ca524b5fcfa05",
       "telegramSent": true
     },
     {
