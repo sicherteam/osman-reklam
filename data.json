@@ -1,6 +1,15 @@
 {
-  "updatedAt": "4.8.2026, 11:19:46",
+  "updatedAt": "4.8.2026, 14:05:32",
   "leads": [
+    {
+      "Musteri": "0664 88925936",
+      "Hizmet": "Landschaftsbau",
+      "Konum": "Bruck an der Leitha",
+      "Tarih": "04.08.26 13:50",
+      "Mesaj": "-",
+      "id": "a01e160e94611a29bdc2104b9ec7c48a",
+      "telegramSent": true
+    },
     {
       "Musteri": "015333 043299",
       "Hizmet": "Steinmetzarbeiten",
@@ -170,15 +179,6 @@
       "Tarih": "31.07.26 12:08",
       "Mesaj": "-",
       "id": "ae595dcd38a08995202d68fec466876b",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 2114410",
-      "Hizmet": "-",
-      "Konum": "Maria Enzersdorf",
-      "Tarih": "31.07.26 10:50",
-      "Mesaj": "-",
-      "id": "9f621ad9360a5633bf9cb5bcb0534d1c",
       "telegramSent": true
     }
   ]
