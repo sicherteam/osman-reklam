@@ -51,8 +51,11 @@ async function sendTelegramMessage(lead) {
     return false;
   }
 
+  // 🔹 Eğer Müşteri alanından bağımsız olarak ayrıştırılmış telefon numarası varsa ekler
+  const phoneText = lead["Telefon"] ? `\n📞 *Telefon:* ${lead["Telefon"]}` : '';
+
   const message = `🔔 *YENİ Müşteri!* (${CONFIG.projectName})\n\n` +
-                  `👤 *Müşteri:* ${lead["Musteri"]}\n` +
+                  `👤 *Müşteri:* ${lead["Musteri"]}${phoneText}\n` +
                   `📍 *Konum:* ${lead["Konum"]}\n` +
                   `💼 *Hizmet:* ${lead["Hizmet"]}\n` +
                   `📅 *Tarih:* ${lead["Tarih"]}\n` +
@@ -272,6 +275,7 @@ function clearChromeLocks() {
     for (const item of validRows) {
       let messageText = "-";
       let finalCustomerName = item.phone;
+      let panelPhone = null; // 🔹 Panel açıldığında tespit edilecek telefon numarası
 
       // 1. Saat Dönüşümü ve Ön-MD5 Üretimi
       const formattedDate = parseTo24HourDate(item.anfrageDate);
@@ -316,9 +320,10 @@ function clearChromeLocks() {
 
           const panelData = await page.evaluate(() => {
             let msg = "-";
-            let foundPhone = null;
             let nameInHeader = null;
+            let extractedPhone = null;
 
+            // A) Mesaj Metnini Okuma
             const chatBlock = Array.from(document.querySelectorAll('div, section, article'))
                                    .find(el => (el.innerText || '').includes('Unterhaltung'));
             
@@ -331,37 +336,34 @@ function clearChromeLocks() {
                          .trim() || "NO MESSAGE";
             }
 
-            // 🔹 Sol Üst Paneli Okuma (Numara / İsim Ayıklama)
+            // B) Üst Panel Header Alanından Telefon ve İsim Taraması
             const headerBar = Array.from(document.querySelectorAll('div, header'))
                                    .find(el => (el.innerText || '').includes('ARCHIVIEREN') || (el.innerText || '').includes('MARKIEREN'));
             if (headerBar) {
-              const lines = headerBar.innerText.split('\n').map(l => l.trim()).filter(Boolean);
+              const headerText = headerBar.innerText || '';
+
+              // 🔹 1. Telefon Numarası Taraması (+43, +90, 0660 vb. uluslararası/yerel kalıplar)
+              const phoneMatch = headerText.match(/\+?\d[\d\s\/-]{7,}/);
+              if (phoneMatch) {
+                extractedPhone = phoneMatch[0].trim();
+              }
+
+              // 🔹 2. İsim Taraması
+              const lines = headerText.split('\n').map(l => l.trim()).filter(Boolean);
               if (lines.length > 0 && !lines[0].includes('ARCHIVIEREN')) {
                 const candidate = lines[0].split('|')[0].trim();
                 if (!/Google|Lokale|Dienstleistungen|Potenzieller|Anrufer/i.test(candidate)) {
-                  
-                  // Telefon numarası tespiti (+43..., 0660..., vb.)
-                  const isPhone = /^(\+?\d[\d\s\(\)\-]{6,}\d)$/.test(candidate);
-                  if (isPhone) {
-                    foundPhone = candidate;
-                  } else {
-                    nameInHeader = candidate;
-                  }
+                  nameInHeader = candidate;
                 }
               }
             }
 
-            return { msg, foundPhone, nameInHeader };
+            return { msg, nameInHeader, extractedPhone };
           });
 
-          // 🔹 Numara bulunduysa mesajın başına ekle
-          if (panelData.foundPhone) {
-            messageText = `[Tel: ${panelData.foundPhone}] ${panelData.msg}`;
-          } else {
-            messageText = panelData.msg;
-          }
+          messageText = panelData.msg;
+          panelPhone = panelData.extractedPhone;
 
-          // 🔹 İsim boşsa sol üstteki ismi al
           if ((finalCustomerName === '-' || !finalCustomerName) && panelData.nameInHeader) {
             finalCustomerName = panelData.nameInHeader;
           }
@@ -371,13 +373,14 @@ function clearChromeLocks() {
         }
       }
 
-      // 🔹 Hiçbiri yoksa varsayılan 'Müşteri' adını ver
+      // 🔹 İsim bulunamazsa panelden çıkan telefonu, o da yoksa 'Müşteri' kelimesini atar
       if (!finalCustomerName || finalCustomerName.trim() === '-' || finalCustomerName === '') {
-        finalCustomerName = 'Müşteri';
+        finalCustomerName = panelPhone || 'Müşteri';
       }
 
       const leadObj = {
         "Musteri": finalCustomerName,
+        "Telefon": panelPhone || (item.phone !== '-' && /^\+?\d[\d\s-]{6,}$/.test(item.phone) ? item.phone : null),
         "Hizmet": item.jobType,
         "Konum": item.location,
         "Tarih": formattedDate,
