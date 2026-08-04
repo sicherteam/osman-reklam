@@ -1,6 +1,15 @@
 {
-  "updatedAt": "3.8.2026, 15:33:36",
+  "updatedAt": "4.8.2026, 10:33:47",
   "leads": [
+    {
+      "Musteri": "0664 2534407",
+      "Hizmet": "Reparaturen und Wartung",
+      "Konum": "Gloggnitz",
+      "Tarih": "04.08.26 10:28",
+      "Mesaj": "-",
+      "id": "21a734f22555e0be4e97e112f8ff05e4",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 3377549",
       "Hizmet": "-",
@@ -170,15 +179,6 @@
       "Tarih": "31.07.26 10:50",
       "Mesaj": "-",
       "id": "9f621ad9360a5633bf9cb5bcb0534d1c",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 11721775",
-      "Hizmet": "Entsorgung von Gartenabfällen",
-      "Konum": "Mistelbach",
-      "Tarih": "30.07.26 09:50",
-      "Mesaj": "-",
-      "id": "bf79469697fa997559ec00ec9cdf8c97",
       "telegramSent": true
     }
   ]
