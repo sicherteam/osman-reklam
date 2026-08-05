@@ -1,6 +1,16 @@
 {
-  "updatedAt": "4.8.2026, 14:05:32",
+  "updatedAt": "5.8.2026, 17:47:29",
   "leads": [
+    {
+      "Musteri": "0664 3501648",
+      "Telefon": "0664 3501648",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "05.08.26 17:35",
+      "Mesaj": "-",
+      "id": "b20eade652335d43ad36baf91b2b19b9",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 88925936",
       "Hizmet": "Landschaftsbau",
@@ -170,15 +180,6 @@
       "Tarih": "31.07.26 13:23",
       "Mesaj": "-",
       "id": "59757b74bbb9c1dc1406e1f09659ffff",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 10137450",
-      "Hizmet": "Winterdienst",
-      "Konum": "Gießhübl",
-      "Tarih": "31.07.26 12:08",
-      "Mesaj": "-",
-      "id": "ae595dcd38a08995202d68fec466876b",
       "telegramSent": true
     }
   ]
