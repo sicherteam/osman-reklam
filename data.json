@@ -1,6 +1,16 @@
 {
-  "updatedAt": "5.8.2026, 17:47:29",
+  "updatedAt": "6.8.2026, 16:19:42",
   "leads": [
+    {
+      "Musteri": "0699 11303517",
+      "Telefon": "0699 11303517",
+      "Hizmet": "Baumfällarbeiten",
+      "Konum": "Bad Vöslau",
+      "Tarih": "06.08.26 16:13",
+      "Mesaj": "-",
+      "id": "9a0b0b67cc0e2766dcbf269e90b88417",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 3501648",
       "Telefon": "0664 3501648",
@@ -171,15 +181,6 @@
       "Tarih": "31.07.26 15:44",
       "Mesaj": "-",
       "id": "0edd114c966af933e037cc090d01f24a",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 5963043",
-      "Hizmet": "-",
-      "Konum": "Berndorf",
-      "Tarih": "31.07.26 13:23",
-      "Mesaj": "-",
-      "id": "59757b74bbb9c1dc1406e1f09659ffff",
       "telegramSent": true
     }
   ]
