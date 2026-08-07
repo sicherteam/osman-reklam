@@ -1,6 +1,16 @@
 {
-  "updatedAt": "7.8.2026, 15:47:37",
+  "updatedAt": "7.8.2026, 18:19:41",
   "leads": [
+    {
+      "Musteri": "0664 3614020",
+      "Telefon": "0664 3614020",
+      "Hizmet": "Zaunbau",
+      "Konum": "Teesdorf",
+      "Tarih": "07.08.26 18:08",
+      "Mesaj": "P\nPotenzieller Kunde\n4:08 PM\nIch bräuchte einen Alu Lamellenzaun für meinen Garten in Kottingbrunn. Machen bzw haben sie so etwas auch? MfG Gabriele Nowak",
+      "id": "ccd14e975bfcb30a8452f27ae8d38986",
+      "telegramSent": true
+    },
     {
       "Musteri": "Andreas Bauer",
       "Telefon": "0664 88552334",
@@ -176,15 +186,6 @@
       "Tarih": "01.08.26 10:40",
       "Mesaj": "-",
       "id": "e2fb84a1b3de07a2ea6259ef7536f423",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 10859057",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "31.07.26 19:40",
-      "Mesaj": "-",
-      "id": "fe13c763ad46f3454edf5e04859466df",
       "telegramSent": true
     }
   ]
