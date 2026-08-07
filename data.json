@@ -1,6 +1,16 @@
 {
-  "updatedAt": "7.8.2026, 10:19:42",
+  "updatedAt": "7.8.2026, 12:47:45",
   "leads": [
+    {
+      "Musteri": "0676 9346814",
+      "Telefon": "0676 9346814",
+      "Hizmet": "Winterdienst",
+      "Konum": "Mistelbach",
+      "Tarih": "07.08.26 12:41",
+      "Mesaj": "-",
+      "id": "43ba1b65765e6cab1e27c6fadd8d0d27",
+      "telegramSent": true
+    },
     {
       "Musteri": "0670 6087349",
       "Telefon": "0670 6087349",
@@ -137,15 +147,6 @@
       "Tarih": "01.08.26 18:58",
       "Mesaj": "P\nPotenzieller Kunde\n4:58 PM\nHallo. Ich habe eine etwas ungewöhnliche Anfrage.. könnte ich alle 1-2 Woche 1-2qm² Rollrasen bei ihnen abholen/bestellen? Wäre für meine Katzen.. Danke vorab und liebe Grüße Monika Beyhl",
       "id": "2c6e6450b3617257d1d650658e3c4f25",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 99696715",
-      "Hizmet": "Zaunbau",
-      "Konum": "Krems",
-      "Tarih": "01.08.26 16:44",
-      "Mesaj": "-",
-      "id": "4defb633046f6b930d412eba44842e9a",
       "telegramSent": true
     },
     {
