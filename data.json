@@ -1,6 +1,16 @@
 {
-  "updatedAt": "7.8.2026, 12:47:45",
+  "updatedAt": "7.8.2026, 13:33:42",
   "leads": [
+    {
+      "Musteri": "331423069",
+      "Telefon": "331423069",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "07.08.26 13:30",
+      "Mesaj": "P\nPotenzieller Kunde\n11:30 AM\n Verpasster Anruf",
+      "id": "c031fe267afe167532342f85cc3fe458",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 9346814",
       "Telefon": "0676 9346814",
@@ -174,15 +184,6 @@
       "Tarih": "31.07.26 19:40",
       "Mesaj": "-",
       "id": "fe13c763ad46f3454edf5e04859466df",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 5013929",
-      "Hizmet": "Baumpflege",
-      "Konum": "Hollabrunn",
-      "Tarih": "31.07.26 16:56",
-      "Mesaj": "P\nPotenzieller Kunde\n2:56 PM\nBaumzumschnitt Zuschnitt von großen Sträuchern Könnten sie mal vorbeikommen und vorort besichtigen bzw. Kostenvoranschlag Obritz 314 2061 Hadres Bitte Kontaktaufnahme Tochter Lercher 06645013929",
-      "id": "ab1a4ddbcb82cc4017daede8ebf18f77",
       "telegramSent": true
     }
   ]
