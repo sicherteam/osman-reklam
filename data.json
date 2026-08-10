@@ -1,6 +1,16 @@
 {
-  "updatedAt": "10.8.2026, 10:05:39",
+  "updatedAt": "10.8.2026, 16:05:35",
   "leads": [
+    {
+      "Musteri": "0660 1876923",
+      "Telefon": "0660 1876923",
+      "Hizmet": "-",
+      "Konum": "Raasdorf",
+      "Tarih": "10.08.26 15:49",
+      "Mesaj": "-",
+      "id": "d3ca20de981543505e5d54bb95bd676a",
+      "telegramSent": true
+    },
     {
       "Musteri": "0660 2964607",
       "Telefon": "0660 2964607",
@@ -182,15 +192,6 @@
       "Tarih": "02.08.26 20:17",
       "Mesaj": "P\nPotenzieller Kunde\n6:17 PM\nFällen eines alten hohen baumes( föhre) in weidling",
       "id": "91f76f6fe37e4c13d10f3e91ae49558f",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0650 6010220",
-      "Hizmet": "Schneiden der Hecke",
-      "Konum": "Sankt Valentin",
-      "Tarih": "02.08.26 18:13",
-      "Mesaj": "P\nPotenzieller Kunde\n4:13 PM\nHeckenschnitt. Ca. 25 laufmeter Kirschloorbeer 3 andere Büsche sind in den 25 m enthalten ( 1 Ostergruß + 2 andere",
-      "id": "18d9da6d3587be2ff431852aa1ed20e3",
       "telegramSent": true
     }
   ]
