@@ -1,6 +1,16 @@
 {
-  "updatedAt": "10.8.2026, 16:05:35",
+  "updatedAt": "10.8.2026, 18:47:34",
   "leads": [
+    {
+      "Musteri": "0660 6567180",
+      "Telefon": "0660 6567180",
+      "Hizmet": "-",
+      "Konum": "Böheimkirchen",
+      "Tarih": "10.08.26 18:41",
+      "Mesaj": "-",
+      "id": "3be09f976abdf894315320c90f75d8d8",
+      "telegramSent": true
+    },
     {
       "Musteri": "0660 1876923",
       "Telefon": "0660 1876923",
@@ -183,15 +193,6 @@
       "Tarih": "03.08.26 12:24",
       "Mesaj": "-",
       "id": "ff3474040d38a8829cdf9ab1b69723f0",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 4889211",
-      "Hizmet": "Baumfällarbeiten",
-      "Konum": "Klosterneuburg",
-      "Tarih": "02.08.26 20:17",
-      "Mesaj": "P\nPotenzieller Kunde\n6:17 PM\nFällen eines alten hohen baumes( föhre) in weidling",
-      "id": "91f76f6fe37e4c13d10f3e91ae49558f",
       "telegramSent": true
     }
   ]
