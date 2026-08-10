@@ -1,6 +1,26 @@
 {
-  "updatedAt": "10.8.2026, 08:05:48",
+  "updatedAt": "10.8.2026, 09:19:40",
   "leads": [
+    {
+      "Musteri": "0664 5025612",
+      "Telefon": "0664 5025612",
+      "Hizmet": "-",
+      "Konum": "Bezirk Sankt Pölten-Land",
+      "Tarih": "10.08.26 09:09",
+      "Mesaj": "-",
+      "id": "44b5077fa3b40030e1f7324f021ee716",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0664 73861988",
+      "Telefon": "0664 73861988",
+      "Hizmet": "-",
+      "Konum": "Mistelbach",
+      "Tarih": "10.08.26 09:08",
+      "Mesaj": "-",
+      "id": "b17caddb5b066ac0193006c83bdc2c9a",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 1237792",
       "Telefon": "0664 1237792",
@@ -170,24 +190,6 @@
       "Tarih": "02.08.26 18:13",
       "Mesaj": "P\nPotenzieller Kunde\n4:13 PM\nHeckenschnitt. Ca. 25 laufmeter Kirschloorbeer 3 andere Büsche sind in den 25 m enthalten ( 1 Ostergruß + 2 andere",
       "id": "18d9da6d3587be2ff431852aa1ed20e3",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0650 6010220",
-      "Hizmet": "-",
-      "Konum": "Sankt Valentin",
-      "Tarih": "02.08.26 18:09",
-      "Mesaj": "-",
-      "id": "c34379b25bb182d918165ebcab0e3b13",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "Müşteri",
-      "Hizmet": "-",
-      "Konum": "Traiskirchen",
-      "Tarih": "01.08.26 18:58",
-      "Mesaj": "P\nPotenzieller Kunde\n4:58 PM\nHallo. Ich habe eine etwas ungewöhnliche Anfrage.. könnte ich alle 1-2 Woche 1-2qm² Rollrasen bei ihnen abholen/bestellen? Wäre für meine Katzen.. Danke vorab und liebe Grüße Monika Beyhl",
-      "id": "2c6e6450b3617257d1d650658e3c4f25",
       "telegramSent": true
     }
   ]
