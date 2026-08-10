@@ -1,6 +1,16 @@
 {
-  "updatedAt": "8.8.2026, 10:47:50",
+  "updatedAt": "10.8.2026, 08:05:48",
   "leads": [
+    {
+      "Musteri": "0664 1237792",
+      "Telefon": "0664 1237792",
+      "Hizmet": "-",
+      "Konum": "Gmünd",
+      "Tarih": "10.08.26 08:02",
+      "Mesaj": "-",
+      "id": "ed0b9bee0406411483b85463a00ec1d1",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 2668660",
       "Telefon": "0664 2668660",
@@ -178,15 +188,6 @@
       "Tarih": "01.08.26 18:58",
       "Mesaj": "P\nPotenzieller Kunde\n4:58 PM\nHallo. Ich habe eine etwas ungewöhnliche Anfrage.. könnte ich alle 1-2 Woche 1-2qm² Rollrasen bei ihnen abholen/bestellen? Wäre für meine Katzen.. Danke vorab und liebe Grüße Monika Beyhl",
       "id": "2c6e6450b3617257d1d650658e3c4f25",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 19073257",
-      "Hizmet": "-",
-      "Konum": "Ebreichsdorf",
-      "Tarih": "01.08.26 11:19",
-      "Mesaj": "-",
-      "id": "13df453c06a177c5b696c1f2b0869e17",
       "telegramSent": true
     }
   ]
