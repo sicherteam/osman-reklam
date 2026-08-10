@@ -1,6 +1,16 @@
 {
-  "updatedAt": "10.8.2026, 09:19:40",
+  "updatedAt": "10.8.2026, 10:05:39",
   "leads": [
+    {
+      "Musteri": "0660 2964607",
+      "Telefon": "0660 2964607",
+      "Hizmet": "-",
+      "Konum": "Hainburg an der Donau",
+      "Tarih": "10.08.26 09:55",
+      "Mesaj": "-",
+      "id": "c088934a365848d1d5c1dfee594c4b9c",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 5025612",
       "Telefon": "0664 5025612",
@@ -163,15 +173,6 @@
       "Tarih": "03.08.26 12:24",
       "Mesaj": "-",
       "id": "ff3474040d38a8829cdf9ab1b69723f0",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 73556638",
-      "Hizmet": "Baumpflege",
-      "Konum": "Gerasdorf bei Wien",
-      "Tarih": "03.08.26 08:55",
-      "Mesaj": "-",
-      "id": "b570055bc964d7e101aa8392e3cd0934",
       "telegramSent": true
     },
     {
