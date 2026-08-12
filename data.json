@@ -1,6 +1,16 @@
 {
-  "updatedAt": "12.8.2026, 16:33:38",
+  "updatedAt": "12.8.2026, 18:05:32",
   "leads": [
+    {
+      "Musteri": "0676 6030369",
+      "Telefon": "0676 6030369",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "12.08.26 18:00",
+      "Mesaj": "-",
+      "id": "ffab5f4c0a8762eb5fea47cd03622c83",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 5373505",
       "Telefon": "0664 5373505",
@@ -159,15 +169,6 @@
       "Tarih": "05.08.26 17:35",
       "Mesaj": "-",
       "id": "b20eade652335d43ad36baf91b2b19b9",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 88925936",
-      "Hizmet": "Landschaftsbau",
-      "Konum": "Bruck an der Leitha",
-      "Tarih": "04.08.26 13:50",
-      "Mesaj": "-",
-      "id": "a01e160e94611a29bdc2104b9ec7c48a",
       "telegramSent": true
     },
     {
