@@ -1,6 +1,16 @@
 {
-  "updatedAt": "12.8.2026, 18:05:32",
+  "updatedAt": "12.8.2026, 18:33:39",
   "leads": [
+    {
+      "Musteri": "0664 2150016",
+      "Telefon": "0664 2150016",
+      "Hizmet": "Baumpflege",
+      "Konum": "Hagenbrunn",
+      "Tarih": "12.08.26 18:31",
+      "Mesaj": "-",
+      "id": "5f85c525db55bb8f07c778207c763aa2",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 6030369",
       "Telefon": "0676 6030369",
@@ -187,15 +197,6 @@
       "Tarih": "03.08.26 15:27",
       "Mesaj": "-",
       "id": "e00abc4e9289b19888e8d1958caee3d2",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 1106022",
-      "Hizmet": "-",
-      "Konum": "Gerasdorf bei Wien",
-      "Tarih": "03.08.26 15:22",
-      "Mesaj": "-",
-      "id": "38b9637a2be3046cc337a7c1f352791e",
       "telegramSent": true
     }
   ]
