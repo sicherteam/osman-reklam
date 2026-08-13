@@ -1,6 +1,16 @@
 {
-  "updatedAt": "13.8.2026, 11:05:37",
+  "updatedAt": "13.8.2026, 15:05:47",
   "leads": [
+    {
+      "Musteri": "0660 5229966",
+      "Telefon": "0660 5229966",
+      "Hizmet": "-",
+      "Konum": "Mödling",
+      "Tarih": "13.08.26 15:00",
+      "Mesaj": "-",
+      "id": "663b8df337a94a7ed3c74cf8bc454e98",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 17001913",
       "Telefon": "0699 17001913",
@@ -189,16 +199,6 @@
       "Tarih": "06.08.26 16:13",
       "Mesaj": "-",
       "id": "9a0b0b67cc0e2766dcbf269e90b88417",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 3501648",
-      "Telefon": "0664 3501648",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "05.08.26 17:35",
-      "Mesaj": "-",
-      "id": "b20eade652335d43ad36baf91b2b19b9",
       "telegramSent": true
     }
   ]
