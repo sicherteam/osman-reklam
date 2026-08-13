@@ -1,6 +1,16 @@
 {
-  "updatedAt": "12.8.2026, 18:33:39",
+  "updatedAt": "13.8.2026, 10:19:35",
   "leads": [
+    {
+      "Musteri": "0676 7532367",
+      "Telefon": "0676 7532367",
+      "Hizmet": "Zaunbau",
+      "Konum": "Wien",
+      "Tarih": "13.08.26 10:10",
+      "Mesaj": "-",
+      "id": "0a0a36869844ee91642f136bddef988e",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 2150016",
       "Telefon": "0664 2150016",
@@ -188,15 +198,6 @@
       "Tarih": "04.08.26 10:28",
       "Mesaj": "-",
       "id": "21a734f22555e0be4e97e112f8ff05e4",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 3377549",
-      "Hizmet": "-",
-      "Konum": "Mistelbach",
-      "Tarih": "03.08.26 15:27",
-      "Mesaj": "-",
-      "id": "e00abc4e9289b19888e8d1958caee3d2",
       "telegramSent": true
     }
   ]
