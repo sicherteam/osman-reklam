@@ -1,6 +1,16 @@
 {
-  "updatedAt": "13.8.2026, 10:19:35",
+  "updatedAt": "13.8.2026, 11:05:37",
   "leads": [
+    {
+      "Musteri": "0699 17001913",
+      "Telefon": "0699 17001913",
+      "Hizmet": "Winterdienst",
+      "Konum": "Mödling",
+      "Tarih": "13.08.26 11:03",
+      "Mesaj": "-",
+      "id": "2fd51ea743bd4075841927f5962a5cc7",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 7532367",
       "Telefon": "0676 7532367",
@@ -189,15 +199,6 @@
       "Tarih": "05.08.26 17:35",
       "Mesaj": "-",
       "id": "b20eade652335d43ad36baf91b2b19b9",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 2534407",
-      "Hizmet": "Reparaturen und Wartung",
-      "Konum": "Gloggnitz",
-      "Tarih": "04.08.26 10:28",
-      "Mesaj": "-",
-      "id": "21a734f22555e0be4e97e112f8ff05e4",
       "telegramSent": true
     }
   ]
