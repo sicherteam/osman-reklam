@@ -1,6 +1,46 @@
 {
-  "updatedAt": "13.8.2026, 15:05:47",
+  "updatedAt": "14.8.2026, 12:47:44",
   "leads": [
+    {
+      "Musteri": "0664 73477043",
+      "Telefon": "0664 73477043",
+      "Hizmet": "Gartenteiche, Springbrunnen und Wasserspiele",
+      "Konum": "Stetten",
+      "Tarih": "14.08.26 12:28",
+      "Mesaj": "-",
+      "id": "bb1edf21e3bc2e3eb9cc58c6a39f5e65",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0660 5700991",
+      "Telefon": "0660 5700991",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "14.08.26 10:22",
+      "Mesaj": "-",
+      "id": "0c3f7c03482be36b5cce93e1852c92e6",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0650 6203752",
+      "Telefon": "0650 6203752",
+      "Hizmet": "Entsorgung von Gartenabfällen",
+      "Konum": "Leobersdorf",
+      "Tarih": "14.08.26 10:07",
+      "Mesaj": "-",
+      "id": "4e0fb17b82a5ef92d3fd8dc8b1913911",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0699 81845686",
+      "Telefon": "0699 81845686",
+      "Hizmet": "Baumpflege",
+      "Konum": "Theresienfeld",
+      "Tarih": "14.08.26 09:16",
+      "Mesaj": "-",
+      "id": "f22d27b4da8d5b556660bc6041ed97c3",
+      "telegramSent": true
+    },
     {
       "Musteri": "0660 5229966",
       "Telefon": "0660 5229966",
@@ -159,46 +199,6 @@
       "Tarih": "07.08.26 15:36",
       "Mesaj": "A\nAndreas Bauer\n1:36 PM\nMein Rasen ist komplett mit Hirse versetzt. ca 120 Qm was kostet es den Rasen zu entfernen un einen Rollrasen zu verlegen?",
       "id": "e5bf38a774c4aa8c8cd9050b735a24a7",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "331423069",
-      "Telefon": "331423069",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "07.08.26 13:30",
-      "Mesaj": "P\nPotenzieller Kunde\n11:30 AM\n Verpasster Anruf",
-      "id": "c031fe267afe167532342f85cc3fe458",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 9346814",
-      "Telefon": "0676 9346814",
-      "Hizmet": "Winterdienst",
-      "Konum": "Mistelbach",
-      "Tarih": "07.08.26 12:41",
-      "Mesaj": "-",
-      "id": "43ba1b65765e6cab1e27c6fadd8d0d27",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0670 6087349",
-      "Telefon": "0670 6087349",
-      "Hizmet": "-",
-      "Konum": "Langenzersdorf",
-      "Tarih": "07.08.26 10:06",
-      "Mesaj": "-",
-      "id": "2769a4459f57a904847af2c06203e554",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 11303517",
-      "Telefon": "0699 11303517",
-      "Hizmet": "Baumfällarbeiten",
-      "Konum": "Bad Vöslau",
-      "Tarih": "06.08.26 16:13",
-      "Mesaj": "-",
-      "id": "9a0b0b67cc0e2766dcbf269e90b88417",
       "telegramSent": true
     }
   ]
