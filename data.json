@@ -1,6 +1,16 @@
 {
-  "updatedAt": "17.8.2026, 08:33:41",
+  "updatedAt": "17.8.2026, 08:47:50",
   "leads": [
+    {
+      "Musteri": "0664 88221901",
+      "Telefon": "0664 88221901",
+      "Hizmet": "-",
+      "Konum": "Bad Vöslau",
+      "Tarih": "17.08.26 08:36",
+      "Mesaj": "-",
+      "id": "98b73e5bc9168c21d7867f449bd9467c",
+      "telegramSent": true
+    },
     {
       "Musteri": "0680 1192439",
       "Telefon": "0680 1192439",
@@ -189,16 +199,6 @@
       "Tarih": "08.08.26 10:30",
       "Mesaj": "-",
       "id": "f23d8b3585bc7adf58b69d4dd8275ed9",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 3614020",
-      "Telefon": "0664 3614020",
-      "Hizmet": "Zaunbau",
-      "Konum": "Teesdorf",
-      "Tarih": "07.08.26 18:08",
-      "Mesaj": "P\nPotenzieller Kunde\n4:08 PM\nIch bräuchte einen Alu Lamellenzaun für meinen Garten in Kottingbrunn. Machen bzw haben sie so etwas auch? MfG Gabriele Nowak",
-      "id": "ccd14e975bfcb30a8452f27ae8d38986",
       "telegramSent": true
     }
   ]
