@@ -1,6 +1,16 @@
 {
-  "updatedAt": "17.8.2026, 08:47:50",
+  "updatedAt": "17.8.2026, 12:05:39",
   "leads": [
+    {
+      "Musteri": "0664 3489464",
+      "Telefon": "0664 3489464",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "17.08.26 11:48",
+      "Mesaj": "-",
+      "id": "e90716e31a7dad1584a0b4ca94b8791e",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 88221901",
       "Telefon": "0664 88221901",
@@ -189,16 +199,6 @@
       "Tarih": "10.08.26 08:02",
       "Mesaj": "-",
       "id": "ed0b9bee0406411483b85463a00ec1d1",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 2668660",
-      "Telefon": "0664 2668660",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "08.08.26 10:30",
-      "Mesaj": "-",
-      "id": "f23d8b3585bc7adf58b69d4dd8275ed9",
       "telegramSent": true
     }
   ]
