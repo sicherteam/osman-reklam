@@ -1,6 +1,26 @@
 {
-  "updatedAt": "18.8.2026, 14:19:45",
+  "updatedAt": "18.8.2026, 16:05:38",
   "leads": [
+    {
+      "Musteri": "0676 9212309",
+      "Telefon": "0676 9212309",
+      "Hizmet": "-",
+      "Konum": "Kirchberg am Wechsel",
+      "Tarih": "18.08.26 15:56",
+      "Mesaj": "-",
+      "id": "ce9bb69af52900f6addc2cf82e8c4c27",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0660 1203863",
+      "Telefon": "0660 1203863",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "18.08.26 15:52",
+      "Mesaj": "-",
+      "id": "dd11a83a4a8c12341fe97287abd44c54",
+      "telegramSent": true
+    },
     {
       "Musteri": "0650 3950685",
       "Telefon": "0650 3950685",
@@ -162,16 +182,6 @@
       "telegramSent": true
     },
     {
-      "Musteri": "0676 6030369",
-      "Telefon": "0676 6030369",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "12.08.26 18:00",
-      "Mesaj": "-",
-      "id": "ffab5f4c0a8762eb5fea47cd03622c83",
-      "telegramSent": true
-    },
-    {
       "Musteri": "0664 5373505",
       "Telefon": "0664 5373505",
       "Hizmet": "-",
@@ -189,16 +199,6 @@
       "Tarih": "12.08.26 08:43",
       "Mesaj": "-",
       "id": "d95cd1f7a5d783b073d81ca23e5481cf",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 6567180",
-      "Telefon": "0660 6567180",
-      "Hizmet": "-",
-      "Konum": "Böheimkirchen",
-      "Tarih": "10.08.26 18:41",
-      "Mesaj": "-",
-      "id": "3be09f976abdf894315320c90f75d8d8",
       "telegramSent": true
     }
   ]
