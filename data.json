@@ -1,6 +1,16 @@
 {
-  "updatedAt": "18.8.2026, 12:05:41",
+  "updatedAt": "18.8.2026, 12:33:37",
   "leads": [
+    {
+      "Musteri": "0664 5013929",
+      "Telefon": "0664 5013929",
+      "Hizmet": "Baumpflege",
+      "Konum": "Hollabrunn",
+      "Tarih": "18.08.26 12:24",
+      "Mesaj": "-",
+      "id": "9ead008880a439cf932186a49b7d067d",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 4480380",
       "Telefon": "0676 4480380",
@@ -189,16 +199,6 @@
       "Tarih": "10.08.26 15:49",
       "Mesaj": "-",
       "id": "d3ca20de981543505e5d54bb95bd676a",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 5025612",
-      "Telefon": "0664 5025612",
-      "Hizmet": "-",
-      "Konum": "Bezirk Sankt Pölten-Land",
-      "Tarih": "10.08.26 09:09",
-      "Mesaj": "-",
-      "id": "44b5077fa3b40030e1f7324f021ee716",
       "telegramSent": true
     }
   ]
