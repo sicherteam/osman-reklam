@@ -1,6 +1,16 @@
 {
-  "updatedAt": "18.8.2026, 08:33:40",
+  "updatedAt": "18.8.2026, 11:33:40",
   "leads": [
+    {
+      "Musteri": "0676 7055461",
+      "Telefon": "0676 7055461",
+      "Hizmet": "Entsorgung von Gartenabfällen",
+      "Konum": "Bruck an der Leitha",
+      "Tarih": "18.08.26 11:23",
+      "Mesaj": "-",
+      "id": "7fb23ca826f60409c744a22abbaa8f9c",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 1114780",
       "Telefon": "0664 1114780",
@@ -189,16 +199,6 @@
       "Tarih": "10.08.26 09:08",
       "Mesaj": "-",
       "id": "b17caddb5b066ac0193006c83bdc2c9a",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 1237792",
-      "Telefon": "0664 1237792",
-      "Hizmet": "-",
-      "Konum": "Gmünd",
-      "Tarih": "10.08.26 08:02",
-      "Mesaj": "-",
-      "id": "ed0b9bee0406411483b85463a00ec1d1",
       "telegramSent": true
     }
   ]
