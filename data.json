@@ -1,6 +1,16 @@
 {
-  "updatedAt": "18.8.2026, 11:33:40",
+  "updatedAt": "18.8.2026, 12:05:41",
   "leads": [
+    {
+      "Musteri": "0676 4480380",
+      "Telefon": "0676 4480380",
+      "Hizmet": "Baumpflege",
+      "Konum": "Ebergassing",
+      "Tarih": "18.08.26 11:59",
+      "Mesaj": "-",
+      "id": "bd2ba0adf6e98120956d9d38c6dd264b",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 7055461",
       "Telefon": "0676 7055461",
@@ -189,16 +199,6 @@
       "Tarih": "10.08.26 09:09",
       "Mesaj": "-",
       "id": "44b5077fa3b40030e1f7324f021ee716",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 73861988",
-      "Telefon": "0664 73861988",
-      "Hizmet": "-",
-      "Konum": "Mistelbach",
-      "Tarih": "10.08.26 09:08",
-      "Mesaj": "-",
-      "id": "b17caddb5b066ac0193006c83bdc2c9a",
       "telegramSent": true
     }
   ]
