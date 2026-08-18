@@ -1,6 +1,16 @@
 {
-  "updatedAt": "17.8.2026, 12:05:39",
+  "updatedAt": "18.8.2026, 08:33:40",
   "leads": [
+    {
+      "Musteri": "0664 1114780",
+      "Telefon": "0664 1114780",
+      "Hizmet": "-",
+      "Konum": "Gumpoldskirchen",
+      "Tarih": "18.08.26 08:21",
+      "Mesaj": "-",
+      "id": "c1ecf7c29cca9896a8feafed5e0aefec",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 3489464",
       "Telefon": "0664 3489464",
@@ -159,16 +169,6 @@
       "Tarih": "10.08.26 15:49",
       "Mesaj": "-",
       "id": "d3ca20de981543505e5d54bb95bd676a",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 2964607",
-      "Telefon": "0660 2964607",
-      "Hizmet": "-",
-      "Konum": "Hainburg an der Donau",
-      "Tarih": "10.08.26 09:55",
-      "Mesaj": "-",
-      "id": "c088934a365848d1d5c1dfee594c4b9c",
       "telegramSent": true
     },
     {
