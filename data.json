@@ -1,6 +1,16 @@
 {
-  "updatedAt": "19.8.2026, 14:19:36",
+  "updatedAt": "20.8.2026, 12:33:50",
   "leads": [
+    {
+      "Musteri": "0676 3048148",
+      "Telefon": "0676 3048148",
+      "Hizmet": "-",
+      "Konum": "Amstetten",
+      "Tarih": "20.08.26 12:21",
+      "Mesaj": "-",
+      "id": "92f230d77229cac4766477881c27e019",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 73576605",
       "Telefon": "0664 73576605",
@@ -189,16 +199,6 @@
       "Tarih": "13.08.26 10:10",
       "Mesaj": "-",
       "id": "0a0a36869844ee91642f136bddef988e",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 3677701",
-      "Telefon": "0676 3677701",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "12.08.26 08:43",
-      "Mesaj": "-",
-      "id": "d95cd1f7a5d783b073d81ca23e5481cf",
       "telegramSent": true
     }
   ]
