@@ -1,6 +1,16 @@
 {
-  "updatedAt": "22.8.2026, 10:33:36",
+  "updatedAt": "22.8.2026, 13:19:34",
   "leads": [
+    {
+      "Musteri": "0676 5951883",
+      "Telefon": "0676 5951883",
+      "Hizmet": "-",
+      "Konum": "Klosterneuburg",
+      "Tarih": "22.08.26 13:12",
+      "Mesaj": "-",
+      "id": "f238d691f90d3af65c1be952f0ee82dc",
+      "telegramSent": true
+    },
     {
       "Musteri": "0660 8645815",
       "Telefon": "0660 8645815",
@@ -189,16 +199,6 @@
       "Tarih": "14.08.26 10:07",
       "Mesaj": "-",
       "id": "4e0fb17b82a5ef92d3fd8dc8b1913911",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 81845686",
-      "Telefon": "0699 81845686",
-      "Hizmet": "Baumpflege",
-      "Konum": "Theresienfeld",
-      "Tarih": "14.08.26 09:16",
-      "Mesaj": "-",
-      "id": "f22d27b4da8d5b556660bc6041ed97c3",
       "telegramSent": true
     }
   ]
