@@ -1,6 +1,16 @@
 {
-  "updatedAt": "21.8.2026, 11:48:02",
+  "updatedAt": "22.8.2026, 10:33:36",
   "leads": [
+    {
+      "Musteri": "0660 8645815",
+      "Telefon": "0660 8645815",
+      "Hizmet": "Kunstrasenverlegung",
+      "Konum": "Himberg bei Wien",
+      "Tarih": "22.08.26 10:10",
+      "Mesaj": "-",
+      "id": "04f0ecabc7727d210b460c5708657e64",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 75018191",
       "Telefon": "0664 75018191",
@@ -189,16 +199,6 @@
       "Tarih": "14.08.26 09:16",
       "Mesaj": "-",
       "id": "f22d27b4da8d5b556660bc6041ed97c3",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 5229966",
-      "Telefon": "0660 5229966",
-      "Hizmet": "-",
-      "Konum": "Mödling",
-      "Tarih": "13.08.26 15:00",
-      "Mesaj": "-",
-      "id": "663b8df337a94a7ed3c74cf8bc454e98",
       "telegramSent": true
     }
   ]
