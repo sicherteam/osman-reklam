@@ -1,6 +1,16 @@
 {
-  "updatedAt": "22.8.2026, 13:33:45",
+  "updatedAt": "22.8.2026, 15:47:40",
   "leads": [
+    {
+      "Musteri": "02243 22293",
+      "Telefon": "02243 22293",
+      "Hizmet": "-",
+      "Konum": "Klosterneuburg",
+      "Tarih": "22.08.26 15:35",
+      "Mesaj": "-",
+      "id": "42a569d484f62ee1128956673d81ebe7",
+      "telegramSent": true
+    },
     {
       "Musteri": "777 521 649",
       "Telefon": "777 521 649",
@@ -189,16 +199,6 @@
       "Tarih": "14.08.26 12:28",
       "Mesaj": "-",
       "id": "bb1edf21e3bc2e3eb9cc58c6a39f5e65",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 5700991",
-      "Telefon": "0660 5700991",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "14.08.26 10:22",
-      "Mesaj": "-",
-      "id": "0c3f7c03482be36b5cce93e1852c92e6",
       "telegramSent": true
     }
   ]
