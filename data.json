@@ -1,6 +1,16 @@
 {
-  "updatedAt": "22.8.2026, 15:47:40",
+  "updatedAt": "22.8.2026, 19:47:50",
   "leads": [
+    {
+      "Musteri": "0676 7575499",
+      "Telefon": "0676 7575499",
+      "Hizmet": "-",
+      "Konum": "Guntramsdorf",
+      "Tarih": "22.08.26 19:22",
+      "Mesaj": "P\nPotenzieller Kunde\n5:22 PM\nVermissen Sie zufällig einen großen schönen Oleander?! Mein dementer Mann hat ihn irgendwo in diesem Bereich entwendet und wir suchen den Besitzer...LG Maria Schwarz Tel. 06767575499",
+      "id": "a107649e18efbf4c8611c56fcc006dfc",
+      "telegramSent": true
+    },
     {
       "Musteri": "02243 22293",
       "Telefon": "02243 22293",
@@ -189,16 +199,6 @@
       "Tarih": "17.08.26 08:19",
       "Mesaj": "-",
       "id": "b0b00c39e8ca82f77065b1b7538d55b7",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 73477043",
-      "Telefon": "0664 73477043",
-      "Hizmet": "Gartenteiche, Springbrunnen und Wasserspiele",
-      "Konum": "Stetten",
-      "Tarih": "14.08.26 12:28",
-      "Mesaj": "-",
-      "id": "bb1edf21e3bc2e3eb9cc58c6a39f5e65",
       "telegramSent": true
     }
   ]
