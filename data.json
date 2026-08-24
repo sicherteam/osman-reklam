@@ -1,6 +1,26 @@
 {
-  "updatedAt": "24.8.2026, 08:34:34",
+  "updatedAt": "24.8.2026, 10:20:04",
   "leads": [
+    {
+      "Musteri": "0664 7965844",
+      "Telefon": "0664 7965844",
+      "Hizmet": "Andere Dienstleistung",
+      "Konum": "Wien",
+      "Tarih": "24.08.26 09:47",
+      "Mesaj": "P\nPotenzieller Kunde\n7:47 AM\nKunstrasen",
+      "id": "3d3f14bdcb89a40e58fcb8e3e1138fc0",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0676 83607202",
+      "Telefon": "0676 83607202",
+      "Hizmet": "-",
+      "Konum": "Kirchstetten",
+      "Tarih": "24.08.26 09:45",
+      "Mesaj": "-",
+      "id": "011aa59e3e8655f77627571ac32b4acb",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 3287663",
       "Telefon": "0664 3287663",
@@ -152,16 +172,6 @@
       "telegramSent": true
     },
     {
-      "Musteri": "0664 5013929",
-      "Telefon": "0664 5013929",
-      "Hizmet": "Baumpflege",
-      "Konum": "Hollabrunn",
-      "Tarih": "18.08.26 12:24",
-      "Mesaj": "-",
-      "id": "9ead008880a439cf932186a49b7d067d",
-      "telegramSent": true
-    },
-    {
       "Musteri": "0676 4480380",
       "Telefon": "0676 4480380",
       "Hizmet": "Baumpflege",
@@ -189,16 +199,6 @@
       "Tarih": "18.08.26 08:21",
       "Mesaj": "-",
       "id": "c1ecf7c29cca9896a8feafed5e0aefec",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 3489464",
-      "Telefon": "0664 3489464",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "17.08.26 11:48",
-      "Mesaj": "-",
-      "id": "e90716e31a7dad1584a0b4ca94b8791e",
       "telegramSent": true
     }
   ]
