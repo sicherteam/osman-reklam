@@ -1,6 +1,16 @@
 {
-  "updatedAt": "24.8.2026, 19:34:00",
+  "updatedAt": "24.8.2026, 20:34:36",
   "leads": [
+    {
+      "Musteri": "0699 10670612",
+      "Telefon": "0699 10670612",
+      "Hizmet": "Rollrasen verlegen",
+      "Konum": "Schwechat",
+      "Tarih": "24.08.26 20:24",
+      "Mesaj": "P\nPotenzieller Kunde\n6:24 PM\nSehr geehrte Damen und Herren! Ich hätte gerne einen neuen rasen. Verlegen von ca 220 m2 inkl. Abtrag alter Rasen (Steppe) in 2401 Fischamend. Ersuche um Angebot Mit freundlichen Grüßen Petra weiß",
+      "id": "9d003eeb6e4275b985d9bcfd26320bed",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 11122021",
       "Telefon": "0699 11122021",
@@ -149,16 +159,6 @@
       "Tarih": "19.08.26 14:11",
       "Mesaj": "-",
       "id": "c6402745d5ba45ab9f4aff327afbde78",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0677 62242002",
-      "Telefon": "0677 62242002",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "19.08.26 10:36",
-      "Mesaj": "-",
-      "id": "a0cb5f8f9b0fe3cdd3fa6b4fdc68cc9a",
       "telegramSent": true
     },
     {
