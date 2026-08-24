@@ -1,6 +1,16 @@
 {
-  "updatedAt": "24.8.2026, 11:05:58",
+  "updatedAt": "24.8.2026, 17:34:32",
   "leads": [
+    {
+      "Musteri": "0676 4764155",
+      "Telefon": "0676 4764155",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "24.08.26 17:21",
+      "Mesaj": "-",
+      "id": "295316e138aca45a2803a0de1945dae8",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 1309178",
       "Telefon": "0664 1309178",
@@ -139,16 +149,6 @@
       "Tarih": "19.08.26 10:36",
       "Mesaj": "-",
       "id": "a0cb5f8f9b0fe3cdd3fa6b4fdc68cc9a",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0670 3512726",
-      "Telefon": "0670 3512726",
-      "Hizmet": "Reparaturen und Wartung",
-      "Konum": "Zistersdorf",
-      "Tarih": "18.08.26 16:51",
-      "Mesaj": "-",
-      "id": "5e5e552a3e7e7be87524f93ada0db207",
       "telegramSent": true
     },
     {
