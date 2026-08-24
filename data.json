@@ -1,6 +1,26 @@
 {
-  "updatedAt": "22.8.2026, 19:47:50",
+  "updatedAt": "24.8.2026, 08:34:34",
   "leads": [
+    {
+      "Musteri": "0664 3287663",
+      "Telefon": "0664 3287663",
+      "Hizmet": "-",
+      "Konum": "Gmünd",
+      "Tarih": "24.08.26 08:26",
+      "Mesaj": "-",
+      "id": "fe2bb886c06c60761e0e617700e61f96",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0664 3284453",
+      "Telefon": "0664 3284453",
+      "Hizmet": "-",
+      "Konum": "Gmünd",
+      "Tarih": "24.08.26 08:11",
+      "Mesaj": "-",
+      "id": "c87e3714bbe5df8f928ad9379ab8b0b8",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 7575499",
       "Telefon": "0676 7575499",
@@ -179,26 +199,6 @@
       "Tarih": "17.08.26 11:48",
       "Mesaj": "-",
       "id": "e90716e31a7dad1584a0b4ca94b8791e",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 88221901",
-      "Telefon": "0664 88221901",
-      "Hizmet": "-",
-      "Konum": "Bad Vöslau",
-      "Tarih": "17.08.26 08:36",
-      "Mesaj": "-",
-      "id": "98b73e5bc9168c21d7867f449bd9467c",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0680 1192439",
-      "Telefon": "0680 1192439",
-      "Hizmet": "-",
-      "Konum": "Schönkirchen-Reyersdorf",
-      "Tarih": "17.08.26 08:19",
-      "Mesaj": "-",
-      "id": "b0b00c39e8ca82f77065b1b7538d55b7",
       "telegramSent": true
     }
   ]
