@@ -1,6 +1,16 @@
 {
-  "updatedAt": "24.8.2026, 20:34:36",
+  "updatedAt": "25.8.2026, 11:34:11",
   "leads": [
+    {
+      "Musteri": "0664 73576605",
+      "Telefon": "0664 73576605",
+      "Hizmet": "Entsorgung",
+      "Konum": "Bezirk Sankt Pölten-Land",
+      "Tarih": "25.08.26 11:22",
+      "Mesaj": "P\nPotenzieller Kunde\n9:22 AM\nBenötigen die Entsorgung eine Kriechelbaumes.",
+      "id": "419125e53a2c25ff3c12e00e6c2a4f19",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 10670612",
       "Telefon": "0699 10670612",
@@ -189,16 +199,6 @@
       "Tarih": "18.08.26 11:59",
       "Mesaj": "-",
       "id": "bd2ba0adf6e98120956d9d38c6dd264b",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 7055461",
-      "Telefon": "0676 7055461",
-      "Hizmet": "Entsorgung von Gartenabfällen",
-      "Konum": "Bruck an der Leitha",
-      "Tarih": "18.08.26 11:23",
-      "Mesaj": "-",
-      "id": "7fb23ca826f60409c744a22abbaa8f9c",
       "telegramSent": true
     }
   ]
