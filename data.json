@@ -1,6 +1,16 @@
 {
-  "updatedAt": "26.8.2026, 13:06:07",
+  "updatedAt": "26.8.2026, 15:06:02",
   "leads": [
+    {
+      "Musteri": "0660 1876758",
+      "Telefon": "0660 1876758",
+      "Hizmet": "-",
+      "Konum": "Hohenau an der March",
+      "Tarih": "26.08.26 14:49",
+      "Mesaj": "-",
+      "id": "8a760b8cf5000f1ba8c1154a0b54c7e9",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 2817705",
       "Telefon": "0664 2817705",
@@ -189,16 +199,6 @@
       "Tarih": "20.08.26 12:21",
       "Mesaj": "-",
       "id": "92f230d77229cac4766477881c27e019",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 73576605",
-      "Telefon": "0664 73576605",
-      "Hizmet": "-",
-      "Konum": "Niederösterreich",
-      "Tarih": "19.08.26 14:11",
-      "Mesaj": "-",
-      "id": "c6402745d5ba45ab9f4aff327afbde78",
       "telegramSent": true
     }
   ]
