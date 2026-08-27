@@ -1,6 +1,16 @@
 {
-  "updatedAt": "27.8.2026, 12:47:44",
+  "updatedAt": "27.8.2026, 18:47:54",
   "leads": [
+    {
+      "Musteri": "0670 4057052",
+      "Telefon": "0670 4057052",
+      "Hizmet": "-",
+      "Konum": "Gramatneusiedl",
+      "Tarih": "27.08.26 18:40",
+      "Mesaj": "-",
+      "id": "b248adb581797351823a82ace8a44e3a",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 81860939",
       "Telefon": "0699 81860939",
@@ -169,16 +179,6 @@
       "Tarih": "22.08.26 19:22",
       "Mesaj": "P\nPotenzieller Kunde\n5:22 PM\nVermissen Sie zufällig einen großen schönen Oleander?! Mein dementer Mann hat ihn irgendwo in diesem Bereich entwendet und wir suchen den Besitzer...LG Maria Schwarz Tel. 06767575499",
       "id": "a107649e18efbf4c8611c56fcc006dfc",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "02243 22293",
-      "Telefon": "02243 22293",
-      "Hizmet": "-",
-      "Konum": "Klosterneuburg",
-      "Tarih": "22.08.26 15:35",
-      "Mesaj": "-",
-      "id": "42a569d484f62ee1128956673d81ebe7",
       "telegramSent": true
     },
     {
