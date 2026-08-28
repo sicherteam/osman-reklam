@@ -1,6 +1,16 @@
 {
-  "updatedAt": "27.8.2026, 18:47:54",
+  "updatedAt": "28.8.2026, 07:19:56",
   "leads": [
+    {
+      "Musteri": "0680 5073075",
+      "Telefon": "0680 5073075",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "28.08.26 07:18",
+      "Mesaj": "-",
+      "id": "e06bbfb90eae488797acd5f6e58b6b28",
+      "telegramSent": true
+    },
     {
       "Musteri": "0670 4057052",
       "Telefon": "0670 4057052",
@@ -189,16 +199,6 @@
       "Tarih": "22.08.26 13:12",
       "Mesaj": "-",
       "id": "f238d691f90d3af65c1be952f0ee82dc",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 8645815",
-      "Telefon": "0660 8645815",
-      "Hizmet": "Kunstrasenverlegung",
-      "Konum": "Himberg bei Wien",
-      "Tarih": "22.08.26 10:10",
-      "Mesaj": "-",
-      "id": "04f0ecabc7727d210b460c5708657e64",
       "telegramSent": true
     }
   ]
