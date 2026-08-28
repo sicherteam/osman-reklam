@@ -1,6 +1,16 @@
 {
-  "updatedAt": "28.8.2026, 12:05:35",
+  "updatedAt": "28.8.2026, 12:33:35",
   "leads": [
+    {
+      "Musteri": "0664 5004072",
+      "Telefon": "0664 5004072",
+      "Hizmet": "Winterdienst",
+      "Konum": "Klosterneuburg",
+      "Tarih": "28.08.26 12:17",
+      "Mesaj": "-",
+      "id": "d332d8f6991003502c1d96632060ecd3",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 6222324",
       "Telefon": "0676 6222324",
@@ -189,16 +199,6 @@
       "Tarih": "24.08.26 09:45",
       "Mesaj": "-",
       "id": "011aa59e3e8655f77627571ac32b4acb",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 3287663",
-      "Telefon": "0664 3287663",
-      "Hizmet": "-",
-      "Konum": "Gmünd",
-      "Tarih": "24.08.26 08:26",
-      "Mesaj": "-",
-      "id": "fe2bb886c06c60761e0e617700e61f96",
       "telegramSent": true
     }
   ]
