@@ -1,6 +1,16 @@
 {
-  "updatedAt": "29.8.2026, 12:33:49",
+  "updatedAt": "29.8.2026, 19:19:28",
   "leads": [
+    {
+      "Musteri": "0650 4152024",
+      "Telefon": "0650 4152024",
+      "Hizmet": "Baumfällarbeiten",
+      "Konum": "Niederösterreich",
+      "Tarih": "29.08.26 19:08",
+      "Mesaj": "-",
+      "id": "5c9d9977dff2979e39d77f216c9ed3c9",
+      "telegramSent": true
+    },
     {
       "Musteri": "0680 2074417",
       "Telefon": "0680 2074417",
@@ -189,16 +199,6 @@
       "Tarih": "24.08.26 19:25",
       "Mesaj": "-",
       "id": "bcbcec7bc7211c7e3b0744622bb252ba",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 4764155",
-      "Telefon": "0676 4764155",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "24.08.26 17:21",
-      "Mesaj": "-",
-      "id": "295316e138aca45a2803a0de1945dae8",
       "telegramSent": true
     }
   ]
