@@ -1,6 +1,16 @@
 {
-  "updatedAt": "31.8.2026, 14:33:47",
+  "updatedAt": "31.8.2026, 15:19:38",
   "leads": [
+    {
+      "Musteri": "0676 6109513",
+      "Telefon": "0676 6109513",
+      "Hizmet": "Baumpflege",
+      "Konum": "Kilb",
+      "Tarih": "31.08.26 15:03",
+      "Mesaj": "-",
+      "id": "a799b69a3e0c64c8bf9bcec2e9a66933",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 4313305",
       "Telefon": "0676 4313305",
@@ -169,16 +179,6 @@
       "Tarih": "28.08.26 07:18",
       "Mesaj": "-",
       "id": "e06bbfb90eae488797acd5f6e58b6b28",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0670 4057052",
-      "Telefon": "0670 4057052",
-      "Hizmet": "-",
-      "Konum": "Gramatneusiedl",
-      "Tarih": "27.08.26 18:40",
-      "Mesaj": "-",
-      "id": "b248adb581797351823a82ace8a44e3a",
       "telegramSent": true
     },
     {
