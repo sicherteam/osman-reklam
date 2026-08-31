@@ -1,6 +1,16 @@
 {
-  "updatedAt": "31.8.2026, 13:05:36",
+  "updatedAt": "31.8.2026, 14:19:36",
   "leads": [
+    {
+      "Musteri": "0650 6262358",
+      "Telefon": "0650 6262358",
+      "Hizmet": "Baumpflege",
+      "Konum": "Langenzersdorf",
+      "Tarih": "31.08.26 14:14",
+      "Mesaj": "-",
+      "id": "4360eb067115c91a42dfbca6c5aa4a24",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 10606168",
       "Telefon": "0699 10606168",
@@ -189,16 +199,6 @@
       "Tarih": "26.08.26 14:49",
       "Mesaj": "-",
       "id": "8a760b8cf5000f1ba8c1154a0b54c7e9",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 2817705",
-      "Telefon": "0664 2817705",
-      "Hizmet": "-",
-      "Konum": "Baden",
-      "Tarih": "26.08.26 12:57",
-      "Mesaj": "-",
-      "id": "4dbfd34c8fd9b570f480e446aa08c94b",
       "telegramSent": true
     }
   ]
