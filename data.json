@@ -1,6 +1,26 @@
 {
-  "updatedAt": "1.9.2026, 12:47:40",
+  "updatedAt": "1.9.2026, 17:48:11",
   "leads": [
+    {
+      "Musteri": "0664 4072246",
+      "Telefon": "0664 4072246",
+      "Hizmet": "-",
+      "Konum": "Prinzersdorf",
+      "Tarih": "01.09.26 15:49",
+      "Mesaj": "-",
+      "id": "a8541cdd7e210f1d99669aea796b69d8",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0664 73602833",
+      "Telefon": "0664 73602833",
+      "Hizmet": "Gartendekorationen",
+      "Konum": "Neulengbach",
+      "Tarih": "01.09.26 14:17",
+      "Mesaj": "-",
+      "id": "4f2ce72c8466385331ccad5a81ba7e3a",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 10190601",
       "Telefon": "0699 10190601",
@@ -142,16 +162,6 @@
       "telegramSent": true
     },
     {
-      "Musteri": "0699 18141976",
-      "Telefon": "0699 18141976",
-      "Hizmet": "-",
-      "Konum": "Langenzersdorf",
-      "Tarih": "28.08.26 18:49",
-      "Mesaj": "-",
-      "id": "7286242eac5b4d3538ddf126e7f7ec84",
-      "telegramSent": true
-    },
-    {
       "Musteri": "0664 4444957",
       "Telefon": "0664 4444957",
       "Hizmet": "-",
@@ -189,16 +199,6 @@
       "Tarih": "28.08.26 09:56",
       "Mesaj": "-",
       "id": "e23c3c20ca28054673c5de56dadde3c9",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0680 5073075",
-      "Telefon": "0680 5073075",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "28.08.26 07:18",
-      "Mesaj": "-",
-      "id": "e06bbfb90eae488797acd5f6e58b6b28",
       "telegramSent": true
     }
   ]
