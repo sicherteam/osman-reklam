@@ -1,6 +1,26 @@
 {
-  "updatedAt": "31.8.2026, 16:05:36",
+  "updatedAt": "1.9.2026, 12:47:40",
   "leads": [
+    {
+      "Musteri": "0699 10190601",
+      "Telefon": "0699 10190601",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "01.09.26 11:57",
+      "Mesaj": "-",
+      "id": "e88f58f3b8302d72b106b5bce8c019f2",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0660 7979070",
+      "Telefon": "0660 7979070",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "01.09.26 11:43",
+      "Mesaj": "-",
+      "id": "b77fceab97c08c23ff84de1aa594d79c",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 5239059",
       "Telefon": "0676 5239059",
@@ -142,16 +162,6 @@
       "telegramSent": true
     },
     {
-      "Musteri": "0664 5004072",
-      "Telefon": "0664 5004072",
-      "Hizmet": "Winterdienst",
-      "Konum": "Klosterneuburg",
-      "Tarih": "28.08.26 12:17",
-      "Mesaj": "-",
-      "id": "d332d8f6991003502c1d96632060ecd3",
-      "telegramSent": true
-    },
-    {
       "Musteri": "0676 6222324",
       "Telefon": "0676 6222324",
       "Hizmet": "-",
@@ -189,16 +199,6 @@
       "Tarih": "28.08.26 07:18",
       "Mesaj": "-",
       "id": "e06bbfb90eae488797acd5f6e58b6b28",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 81860939",
-      "Telefon": "0699 81860939",
-      "Hizmet": "-",
-      "Konum": "Hainburg an der Donau",
-      "Tarih": "27.08.26 12:32",
-      "Mesaj": "-",
-      "id": "9a5fca2a173b5e80e5895c32f959d18e",
       "telegramSent": true
     }
   ]
