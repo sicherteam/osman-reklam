@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2.9.2026, 13:30:30",
+  "updatedAt": "2.9.2026, 15:39:36",
   "leads": [
+    {
+      "Musteri": "01 8651043",
+      "Telefon": "01 8651043",
+      "Hizmet": "-",
+      "Konum": "Perchtoldsdorf",
+      "Tarih": "02.09.26 15:33",
+      "Mesaj": "-",
+      "id": "82ebf4c7142fc735cf9285909c04d837",
+      "telegramSent": true
+    },
     {
       "Musteri": "0650 9933717",
       "Telefon": "0650 9933717",
@@ -169,16 +179,6 @@
       "Tarih": "31.08.26 10:40",
       "Mesaj": "-",
       "id": "6fa6f7a21b2633f2d91b113a84b9e488",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0650 6606618",
-      "Telefon": "0650 6606618",
-      "Hizmet": "-",
-      "Konum": "Himberg bei Wien",
-      "Tarih": "31.08.26 08:45",
-      "Mesaj": "-",
-      "id": "5049034c956b2bee8ce9a825a3a0d127",
       "telegramSent": true
     },
     {
