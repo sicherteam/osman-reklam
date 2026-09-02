@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2.9.2026, 10:03:34",
+  "updatedAt": "2.9.2026, 11:12:27",
   "leads": [
+    {
+      "Musteri": "0664 2353325",
+      "Telefon": "0664 2353325",
+      "Hizmet": "Kunstrasenverlegung",
+      "Konum": "Wien",
+      "Tarih": "02.09.26 11:01",
+      "Mesaj": "-",
+      "id": "9a9e2916391ae48669d05ef00cfc61ff",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 3923230",
       "Telefon": "0664 3923230",
@@ -169,16 +179,6 @@
       "Tarih": "30.08.26 17:40",
       "Mesaj": "-",
       "id": "6f7b33e9a558a66d206752280200c2b7",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0650 4152024",
-      "Telefon": "0650 4152024",
-      "Hizmet": "Baumfällarbeiten",
-      "Konum": "Niederösterreich",
-      "Tarih": "29.08.26 19:08",
-      "Mesaj": "-",
-      "id": "5c9d9977dff2979e39d77f216c9ed3c9",
       "telegramSent": true
     },
     {
