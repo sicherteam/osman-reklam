@@ -1,6 +1,16 @@
 {
-  "updatedAt": "1.9.2026, 17:48:11",
+  "updatedAt": "2.9.2026, 08:41:25",
   "leads": [
+    {
+      "Musteri": "0650 6355081",
+      "Telefon": "0650 6355081",
+      "Hizmet": "-",
+      "Konum": "Gemeinde Bruck an der Leitha",
+      "Tarih": "02.09.26 08:32",
+      "Mesaj": "-",
+      "id": "1f414605aea2010259bb7388efe4f0ca",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 4072246",
       "Telefon": "0664 4072246",
@@ -179,16 +189,6 @@
       "Tarih": "28.08.26 11:48",
       "Mesaj": "-",
       "id": "d7e46fc7ba351d87d9356593353acbd4",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 3522800",
-      "Telefon": "0660 3522800",
-      "Hizmet": "-",
-      "Konum": "Wiener Neustadt",
-      "Tarih": "28.08.26 11:31",
-      "Mesaj": "-",
-      "id": "df3722b07846f0db3876ef187c0921ad",
       "telegramSent": true
     },
     {
