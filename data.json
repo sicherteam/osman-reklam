@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2.9.2026, 12:21:38",
+  "updatedAt": "2.9.2026, 13:30:30",
   "leads": [
+    {
+      "Musteri": "0650 9933717",
+      "Telefon": "0650 9933717",
+      "Hizmet": "-",
+      "Konum": "Scheibbs",
+      "Tarih": "02.09.26 13:27",
+      "Mesaj": "-",
+      "id": "61b2348bcced324a1b150a562310f486",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 4753292",
       "Telefon": "0676 4753292",
@@ -179,16 +189,6 @@
       "Tarih": "31.08.26 07:14",
       "Mesaj": "P\nPotenzieller Kunde\n5:14 AM\nIch habe Interesse an einen Job für die Garten Arbeit und für die Arbeit draußen",
       "id": "e3c320eb8f4faf52bccfdf1d395c5e4d",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "725 607 272",
-      "Telefon": "725 607 272",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "30.08.26 17:40",
-      "Mesaj": "-",
-      "id": "6f7b33e9a558a66d206752280200c2b7",
       "telegramSent": true
     },
     {
