@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2.9.2026, 11:12:27",
+  "updatedAt": "2.9.2026, 12:21:38",
   "leads": [
+    {
+      "Musteri": "0676 4753292",
+      "Telefon": "0676 4753292",
+      "Hizmet": "Baumpflege",
+      "Konum": "Wien",
+      "Tarih": "02.09.26 12:12",
+      "Mesaj": "-",
+      "id": "1e26378b51ffcd7e04736b2af2344f61",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 2353325",
       "Telefon": "0664 2353325",
@@ -179,16 +189,6 @@
       "Tarih": "30.08.26 17:40",
       "Mesaj": "-",
       "id": "6f7b33e9a558a66d206752280200c2b7",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0680 2074417",
-      "Telefon": "0680 2074417",
-      "Hizmet": "-",
-      "Konum": "Groß-Enzersdorf",
-      "Tarih": "29.08.26 12:28",
-      "Mesaj": "-",
-      "id": "b1e5ab8abcecbfe0a8c716a0dff7b7bb",
       "telegramSent": true
     },
     {
