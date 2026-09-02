@@ -1,6 +1,16 @@
 {
-  "updatedAt": "2.9.2026, 08:41:25",
+  "updatedAt": "2.9.2026, 09:30:31",
   "leads": [
+    {
+      "Musteri": "0664 5239786",
+      "Telefon": "0664 5239786",
+      "Hizmet": "-",
+      "Konum": "Stockerau",
+      "Tarih": "02.09.26 09:19",
+      "Mesaj": "-",
+      "id": "f1ad778fa62d4680c87afa748bd8148e",
+      "telegramSent": true
+    },
     {
       "Musteri": "0650 6355081",
       "Telefon": "0650 6355081",
@@ -179,16 +189,6 @@
       "Tarih": "28.08.26 16:35",
       "Mesaj": "-",
       "id": "aca0dcb866491fa567de870335e09632",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 6222324",
-      "Telefon": "0676 6222324",
-      "Hizmet": "-",
-      "Konum": "Atzenbrugg",
-      "Tarih": "28.08.26 11:48",
-      "Mesaj": "-",
-      "id": "d7e46fc7ba351d87d9356593353acbd4",
       "telegramSent": true
     },
     {
