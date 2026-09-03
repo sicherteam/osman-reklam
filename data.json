@@ -1,6 +1,16 @@
 {
-  "updatedAt": "3.9.2026, 13:48:35",
+  "updatedAt": "3.9.2026, 14:57:31",
   "leads": [
+    {
+      "Musteri": "0664 4363140",
+      "Telefon": "0664 4363140",
+      "Hizmet": "Schneiden der Hecke",
+      "Konum": "Leobendorf",
+      "Tarih": "03.09.26 14:51",
+      "Mesaj": "-",
+      "id": "5ce74ad9a1988a38598c508499387c78",
+      "telegramSent": true
+    },
     {
       "Musteri": "0680 1226555",
       "Telefon": "0680 1226555",
@@ -189,16 +199,6 @@
       "Tarih": "31.08.26 10:40",
       "Mesaj": "-",
       "id": "6fa6f7a21b2633f2d91b113a84b9e488",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0677 61947573",
-      "Telefon": "0677 61947573",
-      "Hizmet": "Landschaftsbau",
-      "Konum": "Poysdorf",
-      "Tarih": "31.08.26 07:14",
-      "Mesaj": "P\nPotenzieller Kunde\n5:14 AM\nIch habe Interesse an einen Job für die Garten Arbeit und für die Arbeit draußen",
-      "id": "e3c320eb8f4faf52bccfdf1d395c5e4d",
       "telegramSent": true
     }
   ]
