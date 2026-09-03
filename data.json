@@ -1,6 +1,16 @@
 {
-  "updatedAt": "3.9.2026, 13:03:36",
+  "updatedAt": "3.9.2026, 13:12:32",
   "leads": [
+    {
+      "Musteri": "0699 18663268",
+      "Telefon": "0699 18663268",
+      "Hizmet": "-",
+      "Konum": "Bruck an der Leitha",
+      "Tarih": "03.09.26 13:10",
+      "Mesaj": "-",
+      "id": "6cee1c4ee98bae56b3eb0e80d7580066",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 4253106",
       "Telefon": "0676 4253106",
@@ -139,16 +149,6 @@
       "Tarih": "01.09.26 11:43",
       "Mesaj": "-",
       "id": "b77fceab97c08c23ff84de1aa594d79c",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 5239059",
-      "Telefon": "0676 5239059",
-      "Hizmet": "-",
-      "Konum": "Klosterneuburg",
-      "Tarih": "31.08.26 16:03",
-      "Mesaj": "-",
-      "id": "eea9aa65675089016326bad0001e47a0",
       "telegramSent": true
     },
     {
