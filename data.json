@@ -1,6 +1,16 @@
 {
-  "updatedAt": "3.9.2026, 12:48:34",
+  "updatedAt": "3.9.2026, 13:03:36",
   "leads": [
+    {
+      "Musteri": "0676 4253106",
+      "Telefon": "0676 4253106",
+      "Hizmet": "Winterdienst",
+      "Konum": "Wien",
+      "Tarih": "03.09.26 13:01",
+      "Mesaj": "-",
+      "id": "e2023907b8c0362b3db37ea66b66c657",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 73063551",
       "Telefon": "0664 73063551",
@@ -149,16 +159,6 @@
       "Tarih": "31.08.26 15:03",
       "Mesaj": "-",
       "id": "a799b69a3e0c64c8bf9bcec2e9a66933",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 4313305",
-      "Telefon": "0676 4313305",
-      "Hizmet": "-",
-      "Konum": "Wilhelmsburg",
-      "Tarih": "31.08.26 14:21",
-      "Mesaj": "-",
-      "id": "d7792572c91976cfaeb0f8d5104f961e",
       "telegramSent": true
     },
     {
