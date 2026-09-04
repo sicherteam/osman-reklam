@@ -1,6 +1,16 @@
 {
-  "updatedAt": "3.9.2026, 14:57:31",
+  "updatedAt": "4.9.2026, 10:57:29",
   "leads": [
+    {
+      "Musteri": "0650 8728331",
+      "Telefon": "0650 8728331",
+      "Hizmet": "Schneiden der Hecke",
+      "Konum": "Langenzersdorf",
+      "Tarih": "04.09.26 10:49",
+      "Mesaj": "-",
+      "id": "b3b44780978558ac3ad6788818b0adb8",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 4363140",
       "Telefon": "0664 4363140",
@@ -189,16 +199,6 @@
       "Tarih": "31.08.26 12:32",
       "Mesaj": "-",
       "id": "95f1c00693e337cc872eb4334e841e50",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 11698630",
-      "Telefon": "0699 11698630",
-      "Hizmet": "Rollrasen verlegen",
-      "Konum": "Hennersdorf bei Wien",
-      "Tarih": "31.08.26 10:40",
-      "Mesaj": "-",
-      "id": "6fa6f7a21b2633f2d91b113a84b9e488",
       "telegramSent": true
     }
   ]
