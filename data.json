@@ -1,6 +1,16 @@
 {
-  "updatedAt": "5.9.2026, 10:57:33",
+  "updatedAt": "6.9.2026, 18:21:27",
   "leads": [
+    {
+      "Musteri": "0699 19472232",
+      "Telefon": "0699 19472232",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "06.09.26 18:15",
+      "Mesaj": "-",
+      "id": "8cd1a0ec214cc8fb068aac0b4f4403c9",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 4811818",
       "Telefon": "0676 4811818",
@@ -149,16 +159,6 @@
       "Tarih": "02.09.26 11:01",
       "Mesaj": "-",
       "id": "9a9e2916391ae48669d05ef00cfc61ff",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 3923230",
-      "Telefon": "0664 3923230",
-      "Hizmet": "-",
-      "Konum": "Gresten",
-      "Tarih": "02.09.26 09:58",
-      "Mesaj": "-",
-      "id": "e504e1289f14da82600831609cf948fa",
       "telegramSent": true
     },
     {
