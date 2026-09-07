@@ -1,6 +1,16 @@
 {
-  "updatedAt": "7.9.2026, 19:31:03",
+  "updatedAt": "7.9.2026, 20:03:44",
   "leads": [
+    {
+      "Musteri": "0664 3333333",
+      "Telefon": "0664 3333333",
+      "Hizmet": "Wurzelfräsen",
+      "Konum": "Wien",
+      "Tarih": "07.09.26 20:01",
+      "Mesaj": "-",
+      "id": "44866aa6fbcd0aa1d15ac7f6583f0b94",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 19239621",
       "Telefon": "0699 19239621",
@@ -189,16 +199,6 @@
       "Tarih": "02.09.26 15:33",
       "Mesaj": "-",
       "id": "82ebf4c7142fc735cf9285909c04d837",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 4753292",
-      "Telefon": "0676 4753292",
-      "Hizmet": "Baumpflege",
-      "Konum": "Wien",
-      "Tarih": "02.09.26 12:12",
-      "Mesaj": "-",
-      "id": "1e26378b51ffcd7e04736b2af2344f61",
       "telegramSent": true
     }
   ]
