@@ -1,6 +1,16 @@
 {
-  "updatedAt": "7.9.2026, 15:30:38",
+  "updatedAt": "7.9.2026, 15:48:33",
   "leads": [
+    {
+      "Musteri": "0681 84106000",
+      "Telefon": "0681 84106000",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "07.09.26 15:44",
+      "Mesaj": "-",
+      "id": "2a68890688697dec6c0677e91ed9a804",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 1682005",
       "Telefon": "0664 1682005",
@@ -189,16 +199,6 @@
       "Tarih": "02.09.26 09:19",
       "Mesaj": "-",
       "id": "f1ad778fa62d4680c87afa748bd8148e",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0650 6355081",
-      "Telefon": "0650 6355081",
-      "Hizmet": "-",
-      "Konum": "Gemeinde Bruck an der Leitha",
-      "Tarih": "02.09.26 08:32",
-      "Mesaj": "-",
-      "id": "1f414605aea2010259bb7388efe4f0ca",
       "telegramSent": true
     }
   ]
