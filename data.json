@@ -1,6 +1,16 @@
 {
-  "updatedAt": "7.9.2026, 13:21:36",
+  "updatedAt": "7.9.2026, 14:12:31",
   "leads": [
+    {
+      "Musteri": "0664 60555544",
+      "Telefon": "0664 60555544",
+      "Hizmet": "-",
+      "Konum": "Schwadorf bei Wien",
+      "Tarih": "07.09.26 14:04",
+      "Mesaj": "-",
+      "id": "a73f3d2bc18e7805dac1093df626e486",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 3899469",
       "Telefon": "0676 3899469",
@@ -189,16 +199,6 @@
       "Tarih": "01.09.26 15:49",
       "Mesaj": "-",
       "id": "a8541cdd7e210f1d99669aea796b69d8",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 73602833",
-      "Telefon": "0664 73602833",
-      "Hizmet": "Gartendekorationen",
-      "Konum": "Neulengbach",
-      "Tarih": "01.09.26 14:17",
-      "Mesaj": "-",
-      "id": "4f2ce72c8466385331ccad5a81ba7e3a",
       "telegramSent": true
     }
   ]
