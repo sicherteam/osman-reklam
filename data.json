@@ -1,6 +1,16 @@
 {
-  "updatedAt": "6.9.2026, 18:21:27",
+  "updatedAt": "7.9.2026, 13:21:36",
   "leads": [
+    {
+      "Musteri": "0676 3899469",
+      "Telefon": "0676 3899469",
+      "Hizmet": "-",
+      "Konum": "Gerasdorf bei Wien",
+      "Tarih": "07.09.26 13:15",
+      "Mesaj": "-",
+      "id": "75e5926809837307161ec55196592e24",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 19472232",
       "Telefon": "0699 19472232",
@@ -129,16 +139,6 @@
       "Tarih": "02.09.26 15:33",
       "Mesaj": "-",
       "id": "82ebf4c7142fc735cf9285909c04d837",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0650 9933717",
-      "Telefon": "0650 9933717",
-      "Hizmet": "-",
-      "Konum": "Scheibbs",
-      "Tarih": "02.09.26 13:27",
-      "Mesaj": "-",
-      "id": "61b2348bcced324a1b150a562310f486",
       "telegramSent": true
     },
     {
