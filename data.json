@@ -1,6 +1,16 @@
 {
-  "updatedAt": "7.9.2026, 14:12:31",
+  "updatedAt": "7.9.2026, 15:30:38",
   "leads": [
+    {
+      "Musteri": "0664 1682005",
+      "Telefon": "0664 1682005",
+      "Hizmet": "-",
+      "Konum": "Böheimkirchen",
+      "Tarih": "07.09.26 15:25",
+      "Mesaj": "-",
+      "id": "19505ed858edd49c2b5aadccc18d73a0",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 60555544",
       "Telefon": "0664 60555544",
@@ -189,16 +199,6 @@
       "Tarih": "02.09.26 08:32",
       "Mesaj": "-",
       "id": "1f414605aea2010259bb7388efe4f0ca",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 4072246",
-      "Telefon": "0664 4072246",
-      "Hizmet": "-",
-      "Konum": "Prinzersdorf",
-      "Tarih": "01.09.26 15:49",
-      "Mesaj": "-",
-      "id": "a8541cdd7e210f1d99669aea796b69d8",
       "telegramSent": true
     }
   ]
