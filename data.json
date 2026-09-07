@@ -1,6 +1,16 @@
 {
-  "updatedAt": "7.9.2026, 18:21:28",
+  "updatedAt": "7.9.2026, 19:31:03",
   "leads": [
+    {
+      "Musteri": "0699 19239621",
+      "Telefon": "0699 19239621",
+      "Hizmet": "Sodenarbeiten und Grasansaat",
+      "Konum": "Wien",
+      "Tarih": "07.09.26 19:23",
+      "Mesaj": "P\nPotenzieller Kunde\n5:23 PM\n25qm Fläche, Untergrund",
+      "id": "3b0f74aa48afe4d34d63f87b1e27e8e2",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 88468856",
       "Telefon": "0664 88468856",
@@ -189,16 +199,6 @@
       "Tarih": "02.09.26 12:12",
       "Mesaj": "-",
       "id": "1e26378b51ffcd7e04736b2af2344f61",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 2353325",
-      "Telefon": "0664 2353325",
-      "Hizmet": "Kunstrasenverlegung",
-      "Konum": "Wien",
-      "Tarih": "02.09.26 11:01",
-      "Mesaj": "-",
-      "id": "9a9e2916391ae48669d05ef00cfc61ff",
       "telegramSent": true
     }
   ]
