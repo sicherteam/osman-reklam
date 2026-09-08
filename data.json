@@ -1,6 +1,16 @@
 {
-  "updatedAt": "7.9.2026, 20:03:44",
+  "updatedAt": "8.9.2026, 11:30:37",
   "leads": [
+    {
+      "Musteri": "0650 3010955",
+      "Telefon": "0650 3010955",
+      "Hizmet": "-",
+      "Konum": "Lassee",
+      "Tarih": "08.09.26 11:22",
+      "Mesaj": "-",
+      "id": "f2d9c352d77f84a18cd7606d80214e23",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 3333333",
       "Telefon": "0664 3333333",
@@ -159,16 +169,6 @@
       "Tarih": "03.09.26 13:10",
       "Mesaj": "-",
       "id": "6cee1c4ee98bae56b3eb0e80d7580066",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 4253106",
-      "Telefon": "0676 4253106",
-      "Hizmet": "Winterdienst",
-      "Konum": "Wien",
-      "Tarih": "03.09.26 13:01",
-      "Mesaj": "-",
-      "id": "e2023907b8c0362b3db37ea66b66c657",
       "telegramSent": true
     },
     {
