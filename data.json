@@ -1,6 +1,16 @@
 {
-  "updatedAt": "9.9.2026, 14:48:31",
+  "updatedAt": "9.9.2026, 18:21:35",
   "leads": [
+    {
+      "Musteri": "0660 1606472",
+      "Telefon": "0660 1606472",
+      "Hizmet": "-",
+      "Konum": "Mistelbach",
+      "Tarih": "09.09.26 18:19",
+      "Mesaj": "-",
+      "id": "91d2dcd086d90f5a9c996d47a7348639",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 1018629",
       "Telefon": "0664 1018629",
@@ -179,16 +189,6 @@
       "Tarih": "03.09.26 13:45",
       "Mesaj": "-",
       "id": "94429094c2f7c715a2187c9289f7a16e",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 18663268",
-      "Telefon": "0699 18663268",
-      "Hizmet": "-",
-      "Konum": "Bruck an der Leitha",
-      "Tarih": "03.09.26 13:10",
-      "Mesaj": "-",
-      "id": "6cee1c4ee98bae56b3eb0e80d7580066",
       "telegramSent": true
     },
     {
