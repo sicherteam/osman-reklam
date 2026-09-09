@@ -1,6 +1,16 @@
 {
-  "updatedAt": "9.9.2026, 11:12:32",
+  "updatedAt": "9.9.2026, 11:57:30",
   "leads": [
+    {
+      "Musteri": "0664 88468856",
+      "Telefon": "0664 88468856",
+      "Hizmet": "Gartendekorationen",
+      "Konum": "Horn",
+      "Tarih": "09.09.26 11:56",
+      "Mesaj": "-",
+      "id": "9a6eff81c2331b86c995e6e098a9053a",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 9702768",
       "Telefon": "0664 9702768",
@@ -189,16 +199,6 @@
       "Tarih": "03.09.26 08:43",
       "Mesaj": "-",
       "id": "ae9d6aec0c7a2053a1b97d7a7307a986",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "01 8651043",
-      "Telefon": "01 8651043",
-      "Hizmet": "-",
-      "Konum": "Perchtoldsdorf",
-      "Tarih": "02.09.26 15:33",
-      "Mesaj": "-",
-      "id": "82ebf4c7142fc735cf9285909c04d837",
       "telegramSent": true
     }
   ]
