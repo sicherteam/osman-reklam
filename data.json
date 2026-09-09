@@ -1,6 +1,16 @@
 {
-  "updatedAt": "9.9.2026, 11:57:30",
+  "updatedAt": "9.9.2026, 14:48:31",
   "leads": [
+    {
+      "Musteri": "0664 1018629",
+      "Telefon": "0664 1018629",
+      "Hizmet": "-",
+      "Konum": "Mödling",
+      "Tarih": "09.09.26 14:47",
+      "Mesaj": "-",
+      "id": "efb9e3c514d91e2ffe2afba91e8b0189",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 88468856",
       "Telefon": "0664 88468856",
@@ -189,16 +199,6 @@
       "Tarih": "03.09.26 12:39",
       "Mesaj": "-",
       "id": "a03f131f258ce24bdcfb4a63689b82e3",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 2107327",
-      "Telefon": "0660 2107327",
-      "Hizmet": "-",
-      "Konum": "Korneuburg",
-      "Tarih": "03.09.26 08:43",
-      "Mesaj": "-",
-      "id": "ae9d6aec0c7a2053a1b97d7a7307a986",
       "telegramSent": true
     }
   ]
