@@ -1,6 +1,16 @@
 {
-  "updatedAt": "8.9.2026, 11:30:37",
+  "updatedAt": "9.9.2026, 11:12:32",
   "leads": [
+    {
+      "Musteri": "0664 9702768",
+      "Telefon": "0664 9702768",
+      "Hizmet": "Winterdienst",
+      "Konum": "Gumpoldskirchen",
+      "Tarih": "09.09.26 11:06",
+      "Mesaj": "-",
+      "id": "37a55998184959525b49343ce75b88c0",
+      "telegramSent": true
+    },
     {
       "Musteri": "0650 3010955",
       "Telefon": "0650 3010955",
@@ -139,16 +149,6 @@
       "Tarih": "04.09.26 10:49",
       "Mesaj": "-",
       "id": "b3b44780978558ac3ad6788818b0adb8",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 4363140",
-      "Telefon": "0664 4363140",
-      "Hizmet": "Schneiden der Hecke",
-      "Konum": "Leobendorf",
-      "Tarih": "03.09.26 14:51",
-      "Mesaj": "-",
-      "id": "5ce74ad9a1988a38598c508499387c78",
       "telegramSent": true
     },
     {
