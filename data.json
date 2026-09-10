@@ -1,6 +1,16 @@
 {
-  "updatedAt": "9.9.2026, 18:21:35",
+  "updatedAt": "10.9.2026, 17:03:43",
   "leads": [
+    {
+      "Musteri": "0676 3874264",
+      "Telefon": "0676 3874264",
+      "Hizmet": "-",
+      "Konum": "Gföhl",
+      "Tarih": "10.09.26 16:59",
+      "Mesaj": "-",
+      "id": "e50d9f3fa5e0fb85554951122c07dafd",
+      "telegramSent": true
+    },
     {
       "Musteri": "0660 1606472",
       "Telefon": "0660 1606472",
@@ -179,16 +189,6 @@
       "Tarih": "04.09.26 10:49",
       "Mesaj": "-",
       "id": "b3b44780978558ac3ad6788818b0adb8",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0680 1226555",
-      "Telefon": "0680 1226555",
-      "Hizmet": "Zaunbau",
-      "Konum": "Hollabrunn",
-      "Tarih": "03.09.26 13:45",
-      "Mesaj": "-",
-      "id": "94429094c2f7c715a2187c9289f7a16e",
       "telegramSent": true
     },
     {
