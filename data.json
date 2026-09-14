@@ -1,6 +1,16 @@
 {
-  "updatedAt": "12.9.2026, 17:03:35",
+  "updatedAt": "14.9.2026, 08:48:28",
   "leads": [
+    {
+      "Musteri": "0676 9020050",
+      "Telefon": "0676 9020050",
+      "Hizmet": "-",
+      "Konum": "Hainburg an der Donau",
+      "Tarih": "14.09.26 08:44",
+      "Mesaj": "-",
+      "id": "9080a050277a0f5b9e991b95542a26cf",
+      "telegramSent": true
+    },
     {
       "Musteri": "0680 3025634",
       "Telefon": "0680 3025634",
@@ -189,16 +199,6 @@
       "Tarih": "04.09.26 10:49",
       "Mesaj": "-",
       "id": "b3b44780978558ac3ad6788818b0adb8",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 73063551",
-      "Telefon": "0664 73063551",
-      "Hizmet": "-",
-      "Konum": "Breitenau am Steinfelde",
-      "Tarih": "03.09.26 12:39",
-      "Mesaj": "-",
-      "id": "a03f131f258ce24bdcfb4a63689b82e3",
       "telegramSent": true
     }
   ]
