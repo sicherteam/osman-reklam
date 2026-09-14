@@ -1,6 +1,16 @@
 {
-  "updatedAt": "14.9.2026, 08:48:28",
+  "updatedAt": "14.9.2026, 10:12:31",
   "leads": [
+    {
+      "Musteri": "0699 11043315",
+      "Telefon": "0699 11043315",
+      "Hizmet": "-",
+      "Konum": "Gloggnitz",
+      "Tarih": "14.09.26 10:08",
+      "Mesaj": "-",
+      "id": "37ef00d3485c3813794b343b7ff3febb",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 9020050",
       "Telefon": "0676 9020050",
@@ -189,16 +199,6 @@
       "Tarih": "05.09.26 10:54",
       "Mesaj": "-",
       "id": "e6c6fdb96ba4260ef505beba52e9c17b",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0650 8728331",
-      "Telefon": "0650 8728331",
-      "Hizmet": "Schneiden der Hecke",
-      "Konum": "Langenzersdorf",
-      "Tarih": "04.09.26 10:49",
-      "Mesaj": "-",
-      "id": "b3b44780978558ac3ad6788818b0adb8",
       "telegramSent": true
     }
   ]
