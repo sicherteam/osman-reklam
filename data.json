@@ -1,6 +1,16 @@
 {
-  "updatedAt": "15.9.2026, 13:48:32",
+  "updatedAt": "15.9.2026, 15:03:32",
   "leads": [
+    {
+      "Musteri": "0650 5009666",
+      "Telefon": "0650 5009666",
+      "Hizmet": "-",
+      "Konum": "Bruck an der Leitha",
+      "Tarih": "15.09.26 14:57",
+      "Mesaj": "-",
+      "id": "e0917c2116438f14fbadc601a3bd9271",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 4821276",
       "Telefon": "0676 4821276",
@@ -189,16 +199,6 @@
       "Tarih": "07.09.26 13:15",
       "Mesaj": "-",
       "id": "75e5926809837307161ec55196592e24",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 19472232",
-      "Telefon": "0699 19472232",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "06.09.26 18:15",
-      "Mesaj": "-",
-      "id": "8cd1a0ec214cc8fb068aac0b4f4403c9",
       "telegramSent": true
     }
   ]
