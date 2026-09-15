@@ -1,6 +1,16 @@
 {
-  "updatedAt": "14.9.2026, 10:12:31",
+  "updatedAt": "15.9.2026, 13:48:32",
   "leads": [
+    {
+      "Musteri": "0676 4821276",
+      "Telefon": "0676 4821276",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "15.09.26 13:47",
+      "Mesaj": "-",
+      "id": "f5bf2960ddbd05b3161ae003533e74eb",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 11043315",
       "Telefon": "0699 11043315",
@@ -189,16 +199,6 @@
       "Tarih": "06.09.26 18:15",
       "Mesaj": "-",
       "id": "8cd1a0ec214cc8fb068aac0b4f4403c9",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 4811818",
-      "Telefon": "0676 4811818",
-      "Hizmet": "-",
-      "Konum": "Bruck an der Leitha",
-      "Tarih": "05.09.26 10:54",
-      "Mesaj": "-",
-      "id": "e6c6fdb96ba4260ef505beba52e9c17b",
       "telegramSent": true
     }
   ]
