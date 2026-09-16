@@ -1,6 +1,16 @@
 {
-  "updatedAt": "16.9.2026, 12:39:30",
+  "updatedAt": "16.9.2026, 12:48:30",
   "leads": [
+    {
+      "Musteri": "0664 8143661",
+      "Telefon": "0664 8143661",
+      "Hizmet": "Winterdienst",
+      "Konum": "Baden",
+      "Tarih": "16.09.26 12:44",
+      "Mesaj": "-",
+      "id": "0ae860595ac32ff3d16a0b10da9dc3ee",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 10088498",
       "Telefon": "0699 10088498",
@@ -179,16 +189,6 @@
       "Tarih": "07.09.26 19:23",
       "Mesaj": "P\nPotenzieller Kunde\n5:23 PM\n25qm Fläche, Untergrund",
       "id": "3b0f74aa48afe4d34d63f87b1e27e8e2",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 1682005",
-      "Telefon": "0664 1682005",
-      "Hizmet": "-",
-      "Konum": "Böheimkirchen",
-      "Tarih": "07.09.26 15:25",
-      "Mesaj": "-",
-      "id": "19505ed858edd49c2b5aadccc18d73a0",
       "telegramSent": true
     },
     {
