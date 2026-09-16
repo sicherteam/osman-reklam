@@ -1,6 +1,16 @@
 {
-  "updatedAt": "16.9.2026, 14:57:35",
+  "updatedAt": "16.9.2026, 15:39:36",
   "leads": [
+    {
+      "Musteri": "0664 1858543",
+      "Telefon": "0664 1858543",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "16.09.26 15:34",
+      "Mesaj": "-",
+      "id": "9ffe0becf7a94c937a40d63e7a9d2d68",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 7947435",
       "Telefon": "0664 7947435",
@@ -169,16 +179,6 @@
       "Tarih": "09.09.26 11:56",
       "Mesaj": "-",
       "id": "9a6eff81c2331b86c995e6e098a9053a",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 9702768",
-      "Telefon": "0664 9702768",
-      "Hizmet": "Winterdienst",
-      "Konum": "Gumpoldskirchen",
-      "Tarih": "09.09.26 11:06",
-      "Mesaj": "-",
-      "id": "37a55998184959525b49343ce75b88c0",
       "telegramSent": true
     },
     {
