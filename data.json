@@ -1,6 +1,16 @@
 {
-  "updatedAt": "20.9.2026, 09:57:30",
+  "updatedAt": "20.9.2026, 10:03:46",
   "leads": [
+    {
+      "Musteri": "0660 3944480",
+      "Telefon": "0660 3944480",
+      "Hizmet": "Baumpflege",
+      "Konum": "Hollabrunn",
+      "Tarih": "20.09.26 10:01",
+      "Mesaj": "P\nPotenzieller Kunde\n8:01 AM\nBitte im Besuch, Gartenarbeit. in Wischathal. Fam. Weingart.. Mfg.",
+      "id": "e9d2741dff034a8b83b7dbcff3c49328",
+      "telegramSent": true
+    },
     {
       "Musteri": "0660 3944480",
       "Telefon": "0660 3944480",
@@ -169,16 +179,6 @@
       "Tarih": "10.09.26 16:59",
       "Mesaj": "-",
       "id": "e50d9f3fa5e0fb85554951122c07dafd",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 1606472",
-      "Telefon": "0660 1606472",
-      "Hizmet": "-",
-      "Konum": "Mistelbach",
-      "Tarih": "09.09.26 18:19",
-      "Mesaj": "-",
-      "id": "91d2dcd086d90f5a9c996d47a7348639",
       "telegramSent": true
     },
     {
