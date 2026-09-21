@@ -1,6 +1,16 @@
 {
-  "updatedAt": "20.9.2026, 10:03:46",
+  "updatedAt": "21.9.2026, 09:39:32",
   "leads": [
+    {
+      "Musteri": "0699 11761583",
+      "Telefon": "0699 11761583",
+      "Hizmet": "Gartenteiche, Springbrunnen und Wasserspiele",
+      "Konum": "Mistelbach",
+      "Tarih": "21.09.26 09:35",
+      "Mesaj": "-",
+      "id": "6efe709a80b71c88f7486e7dba7216d9",
+      "telegramSent": true
+    },
     {
       "Musteri": "0660 3944480",
       "Telefon": "0660 3944480",
@@ -179,16 +189,6 @@
       "Tarih": "10.09.26 16:59",
       "Mesaj": "-",
       "id": "e50d9f3fa5e0fb85554951122c07dafd",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 88468856",
-      "Telefon": "0664 88468856",
-      "Hizmet": "Gartendekorationen",
-      "Konum": "Horn",
-      "Tarih": "09.09.26 11:56",
-      "Mesaj": "-",
-      "id": "9a6eff81c2331b86c995e6e098a9053a",
       "telegramSent": true
     },
     {
