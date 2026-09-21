@@ -1,6 +1,16 @@
 {
-  "updatedAt": "21.9.2026, 14:21:46",
+  "updatedAt": "21.9.2026, 17:12:30",
   "leads": [
+    {
+      "Musteri": "0676 4752425",
+      "Telefon": "0676 4752425",
+      "Hizmet": "-",
+      "Konum": "Hirtenberg",
+      "Tarih": "21.09.26 17:04",
+      "Mesaj": "-",
+      "id": "3ee177342fb733453b6bc7d4dc849e2b",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 5795017",
       "Telefon": "0676 5795017",
@@ -189,16 +199,6 @@
       "Tarih": "11.09.26 20:35",
       "Mesaj": "-",
       "id": "52b5f1279a125931e148da35b7d57792",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 4444957",
-      "Telefon": "0664 4444957",
-      "Hizmet": "-",
-      "Konum": "Hainfeld",
-      "Tarih": "10.09.26 18:05",
-      "Mesaj": "-",
-      "id": "a177849b45967ee67fc26151c0473ff5",
       "telegramSent": true
     }
   ]
