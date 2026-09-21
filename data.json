@@ -1,6 +1,16 @@
 {
-  "updatedAt": "21.9.2026, 09:39:32",
+  "updatedAt": "21.9.2026, 09:48:37",
   "leads": [
+    {
+      "Musteri": "0699 11957994",
+      "Telefon": "0699 11957994",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "21.09.26 09:40",
+      "Mesaj": "-",
+      "id": "0a0fa1c208ea048c22ae4acb6a0a0fcb",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 11761583",
       "Telefon": "0699 11761583",
@@ -189,16 +199,6 @@
       "Tarih": "10.09.26 16:59",
       "Mesaj": "-",
       "id": "e50d9f3fa5e0fb85554951122c07dafd",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 3899469",
-      "Telefon": "0676 3899469",
-      "Hizmet": "-",
-      "Konum": "Gerasdorf bei Wien",
-      "Tarih": "07.09.26 13:15",
-      "Mesaj": "-",
-      "id": "75e5926809837307161ec55196592e24",
       "telegramSent": true
     }
   ]
