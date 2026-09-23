@@ -1,6 +1,16 @@
 {
-  "updatedAt": "22.9.2026, 11:30:30",
+  "updatedAt": "23.9.2026, 08:39:31",
   "leads": [
+    {
+      "Musteri": "0664 3556418",
+      "Telefon": "0664 3556418",
+      "Hizmet": "Winterdienst",
+      "Konum": "Gießhübl",
+      "Tarih": "23.09.26 08:36",
+      "Mesaj": "-",
+      "id": "334543a1958f5ada0c3936d9aa2b9ff1",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 3042884",
       "Telefon": "0676 3042884",
@@ -189,16 +199,6 @@
       "Tarih": "14.09.26 10:08",
       "Mesaj": "-",
       "id": "37ef00d3485c3813794b343b7ff3febb",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 9020050",
-      "Telefon": "0676 9020050",
-      "Hizmet": "-",
-      "Konum": "Hainburg an der Donau",
-      "Tarih": "14.09.26 08:44",
-      "Mesaj": "-",
-      "id": "9080a050277a0f5b9e991b95542a26cf",
       "telegramSent": true
     }
   ]
