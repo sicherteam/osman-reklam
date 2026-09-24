@@ -1,6 +1,16 @@
 {
-  "updatedAt": "24.9.2026, 09:48:37",
+  "updatedAt": "24.9.2026, 10:12:29",
   "leads": [
+    {
+      "Musteri": "0676 5455614",
+      "Telefon": "0676 5455614",
+      "Hizmet": "Baumpflege",
+      "Konum": "Deutsch-Wagram",
+      "Tarih": "24.09.26 10:06",
+      "Mesaj": "-",
+      "id": "c500aebda938808cace6c70a24b337fe",
+      "telegramSent": true
+    },
     {
       "Musteri": "0660 5456324",
       "Telefon": "0660 5456324",
@@ -179,16 +189,6 @@
       "Tarih": "16.09.26 10:32",
       "Mesaj": "M\nManfred Jungmann\n8:32 AM\nGuten Tag wir bräuchten bitte einen Kostenvoranschlag von ihnen für Baum und Sträucher entfernung dann Baumschnitt Heckenschnitt Unkrautentfernung und Rasenschnitt. Würden uns freuen wenn sie uns eine Rückmeldung geben. Ort: 1220 Wien Hermann-Gebauer-Strasse 4. Firma : Gim Shopping Center GmBH Name : Homeland MfG Jungmann Manfred Haustechniker",
       "id": "1aa384eccc10075c8ae0e3106e7365ef",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 5281737",
-      "Telefon": "0664 5281737",
-      "Hizmet": "-",
-      "Konum": "Wiener Neustadt",
-      "Tarih": "16.09.26 10:08",
-      "Mesaj": "-",
-      "id": "c6dea51407c0e8a82d6cbf6915f9f6fa",
       "telegramSent": true
     },
     {
