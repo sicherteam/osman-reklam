@@ -1,6 +1,16 @@
 {
-  "updatedAt": "24.9.2026, 10:12:29",
+  "updatedAt": "24.9.2026, 11:48:51",
   "leads": [
+    {
+      "Musteri": "0664 2247245",
+      "Telefon": "0664 2247245",
+      "Hizmet": "Winterdienst",
+      "Konum": "Perchtoldsdorf",
+      "Tarih": "24.09.26 11:39",
+      "Mesaj": "-",
+      "id": "83ecbcf1a4d569bd8f5cf3afea501b5f",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 5455614",
       "Telefon": "0676 5455614",
@@ -159,16 +169,6 @@
       "Tarih": "16.09.26 14:46",
       "Mesaj": "-",
       "id": "fa204b2c3ded800b2010f80cf648b928",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 8143661",
-      "Telefon": "0664 8143661",
-      "Hizmet": "Winterdienst",
-      "Konum": "Baden",
-      "Tarih": "16.09.26 12:44",
-      "Mesaj": "-",
-      "id": "0ae860595ac32ff3d16a0b10da9dc3ee",
       "telegramSent": true
     },
     {
