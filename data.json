@@ -1,6 +1,16 @@
 {
-  "updatedAt": "25.9.2026, 07:57:36",
+  "updatedAt": "25.9.2026, 09:30:37",
   "leads": [
+    {
+      "Musteri": "0650 4146053",
+      "Telefon": "0650 4146053",
+      "Hizmet": "Baumpflege",
+      "Konum": "Winzendorf-Muthmannsdorf",
+      "Tarih": "25.09.26 09:21",
+      "Mesaj": "-",
+      "id": "f7b8627e8f6a42164eb27ba07b853a6f",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 5013929",
       "Telefon": "0664 5013929",
@@ -189,16 +199,6 @@
       "Tarih": "16.09.26 12:26",
       "Mesaj": "-",
       "id": "32e04d792a1fc7d0e5d872beb5e98efb",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "Manfred Jungmann",
-      "Telefon": "0660 2225614",
-      "Hizmet": "Schneiden der Hecke",
-      "Konum": "Wien",
-      "Tarih": "16.09.26 10:32",
-      "Mesaj": "M\nManfred Jungmann\n8:32 AM\nGuten Tag wir bräuchten bitte einen Kostenvoranschlag von ihnen für Baum und Sträucher entfernung dann Baumschnitt Heckenschnitt Unkrautentfernung und Rasenschnitt. Würden uns freuen wenn sie uns eine Rückmeldung geben. Ort: 1220 Wien Hermann-Gebauer-Strasse 4. Firma : Gim Shopping Center GmBH Name : Homeland MfG Jungmann Manfred Haustechniker",
-      "id": "1aa384eccc10075c8ae0e3106e7365ef",
       "telegramSent": true
     }
   ]
