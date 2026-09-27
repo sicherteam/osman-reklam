@@ -1,6 +1,16 @@
 {
-  "updatedAt": "26.9.2026, 15:48:35",
+  "updatedAt": "27.9.2026, 07:39:27",
   "leads": [
+    {
+      "Musteri": "0676 3007596",
+      "Telefon": "0676 3007596",
+      "Hizmet": "-",
+      "Konum": "Retz",
+      "Tarih": "27.09.26 07:36",
+      "Mesaj": "-",
+      "id": "09dea5f1c8c46ffad1e7d3368e44d3b3",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 11604513",
       "Telefon": "0699 11604513",
@@ -189,16 +199,6 @@
       "Tarih": "18.09.26 13:03",
       "Mesaj": "-",
       "id": "51216b220eda0b8b6b2355d0d73eb4d0",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 1858543",
-      "Telefon": "0664 1858543",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "16.09.26 15:34",
-      "Mesaj": "-",
-      "id": "9ffe0becf7a94c937a40d63e7a9d2d68",
       "telegramSent": true
     }
   ]
