@@ -1,6 +1,16 @@
 {
-  "updatedAt": "28.9.2026, 09:57:37",
+  "updatedAt": "28.9.2026, 14:30:34",
   "leads": [
+    {
+      "Musteri": "0650 8269643",
+      "Telefon": "0650 8269643",
+      "Hizmet": "Entsorgung von Gartenabfällen",
+      "Konum": "Perchtoldsdorf",
+      "Tarih": "28.09.26 14:26",
+      "Mesaj": "-",
+      "id": "59c785c5ddb9ca95b979ed45a0dcf4c2",
+      "telegramSent": true
+    },
     {
       "Musteri": "0680 3044385",
       "Telefon": "0680 3044385",
@@ -189,16 +199,6 @@
       "Tarih": "21.09.26 09:40",
       "Mesaj": "-",
       "id": "0a0fa1c208ea048c22ae4acb6a0a0fcb",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 3944480",
-      "Telefon": "0660 3944480",
-      "Hizmet": "Baumpflege",
-      "Konum": "Hollabrunn",
-      "Tarih": "20.09.26 10:01",
-      "Mesaj": "P\nPotenzieller Kunde\n8:01 AM\nBitte im Besuch, Gartenarbeit. in Wischathal. Fam. Weingart.. Mfg.",
-      "id": "e9d2741dff034a8b83b7dbcff3c49328",
       "telegramSent": true
     }
   ]
