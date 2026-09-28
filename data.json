@@ -1,6 +1,16 @@
 {
-  "updatedAt": "27.9.2026, 11:03:29",
+  "updatedAt": "28.9.2026, 09:57:37",
   "leads": [
+    {
+      "Musteri": "0680 3044385",
+      "Telefon": "0680 3044385",
+      "Hizmet": "-",
+      "Konum": "Stockerau",
+      "Tarih": "28.09.26 09:48",
+      "Mesaj": "-",
+      "id": "94525938e83b7cc28a5faca55d8fc324",
+      "telegramSent": true
+    },
     {
       "Musteri": "0660 2964607",
       "Telefon": "0660 2964607",
@@ -179,16 +189,6 @@
       "Tarih": "21.09.26 09:40",
       "Mesaj": "-",
       "id": "0a0fa1c208ea048c22ae4acb6a0a0fcb",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 11761583",
-      "Telefon": "0699 11761583",
-      "Hizmet": "Gartenteiche, Springbrunnen und Wasserspiele",
-      "Konum": "Mistelbach",
-      "Tarih": "21.09.26 09:35",
-      "Mesaj": "-",
-      "id": "6efe709a80b71c88f7486e7dba7216d9",
       "telegramSent": true
     },
     {
