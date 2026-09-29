@@ -1,6 +1,16 @@
 {
-  "updatedAt": "29.9.2026, 08:57:55",
+  "updatedAt": "29.9.2026, 10:03:35",
   "leads": [
+    {
+      "Musteri": "0676 6485539",
+      "Telefon": "0676 6485539",
+      "Hizmet": "-",
+      "Konum": "Berndorf",
+      "Tarih": "29.09.26 09:59",
+      "Mesaj": "-",
+      "id": "3afd5302c65ec4c8507cdd9d579d94a9",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 4786011",
       "Telefon": "0676 4786011",
@@ -179,16 +189,6 @@
       "Tarih": "21.09.26 17:04",
       "Mesaj": "-",
       "id": "3ee177342fb733453b6bc7d4dc849e2b",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 5795017",
-      "Telefon": "0676 5795017",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "21.09.26 14:14",
-      "Mesaj": "-",
-      "id": "044504dfd1cd74f76a825fda85648fcc",
       "telegramSent": true
     },
     {
