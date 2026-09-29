@@ -1,6 +1,16 @@
 {
-  "updatedAt": "28.9.2026, 14:30:34",
+  "updatedAt": "29.9.2026, 08:57:55",
   "leads": [
+    {
+      "Musteri": "0676 4786011",
+      "Telefon": "0676 4786011",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "29.09.26 08:52",
+      "Mesaj": "-",
+      "id": "cf50a86a6b2622743f2edcdcd134d507",
+      "telegramSent": true
+    },
     {
       "Musteri": "0650 8269643",
       "Telefon": "0650 8269643",
@@ -159,16 +169,6 @@
       "Tarih": "22.09.26 11:19",
       "Mesaj": "-",
       "id": "b84dc973c823cd60649433e07d7dad3f",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 4782190",
-      "Telefon": "0676 4782190",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "21.09.26 19:15",
-      "Mesaj": "-",
-      "id": "5f360fbced3cd89fc357b993fda4bf6d",
       "telegramSent": true
     },
     {
