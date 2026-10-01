@@ -1,6 +1,26 @@
 {
-  "updatedAt": "1.10.2026, 16:39:57",
+  "updatedAt": "1.10.2026, 18:12:43",
   "leads": [
+    {
+      "Musteri": "0664 1140698",
+      "Telefon": "0664 1140698",
+      "Hizmet": "Schneiden der Hecke",
+      "Konum": "Gemeinde Bruck an der Leitha",
+      "Tarih": "01.10.26 18:06",
+      "Mesaj": "-",
+      "id": "efd6ddb617d3c2fcb17e77ffb787ced1",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "342978818",
+      "Telefon": "342978818",
+      "Hizmet": "Schneiden der Hecke",
+      "Konum": "Gemeinde Bruck an der Leitha",
+      "Tarih": "01.10.26 18:03",
+      "Mesaj": "P\nPotenzieller Kunde\n4:03 PM\n Eingehender Anruf",
+      "id": "76f164e78fd00dbe61dcf750cf242b5a",
+      "telegramSent": true
+    },
     {
       "Musteri": "0650 3606099",
       "Telefon": "0650 3606099",
@@ -159,26 +179,6 @@
       "Tarih": "27.09.26 07:36",
       "Mesaj": "-",
       "id": "09dea5f1c8c46ffad1e7d3368e44d3b3",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 11604513",
-      "Telefon": "0699 11604513",
-      "Hizmet": "Baumpflege",
-      "Konum": "Mistelbach",
-      "Tarih": "26.09.26 15:41",
-      "Mesaj": "-",
-      "id": "70b9624cc5d1013b20285b58f20673d3",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 1966703",
-      "Telefon": "0660 1966703",
-      "Hizmet": "Steinmetzarbeiten",
-      "Konum": "Wien",
-      "Tarih": "25.09.26 15:34",
-      "Mesaj": "-",
-      "id": "bcf49ac4eb762d8b55a9a03c80970844",
       "telegramSent": true
     },
     {
