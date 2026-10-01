@@ -1,6 +1,16 @@
 {
-  "updatedAt": "1.10.2026, 12:30:37",
+  "updatedAt": "1.10.2026, 16:39:57",
   "leads": [
+    {
+      "Musteri": "0650 3606099",
+      "Telefon": "0650 3606099",
+      "Hizmet": "Rollrasen verlegen",
+      "Konum": "Wiener Neustadt",
+      "Tarih": "01.10.26 16:35",
+      "Mesaj": "P\nPotenzieller Kunde\n2:35 PM\nGuten Tag Ich habe kleinen 40 m2 Garten der neuen Rasen, Beet Einfassung und Gestaltung benötigt. Marion Lackner 2625 Schwarzau Ich hätte gerne einen Kostenvoranschlag",
+      "id": "255f279fa2434824a1adf26b6dfde0a1",
+      "telegramSent": true
+    },
     {
       "Musteri": "0650 8491595",
       "Telefon": "0650 8491595",
@@ -169,16 +179,6 @@
       "Tarih": "25.09.26 15:34",
       "Mesaj": "-",
       "id": "bcf49ac4eb762d8b55a9a03c80970844",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0650 4146053",
-      "Telefon": "0650 4146053",
-      "Hizmet": "Baumpflege",
-      "Konum": "Winzendorf-Muthmannsdorf",
-      "Tarih": "25.09.26 09:21",
-      "Mesaj": "-",
-      "id": "f7b8627e8f6a42164eb27ba07b853a6f",
       "telegramSent": true
     },
     {
