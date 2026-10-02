@@ -1,6 +1,16 @@
 {
-  "updatedAt": "1.10.2026, 18:12:43",
+  "updatedAt": "2.10.2026, 08:30:39",
   "leads": [
+    {
+      "Musteri": "0650 9271766",
+      "Telefon": "0650 9271766",
+      "Hizmet": "Zaunbau",
+      "Konum": "Wien",
+      "Tarih": "02.10.26 08:21",
+      "Mesaj": "-",
+      "id": "b157d5a97050fa5262fecee2901d7241",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 1140698",
       "Telefon": "0664 1140698",
@@ -149,16 +159,6 @@
       "Tarih": "28.09.26 09:48",
       "Mesaj": "-",
       "id": "94525938e83b7cc28a5faca55d8fc324",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 2964607",
-      "Telefon": "0660 2964607",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "27.09.26 10:57",
-      "Mesaj": "-",
-      "id": "732054058004183c0208291c6dc5a025",
       "telegramSent": true
     },
     {
