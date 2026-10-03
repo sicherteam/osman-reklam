@@ -1,6 +1,16 @@
 {
-  "updatedAt": "3.10.2026, 11:30:36",
+  "updatedAt": "3.10.2026, 14:39:58",
   "leads": [
+    {
+      "Musteri": "343386263",
+      "Telefon": "343386263",
+      "Hizmet": "Zaunbau",
+      "Konum": "Klosterneuburg",
+      "Tarih": "03.10.26 14:33",
+      "Mesaj": "P\nPotenzieller Kunde\n12:33 PM\nIch finde leider nirgends eine Adresse von euch. Ich würde einen Maschendrahtzaun 2m hoch, 25 m lang brauchen. Was kann das ca. kosten? LG. M. Feit",
+      "id": "168fe2cc9e9c7f3dd9b3e31b386cb4f3",
+      "telegramSent": true
+    },
     {
       "Musteri": "0660 5619721",
       "Telefon": "0660 5619721",
@@ -189,16 +199,6 @@
       "Tarih": "28.09.26 09:48",
       "Mesaj": "-",
       "id": "94525938e83b7cc28a5faca55d8fc324",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 5013929",
-      "Telefon": "0664 5013929",
-      "Hizmet": "Baumpflege",
-      "Konum": "Hollabrunn",
-      "Tarih": "25.09.26 07:52",
-      "Mesaj": "-",
-      "id": "97743fe37af9c20eef53ba2788afa0a2",
       "telegramSent": true
     }
   ]
