@@ -1,6 +1,16 @@
 {
-  "updatedAt": "3.10.2026, 10:57:39",
+  "updatedAt": "3.10.2026, 11:30:36",
   "leads": [
+    {
+      "Musteri": "0660 5619721",
+      "Telefon": "0660 5619721",
+      "Hizmet": "Baumpflege",
+      "Konum": "Stockerau",
+      "Tarih": "03.10.26 11:30",
+      "Mesaj": "P\nPotenzieller Kunde\n9:30 AM\nHallo! Wir haben 3 Obstbäume, die zurückgeschnitten und gepflegt gehören. Einer davon (Marillenbaum) ist sehr groß und eine Seite abgestorben. Wollen Sie sich unseren Garten (2000 Stockerau) für einen Kostenvoranschlag anschauen kommen? Liebe Grüße, Astrid",
+      "id": "b3745cf2259c4100ffb9e5cebcda5cb1",
+      "telegramSent": true
+    },
     {
       "Musteri": "01 8651043",
       "Telefon": "01 8651043",
@@ -179,16 +189,6 @@
       "Tarih": "28.09.26 09:48",
       "Mesaj": "-",
       "id": "94525938e83b7cc28a5faca55d8fc324",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 3007596",
-      "Telefon": "0676 3007596",
-      "Hizmet": "-",
-      "Konum": "Retz",
-      "Tarih": "27.09.26 07:36",
-      "Mesaj": "-",
-      "id": "09dea5f1c8c46ffad1e7d3368e44d3b3",
       "telegramSent": true
     },
     {
