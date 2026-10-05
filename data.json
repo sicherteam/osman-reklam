@@ -1,6 +1,16 @@
 {
-  "updatedAt": "5.10.2026, 10:48:39",
+  "updatedAt": "5.10.2026, 12:39:52",
   "leads": [
+    {
+      "Musteri": "0664 1608353",
+      "Telefon": "0664 1608353",
+      "Hizmet": "-",
+      "Konum": "Eichgraben",
+      "Tarih": "05.10.26 12:32",
+      "Mesaj": "-",
+      "id": "fd38186ad139ca47aed0c2f9ba1de1dc",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 11070601",
       "Telefon": "0699 11070601",
@@ -189,16 +199,6 @@
       "Tarih": "29.09.26 10:49",
       "Mesaj": "-",
       "id": "16535a87defe038e9b348249b08d3eeb",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 6485539",
-      "Telefon": "0676 6485539",
-      "Hizmet": "-",
-      "Konum": "Berndorf",
-      "Tarih": "29.09.26 09:59",
-      "Mesaj": "-",
-      "id": "3afd5302c65ec4c8507cdd9d579d94a9",
       "telegramSent": true
     }
   ]
