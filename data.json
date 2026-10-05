@@ -1,6 +1,16 @@
 {
-  "updatedAt": "5.10.2026, 08:48:58",
+  "updatedAt": "5.10.2026, 10:48:39",
   "leads": [
+    {
+      "Musteri": "0699 11070601",
+      "Telefon": "0699 11070601",
+      "Hizmet": "Wurzelfräsen",
+      "Konum": "Traismauer",
+      "Tarih": "05.10.26 10:40",
+      "Mesaj": "-",
+      "id": "f23bc1f9a8d042e0ce92388fb01cfd28",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 4274183",
       "Telefon": "0676 4274183",
@@ -189,16 +199,6 @@
       "Tarih": "29.09.26 09:59",
       "Mesaj": "-",
       "id": "3afd5302c65ec4c8507cdd9d579d94a9",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 4786011",
-      "Telefon": "0676 4786011",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "29.09.26 08:52",
-      "Mesaj": "-",
-      "id": "cf50a86a6b2622743f2edcdcd134d507",
       "telegramSent": true
     }
   ]
