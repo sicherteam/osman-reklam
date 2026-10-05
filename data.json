@@ -1,6 +1,16 @@
 {
-  "updatedAt": "5.10.2026, 12:39:52",
+  "updatedAt": "5.10.2026, 13:03:29",
   "leads": [
+    {
+      "Musteri": "0650 8491392",
+      "Telefon": "0650 8491392",
+      "Hizmet": "Baumpflege",
+      "Konum": "Judenau-Baumgarten",
+      "Tarih": "05.10.26 12:57",
+      "Mesaj": "-",
+      "id": "f2ad7644fafcfd946dc796a9568e5071",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 1608353",
       "Telefon": "0664 1608353",
@@ -189,16 +199,6 @@
       "Tarih": "29.09.26 14:05",
       "Mesaj": "-",
       "id": "3716eb4faf099cfb5088cef40ee95a32",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 6064339",
-      "Telefon": "0676 6064339",
-      "Hizmet": "Baumpflege",
-      "Konum": "Wimpassing im Schwarzatale",
-      "Tarih": "29.09.26 10:49",
-      "Mesaj": "-",
-      "id": "16535a87defe038e9b348249b08d3eeb",
       "telegramSent": true
     }
   ]
