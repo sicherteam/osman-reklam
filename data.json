@@ -1,6 +1,16 @@
 {
-  "updatedAt": "4.10.2026, 14:21:41",
+  "updatedAt": "5.10.2026, 08:48:58",
   "leads": [
+    {
+      "Musteri": "0676 4274183",
+      "Telefon": "0676 4274183",
+      "Hizmet": "-",
+      "Konum": "Mistelbach",
+      "Tarih": "05.10.26 08:41",
+      "Mesaj": "-",
+      "id": "b9df736990beee0d48eeaed78c72cea0",
+      "telegramSent": true
+    },
     {
       "Musteri": "0677 64731672",
       "Telefon": "0677 64731672",
@@ -189,16 +199,6 @@
       "Tarih": "29.09.26 08:52",
       "Mesaj": "-",
       "id": "cf50a86a6b2622743f2edcdcd134d507",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0650 8269643",
-      "Telefon": "0650 8269643",
-      "Hizmet": "Entsorgung von Gartenabfällen",
-      "Konum": "Perchtoldsdorf",
-      "Tarih": "28.09.26 14:26",
-      "Mesaj": "-",
-      "id": "59c785c5ddb9ca95b979ed45a0dcf4c2",
       "telegramSent": true
     }
   ]
