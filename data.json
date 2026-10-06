@@ -1,5 +1,5 @@
 {
-  "updatedAt": "6.10.2026, 16:57:37",
+  "updatedAt": "6.10.2026, 18:03:41",
   "leads": [
     {
       "Musteri": "0664 3867324",
@@ -192,13 +192,13 @@
       "telegramSent": true
     },
     {
-      "Musteri": "342978818",
-      "Telefon": "342978818",
-      "Hizmet": "Schneiden der Hecke",
-      "Konum": "Gemeinde Bruck an der Leitha",
-      "Tarih": "01.10.26 18:03",
-      "Mesaj": "P\nPotenzieller Kunde\n4:03 PM\n Eingehender Anruf",
-      "id": "76f164e78fd00dbe61dcf750cf242b5a",
+      "Musteri": "0681 20658365",
+      "Telefon": "0681 20658365",
+      "Hizmet": "Zaunbau",
+      "Konum": "Mistelbach",
+      "Tarih": "29.09.26 16:16",
+      "Mesaj": "-",
+      "id": "caad61ffd7c84bac9a4b7cf1227b5844",
       "telegramSent": true
     }
   ]
