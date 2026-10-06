@@ -1,6 +1,16 @@
 {
-  "updatedAt": "6.10.2026, 09:39:47",
+  "updatedAt": "6.10.2026, 14:30:32",
   "leads": [
+    {
+      "Musteri": "0676 82537140",
+      "Telefon": "0676 82537140",
+      "Hizmet": "-",
+      "Konum": "Traismauer",
+      "Tarih": "06.10.26 14:25",
+      "Mesaj": "-",
+      "id": "f28d14875619ad26f3ed1b7563dba593",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 18225734",
       "Telefon": "0699 18225734",
@@ -189,16 +199,6 @@
       "Tarih": "01.10.26 12:24",
       "Mesaj": "-",
       "id": "64dfd114e2778323995542c140564cc5",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 1987660",
-      "Telefon": "0660 1987660",
-      "Hizmet": "-",
-      "Konum": "Ebreichsdorf",
-      "Tarih": "01.10.26 11:27",
-      "Mesaj": "-",
-      "id": "328904b29383c79eab328f415b6f257d",
       "telegramSent": true
     }
   ]
