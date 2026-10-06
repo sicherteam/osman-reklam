@@ -1,6 +1,16 @@
 {
-  "updatedAt": "6.10.2026, 14:30:32",
+  "updatedAt": "6.10.2026, 16:12:31",
   "leads": [
+    {
+      "Musteri": "0650 8427788",
+      "Telefon": "0650 8427788",
+      "Hizmet": "Schneiden der Hecke",
+      "Konum": "Klosterneuburg",
+      "Tarih": "06.10.26 16:04",
+      "Mesaj": "-",
+      "id": "93bb66157a944b03743e49195c7c8df5",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 82537140",
       "Telefon": "0676 82537140",
@@ -189,16 +199,6 @@
       "Tarih": "01.10.26 16:35",
       "Mesaj": "P\nPotenzieller Kunde\n2:35 PM\nGuten Tag Ich habe kleinen 40 m2 Garten der neuen Rasen, Beet Einfassung und Gestaltung benötigt. Marion Lackner 2625 Schwarzau Ich hätte gerne einen Kostenvoranschlag",
       "id": "255f279fa2434824a1adf26b6dfde0a1",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0650 8491595",
-      "Telefon": "0650 8491595",
-      "Hizmet": "-",
-      "Konum": "Gerasdorf bei Wien",
-      "Tarih": "01.10.26 12:24",
-      "Mesaj": "-",
-      "id": "64dfd114e2778323995542c140564cc5",
       "telegramSent": true
     }
   ]
