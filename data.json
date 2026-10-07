@@ -1,6 +1,16 @@
 {
-  "updatedAt": "6.10.2026, 18:03:41",
+  "updatedAt": "7.10.2026, 08:03:31",
   "leads": [
+    {
+      "Musteri": "0660 7380058",
+      "Telefon": "0660 7380058",
+      "Hizmet": "-",
+      "Konum": "Mödling",
+      "Tarih": "07.10.26 07:57",
+      "Mesaj": "-",
+      "id": "fa2851030aac2212dcdfd2aca436d149",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 3867324",
       "Telefon": "0664 3867324",
@@ -179,16 +189,6 @@
       "Tarih": "02.10.26 08:21",
       "Mesaj": "-",
       "id": "b157d5a97050fa5262fecee2901d7241",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 1140698",
-      "Telefon": "0664 1140698",
-      "Hizmet": "Schneiden der Hecke",
-      "Konum": "Gemeinde Bruck an der Leitha",
-      "Tarih": "01.10.26 18:06",
-      "Mesaj": "-",
-      "id": "efd6ddb617d3c2fcb17e77ffb787ced1",
       "telegramSent": true
     },
     {
