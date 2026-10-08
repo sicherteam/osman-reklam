@@ -1,6 +1,16 @@
 {
-  "updatedAt": "7.10.2026, 15:30:38",
+  "updatedAt": "8.10.2026, 08:48:38",
   "leads": [
+    {
+      "Musteri": "0664 73904092",
+      "Telefon": "0664 73904092",
+      "Hizmet": "Rollrasen verlegen",
+      "Konum": "Mistelbach",
+      "Tarih": "08.10.26 08:45",
+      "Mesaj": "-",
+      "id": "f1d420cf61a35a9f846f1d4a37e4252d",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 10078538",
       "Telefon": "0699 10078538",
@@ -179,16 +189,6 @@
       "Tarih": "03.10.26 11:30",
       "Mesaj": "P\nPotenzieller Kunde\n9:30 AM\nHallo! Wir haben 3 Obstbäume, die zurückgeschnitten und gepflegt gehören. Einer davon (Marillenbaum) ist sehr groß und eine Seite abgestorben. Wollen Sie sich unseren Garten (2000 Stockerau) für einen Kostenvoranschlag anschauen kommen? Liebe Grüße, Astrid",
       "id": "b3745cf2259c4100ffb9e5cebcda5cb1",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "01 8651043",
-      "Telefon": "01 8651043",
-      "Hizmet": "Kunstrasenverlegung",
-      "Konum": "Brunn am Gebirge",
-      "Tarih": "03.10.26 10:49",
-      "Mesaj": "-",
-      "id": "d64e2287c74a7b4dfdece16560bc3012",
       "telegramSent": true
     },
     {
