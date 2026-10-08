@@ -1,6 +1,16 @@
 {
-  "updatedAt": "8.10.2026, 08:48:38",
+  "updatedAt": "8.10.2026, 10:30:30",
   "leads": [
+    {
+      "Musteri": "0699 10133343",
+      "Telefon": "0699 10133343",
+      "Hizmet": "Winterdienst",
+      "Konum": "Puchberg am Schneeberg",
+      "Tarih": "08.10.26 10:25",
+      "Mesaj": "-",
+      "id": "882629c1c52eb04f2dc0ac76ae645497",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 73904092",
       "Telefon": "0664 73904092",
@@ -179,16 +189,6 @@
       "Tarih": "03.10.26 14:33",
       "Mesaj": "P\nPotenzieller Kunde\n12:33 PM\nIch finde leider nirgends eine Adresse von euch. Ich würde einen Maschendrahtzaun 2m hoch, 25 m lang brauchen. Was kann das ca. kosten? LG. M. Feit",
       "id": "168fe2cc9e9c7f3dd9b3e31b386cb4f3",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0660 5619721",
-      "Telefon": "0660 5619721",
-      "Hizmet": "Baumpflege",
-      "Konum": "Stockerau",
-      "Tarih": "03.10.26 11:30",
-      "Mesaj": "P\nPotenzieller Kunde\n9:30 AM\nHallo! Wir haben 3 Obstbäume, die zurückgeschnitten und gepflegt gehören. Einer davon (Marillenbaum) ist sehr groß und eine Seite abgestorben. Wollen Sie sich unseren Garten (2000 Stockerau) für einen Kostenvoranschlag anschauen kommen? Liebe Grüße, Astrid",
-      "id": "b3745cf2259c4100ffb9e5cebcda5cb1",
       "telegramSent": true
     },
     {
