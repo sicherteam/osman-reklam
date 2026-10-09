@@ -1,6 +1,16 @@
 {
-  "updatedAt": "8.10.2026, 10:39:38",
+  "updatedAt": "9.10.2026, 11:12:34",
   "leads": [
+    {
+      "Musteri": "0699 18100544",
+      "Telefon": "0699 18100544",
+      "Hizmet": "Baumpflege",
+      "Konum": "Schwechat",
+      "Tarih": "09.10.26 11:03",
+      "Mesaj": "-",
+      "id": "2b45e254a534fb8ceb93148b9d68bf67",
+      "telegramSent": true
+    },
     {
       "Musteri": "0650 7314276",
       "Telefon": "0650 7314276",
@@ -179,16 +189,6 @@
       "Tarih": "05.10.26 08:41",
       "Mesaj": "-",
       "id": "b9df736990beee0d48eeaed78c72cea0",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "343386263",
-      "Telefon": "343386263",
-      "Hizmet": "Zaunbau",
-      "Konum": "Klosterneuburg",
-      "Tarih": "03.10.26 14:33",
-      "Mesaj": "P\nPotenzieller Kunde\n12:33 PM\nIch finde leider nirgends eine Adresse von euch. Ich würde einen Maschendrahtzaun 2m hoch, 25 m lang brauchen. Was kann das ca. kosten? LG. M. Feit",
-      "id": "168fe2cc9e9c7f3dd9b3e31b386cb4f3",
       "telegramSent": true
     },
     {
