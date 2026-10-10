@@ -1,6 +1,16 @@
 {
-  "updatedAt": "9.10.2026, 15:57:36",
+  "updatedAt": "10.10.2026, 17:22:04",
   "leads": [
+    {
+      "Musteri": "0664 5231240",
+      "Telefon": "0664 5231240",
+      "Hizmet": "-",
+      "Konum": "Breitenau am Steinfelde",
+      "Tarih": "10.10.26 17:12",
+      "Mesaj": "-",
+      "id": "81cb4ec30ec2d3e51b4241cd0cebf8b3",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 12816514",
       "Telefon": "0699 12816514",
@@ -179,16 +189,6 @@
       "Tarih": "05.10.26 10:40",
       "Mesaj": "-",
       "id": "f23bc1f9a8d042e0ce92388fb01cfd28",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 4274183",
-      "Telefon": "0676 4274183",
-      "Hizmet": "-",
-      "Konum": "Mistelbach",
-      "Tarih": "05.10.26 08:41",
-      "Mesaj": "-",
-      "id": "b9df736990beee0d48eeaed78c72cea0",
       "telegramSent": true
     },
     {
