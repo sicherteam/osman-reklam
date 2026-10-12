@@ -1,6 +1,16 @@
 {
-  "updatedAt": "11.10.2026, 09:39:33",
+  "updatedAt": "12.10.2026, 09:30:35",
   "leads": [
+    {
+      "Musteri": "0680 3022080",
+      "Telefon": "0680 3022080",
+      "Hizmet": "Baumfällen",
+      "Konum": "Rabenstein an der Pielach",
+      "Tarih": "12.10.26 09:21",
+      "Mesaj": "-",
+      "id": "d775611a5a92eb884813ae6f6cab1d5d",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 3245966",
       "Telefon": "0664 3245966",
@@ -179,16 +189,6 @@
       "Tarih": "05.10.26 12:57",
       "Mesaj": "-",
       "id": "f2ad7644fafcfd946dc796a9568e5071",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 1608353",
-      "Telefon": "0664 1608353",
-      "Hizmet": "-",
-      "Konum": "Eichgraben",
-      "Tarih": "05.10.26 12:32",
-      "Mesaj": "-",
-      "id": "fd38186ad139ca47aed0c2f9ba1de1dc",
       "telegramSent": true
     },
     {
