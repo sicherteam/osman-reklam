@@ -1,6 +1,16 @@
 {
-  "updatedAt": "13.10.2026, 12:21:36",
+  "updatedAt": "13.10.2026, 14:30:29",
   "leads": [
+    {
+      "Musteri": "0664 4578516",
+      "Telefon": "0664 4578516",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "13.10.26 14:27",
+      "Mesaj": "-",
+      "id": "bec562904d02daf974caedb4d26acab2",
+      "telegramSent": true
+    },
     {
       "Musteri": "0681 84106000",
       "Telefon": "0681 84106000",
@@ -179,16 +189,6 @@
       "Tarih": "06.10.26 14:25",
       "Mesaj": "-",
       "id": "f28d14875619ad26f3ed1b7563dba593",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 18225734",
-      "Telefon": "0699 18225734",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "06.10.26 09:27",
-      "Mesaj": "-",
-      "id": "6b9691cfe15a5fa62afef86f836d8923",
       "telegramSent": true
     },
     {
