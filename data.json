@@ -1,5 +1,5 @@
 {
-  "updatedAt": "13.10.2026, 14:30:29",
+  "updatedAt": "14.10.2026, 08:21:42",
   "leads": [
     {
       "Musteri": "0664 4578516",
@@ -142,16 +142,6 @@
       "telegramSent": true
     },
     {
-      "Musteri": "0676 5486008",
-      "Telefon": "0676 5486008",
-      "Hizmet": "Baumpflege",
-      "Konum": "Mistelbach",
-      "Tarih": "07.10.26 10:22",
-      "Mesaj": "-",
-      "id": "8a1c45392b04e4547ffae675fbf26f38",
-      "telegramSent": true
-    },
-    {
       "Musteri": "0660 7380058",
       "Telefon": "0660 7380058",
       "Hizmet": "-",
@@ -199,6 +189,16 @@
       "Tarih": "05.10.26 15:48",
       "Mesaj": "-",
       "id": "86664a3d4b50d38cd5d59192ed821ddd",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0676 4274183",
+      "Telefon": "0676 4274183",
+      "Hizmet": "-",
+      "Konum": "Mistelbach",
+      "Tarih": "05.10.26 08:41",
+      "Mesaj": "-",
+      "id": "b9df736990beee0d48eeaed78c72cea0",
       "telegramSent": true
     }
   ]
