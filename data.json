@@ -1,6 +1,16 @@
 {
-  "updatedAt": "14.10.2026, 08:21:42",
+  "updatedAt": "14.10.2026, 14:39:33",
   "leads": [
+    {
+      "Musteri": "0699 10428333",
+      "Telefon": "0699 10428333",
+      "Hizmet": "-",
+      "Konum": "Strasshof an der Nordbahn",
+      "Tarih": "14.10.26 14:31",
+      "Mesaj": "-",
+      "id": "4704a8bafc2c438103c100b3462b909c",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 4578516",
       "Telefon": "0664 4578516",
@@ -169,16 +179,6 @@
       "Tarih": "06.10.26 16:04",
       "Mesaj": "-",
       "id": "93bb66157a944b03743e49195c7c8df5",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 82537140",
-      "Telefon": "0676 82537140",
-      "Hizmet": "-",
-      "Konum": "Traismauer",
-      "Tarih": "06.10.26 14:25",
-      "Mesaj": "-",
-      "id": "f28d14875619ad26f3ed1b7563dba593",
       "telegramSent": true
     },
     {
