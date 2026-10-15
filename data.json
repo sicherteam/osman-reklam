@@ -1,6 +1,16 @@
 {
-  "updatedAt": "15.10.2026, 13:48:36",
+  "updatedAt": "15.10.2026, 14:03:29",
   "leads": [
+    {
+      "Musteri": "0664 3328286",
+      "Telefon": "0664 3328286",
+      "Hizmet": "Baumpflege",
+      "Konum": "Wiener Neustadt",
+      "Tarih": "15.10.26 13:57",
+      "Mesaj": "-",
+      "id": "8dd9616a756ab3ee808ffe0f668ea0a7",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 5561591",
       "Telefon": "0676 5561591",
@@ -139,16 +149,6 @@
       "Tarih": "08.10.26 10:37",
       "Mesaj": "-",
       "id": "1f0d34a7f5f5962831834d9f300ca605",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 10133343",
-      "Telefon": "0699 10133343",
-      "Hizmet": "Winterdienst",
-      "Konum": "Puchberg am Schneeberg",
-      "Tarih": "08.10.26 10:25",
-      "Mesaj": "-",
-      "id": "882629c1c52eb04f2dc0ac76ae645497",
       "telegramSent": true
     },
     {
