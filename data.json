@@ -1,6 +1,16 @@
 {
-  "updatedAt": "15.10.2026, 14:03:29",
+  "updatedAt": "15.10.2026, 15:48:59",
   "leads": [
+    {
+      "Musteri": "0664 3338509",
+      "Telefon": "0664 3338509",
+      "Hizmet": "-",
+      "Konum": "Langenzersdorf",
+      "Tarih": "15.10.26 15:45",
+      "Mesaj": "P\nPotenzieller Kunde\n1:45 PM\nIch bitte um einen Kostenvoranschlag für Hecken schneiden in der Seeschlacht 149, 2103 Langenzersdorf und diverse schneidarbeiten mit Abtransport. Bitte um einen Termin am 20.10.26 wenn möglich. Mit freundlichen Grüßen Gerhard Klick",
+      "id": "9d5beab382ec893f77764d2efdc22757",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 3328286",
       "Telefon": "0664 3328286",
@@ -139,16 +149,6 @@
       "Tarih": "09.10.26 11:03",
       "Mesaj": "-",
       "id": "2b45e254a534fb8ceb93148b9d68bf67",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0650 7314276",
-      "Telefon": "0650 7314276",
-      "Hizmet": "-",
-      "Konum": "Ternitz",
-      "Tarih": "08.10.26 10:37",
-      "Mesaj": "-",
-      "id": "1f0d34a7f5f5962831834d9f300ca605",
       "telegramSent": true
     },
     {
