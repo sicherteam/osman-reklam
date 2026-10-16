@@ -1,6 +1,16 @@
 {
-  "updatedAt": "16.10.2026, 09:39:35",
+  "updatedAt": "16.10.2026, 09:48:43",
   "leads": [
+    {
+      "Musteri": "0680 1107531",
+      "Telefon": "0680 1107531",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "16.10.26 09:39",
+      "Mesaj": "-",
+      "id": "f97eaff19717cfd9f54d64a9ca59d218",
+      "telegramSent": true
+    },
     {
       "Musteri": "0660 1776343",
       "Telefon": "0660 1776343",
@@ -169,16 +179,6 @@
       "Tarih": "08.10.26 08:45",
       "Mesaj": "-",
       "id": "f1d420cf61a35a9f846f1d4a37e4252d",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0650 8427788",
-      "Telefon": "0650 8427788",
-      "Hizmet": "Schneiden der Hecke",
-      "Konum": "Klosterneuburg",
-      "Tarih": "06.10.26 16:04",
-      "Mesaj": "-",
-      "id": "93bb66157a944b03743e49195c7c8df5",
       "telegramSent": true
     },
     {
