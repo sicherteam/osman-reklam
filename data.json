@@ -1,6 +1,16 @@
 {
-  "updatedAt": "15.10.2026, 15:48:59",
+  "updatedAt": "16.10.2026, 09:39:35",
   "leads": [
+    {
+      "Musteri": "0660 1776343",
+      "Telefon": "0660 1776343",
+      "Hizmet": "Winterdienst",
+      "Konum": "Berndorf",
+      "Tarih": "16.10.26 09:31",
+      "Mesaj": "-",
+      "id": "c35b52fdfae74349e4334bb7ad23ee64",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 3338509",
       "Telefon": "0664 3338509",
@@ -159,16 +169,6 @@
       "Tarih": "08.10.26 08:45",
       "Mesaj": "-",
       "id": "f1d420cf61a35a9f846f1d4a37e4252d",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 10078538",
-      "Telefon": "0699 10078538",
-      "Hizmet": "Zaunbau",
-      "Konum": "Waidhofen an der Thaya",
-      "Tarih": "07.10.26 15:23",
-      "Mesaj": "-",
-      "id": "b4ab353be33fda7381f22a6339e9990c",
       "telegramSent": true
     },
     {
