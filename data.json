@@ -1,6 +1,16 @@
 {
-  "updatedAt": "18.10.2026, 11:03:35",
+  "updatedAt": "19.10.2026, 13:39:34",
   "leads": [
+    {
+      "Musteri": "0664 1288601",
+      "Telefon": "0664 1288601",
+      "Hizmet": "Zaunbau",
+      "Konum": "Wolfpassing",
+      "Tarih": "19.10.26 13:29",
+      "Mesaj": "-",
+      "id": "2c608491a380b4d2686135ea1637c5b1",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 17083826",
       "Telefon": "0699 17083826",
@@ -169,16 +179,6 @@
       "Tarih": "12.10.26 09:21",
       "Mesaj": "-",
       "id": "d775611a5a92eb884813ae6f6cab1d5d",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 3245966",
-      "Telefon": "0664 3245966",
-      "Hizmet": "Baumfällarbeiten",
-      "Konum": "Wien",
-      "Tarih": "11.10.26 09:30",
-      "Mesaj": "-",
-      "id": "146b5932aa9e97a34e0c76b1bb3eb5a9",
       "telegramSent": true
     },
     {
