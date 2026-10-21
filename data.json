@@ -1,6 +1,16 @@
 {
-  "updatedAt": "21.10.2026, 11:48:48",
+  "updatedAt": "21.10.2026, 16:30:44",
   "leads": [
+    {
+      "Musteri": "0699 12623257",
+      "Telefon": "0699 12623257",
+      "Hizmet": "-",
+      "Konum": "Strasshof an der Nordbahn",
+      "Tarih": "21.10.26 16:29",
+      "Mesaj": "-",
+      "id": "58573ff08735c4f0f9758abe621ee32b",
+      "telegramSent": true
+    },
     {
       "Musteri": "0699 17787887",
       "Telefon": "0699 17787887",
@@ -189,16 +199,6 @@
       "Tarih": "14.10.26 14:31",
       "Mesaj": "-",
       "id": "4704a8bafc2c438103c100b3462b909c",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0676 4274183",
-      "Telefon": "0676 4274183",
-      "Hizmet": "-",
-      "Konum": "Mistelbach",
-      "Tarih": "05.10.26 08:41",
-      "Mesaj": "-",
-      "id": "b9df736990beee0d48eeaed78c72cea0",
       "telegramSent": true
     }
   ]
