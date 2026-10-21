@@ -1,6 +1,16 @@
 {
-  "updatedAt": "21.10.2026, 10:12:33",
+  "updatedAt": "21.10.2026, 11:48:48",
   "leads": [
+    {
+      "Musteri": "0699 17787887",
+      "Telefon": "0699 17787887",
+      "Hizmet": "-",
+      "Konum": "Wolkersdorf im Weinviertel",
+      "Tarih": "21.10.26 11:45",
+      "Mesaj": "-",
+      "id": "74aa6b848059f5c862071e7d0bbbf0d1",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 3005546",
       "Telefon": "0664 3005546",
@@ -179,16 +189,6 @@
       "Tarih": "14.10.26 14:31",
       "Mesaj": "-",
       "id": "4704a8bafc2c438103c100b3462b909c",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 4578516",
-      "Telefon": "0664 4578516",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "13.10.26 14:27",
-      "Mesaj": "-",
-      "id": "bec562904d02daf974caedb4d26acab2",
       "telegramSent": true
     },
     {
