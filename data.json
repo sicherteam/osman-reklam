@@ -1,5 +1,5 @@
 {
-  "updatedAt": "22.10.2026, 15:39:34",
+  "updatedAt": "22.10.2026, 17:03:34",
   "leads": [
     {
       "Musteri": "0664 73229470",
@@ -152,16 +152,6 @@
       "telegramSent": true
     },
     {
-      "Musteri": "0660 1776343",
-      "Telefon": "0660 1776343",
-      "Hizmet": "Winterdienst",
-      "Konum": "Berndorf",
-      "Tarih": "16.10.26 09:31",
-      "Mesaj": "-",
-      "id": "c35b52fdfae74349e4334bb7ad23ee64",
-      "telegramSent": true
-    },
-    {
       "Musteri": "0664 3338509",
       "Telefon": "0664 3338509",
       "Hizmet": "-",
@@ -199,6 +189,16 @@
       "Tarih": "15.10.26 08:07",
       "Mesaj": "-",
       "id": "5b9f7945445810a7eac14b12137a3e7f",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0681 20255105",
+      "Telefon": "0681 20255105",
+      "Hizmet": "Landschaftsbau",
+      "Konum": "Wien",
+      "Tarih": "05.10.26 15:48",
+      "Mesaj": "-",
+      "id": "86664a3d4b50d38cd5d59192ed821ddd",
       "telegramSent": true
     }
   ]
