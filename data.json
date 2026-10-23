@@ -1,6 +1,26 @@
 {
-  "updatedAt": "22.10.2026, 17:03:34",
+  "updatedAt": "23.10.2026, 16:12:58",
   "leads": [
+    {
+      "Musteri": "0676 3376536",
+      "Telefon": "0676 3376536",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "23.10.26 16:04",
+      "Mesaj": "-",
+      "id": "0c7a309631236b3e6abd899d6b93064f",
+      "telegramSent": true
+    },
+    {
+      "Musteri": "0699 10437440",
+      "Telefon": "0699 10437440",
+      "Hizmet": "-",
+      "Konum": "Sankt Andrä-Wördern",
+      "Tarih": "23.10.26 16:04",
+      "Mesaj": "-",
+      "id": "4b88b26d913bfb5b2e825a5e474fa3f5",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 73229470",
       "Telefon": "0664 73229470",
@@ -142,16 +162,6 @@
       "telegramSent": true
     },
     {
-      "Musteri": "0680 1107531",
-      "Telefon": "0680 1107531",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "16.10.26 09:39",
-      "Mesaj": "-",
-      "id": "f97eaff19717cfd9f54d64a9ca59d218",
-      "telegramSent": true
-    },
-    {
       "Musteri": "0664 3338509",
       "Telefon": "0664 3338509",
       "Hizmet": "-",
@@ -179,16 +189,6 @@
       "Tarih": "15.10.26 13:33",
       "Mesaj": "-",
       "id": "7c5d9773da232a90e3687e5f4cd8db86",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0650 2823345",
-      "Telefon": "0650 2823345",
-      "Hizmet": "-",
-      "Konum": "Pitten",
-      "Tarih": "15.10.26 08:07",
-      "Mesaj": "-",
-      "id": "5b9f7945445810a7eac14b12137a3e7f",
       "telegramSent": true
     },
     {
