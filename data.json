@@ -1,6 +1,16 @@
 {
-  "updatedAt": "23.10.2026, 16:12:58",
+  "updatedAt": "26.10.2026, 11:48:46",
   "leads": [
+    {
+      "Musteri": "0650 7922804",
+      "Telefon": "0650 7922804",
+      "Hizmet": "-",
+      "Konum": "Melk",
+      "Tarih": "26.10.26 12:42",
+      "Mesaj": "-",
+      "id": "0dc8cb9b2cfbd2bffd1650ba69061bc8",
+      "telegramSent": true
+    },
     {
       "Musteri": "0676 3376536",
       "Telefon": "0676 3376536",
@@ -169,16 +179,6 @@
       "Tarih": "15.10.26 15:45",
       "Mesaj": "P\nPotenzieller Kunde\n1:45 PM\nIch bitte um einen Kostenvoranschlag für Hecken schneiden in der Seeschlacht 149, 2103 Langenzersdorf und diverse schneidarbeiten mit Abtransport. Bitte um einen Termin am 20.10.26 wenn möglich. Mit freundlichen Grüßen Gerhard Klick",
       "id": "9d5beab382ec893f77764d2efdc22757",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 3328286",
-      "Telefon": "0664 3328286",
-      "Hizmet": "Baumpflege",
-      "Konum": "Wiener Neustadt",
-      "Tarih": "15.10.26 13:57",
-      "Mesaj": "-",
-      "id": "8dd9616a756ab3ee808ffe0f668ea0a7",
       "telegramSent": true
     },
     {
