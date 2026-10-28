@@ -1,6 +1,16 @@
 {
-  "updatedAt": "27.10.2026, 16:32:12",
+  "updatedAt": "28.10.2026, 08:23:09",
   "leads": [
+    {
+      "Musteri": "0664 9760719",
+      "Telefon": "0664 9760719",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "28.10.26 09:13",
+      "Mesaj": "-",
+      "id": "eb51d58d8f19b42414280161114ac893",
+      "telegramSent": true
+    },
     {
       "Musteri": "0660 1706789",
       "Telefon": "0660 1706789",
@@ -139,16 +149,6 @@
       "Tarih": "18.10.26 10:57",
       "Mesaj": "-",
       "id": "5e60167b1ba7b5aa5bda5d7d6bbbb243",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 18662088",
-      "Telefon": "0699 18662088",
-      "Hizmet": "Baumpflege",
-      "Konum": "Wimpassing im Schwarzatale",
-      "Tarih": "17.10.26 10:27",
-      "Mesaj": "-",
-      "id": "6f4971302d89b188a677aa5f64dd6132",
       "telegramSent": true
     },
     {
