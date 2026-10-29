@@ -1,6 +1,16 @@
 {
-  "updatedAt": "28.10.2026, 08:23:09",
+  "updatedAt": "29.10.2026, 10:48:38",
   "leads": [
+    {
+      "Musteri": "0699 11168077",
+      "Telefon": "0699 11168077",
+      "Hizmet": "Baumpflege",
+      "Konum": "Purkersdorf",
+      "Tarih": "29.10.26 11:43",
+      "Mesaj": "-",
+      "id": "815f8744f97a148141512678a29d6470",
+      "telegramSent": true
+    },
     {
       "Musteri": "0664 9760719",
       "Telefon": "0664 9760719",
@@ -169,16 +179,6 @@
       "Tarih": "16.10.26 18:01",
       "Mesaj": "-",
       "id": "9ea45d9f09b147155de457436fa8615b",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0664 9203340",
-      "Telefon": "0664 9203340",
-      "Hizmet": "-",
-      "Konum": "Gföhl",
-      "Tarih": "16.10.26 11:17",
-      "Mesaj": "-",
-      "id": "f59826f629eb12cef094ea9c4c80706d",
       "telegramSent": true
     },
     {
