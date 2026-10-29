@@ -1,6 +1,16 @@
 {
-  "updatedAt": "29.10.2026, 11:03:33",
+  "updatedAt": "29.10.2026, 11:21:33",
   "leads": [
+    {
+      "Musteri": "0650 4063636",
+      "Telefon": "0650 4063636",
+      "Hizmet": "-",
+      "Konum": "Wien",
+      "Tarih": "29.10.26 12:13",
+      "Mesaj": "-",
+      "id": "974050b67a5e5df06bcf11cbd9349b0b",
+      "telegramSent": true
+    },
     {
       "Musteri": "0660 6502452",
       "Telefon": "0660 6502452",
@@ -159,16 +169,6 @@
       "Tarih": "19.10.26 13:29",
       "Mesaj": "-",
       "id": "2c608491a380b4d2686135ea1637c5b1",
-      "telegramSent": true
-    },
-    {
-      "Musteri": "0699 17083826",
-      "Telefon": "0699 17083826",
-      "Hizmet": "-",
-      "Konum": "Wien",
-      "Tarih": "18.10.26 10:57",
-      "Mesaj": "-",
-      "id": "5e60167b1ba7b5aa5bda5d7d6bbbb243",
       "telegramSent": true
     },
     {
