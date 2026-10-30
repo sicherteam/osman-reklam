@@ -1,6 +1,48 @@
 {
-  "updatedAt": "30.10.2026, 09:39:14",
+  "updatedAt": "30.10.2026, 16:21:09",
   "leads": [
+    {
+      "id": "lsa:2934759850:349035943",
+      "Musteri": "+436801203971",
+      "Telefon": "+436801203971",
+      "Hizmet": "xcat:service_area_business_lawn_care",
+      "Konum": "-",
+      "Tarih": "30.10.2026 13:57",
+      "Mesaj": "-",
+      "telegramSent": true,
+      "googleLeadId": "349035943",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/349035943",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
+    {
+      "id": "lsa:2934759850:349042782",
+      "Musteri": "+436641121404",
+      "Telefon": "+436641121404",
+      "Hizmet": "xcat:service_area_business_lawn_care",
+      "Konum": "-",
+      "Tarih": "30.10.2026 12:50",
+      "Mesaj": "-",
+      "telegramSent": true,
+      "googleLeadId": "349042782",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/349042782",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
+    {
+      "id": "lsa:2934759850:349017739",
+      "Musteri": "+436763699750",
+      "Telefon": "+436763699750",
+      "Hizmet": "xcat:service_area_business_lawn_care",
+      "Konum": "-",
+      "Tarih": "30.10.2026 10:45",
+      "Mesaj": "-",
+      "telegramSent": true,
+      "googleLeadId": "349017739",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/349017739",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:348534389",
       "Musteri": "+436504063636",
