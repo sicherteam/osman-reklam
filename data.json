@@ -1,5 +1,5 @@
 {
-  "updatedAt": "31.10.2026, 00:37:16",
+  "updatedAt": "31.10.2026, 01:37:00",
   "leads": [
     {
       "id": "lsa:2934759850:349035943",
@@ -14,7 +14,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/349035943",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:349042782",
@@ -29,7 +33,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/349042782",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:349017739",
@@ -44,7 +52,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/349017739",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0650 4063636",
@@ -89,7 +101,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/348534389",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:348839344",
@@ -104,7 +120,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/348839344",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:348532925",
@@ -119,7 +139,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/348532925",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0664 9760719",
@@ -144,7 +168,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/348640963",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0660 1706789",
@@ -169,7 +197,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/348492913",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0650 7922804",
@@ -194,7 +226,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/347897798",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:347549282",
@@ -209,7 +245,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/347549282",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:347549201",
@@ -224,7 +264,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/347549201",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0676 3376536",
@@ -259,7 +303,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/347339684",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0664 73229470",
@@ -284,7 +332,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/347430126",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0699 12623257",
@@ -309,7 +361,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/347102777",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0699 17787887",
@@ -334,7 +390,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/347346022",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0664 3005546",
@@ -359,7 +419,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/347342626",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0660 6326272",
@@ -384,7 +448,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346863422",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0676 7840880",
@@ -409,7 +477,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346855727",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0680 5060221",
@@ -434,7 +506,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346963674",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0676 9330793",
@@ -459,7 +535,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346863706",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0664 1288601",
@@ -484,7 +564,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346504631",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:346676832",
@@ -499,7 +583,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346676832",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:346380230",
@@ -514,7 +602,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346380230",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": "0660 5451205"
+      "Telefon2": "0660 5451205",
+      "conversations": [
+        {
+          "id": "3405193923",
+          "date": "2026-10-17 09:26:02.984479",
+          "time": "09:26",
+          "text": "Suche schneeräumungsdienst für Baden Habsburgerdtrasse 38 für den Winter. Bitte um Kostenvoranschlag. W.Kuchenbecker 0660 5451205"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3405193923",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:346496992",
@@ -529,7 +628,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346496992",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0676 4242671",
@@ -554,7 +657,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346438465",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:346432603",
@@ -569,7 +676,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346432603",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:346434085",
@@ -584,7 +695,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346434085",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:345953744",
@@ -599,7 +714,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/345953744",
       "leadType": "MESSAGE",
       "leadStatus": "DECLINED",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3404533305",
+          "date": "2026-10-15 15:45:35.884847",
+          "time": "15:45",
+          "text": "Ich bitte um einen Kostenvoranschlag für Hecken schneiden in der Seeschlacht 149, 2103 Langenzersdorf und diverse schneidarbeiten mit Abtransport. Bitte um einen Termin am 20.10.26 wenn möglich. Mit freundlichen Grüßen Gerhard Klick"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3404533305",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:346223860",
@@ -614,7 +740,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346223860",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:346248504",
@@ -629,7 +759,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346248504",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0676 5561591",
@@ -654,7 +788,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346228563",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:346027368",
@@ -669,7 +807,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/346027368",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:345464687",
@@ -684,7 +826,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/345464687",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:345451634",
@@ -699,7 +845,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/345451634",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:345203162",
@@ -714,7 +864,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/345203162",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:345509457",
@@ -729,7 +883,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/345509457",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:345186269",
@@ -744,7 +902,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/345186269",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:345114761",
@@ -759,7 +921,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/345114761",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:345325170",
@@ -774,7 +940,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/345325170",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:345090016",
@@ -789,7 +959,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/345090016",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:344743640",
@@ -804,7 +978,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/344743640",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:344723894",
@@ -819,7 +997,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/344723894",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:344392418",
@@ -834,7 +1016,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/344392418",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:344703363",
@@ -849,7 +1035,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/344703363",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:344388752",
@@ -864,7 +1054,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/344388752",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:344528359",
@@ -879,7 +1073,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/344528359",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:344457339",
@@ -894,7 +1092,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/344457339",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:344451855",
@@ -909,7 +1111,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/344451855",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343944725",
@@ -924,7 +1130,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343944725",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:344241111",
@@ -939,7 +1149,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/344241111",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:344201469",
@@ -954,7 +1168,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/344201469",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:344253724",
@@ -969,7 +1187,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/344253724",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:344250823",
@@ -984,7 +1206,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/344250823",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343640606",
@@ -999,7 +1225,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343640606",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "Musteri": "0681 20255105",
@@ -1024,7 +1254,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343981471",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343614302",
@@ -1039,7 +1273,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343614302",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343600118",
@@ -1054,7 +1292,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343600118",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343599530",
@@ -1069,7 +1311,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343599530",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343959160",
@@ -1084,7 +1330,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343959160",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343588283",
@@ -1099,7 +1349,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343588283",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343801698",
@@ -1114,7 +1368,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343801698",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343386263",
@@ -1129,7 +1387,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343386263",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3400649452",
+          "date": "2026-10-03 14:33:46.786541",
+          "time": "14:33",
+          "text": "Ich finde leider nirgends eine Adresse von euch. Ich würde einen Maschendrahtzaun 2m hoch, 25 m lang brauchen. Was kann das ca. kosten? LG. M. Feit"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3400649452",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343749109",
@@ -1144,7 +1413,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343749109",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3400641142",
+          "date": "2026-10-03 11:30:06.692255",
+          "time": "11:30",
+          "text": "Hallo! Wir haben 3 Obstbäume, die zurückgeschnitten und gepflegt gehören. Einer davon (Marillenbaum) ist sehr groß und eine Seite abgestorben. Wollen Sie sich unseren Garten (2000 Stockerau) für einen Kostenvoranschlag anschauen kommen? Liebe Grüße, Astrid"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3400641142",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343376600",
@@ -1159,7 +1439,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343376600",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343747309",
@@ -1174,7 +1458,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343747309",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343447926",
@@ -1189,7 +1477,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343447926",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342980036",
@@ -1204,7 +1496,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342980036",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342978818",
@@ -1219,7 +1515,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342978818",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342943460",
@@ -1234,7 +1534,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342943460",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3400364687",
+          "date": "2026-10-01 16:35:19.81796",
+          "time": "16:35",
+          "text": "Guten Tag Ich habe kleinen 40 m2 Garten der neuen Rasen, Beet Einfassung und Gestaltung benötigt. Marion Lackner 2625 Schwarzau Ich hätte gerne einen Kostenvoranschlag"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3400364687",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343221675",
@@ -1249,7 +1560,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343221675",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343217643",
@@ -1264,7 +1579,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343217643",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343208922",
@@ -1279,7 +1598,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343208922",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:343011048",
@@ -1294,7 +1617,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/343011048",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342876204",
@@ -1309,7 +1636,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342876204",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342506483",
@@ -1324,7 +1655,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342506483",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342814641",
@@ -1339,7 +1674,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342814641",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342861889",
@@ -1354,7 +1693,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342861889",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342470051",
@@ -1369,7 +1712,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342470051",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342466892",
@@ -1384,7 +1731,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342466892",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342234794",
@@ -1399,7 +1750,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342234794",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342531531",
@@ -1414,7 +1769,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342531531",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342465204",
@@ -1429,7 +1788,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342465204",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342515833",
@@ -1444,7 +1807,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342515833",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3398517034",
+          "date": "2026-09-27 10:39:59.184393",
+          "time": "10:39",
+          "text": "Hallo! Wir haben Säulen-Obst- Bäume, die inzwischen schon sehr groß geworden sind. Ich würde sie gerne professionell kürzen lassen, damit sie nächstes Jahr wieder Früchte tragen, aber nicht so hoch wachsen. Der Birnenbaum ist inzwischen nämlich so hoch, dass die schweren Birnen und der Wind den Baum ganz schief werden ließen. Können Sie uns diesbezüglich bitte helfen? Liebe Grüße, Michaela Hofmann"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3398517034",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342140036",
@@ -1459,7 +1833,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342140036",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342363990",
@@ -1474,7 +1852,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342363990",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:341838230",
@@ -1489,7 +1871,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/341838230",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342208573",
@@ -1504,7 +1890,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342208573",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:342206662",
@@ -1519,7 +1909,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/342206662",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:341600705",
@@ -1534,7 +1928,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/341600705",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:341906178",
@@ -1549,7 +1947,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/341906178",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:341593223",
@@ -1564,7 +1966,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/341593223",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:341885953",
@@ -1579,7 +1985,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/341885953",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:341682351",
@@ -1594,7 +2004,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/341682351",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:341777026",
@@ -1609,7 +2023,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/341777026",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:341540551",
@@ -1624,7 +2042,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/341540551",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:341291808",
@@ -1639,7 +2061,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/341291808",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:341344351",
@@ -1654,7 +2080,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/341344351",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:341163054",
@@ -1669,7 +2099,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/341163054",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:340828562",
@@ -1684,7 +2118,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/340828562",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:341257648",
@@ -1699,7 +2137,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/341257648",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:340752902",
@@ -1714,7 +2156,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/340752902",
       "leadType": "MESSAGE",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3396056071",
+          "date": "2026-09-20 10:01:00.727692",
+          "time": "10:01",
+          "text": "Bitte im Besuch, Gartenarbeit. in Wischathal. Fam. Weingart.. Mfg."
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3396056071",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:340753712",
@@ -1729,7 +2182,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/340753712",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:340720983",
@@ -1744,7 +2201,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/340720983",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:340256601",
@@ -1759,7 +2220,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/340256601",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:340363954",
@@ -1774,7 +2239,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/340363954",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:339921611",
@@ -1789,7 +2258,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/339921611",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:340226625",
@@ -1804,14 +2277,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/340226625",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:340220082",
       "Musteri": "Manfred Jungmann",
       "Telefon": "+436602225614",
       "Hizmet": "cut_the_hedge",
-      "Konum": "Wien",
+      "Konum": "Wien (1220)",
       "Tarih": "16.09.2026 10:32",
       "Mesaj": "Guten Tag wir bräuchten bitte einen Kostenvoranschlag von ihnen für Baum und Sträucher entfernung dann Baumschnitt Heckenschnitt Unkrautentfernung und Rasenschnitt. Würden uns freuen wenn sie uns eine Rückmeldung geben. Ort: 1220 Wien Hermann-Gebauer-Strasse 4. Firma : Gim Shopping Center GmBH Name : Homeland MfG Jungmann Manfred Haustechniker",
       "telegramSent": true,
@@ -1819,7 +2296,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/340220082",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3394967891",
+          "date": "2026-09-16 10:32:01.739107",
+          "time": "10:32",
+          "text": "Guten Tag wir bräuchten bitte einen Kostenvoranschlag von ihnen für Baum und Sträucher entfernung dann Baumschnitt Heckenschnitt Unkrautentfernung und Rasenschnitt. Würden uns freuen wenn sie uns eine Rückmeldung geben. Ort: 1220 Wien Hermann-Gebauer-Strasse 4. Firma : Gim Shopping Center GmBH Name : Homeland MfG Jungmann Manfred Haustechniker"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3394967891",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:339911903",
@@ -1834,7 +2322,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/339911903",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:340033290",
@@ -1849,7 +2341,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/340033290",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:339684038",
@@ -1864,7 +2360,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/339684038",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:339673181",
@@ -1879,7 +2379,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/339673181",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:339656496",
@@ -1894,7 +2398,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/339656496",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:339652278",
@@ -1909,7 +2417,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/339652278",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:339593332",
@@ -1924,7 +2436,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/339593332",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:339457492",
@@ -1939,7 +2455,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/339457492",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:339116443",
@@ -1954,7 +2474,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/339116443",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:338974623",
@@ -1969,7 +2493,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/338974623",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:338423057",
@@ -1984,7 +2512,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/338423057",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:338765641",
@@ -1999,7 +2531,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/338765641",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:338311631",
@@ -2014,7 +2550,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/338311631",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:338632914",
@@ -2029,7 +2569,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/338632914",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337992962",
@@ -2044,7 +2588,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337992962",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337920161",
@@ -2059,7 +2607,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337920161",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337910201",
@@ -2074,7 +2626,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337910201",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3390792126",
+          "date": "2026-09-07 19:23:20.626974",
+          "time": "19:23",
+          "text": "25qm Fläche, Untergrund"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3390792126",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:338346703",
@@ -2089,7 +2652,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/338346703",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:338172027",
@@ -2104,7 +2671,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/338172027",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:338297422",
@@ -2119,7 +2690,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/338297422",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337838420",
@@ -2134,7 +2709,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337838420",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:338285767",
@@ -2149,7 +2728,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/338285767",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:338210938",
@@ -2164,7 +2747,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/338210938",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:338026255",
@@ -2179,7 +2766,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/338026255",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337913827",
@@ -2194,7 +2785,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337913827",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337460705",
@@ -2209,7 +2804,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337460705",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337430546",
@@ -2224,7 +2823,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337430546",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337773526",
@@ -2239,7 +2842,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337773526",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337521874",
@@ -2254,7 +2861,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337521874",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337512007",
@@ -2269,7 +2880,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337512007",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337390392",
@@ -2284,7 +2899,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337390392",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337066439",
@@ -2299,7 +2918,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337066439",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337388052",
@@ -2314,7 +2937,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337388052",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337492942",
@@ -2329,7 +2956,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337492942",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337236631",
@@ -2344,7 +2975,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337236631",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337209421",
@@ -2359,7 +2994,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337209421",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337116474",
@@ -2374,7 +3013,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337116474",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337202242",
@@ -2389,7 +3032,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337202242",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337197829",
@@ -2404,7 +3051,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337197829",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:337104780",
@@ -2419,7 +3070,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/337104780",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336773204",
@@ -2434,7 +3089,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336773204",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336870261",
@@ -2449,7 +3108,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336870261",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336495521",
@@ -2464,7 +3127,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336495521",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336479954",
@@ -2479,7 +3146,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336479954",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336927256",
@@ -2494,7 +3165,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336927256",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336263777",
@@ -2509,7 +3184,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336263777",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336670183",
@@ -2524,7 +3203,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336670183",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336593127",
@@ -2539,7 +3222,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336593127",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336661024",
@@ -2554,7 +3241,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336661024",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336582696",
@@ -2569,7 +3260,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336582696",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336224825",
@@ -2584,7 +3279,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336224825",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336575817",
@@ -2599,7 +3298,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336575817",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336570822",
@@ -2614,7 +3317,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336570822",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336566343",
@@ -2629,7 +3336,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336566343",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3387878505",
+          "date": "2026-08-31 07:14:54.356723",
+          "time": "07:14",
+          "text": "Ich habe Interesse an einen Job für die Garten Arbeit und für die Arbeit draußen"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3387878505",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336151541",
@@ -2644,7 +3362,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336151541",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336487417",
@@ -2659,7 +3381,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336487417",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336436201",
@@ -2674,7 +3400,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336436201",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336296530",
@@ -2689,7 +3419,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336296530",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336266887",
@@ -2704,7 +3438,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336266887",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336222289",
@@ -2719,7 +3457,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336222289",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336221257",
@@ -2734,7 +3476,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336221257",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335799113",
@@ -2749,7 +3495,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335799113",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:336147462",
@@ -2764,7 +3514,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/336147462",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335788457",
@@ -2779,7 +3533,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335788457",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335667278",
@@ -2794,7 +3552,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335667278",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335990317",
@@ -2809,7 +3571,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335990317",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335980390",
@@ -2824,7 +3590,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335980390",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335825047",
@@ -2839,7 +3609,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335825047",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335692308",
@@ -2854,7 +3628,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335692308",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335753635",
@@ -2869,7 +3647,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335753635",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335749069",
@@ -2884,7 +3666,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335749069",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335515621",
@@ -2899,7 +3685,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335515621",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335438370",
@@ -2908,13 +3698,30 @@
       "Hizmet": "disposals",
       "Konum": "Niederösterreich (3434)",
       "Tarih": "25.08.2026 11:22",
-      "Mesaj": "Benötigen die Entsorgung eine Kriechelbaumes.\n\nZur Sicherheit wiederhole ich von meinem PC.\n Benötige die Entsorgung eines Kriecherlbaumes, sowie den Rückschnitt eines \nKirschbaumes. Zufahrt bis zum Kirschbaum mit klein LKW einfach. Anbei die \nFotos der Bäume. Man sollte aber das Ganze vorher besichtgen. \nKarl Hornof 3434 Katzelsdorf Schulstr. 9  0664 73576605",
+      "Mesaj": "Benötigen die Entsorgung eine Kriechelbaumes.\n\nZur Sicherheit wiederhole ich von meinem PC.\n Benötige die Entsorgung eines Kriecherlbaumes, sowie den Rückschnitt eines\nKirschbaumes. Zufahrt bis zum Kirschbaum mit klein LKW einfach. Anbei die\nFotos der Bäume. Man sollte aber das Ganze vorher besichtgen.\nKarl Hornof 3434 Katzelsdorf Schulstr. 9  0664 73576605",
       "telegramSent": true,
       "googleLeadId": "335438370",
       "googleLeadResource": "customers/2934759850/localServicesLeads/335438370",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": "0664 73576605"
+      "Telefon2": "0664 73576605",
+      "conversations": [
+        {
+          "id": "3385847430",
+          "date": "2026-08-25 11:22:38.033068",
+          "time": "11:22",
+          "text": "Benötigen die Entsorgung eine Kriechelbaumes."
+        },
+        {
+          "id": "3386631283",
+          "date": "2026-08-26 11:04:33.56",
+          "time": "11:04",
+          "text": "Zur Sicherheit wiederhole ich von meinem PC.\n Benötige die Entsorgung eines Kriecherlbaumes, sowie den Rückschnitt eines\nKirschbaumes. Zufahrt bis zum Kirschbaum mit klein LKW einfach. Anbei die\nFotos der Bäume. Man sollte aber das Ganze vorher besichtgen.\nKarl Hornof 3434 Katzelsdorf Schulstr. 9  0664 73576605"
+        }
+      ],
+      "conversationCount": 2,
+      "lastConversationId": "3386631283",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:334953389",
@@ -2923,13 +3730,30 @@
       "Hizmet": "lay_turf",
       "Konum": "Niederösterreich (2401)",
       "Tarih": "24.08.2026 20:24",
-      "Mesaj": "Sehr geehrte Damen und Herren! Ich hätte gerne einen neuen rasen. Verlegen von ca 220 m2 inkl. Abtrag alter Rasen (Steppe) in 2401 Fischamend. Ersuche um Angebot Mit freundlichen Grüßen Petra weiß\n\nNew Message: \nOrt Fischamend \n\nGesendet mit der mobilen Mail App \n\nAm 24.08.26 um 20:25 schrieb Gärtnerei Steidinger – Gartengestaltung & \nGartenbau \n\nVon: \"Gärtnerei Steidinger – Gartengestaltung & Gartenbau\"",
+      "Mesaj": "Sehr geehrte Damen und Herren! Ich hätte gerne einen neuen rasen. Verlegen von ca 220 m2 inkl. Abtrag alter Rasen (Steppe) in 2401 Fischamend. Ersuche um Angebot Mit freundlichen Grüßen Petra weiß\n\nNew Message:\nOrt Fischamend\n\nGesendet mit der mobilen Mail App\n\nAm 24.08.26 um 20:25 schrieb Gärtnerei Steidinger – Gartengestaltung &\nGartenbau\n\nVon: \"Gärtnerei Steidinger – Gartengestaltung & Gartenbau\"",
       "telegramSent": true,
       "googleLeadId": "334953389",
       "googleLeadResource": "customers/2934759850/localServicesLeads/334953389",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3385628823",
+          "date": "2026-08-24 20:24:39.998195",
+          "time": "20:24",
+          "text": "Sehr geehrte Damen und Herren! Ich hätte gerne einen neuen rasen. Verlegen von ca 220 m2 inkl. Abtrag alter Rasen (Steppe) in 2401 Fischamend. Ersuche um Angebot Mit freundlichen Grüßen Petra weiß"
+        },
+        {
+          "id": "3386290267",
+          "date": "2026-08-25 16:30:26.794",
+          "time": "16:30",
+          "text": "New Message:\nOrt Fischamend\n\nGesendet mit der mobilen Mail App\n\nAm 24.08.26 um 20:25 schrieb Gärtnerei Steidinger – Gartengestaltung &\nGartenbau\n\nVon: \"Gärtnerei Steidinger – Gartengestaltung & Gartenbau\""
+        }
+      ],
+      "conversationCount": 2,
+      "lastConversationId": "3386290267",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:334924931",
@@ -2944,7 +3768,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/334924931",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335282773",
@@ -2959,7 +3787,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335282773",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335198785",
@@ -2974,7 +3806,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335198785",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:334769417",
@@ -2989,7 +3825,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/334769417",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3385320819",
+          "date": "2026-08-24 09:47:54.847987",
+          "time": "09:47",
+          "text": "Kunstrasen"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3385320819",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335195704",
@@ -3004,7 +3851,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335195704",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335191033",
@@ -3019,7 +3870,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335191033",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:334767545",
@@ -3034,7 +3889,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/334767545",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:335024461",
@@ -3049,7 +3908,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/335024461",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": "06767575499"
+      "Telefon2": "06767575499",
+      "conversations": [
+        {
+          "id": "3385003416",
+          "date": "2026-08-22 19:22:42.315772",
+          "time": "19:22",
+          "text": "Vermissen Sie zufällig einen großen schönen Oleander?! Mein dementer Mann hat ihn irgendwo in diesem Bereich entwendet und wir suchen den Besitzer...LG Maria Schwarz Tel. 06767575499"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3385003416",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:334907493",
@@ -3064,7 +3934,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/334907493",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:334555103",
@@ -3079,7 +3953,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/334555103",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:334897506",
@@ -3094,7 +3972,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/334897506",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:334961398",
@@ -3109,7 +3991,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/334961398",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:334310792",
@@ -3124,7 +4010,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/334310792",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:334463233",
@@ -3139,7 +4029,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/334463233",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:334208692",
@@ -3154,7 +4048,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/334208692",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:334190866",
@@ -3169,7 +4067,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/334190866",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:333983893",
@@ -3184,7 +4086,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/333983893",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:333892893",
@@ -3199,7 +4105,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/333892893",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:333956755",
@@ -3214,7 +4124,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/333956755",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:333931030",
@@ -3229,7 +4143,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/333931030",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:333849621",
@@ -3244,7 +4162,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/333849621",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:333922789",
@@ -3259,7 +4181,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/333922789",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:333534524",
@@ -3274,7 +4200,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/333534524",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:333911953",
@@ -3289,7 +4219,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/333911953",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:333455955",
@@ -3304,7 +4238,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/333455955",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:333441333",
@@ -3319,7 +4257,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/333441333",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:333143801",
@@ -3334,7 +4276,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/333143801",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:333055810",
@@ -3349,7 +4295,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/333055810",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:332636903",
@@ -3364,7 +4314,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/332636903",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:333049573",
@@ -3379,7 +4333,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/333049573",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:332952333",
@@ -3394,7 +4352,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/332952333",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:332746677",
@@ -3409,7 +4371,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/332746677",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:332721009",
@@ -3424,7 +4390,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/332721009",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:332401010",
@@ -3439,7 +4409,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/332401010",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:332647987",
@@ -3454,7 +4428,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/332647987",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:332219411",
@@ -3469,7 +4447,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/332219411",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:332495874",
@@ -3484,7 +4466,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/332495874",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:332432253",
@@ -3499,7 +4485,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/332432253",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:331978050",
@@ -3514,7 +4504,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/331978050",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:331569386",
@@ -3529,7 +4523,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/331569386",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:331517525",
@@ -3544,7 +4542,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/331517525",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:331914922",
@@ -3559,7 +4561,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/331914922",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:331808580",
@@ -3574,7 +4580,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/331808580",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:331911670",
@@ -3589,7 +4599,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/331911670",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:331672189",
@@ -3604,7 +4618,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/331672189",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:331362969",
@@ -3619,7 +4637,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/331362969",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3379631312",
+          "date": "2026-08-07 18:08:21.631901",
+          "time": "18:08",
+          "text": "Ich bräuchte einen Alu Lamellenzaun für meinen Garten in Kottingbrunn. Machen bzw haben sie so etwas auch? MfG Gabriele Nowak"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3379631312",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:331446373",
@@ -3634,7 +4663,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/331446373",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3379146469",
+          "date": "2026-08-07 15:36:29.718384",
+          "time": "15:36",
+          "text": "Mein Rasen ist komplett mit Hirse versetzt. ca 120 Qm was kostet es den Rasen zu entfernen un einen Rollrasen zu verlegen?"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3379146469",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:331423069",
@@ -3649,7 +4689,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/331423069",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:331418587",
@@ -3664,7 +4708,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/331418587",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:331405708",
@@ -3679,7 +4727,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/331405708",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:331182643",
@@ -3694,7 +4746,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/331182643",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:330556112",
@@ -3709,7 +4765,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/330556112",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:330188291",
@@ -3724,7 +4784,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/330188291",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:330175916",
@@ -3739,7 +4803,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/330175916",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:330164984",
@@ -3754,7 +4822,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/330164984",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329889017",
@@ -3769,7 +4841,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329889017",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329889674",
@@ -3784,7 +4860,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329889674",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:330225136",
@@ -3799,7 +4879,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/330225136",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329836145",
@@ -3814,7 +4898,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329836145",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329788409",
@@ -3829,7 +4917,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329788409",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3376580394",
+          "date": "2026-08-02 20:17:25.55708",
+          "time": "20:17",
+          "text": "Fällen eines alten hohen baumes( föhre) in weidling"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3376580394",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329770415",
@@ -3838,13 +4937,30 @@
       "Hizmet": "cut_the_hedge",
       "Konum": "Wien",
       "Tarih": "02.08.2026 18:13",
-      "Mesaj": "Heckenschnitt. Ca. 25 laufmeter Kirschloorbeer 3 andere Büsche sind in den 25 m enthalten ( 1 Ostergruß + 2 andere\n\nDanke für die rasche Rückmeldung ind Bearbeitung der Anfrage\n\nUnser Name \nPichler Anton  und Manuela \n4432 Ernsthofen \nUferstrasse 39\n\nMfg \n\nGärtnerei Steidinger – Gartengestaltung & Gartenbau",
+      "Mesaj": "Heckenschnitt. Ca. 25 laufmeter Kirschloorbeer 3 andere Büsche sind in den 25 m enthalten ( 1 Ostergruß + 2 andere\n\nDanke für die rasche Rückmeldung ind Bearbeitung der Anfrage\n\nUnser Name\nPichler Anton  und Manuela\n4432 Ernsthofen\nUferstrasse 39\n\nMfg\n\nGärtnerei Steidinger – Gartengestaltung & Gartenbau",
       "telegramSent": true,
       "googleLeadId": "329770415",
       "googleLeadResource": "customers/2934759850/localServicesLeads/329770415",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3376548390",
+          "date": "2026-08-02 18:13:32.667168",
+          "time": "18:13",
+          "text": "Heckenschnitt. Ca. 25 laufmeter Kirschloorbeer 3 andere Büsche sind in den 25 m enthalten ( 1 Ostergruß + 2 andere"
+        },
+        {
+          "id": "3377304962",
+          "date": "2026-08-02 18:26:05.293",
+          "time": "18:26",
+          "text": "Danke für die rasche Rückmeldung ind Bearbeitung der Anfrage\n\nUnser Name\nPichler Anton  und Manuela\n4432 Ernsthofen\nUferstrasse 39\n\nMfg\n\nGärtnerei Steidinger – Gartengestaltung & Gartenbau"
+        }
+      ],
+      "conversationCount": 2,
+      "lastConversationId": "3377304962",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:330034041",
@@ -3859,7 +4975,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/330034041",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329930490",
@@ -3874,7 +4994,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329930490",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329916003",
@@ -3889,7 +5013,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329916003",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3377096567",
+          "date": "2026-08-01 18:58:45.134017",
+          "time": "18:58",
+          "text": "Hallo. Ich habe eine etwas ungewöhnliche Anfrage.. könnte ich alle 1-2 Woche 1-2qm² Rollrasen bei ihnen abholen/bestellen? Wäre für meine Katzen.. Danke vorab und liebe Grüße Monika Beyhl"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3377096567",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:330001609",
@@ -3904,7 +5039,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/330001609",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329972146",
@@ -3919,7 +5058,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329972146",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329846514",
@@ -3934,7 +5077,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329846514",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329483768",
@@ -3949,7 +5096,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329483768",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329427419",
@@ -3964,7 +5115,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329427419",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": "06645013929"
+      "Telefon2": "06645013929",
+      "conversations": [
+        {
+          "id": "3376708616",
+          "date": "2026-07-31 16:56:26.870887",
+          "time": "16:56",
+          "text": "Baumzumschnitt Zuschnitt von großen Sträuchern Könnten sie mal vorbeikommen und vorort besichtigen bzw. Kostenvoranschlag Obritz 314 2061 Hadres Bitte Kontaktaufnahme Tochter Lercher 06645013929"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3376708616",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329792464",
@@ -3979,7 +5141,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329792464",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329387399",
@@ -3994,7 +5160,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329387399",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329759959",
@@ -4009,7 +5179,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329759959",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329649177",
@@ -4024,7 +5198,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329649177",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329645157",
@@ -4039,7 +5217,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329645157",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329428035",
@@ -4054,7 +5236,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329428035",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329212029",
@@ -4069,7 +5255,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329212029",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328912238",
@@ -4084,7 +5274,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328912238",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329276350",
@@ -4099,7 +5293,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329276350",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328798673",
@@ -4114,14 +5312,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328798673",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:329132752",
       "Musteri": "+436767920043",
       "Telefon": "+436767920043",
       "Hizmet": "cut_down_a_tree",
-      "Konum": "Wien",
+      "Konum": "Wien (1220)",
       "Tarih": "28.07.2026 18:34",
       "Mesaj": "Guten Abend.bitte um Rückruf.Alter Marillenbaum muss gefällt werden.Kleingarten 1220 Wien",
       "telegramSent": true,
@@ -4129,7 +5331,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/329132752",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3374792454",
+          "date": "2026-07-28 18:35:46.899332",
+          "time": "18:35",
+          "text": "Guten Abend.bitte um Rückruf.Alter Marillenbaum muss gefällt werden.Kleingarten 1220 Wien"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3374792454",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328972758",
@@ -4144,7 +5357,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328972758",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328663166",
@@ -4159,7 +5376,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328663166",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328662092",
@@ -4174,7 +5395,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328662092",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328935864",
@@ -4189,7 +5414,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328935864",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328798356",
@@ -4204,7 +5433,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328798356",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": "06764100053"
+      "Telefon2": "06764100053",
+      "conversations": [
+        {
+          "id": "3374814604",
+          "date": "2026-07-27 19:24:35.120259",
+          "time": "19:24",
+          "text": "Wollen Fichte im Bezirk Korneuburg abtragen lassen. Bitte um Ihren Anruf. Fam. Grössing 06764100053"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3374814604",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328413923",
@@ -4219,7 +5459,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328413923",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328676686",
@@ -4234,7 +5478,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328676686",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": "06609144000"
+      "Telefon2": "06609144000",
+      "conversations": [
+        {
+          "id": "3374457133",
+          "date": "2026-07-26 19:37:51.890191",
+          "time": "19:37",
+          "text": "Sehr geehrtes Team, benötigen eine Lösung für Zaun zur Nachbarin. Habe zur Zeit viele Sträucher und Bäume stehen. Bitte um Ihre sachkundige Besichtigung und Angebot. Ca.10 Meter. Nicht meine Seite des Zauns. Nachbarin möchte eine Lösung. Und wir wollen Ruhe haben. Vielen Dank, mit freundlichen Grüßen. Fam. Zeller Tel06609144000"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3374457133",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328660870",
@@ -4249,7 +5504,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328660870",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3374764340",
+          "date": "2026-07-26 16:54:12.283904",
+          "time": "16:54",
+          "text": "Ich benötige bitte einen Kostenvoranschlag für folgende Leistungen. - 2x Grube unter 2 Frühbeete ca. 2,5m Länge x1,5m Breite x 50cm Tiefe - 1x Grube unter1x Frühbeet ca. 1,50 Länge x 1,0 m Breite x50cm Tiefe Aufgefüllt sollen die beiden Gruben mit Mutterboden, Sand und Laub werden. Es soll grabfähig sein damit meine Schildkröten dort überwintern können. Die Seiten der Gruben sollen mit Stein, Styrodur oder Hohlkammerplatten versehen werden die vor Fressfeinden schützen sollen. Umgesetzt soll das ganze bis 31.08.2026 sein."
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3374764340",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328508833",
@@ -4264,7 +5530,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328508833",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328137527",
@@ -4273,13 +5543,30 @@
       "Hizmet": "cut_down_a_tree",
       "Konum": "Niederösterreich (2026)",
       "Tarih": "25.07.2026 09:59",
-      "Mesaj": "In meinem Garten in Breitenfurt habe ich eine blätterfreie Birke gefunden mit einer Höhe ca 12m einem Durchmesser von ca 25 cm. Der Standort ist zwischen Fichten 5 m von der Strasse entfernt. Da ich selbst mit Holz etwas anzufangen weiß, braucht es auch nicht abtransportiert werden. könnten Sie diese Arbeit übernehmen? Übernehmen Sie ach andere Arbeiten?\n\nDanke für Ihre schnelle Antwort. Nach dem KurzUrlaub melde ich mich bei \nIhnen telefonisch.\n\nmit freundlichen Grüßen\n\ngerhard Kienast\n\nAm 25.07.2026 um 10:10 schrieb Gärtnerei Steidinger – Gartengestaltung & \nGartenbau:\n\nNew Message:",
+      "Mesaj": "In meinem Garten in Breitenfurt habe ich eine blätterfreie Birke gefunden mit einer Höhe ca 12m einem Durchmesser von ca 25 cm. Der Standort ist zwischen Fichten 5 m von der Strasse entfernt. Da ich selbst mit Holz etwas anzufangen weiß, braucht es auch nicht abtransportiert werden. könnten Sie diese Arbeit übernehmen? Übernehmen Sie ach andere Arbeiten?\n\nDanke für Ihre schnelle Antwort. Nach dem KurzUrlaub melde ich mich bei\nIhnen telefonisch.\n\nmit freundlichen Grüßen\n\ngerhard Kienast\n\nAm 25.07.2026 um 10:10 schrieb Gärtnerei Steidinger – Gartengestaltung &\nGartenbau:\n\nNew Message:",
       "telegramSent": true,
       "googleLeadId": "328137527",
       "googleLeadResource": "customers/2934759850/localServicesLeads/328137527",
       "leadType": "MESSAGE",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3373729380",
+          "date": "2026-07-25 09:59:54.813591",
+          "time": "09:59",
+          "text": "In meinem Garten in Breitenfurt habe ich eine blätterfreie Birke gefunden mit einer Höhe ca 12m einem Durchmesser von ca 25 cm. Der Standort ist zwischen Fichten 5 m von der Strasse entfernt. Da ich selbst mit Holz etwas anzufangen weiß, braucht es auch nicht abtransportiert werden. könnten Sie diese Arbeit übernehmen? Übernehmen Sie ach andere Arbeiten?"
+        },
+        {
+          "id": "3374493152",
+          "date": "2026-07-25 10:49:04.776",
+          "time": "10:49",
+          "text": "Danke für Ihre schnelle Antwort. Nach dem KurzUrlaub melde ich mich bei\nIhnen telefonisch.\n\nmit freundlichen Grüßen\n\ngerhard Kienast\n\nAm 25.07.2026 um 10:10 schrieb Gärtnerei Steidinger – Gartengestaltung &\nGartenbau:\n\nNew Message:"
+        }
+      ],
+      "conversationCount": 2,
+      "lastConversationId": "3374493152",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328332105",
@@ -4294,7 +5581,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328332105",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328251888",
@@ -4309,7 +5600,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328251888",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327915554",
@@ -4324,7 +5619,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327915554",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328222761",
@@ -4339,7 +5638,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328222761",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327893387",
@@ -4354,7 +5657,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327893387",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327721853",
@@ -4369,7 +5676,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327721853",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327992796",
@@ -4384,7 +5695,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327992796",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328044316",
@@ -4399,7 +5714,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328044316",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:328036384",
@@ -4414,7 +5733,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/328036384",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327661484",
@@ -4429,7 +5752,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327661484",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3372934752",
+          "date": "2026-07-23 09:50:44.654205",
+          "time": "09:50",
+          "text": "Lass uns auf WhatsApp chatten und telefonieren. Schnell, einfach, sicher und kostenlos. Einladung läuft bald ab. https://whatsapp.com/dl/"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3372934752",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327827251",
@@ -4444,7 +5778,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327827251",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327444068",
@@ -4459,7 +5797,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327444068",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327787351",
@@ -4474,7 +5816,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327787351",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327412244",
@@ -4489,7 +5835,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327412244",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327768670",
@@ -4504,7 +5854,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327768670",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327762790",
@@ -4519,7 +5873,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327762790",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327260618",
@@ -4534,7 +5892,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327260618",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327542532",
@@ -4549,7 +5911,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327542532",
       "leadType": "PHONE_CALL",
       "leadStatus": "DECLINED",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327576103",
@@ -4564,7 +5930,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327576103",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327461667",
@@ -4579,7 +5949,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327461667",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327456666",
@@ -4594,7 +5968,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327456666",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327514990",
@@ -4609,7 +5987,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327514990",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327153317",
@@ -4624,7 +6006,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327153317",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327435633",
@@ -4639,7 +6025,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327435633",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327507214",
@@ -4654,7 +6044,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327507214",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327507595",
@@ -4669,7 +6063,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327507595",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:326855633",
@@ -4684,7 +6082,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/326855633",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327133128",
@@ -4699,7 +6101,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327133128",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327174613",
@@ -4714,7 +6120,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327174613",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327167851",
@@ -4729,7 +6139,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327167851",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327130938",
@@ -4744,7 +6158,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327130938",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:327128943",
@@ -4759,7 +6177,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/327128943",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:326936497",
@@ -4774,7 +6196,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/326936497",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:326731156",
@@ -4789,7 +6215,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/326731156",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:326572822",
@@ -4804,7 +6234,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/326572822",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:326111261",
@@ -4819,7 +6253,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/326111261",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:326174958",
@@ -4834,7 +6272,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/326174958",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:326137855",
@@ -4849,7 +6291,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/326137855",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:326105448",
@@ -4864,7 +6310,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/326105448",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3369760749",
+          "date": "2026-07-15 08:25:47.386649",
+          "time": "08:25",
+          "text": "So rasch wie möglich"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3369760749",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:325577510",
@@ -4879,7 +6336,18 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/325577510",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [
+        {
+          "id": "3370072007",
+          "date": "2026-07-14 12:19:14.849265",
+          "time": "12:19",
+          "text": "Hallo ich bin einzelunternehmer möchte mich als subunternehmer vorstellen erfahrung Gärtner winterdienst LG sulimanovic"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3370072007",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:325861189",
@@ -4894,7 +6362,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/325861189",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:325370213",
@@ -4909,7 +6381,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/325370213",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:325567279",
@@ -4924,7 +6400,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/325567279",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:325548145",
@@ -4939,7 +6419,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/325548145",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:325293409",
@@ -4954,7 +6438,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/325293409",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:325005125",
@@ -4969,7 +6457,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/325005125",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:325000997",
@@ -4984,7 +6476,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/325000997",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:325272858",
@@ -4999,7 +6495,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/325272858",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:324457349",
@@ -5014,7 +6514,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/324457349",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:324565519",
@@ -5029,7 +6533,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/324565519",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:324208893",
@@ -5044,7 +6552,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/324208893",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:324177405",
@@ -5059,7 +6571,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/324177405",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:323489870",
@@ -5074,7 +6590,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/323489870",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:323470220",
@@ -5089,7 +6609,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/323470220",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:323702799",
@@ -5104,7 +6628,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/323702799",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:323701107",
@@ -5119,7 +6647,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/323701107",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:323629723",
@@ -5134,7 +6666,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/323629723",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:323299514",
@@ -5149,7 +6685,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/323299514",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:323627265",
@@ -5164,7 +6704,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/323627265",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:323617533",
@@ -5179,7 +6723,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/323617533",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:323610234",
@@ -5194,7 +6742,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/323610234",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:323483103",
@@ -5209,7 +6761,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/323483103",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:323451348",
@@ -5224,7 +6780,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/323451348",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:323015459",
@@ -5239,7 +6799,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/323015459",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:323076294",
@@ -5254,7 +6818,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/323076294",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:322727786",
@@ -5269,7 +6837,11 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/322727786",
       "leadType": "PHONE_CALL",
       "leadStatus": "ACTIVE",
-      "Telefon2": null
+      "Telefon2": null,
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:322242728",
