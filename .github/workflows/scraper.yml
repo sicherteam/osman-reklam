@@ -51,9 +51,18 @@ jobs:
           GOOGLE_ADS_CUSTOMER_ID: ${{ secrets.GOOGLE_ADS_CUSTOMER_ID || '2934759850' }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_ID_2: ${{ secrets.TELEGRAM_CHAT_ID_2 }}
           PROJECT_NAME: ${{ secrets.PROJECT_NAME || 'Osman Reklam' }}
           DATA_PATH: 'data.json'
         run: node scraper-lsa-web.js
+
+      - name: Upload Screenshot on Error
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scraper-debug
+          path: error_screenshot.png
+          if-no-files-found: ignore
 
       - name: Google Ads API Senkronizasyonunu Çalıştır
         env:
@@ -64,7 +73,8 @@ jobs:
           GOOGLE_ADS_DEVELOPER_TOKEN: ${{ secrets.GOOGLE_ADS_DEVELOPER_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          PROJECT_NAME: 'Osman Reklam'
+          TELEGRAM_CHAT_ID_2: ${{ secrets.TELEGRAM_CHAT_ID_2 }}
+          PROJECT_NAME: ${{ secrets.PROJECT_NAME || 'Osman Reklam' }}
           SKIP_TELEGRAM: ${{ secrets.SKIP_TELEGRAM || 'false' }}
           LOOKBACK_DAYS: '120'
           DATA_PATH: 'data.json'
