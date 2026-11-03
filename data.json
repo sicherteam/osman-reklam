@@ -1,6 +1,31 @@
 {
-  "updatedAt": "3.11.2026, 09:54:31",
+  "updatedAt": "3.11.2026, 15:18:27",
   "leads": [
+    {
+      "id": "lsa:2934759850:349381352",
+      "Musteri": "Elvira Omerbasic",
+      "Telefon": "+43223586288",
+      "Telefon2": null,
+      "Hizmet": "cut_the_hedge",
+      "Konum": "-",
+      "Tarih": "03.11.2026 15:14",
+      "Mesaj": "Sehr geehrte Damen und Herren, können Sie uns bitte ein Angebot für folgende Arbeiten erstellen: Mäh- und Mulcharbeiten Häckselarbeiten notwendige Rückschnittarbeiten an Sträuchern und Bäumen Für Ihre Rückmeldung bedanken wir uns im Voraus. Mit freundlichen Grüßen PBZ Himberg Elvira Omerbasic",
+      "conversations": [
+        {
+          "id": "3411177278",
+          "date": "2026-11-03 15:14:53.800249",
+          "time": "15:14",
+          "text": "Sehr geehrte Damen und Herren, können Sie uns bitte ein Angebot für folgende Arbeiten erstellen: Mäh- und Mulcharbeiten Häckselarbeiten notwendige Rückschnittarbeiten an Sträuchern und Bäumen Für Ihre Rückmeldung bedanken wir uns im Voraus. Mit freundlichen Grüßen PBZ Himberg Elvira Omerbasic"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3411177278",
+      "telegramSent": true,
+      "googleLeadId": "349381352",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/349381352",
+      "leadType": "MESSAGE",
+      "leadStatus": "NEW"
+    },
     {
       "id": "lsa:2934759850:349408683",
       "Musteri": "+436641920544",
