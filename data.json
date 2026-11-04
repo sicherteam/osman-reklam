@@ -1,5 +1,5 @@
 {
-  "updatedAt": "4.11.2026, 14:46:18",
+  "updatedAt": "4.11.2026, 15:54:02",
   "leads": [
     {
       "id": "lsa:2934759850:349920145",
@@ -7,7 +7,7 @@
       "Telefon": "+436767706090",
       "Telefon2": null,
       "Hizmet": "xcat:service_area_business_landscaper",
-      "Konum": "-",
+      "Konum": "Hainburg an der Donau",
       "Tarih": "04.11.2026 14:42",
       "Mesaj": "-",
       "conversations": [],
@@ -17,7 +17,8 @@
       "googleLeadId": "349920145",
       "googleLeadResource": "customers/2934759850/localServicesLeads/349920145",
       "leadType": "PHONE_CALL",
-      "leadStatus": "ACTIVE"
+      "leadStatus": "ACTIVE",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:349575308",
