@@ -1,13 +1,31 @@
 {
-  "updatedAt": "4.11.2026, 08:40:45",
+  "updatedAt": "4.11.2026, 14:46:18",
   "leads": [
+    {
+      "id": "lsa:2934759850:349920145",
+      "Musteri": "+436767706090",
+      "Telefon": "+436767706090",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_landscaper",
+      "Konum": "-",
+      "Tarih": "04.11.2026 14:42",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "349920145",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/349920145",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:349575308",
       "Musteri": "+4369911429432",
       "Telefon": "+4369911429432",
       "Telefon2": null,
       "Hizmet": "xcat:service_area_business_landscaper",
-      "Konum": "-",
+      "Konum": "Kirchstetten",
       "Tarih": "04.11.2026 08:37",
       "Mesaj": "-",
       "conversations": [],
@@ -17,7 +35,8 @@
       "googleLeadId": "349575308",
       "googleLeadResource": "customers/2934759850/localServicesLeads/349575308",
       "leadType": "PHONE_CALL",
-      "leadStatus": "ACTIVE"
+      "leadStatus": "ACTIVE",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:349381352",
@@ -6975,6 +6994,23 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/322523209",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW"
+    },
+    {
+      "id": "lsa:web:2934759850:349920145",
+      "Musteri": "0676 7706090",
+      "Telefon": "0676 7706090",
+      "Telefon2": null,
+      "Hizmet": "-",
+      "Konum": "Hainburg an der Donau",
+      "Tarih": "04.11.26 1:42 PM",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "349920145",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "Wird überprüft\nhelp_outline"
     },
     {
       "id": "lsa:web:2934759850:349575308",
