@@ -1,5 +1,5 @@
 {
-  "updatedAt": "4.11.2026, 18:39:32",
+  "updatedAt": "4.11.2026, 22:05:59",
   "leads": [
     {
       "id": "lsa:2934759850:349672664",
@@ -7,7 +7,7 @@
       "Telefon": "+436645567576",
       "Telefon2": null,
       "Hizmet": "tree_trimming_and_pruning",
-      "Konum": "-",
+      "Konum": "Wien",
       "Tarih": "04.11.2026 18:35",
       "Mesaj": "-",
       "conversations": [],
@@ -17,7 +17,8 @@
       "googleLeadId": "349672664",
       "googleLeadResource": "customers/2934759850/localServicesLeads/349672664",
       "leadType": "PHONE_CALL",
-      "leadStatus": "NEW"
+      "leadStatus": "NEW",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:349920145",
