@@ -1,6 +1,24 @@
 {
-  "updatedAt": "4.11.2026, 15:54:02",
+  "updatedAt": "4.11.2026, 18:39:32",
   "leads": [
+    {
+      "id": "lsa:2934759850:349672664",
+      "Musteri": "+436645567576",
+      "Telefon": "+436645567576",
+      "Telefon2": null,
+      "Hizmet": "tree_trimming_and_pruning",
+      "Konum": "-",
+      "Tarih": "04.11.2026 18:35",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "349672664",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/349672664",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "NEW"
+    },
     {
       "id": "lsa:2934759850:349920145",
       "Musteri": "+436767706090",
@@ -7012,6 +7030,23 @@
       "googleLeadId": "349920145",
       "leadType": "PHONE_CALL",
       "leadStatus": "Wird überprüft\nhelp_outline"
+    },
+    {
+      "id": "lsa:web:2934759850:349672664",
+      "Musteri": "0664 5567576",
+      "Telefon": "0664 5567576",
+      "Telefon2": null,
+      "Hizmet": "Baumpflege",
+      "Konum": "Wien",
+      "Tarih": "04.11.26 5:35 PM",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "349672664",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "Nicht belastet"
     },
     {
       "id": "lsa:web:2934759850:349575308",
