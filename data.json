@@ -1,6 +1,24 @@
 {
-  "updatedAt": "4.11.2026, 07:40:00",
+  "updatedAt": "4.11.2026, 08:40:45",
   "leads": [
+    {
+      "id": "lsa:2934759850:349575308",
+      "Musteri": "+4369911429432",
+      "Telefon": "+4369911429432",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_landscaper",
+      "Konum": "-",
+      "Tarih": "04.11.2026 08:37",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "349575308",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/349575308",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:349381352",
       "Musteri": "Elvira Omerbasic",
@@ -6957,6 +6975,23 @@
       "googleLeadResource": "customers/2934759850/localServicesLeads/322523209",
       "leadType": "PHONE_CALL",
       "leadStatus": "NEW"
+    },
+    {
+      "id": "lsa:web:2934759850:349575308",
+      "Musteri": "0699 11429432",
+      "Telefon": "0699 11429432",
+      "Telefon2": null,
+      "Hizmet": "-",
+      "Konum": "Kirchstetten",
+      "Tarih": "04.11.26 7:37 AM",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "349575308",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "Nicht belastet"
     }
   ]
 }
