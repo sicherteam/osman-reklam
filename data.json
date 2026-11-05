@@ -1,6 +1,24 @@
 {
-  "updatedAt": "5.11.2026, 02:28:22",
+  "updatedAt": "5.11.2026, 09:17:16",
   "leads": [
+    {
+      "id": "lsa:2934759850:350175276",
+      "Musteri": "+436765341815",
+      "Telefon": "+436765341815",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_landscaper",
+      "Konum": "-",
+      "Tarih": "05.11.2026 09:13",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "350175276",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/350175276",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "NEW"
+    },
     {
       "id": "lsa:2934759850:349672664",
       "Musteri": "+436645567576",
