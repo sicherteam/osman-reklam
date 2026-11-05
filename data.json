@@ -1,5 +1,5 @@
 {
-  "updatedAt": "5.11.2026, 09:20:32",
+  "updatedAt": "5.11.2026, 19:16:48",
   "leads": [
     {
       "id": "lsa:2934759850:350175276",
@@ -7,7 +7,7 @@
       "Telefon": "+436765341815",
       "Telefon2": null,
       "Hizmet": "xcat:service_area_business_landscaper",
-      "Konum": "-",
+      "Konum": "Wien",
       "Tarih": "05.11.2026 09:13",
       "Mesaj": "-",
       "conversations": [],
