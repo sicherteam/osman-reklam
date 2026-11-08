@@ -1,6 +1,24 @@
 {
-  "updatedAt": "8.11.2026, 02:51:33",
+  "updatedAt": "8.11.2026, 08:06:20",
   "leads": [
+    {
+      "id": "lsa:2934759850:350747475",
+      "Musteri": "+4367762979309",
+      "Telefon": "+4367762979309",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_lawn_care",
+      "Konum": "Wien",
+      "Tarih": "08.11.2026 08:03",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "350747475",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/350747475",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "NEW"
+    },
     {
       "id": "lsa:2934759850:350433229",
       "Musteri": "+436764078052",
