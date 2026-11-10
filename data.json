@@ -1,6 +1,24 @@
 {
-  "updatedAt": "10.11.2026, 12:24:46",
+  "updatedAt": "10.11.2026, 12:39:35",
   "leads": [
+    {
+      "id": "lsa:2934759850:351100227",
+      "Musteri": "+436641768251",
+      "Telefon": "+436641768251",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_lawn_care",
+      "Konum": "Zwettl",
+      "Tarih": "10.11.2026 12:36",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "351100227",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/351100227",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:350693009",
       "Musteri": "+4367761464994",
