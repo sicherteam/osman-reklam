@@ -1,6 +1,24 @@
 {
-  "updatedAt": "10.11.2026, 04:14:33",
+  "updatedAt": "10.11.2026, 08:51:34",
   "leads": [
+    {
+      "id": "lsa:2934759850:350688938",
+      "Musteri": "+436644115179",
+      "Telefon": "+436644115179",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_lawn_care",
+      "Konum": "Wien",
+      "Tarih": "10.11.2026 08:48",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "350688938",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/350688938",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:350747475",
       "Musteri": "+4367762979309",
