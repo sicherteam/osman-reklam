@@ -1,6 +1,24 @@
 {
-  "updatedAt": "10.11.2026, 12:39:35",
+  "updatedAt": "10.11.2026, 14:42:21",
   "leads": [
+    {
+      "id": "lsa:2934759850:350718557",
+      "Musteri": "+436641835787",
+      "Telefon": "+436641835787",
+      "Telefon2": null,
+      "Hizmet": "tree_trimming_and_pruning",
+      "Konum": "Mistelbach",
+      "Tarih": "10.11.2026 14:37",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "350718557",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/350718557",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:351100227",
       "Musteri": "+436641768251",
@@ -17,7 +35,8 @@
       "googleLeadId": "351100227",
       "googleLeadResource": "customers/2934759850/localServicesLeads/351100227",
       "leadType": "PHONE_CALL",
-      "leadStatus": "ACTIVE"
+      "leadStatus": "ACTIVE",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:350693009",
