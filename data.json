@@ -1,6 +1,24 @@
 {
-  "updatedAt": "10.11.2026, 08:51:34",
+  "updatedAt": "10.11.2026, 10:37:26",
   "leads": [
+    {
+      "id": "lsa:2934759850:350693009",
+      "Musteri": "+4367761464994",
+      "Telefon": "+4367761464994",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_landscaper",
+      "Konum": "Purkersdorf",
+      "Tarih": "10.11.2026 10:32",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "350693009",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/350693009",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:350688938",
       "Musteri": "+436644115179",
@@ -17,7 +35,8 @@
       "googleLeadId": "350688938",
       "googleLeadResource": "customers/2934759850/localServicesLeads/350688938",
       "leadType": "PHONE_CALL",
-      "leadStatus": "ACTIVE"
+      "leadStatus": "ACTIVE",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:350747475",
