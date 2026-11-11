@@ -1,6 +1,24 @@
 {
-  "updatedAt": "11.11.2026, 11:52:56",
+  "updatedAt": "11.11.2026, 14:09:34",
   "leads": [
+    {
+      "id": "lsa:2934759850:351326863",
+      "Musteri": "+436766691611",
+      "Telefon": "+436766691611",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_lawn_care",
+      "Konum": "Wiener Neustadt",
+      "Tarih": "11.11.2026 14:06",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "351326863",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/351326863",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:350718557",
       "Musteri": "+436641835787",
