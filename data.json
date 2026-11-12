@@ -1,6 +1,24 @@
 {
-  "updatedAt": "12.11.2026, 08:59:10",
+  "updatedAt": "12.11.2026, 12:02:15",
   "leads": [
+    {
+      "id": "lsa:2934759850:351306008",
+      "Musteri": "+4368181130662",
+      "Telefon": "+4368181130662",
+      "Telefon2": null,
+      "Hizmet": "cut_the_hedge",
+      "Konum": "Berndorf",
+      "Tarih": "12.11.2026 11:56",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "351306008",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/351306008",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:351326863",
       "Musteri": "+436766691611",
