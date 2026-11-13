@@ -1,6 +1,24 @@
 {
-  "updatedAt": "13.11.2026, 03:51:11",
+  "updatedAt": "13.11.2026, 09:58:13",
   "leads": [
+    {
+      "id": "lsa:2934759850:351515669",
+      "Musteri": "+4369919942707",
+      "Telefon": "+4369919942707",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_fencing_pro",
+      "Konum": "Wien",
+      "Tarih": "13.11.2026 09:54",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "351515669",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/351515669",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:351306008",
       "Musteri": "+4368181130662",
