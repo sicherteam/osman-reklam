@@ -1,6 +1,24 @@
 {
-  "updatedAt": "14.11.2026, 03:55:33",
+  "updatedAt": "14.11.2026, 09:57:11",
   "leads": [
+    {
+      "id": "lsa:2934759850:351721961",
+      "Musteri": "+436766299790",
+      "Telefon": "+436766299790",
+      "Telefon2": null,
+      "Hizmet": "tree_trimming_and_pruning",
+      "Konum": "Baden",
+      "Tarih": "14.11.2026 09:55",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "351721961",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/351721961",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "NEW"
+    },
     {
       "id": "lsa:2934759850:351515669",
       "Musteri": "+4369919942707",
