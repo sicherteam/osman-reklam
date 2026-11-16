@@ -1,6 +1,24 @@
 {
-  "updatedAt": "16.11.2026, 12:42:22",
+  "updatedAt": "16.11.2026, 13:12:05",
   "leads": [
+    {
+      "id": "lsa:2934759850:352312741",
+      "Musteri": "+43224325778",
+      "Telefon": "+43224325778",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_lawn_care",
+      "Konum": "Wien",
+      "Tarih": "16.11.2026 13:06",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "352312741",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/352312741",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:351721961",
       "Musteri": "+436766299790",
