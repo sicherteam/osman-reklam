@@ -1,6 +1,31 @@
 {
-  "updatedAt": "18.11.2026, 12:55:18",
+  "updatedAt": "18.11.2026, 20:59:17",
   "leads": [
+    {
+      "id": "lsa:2934759850:352517180",
+      "Musteri": "Kunde",
+      "Telefon": null,
+      "Telefon2": null,
+      "Hizmet": "stone_masonry",
+      "Konum": "Wien",
+      "Tarih": "18.11.2026 17:10",
+      "Mesaj": "Hallo was würde es kosten 2 bilder und name jankov andja 1956-2024 bitte um info",
+      "conversations": [
+        {
+          "id": "3415794661",
+          "date": "2026-11-18 17:10:13.465896",
+          "time": "17:10",
+          "text": "Hallo was würde es kosten 2 bilder und name jankov andja 1956-2024 bitte um info"
+        }
+      ],
+      "conversationCount": 1,
+      "lastConversationId": "3415794661",
+      "telegramSent": true,
+      "googleLeadId": "352517180",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/352517180",
+      "leadType": "MESSAGE",
+      "leadStatus": "NEW"
+    },
     {
       "id": "lsa:2934759850:352451285",
       "Musteri": "+436641507030",
