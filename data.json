@@ -1,6 +1,24 @@
 {
-  "updatedAt": "18.11.2026, 04:11:41",
+  "updatedAt": "18.11.2026, 09:52:07",
   "leads": [
+    {
+      "id": "lsa:2934759850:352825975",
+      "Musteri": "+4369918540402",
+      "Telefon": "+4369918540402",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_lawn_care",
+      "Konum": "-",
+      "Tarih": "18.11.2026 09:45",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "352825975",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/352825975",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:352312741",
       "Musteri": "+43224325778",
