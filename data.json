@@ -1,13 +1,31 @@
 {
-  "updatedAt": "18.11.2026, 09:52:07",
+  "updatedAt": "18.11.2026, 10:58:50",
   "leads": [
+    {
+      "id": "lsa:2934759850:352451285",
+      "Musteri": "+436641507030",
+      "Telefon": "+436641507030",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_lawn_care",
+      "Konum": "Wien",
+      "Tarih": "18.11.2026 10:56",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "352451285",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/352451285",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:352825975",
       "Musteri": "+4369918540402",
       "Telefon": "+4369918540402",
       "Telefon2": null,
       "Hizmet": "xcat:service_area_business_lawn_care",
-      "Konum": "-",
+      "Konum": "Ybbs an der Donau",
       "Tarih": "18.11.2026 09:45",
       "Mesaj": "-",
       "conversations": [],
@@ -17,7 +35,8 @@
       "googleLeadId": "352825975",
       "googleLeadResource": "customers/2934759850/localServicesLeads/352825975",
       "leadType": "PHONE_CALL",
-      "leadStatus": "ACTIVE"
+      "leadStatus": "ACTIVE",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:352312741",
