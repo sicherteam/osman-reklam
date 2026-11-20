@@ -1,6 +1,24 @@
 {
-  "updatedAt": "20.11.2026, 10:01:37",
+  "updatedAt": "20.11.2026, 10:28:42",
   "leads": [
+    {
+      "id": "lsa:2934759850:353302179",
+      "Musteri": "+436801405008",
+      "Telefon": "+436801405008",
+      "Telefon2": null,
+      "Hizmet": "installation_fencing_pro",
+      "Konum": "Wien",
+      "Tarih": "20.11.2026 10:18",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "353302179",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/353302179",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:353250589",
       "Musteri": "+436803280846",
@@ -17,7 +35,8 @@
       "googleLeadId": "353250589",
       "googleLeadResource": "customers/2934759850/localServicesLeads/353250589",
       "leadType": "PHONE_CALL",
-      "leadStatus": "ACTIVE"
+      "leadStatus": "ACTIVE",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:352517180",
