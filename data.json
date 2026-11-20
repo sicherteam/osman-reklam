@@ -1,6 +1,24 @@
 {
-  "updatedAt": "20.11.2026, 09:05:25",
+  "updatedAt": "20.11.2026, 10:01:37",
   "leads": [
+    {
+      "id": "lsa:2934759850:353250589",
+      "Musteri": "+436803280846",
+      "Telefon": "+436803280846",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_landscaper",
+      "Konum": "Mistelbach",
+      "Tarih": "20.11.2026 09:55",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "353250589",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/353250589",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:352517180",
       "Musteri": "Kunde",
