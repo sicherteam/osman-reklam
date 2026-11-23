@@ -1,6 +1,24 @@
 {
-  "updatedAt": "23.11.2026, 09:00:34",
+  "updatedAt": "23.11.2026, 16:13:04",
   "leads": [
+    {
+      "id": "lsa:2934759850:353752425",
+      "Musteri": "+436606193829",
+      "Telefon": "+436606193829",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_landscaper",
+      "Konum": "Sollenau",
+      "Tarih": "23.11.2026 16:09",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "353752425",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/353752425",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:353597365",
       "Musteri": "+436763405613",
