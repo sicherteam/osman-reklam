@@ -1,6 +1,24 @@
 {
-  "updatedAt": "24.11.2026, 05:44:32",
+  "updatedAt": "24.11.2026, 13:46:05",
   "leads": [
+    {
+      "id": "lsa:2934759850:353932999",
+      "Musteri": "+436673370589",
+      "Telefon": "+436673370589",
+      "Telefon2": null,
+      "Hizmet": "tree_trimming_and_pruning",
+      "Konum": "Deutsch-Wagram",
+      "Tarih": "24.11.2026 13:38",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "353932999",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/353932999",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "ACTIVE"
+    },
     {
       "id": "lsa:2934759850:353772136",
       "Musteri": "+436644491515",
