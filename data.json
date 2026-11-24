@@ -1,5 +1,5 @@
 {
-  "updatedAt": "24.11.2026, 13:46:05",
+  "updatedAt": "24.11.2026, 14:46:42",
   "leads": [
     {
       "id": "lsa:2934759850:353932999",
@@ -17,7 +17,8 @@
       "googleLeadId": "353932999",
       "googleLeadResource": "customers/2934759850/localServicesLeads/353932999",
       "leadType": "PHONE_CALL",
-      "leadStatus": "ACTIVE"
+      "leadStatus": "ACTIVE",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:353772136",
@@ -61,27 +62,33 @@
       "id": "lsa:2934759850:353597365",
       "Musteri": "+436763405613",
       "Telefon": "+436763405613",
-      "Telefon2": null,
+      "Telefon2": "06763405613",
       "Hizmet": "repairs_maintenance_fencing_pro",
       "Konum": "Horn",
       "Tarih": "22.11.2026 07:12",
-      "Mesaj": "Beim Sturm in den vergangenen Tagen ist mein Zaun beschädigt worden ich brauche einen KV was eine Reparatur kostet 2081 Niederfladnitz Danke",
+      "Mesaj": "Beim Sturm in den vergangenen Tagen ist mein Zaun beschädigt worden ich brauche einen KV was eine Reparatur kostet 2081 Niederfladnitz Danke\n\nKann wehr von ihrer Firma vorbei kommen und mir einen unverbindlichen\nKostenvoranschlag machen\n\nNiederfladnitz 157\nTel. 06763405613\nguemastbr@gmail.com\n\nVielen Dank\nWallenberger Günter\n\nGärtnerei Steidinger – Gartengestaltung & Gartenbau",
       "conversations": [
         {
           "id": "3416682108",
           "date": "2026-11-22 07:12:10.166281",
           "time": "07:12",
           "text": "Beim Sturm in den vergangenen Tagen ist mein Zaun beschädigt worden ich brauche einen KV was eine Reparatur kostet 2081 Niederfladnitz Danke"
+        },
+        {
+          "id": "3417644848",
+          "date": "2026-11-24 14:41:20.168",
+          "time": "14:41",
+          "text": "Kann wehr von ihrer Firma vorbei kommen und mir einen unverbindlichen\nKostenvoranschlag machen\n\nNiederfladnitz 157\nTel. 06763405613\nguemastbr@gmail.com\n\nVielen Dank\nWallenberger Günter\n\nGärtnerei Steidinger – Gartengestaltung & Gartenbau"
         }
       ],
-      "conversationCount": 1,
-      "lastConversationId": "3416682108",
+      "conversationCount": 2,
+      "lastConversationId": "3417644848",
       "telegramSent": true,
       "googleLeadId": "353597365",
       "googleLeadResource": "customers/2934759850/localServicesLeads/353597365",
       "leadType": "MESSAGE",
       "leadStatus": "NEW",
-      "isMessageUpdate": false
+      "isMessageUpdate": true
     },
     {
       "id": "lsa:2934759850:353302179",
