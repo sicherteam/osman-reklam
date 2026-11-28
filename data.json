@@ -1,5 +1,5 @@
 {
-  "updatedAt": "28.11.2026, 19:06:42",
+  "updatedAt": "28.11.2026, 19:42:02",
   "leads": [
     {
       "id": "lsa:2934759850:354294869",
@@ -7,7 +7,7 @@
       "Telefon": "+436604948138",
       "Telefon2": null,
       "Hizmet": "xcat:service_area_business_lawn_care",
-      "Konum": "-",
+      "Konum": "Lilienfeld",
       "Tarih": "28.11.2026 18:59",
       "Mesaj": "-",
       "conversations": [],
@@ -17,7 +17,8 @@
       "googleLeadId": "354294869",
       "googleLeadResource": "customers/2934759850/localServicesLeads/354294869",
       "leadType": "PHONE_CALL",
-      "leadStatus": "NEW"
+      "leadStatus": "NEW",
+      "isMessageUpdate": false
     },
     {
       "id": "lsa:2934759850:354380529",
