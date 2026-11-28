@@ -1,6 +1,24 @@
 {
-  "updatedAt": "28.11.2026, 11:54:11",
+  "updatedAt": "28.11.2026, 19:06:42",
   "leads": [
+    {
+      "id": "lsa:2934759850:354294869",
+      "Musteri": "+436604948138",
+      "Telefon": "+436604948138",
+      "Telefon2": null,
+      "Hizmet": "xcat:service_area_business_lawn_care",
+      "Konum": "-",
+      "Tarih": "28.11.2026 18:59",
+      "Mesaj": "-",
+      "conversations": [],
+      "conversationCount": 0,
+      "lastConversationId": null,
+      "telegramSent": true,
+      "googleLeadId": "354294869",
+      "googleLeadResource": "customers/2934759850/localServicesLeads/354294869",
+      "leadType": "PHONE_CALL",
+      "leadStatus": "NEW"
+    },
     {
       "id": "lsa:2934759850:354380529",
       "Musteri": "+436642710389",
